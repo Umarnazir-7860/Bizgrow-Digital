@@ -33,18 +33,18 @@ const HomePage = () => {
       </section>
 
       {/* Feature Section: Left Text, Right Image */}
-      <section className="py-20 bg-gray-50 px-4">
+      <section className="py-20 bg-gray-50 dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Text */}
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold  text-[#000B25] mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold  dark:text-white text-[#000B25] mb-6">
               Boost Your Online Presence with{" "}
               <span className="text-[#B54118]">BizGrow</span> <br />
               <span className="text-3xl md:text-5xl font-bold text-[#B54118]">
                 Digital
               </span>
             </h2>
-            <p className="text-black mb-6 text-md ">
+            <p className="text-black dark:text-white mb-6 text-md ">
               Ready to attract more clients, increase traffic to your website,
               and grow your online presence? BizGrow Digital provides
               results-driven digital marketing that enables your business to
@@ -83,11 +83,11 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-100 text-center px-4">
+      <section className="py-20 bg-gray-100 dark:bg-black text-center px-4">
         <h2 className="text-3xl md:text-5xl font-bold text-[#B54118] mb-6">
           Why Choose BizGrow Digital
         </h2>
-        <p className="max-w-3xl mx-auto text-gray-700 mb-12 text-lg">
+        <p className="max-w-3xl mx-auto text-gray-700 dark:text-white mb-12 text-lg">
           We combine strategy, creativity, and performance to help your brand
           stand out online. Our results-driven approach ensures measurable
           growth for your business.
@@ -115,7 +115,7 @@ const HomePage = () => {
       </section>
       {/* Final CTA Section */}
       <section
-        className="relative py-20 mx-4 md:mx-20 my-20 rounded-2xl text-white text-center px-4 bg-cover bg-center bg-fixed"
+        className="relative py-20 my-10 bg-black mx-4 md:mx-20 my-8 rounded-2xl text-white text-center px-4 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/hero-cta.jpg')" }}
       >
         {/* Dark Overlay taaki text aur button clear nazar aayein */}

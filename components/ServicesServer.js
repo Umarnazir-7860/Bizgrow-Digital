@@ -26,7 +26,7 @@ export default function ServicesSection() {
         
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl text-[#B54118] mt-20 font-bold">Our Digital Services</h1>
-          <p className="text-black mt-2 text-lg">We help businesses grow online through modern solutions.</p>
+          <p className="text-black mt-2 text-lg ">We help businesses grow online through modern solutions.</p>
         </div>
 
         <div className="relative w-full max-w-4xl h-[50vh] flex items-center justify-center">
@@ -42,7 +42,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        <div className="mt-16">
+        <div className="mt-10 mb-6">
           <Link href="/services">
             <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
               View All Services →
@@ -91,7 +91,7 @@ function Card({ title, img, desc, i, progress, range }) {
         scale,
         zIndex: i,
       }}
-      className="absolute w-full max-w-3xl shadow-2xl rounded-2xl bg-white p-6 md:p-10 border border-gray-100 flex flex-col md:flex-row gap-8 items-center"
+      className="absolute w-full max-w-3xl shadow-2xl rounded-2xl bg-white dark:bg-[#000B25] p-6 md:p-10 border border-gray-100 flex flex-col md:flex-row gap-8 items-center"
     >
       <div className="w-full md:w-1/2">
         <Image src={img} width={400} height={250} alt={title} className="rounded-xl object-cover h-[250px] w-full" />
@@ -99,7 +99,7 @@ function Card({ title, img, desc, i, progress, range }) {
       <div className="w-full md:w-1/2">
         <span className="text-[#B54118] font-bold text-sm uppercase opacity-60 tracking-widest">Service 0{i + 1}</span>
         <h2 className="text-2xl md:text-4xl text-[#B54118] font-extrabold mt-2 leading-tight">{title}</h2>
-        <p className="text-gray-700 mt-4 text-sm md:text-lg leading-relaxed">{desc}</p>
+        <p className="text-gray-700 dark:text-white mt-4 text-sm md:text-lg leading-relaxed">{desc}</p>
       </div>
     </motion.div>
   );

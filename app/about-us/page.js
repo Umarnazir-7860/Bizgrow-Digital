@@ -34,13 +34,13 @@ export default function AboutPage() {
       </section>
 
       {/* Overview Section */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center py-6 px-4 gap-8">
+      <div className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8">
         {/* Text */}
-        <div className="w-full lg:w-1/2 py-10 flex flex-col space-y-3">
+        <div className="w-full lg:w-1/2 py-10 ml-8 flex flex-col space-y-3">
           <h1 className="text-3xl md:text-5xl font-bold text-[#B54118]">
             Who We Are
           </h1>
-          <p className="text-gray-700 text-md md:text-md">
+          <p className="text-gray-700 dark:text-white text-md md:text-md">
             "We are a passionate and dedicated team of professionals committed
             to delivering innovative solutions that empower businesses to grow,
             adapt, and succeed in today’s fast-paced world. At the core of our
@@ -79,12 +79,12 @@ export default function AboutPage() {
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Mission */}
-          <div className="w-full lg:w-1/2 bg-white border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full lg:w-1/2 bg-white dark:bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaBullseye className="text-[#B54118] h-10 w-10" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3">Our Mission</h3>
-            <p className="text-gray-700 text-md">
+            <h3 className="text-2xl font-semibold dark:text-white mb-3">Our Mission</h3>
+            <p className="text-gray-700 dark:text-white text-md">
               Our mission is to empower businesses with innovative solutions
               that drive growth, efficiency, and lasting success. We exist to
               help our clients turn ideas into actionable strategies, overcome
@@ -93,12 +93,12 @@ export default function AboutPage() {
           </div>
 
           {/* Vision */}
-          <div className="w-full lg:w-1/2 bg-white border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full lg:w-1/2 bg-white border  dark:bg-[#000B25] border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaEye className="text-[#B54118] h-10 w-10" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3">Our Vision</h3>
-            <p className="text-gray-700 text-md">
+            <h3 className="text-2xl font-semibold dark:text-white mb-3">Our Vision</h3>
+            <p className="text-gray-700 dark:text-white text-md">
               Our vision is to be recognized as a leader in delivering
               transformative solutions that shape the future of industries. We
               aspire to create a world where businesses of all sizes can thrive,
@@ -109,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="max-w-7xl mx-auto py-10 px-4 lg:px-0">
+      <section className="max-w-7xl mx-auto  py-10 px-4 lg:px-0">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
           Our Core Values
         </h2>
@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* Clients Section */}
-      <section className="mx-auto py-16 px-4 lg:px-0">
+      <section className="mx-auto py-16 dark:bg-gray-200 px-4 lg:px-0">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
           Trusted By
         </h2>
@@ -168,7 +168,7 @@ export default function AboutPage() {
             src="/client-logo.jpg"
             width={1200}
             height={400}
-            className="object-contain w-full max-w-[1200px] h-auto"
+            className="object-contain w-full rounded-xl max-w-[1200px] h-auto"
             alt="Our Clients"
           />
         </div>
