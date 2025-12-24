@@ -1,4 +1,5 @@
 // app/about/page.js
+import FadeIn from "@components/MotionWrapper";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -22,14 +23,25 @@ export default function AboutPage() {
           priority
         />
         <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
+          <FadeIn direction="up" delay={0.2}>
+          <h1 className="text-white text-4xl md:text-6xl mt-20 font-serif font-bold mb-4">
             About BizGrow Digital
           </h1>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.4}>
           <p className="text-white text-lg md:text-xl max-w-2xl">
             We are committed to helping businesses grow online with innovative
             digital solutions, creative design, and data-driven marketing
             strategies.
           </p>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.6}>
+          <Link href="/services">
+            <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
+              Explore Our Services →
+            </button>
+          </Link>
+          </FadeIn>
         </div>
       </section>
 
@@ -37,9 +49,12 @@ export default function AboutPage() {
       <div className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8">
         {/* Text */}
         <div className="w-full lg:w-1/2 py-10 ml-8 flex flex-col space-y-3">
+        <FadeIn direction="right" delay={0.2}>
           <h1 className="text-3xl md:text-5xl font-bold text-[#B54118]">
             Who We Are
           </h1>
+          </FadeIn>
+          <FadeIn direction="right" delay={0.4}>
           <p className="text-gray-700 dark:text-white text-md md:text-md">
             "We are a passionate and dedicated team of professionals committed
             to delivering innovative solutions that empower businesses to grow,
@@ -58,10 +73,13 @@ export default function AboutPage() {
             embracing continuous learning, we help businesses navigate
             complexity and achieve their goals with confidence."
           </p>
+          </FadeIn>
         </div>
 
         {/* Image */}
+        
         <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+          <FadeIn direction="left" delay={0.4}>
           <Image
             src="/team-collaboration.jpg"
             width={500}
@@ -69,17 +87,22 @@ export default function AboutPage() {
             className="rounded-xl"
             alt="Team Collaboration"
           />
+            </FadeIn>
         </div>
+      
       </div>
 
       {/* Mission & Vision Section */}
       <section className="bg-[#F2E8D5] py-10 px-4 ">
+       <FadeIn direction="up" delay={0.2}>  
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
           Our Mission & Vision
         </h2>
+        </FadeIn>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Mission */}
           <div className="w-full lg:w-1/2 bg-white dark:bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+           <FadeIn direction="right" delay={0.3}>
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaBullseye className="text-[#B54118] h-10 w-10" />
             </div>
@@ -90,10 +113,13 @@ export default function AboutPage() {
               help our clients turn ideas into actionable strategies, overcome
               challenges with confidence, and achieve measurable results.
             </p>
+              </FadeIn>
           </div>
+        
 
           {/* Vision */}
           <div className="w-full lg:w-1/2 bg-white border  dark:bg-[#000B25] border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+            <FadeIn direction="left" duration={0.3}>
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaEye className="text-[#B54118] h-10 w-10" />
             </div>
@@ -104,65 +130,78 @@ export default function AboutPage() {
               aspire to create a world where businesses of all sizes can thrive,
               innovate, and adapt effortlessly to change.
             </p>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* Core Values Section */}
       <section className="max-w-7xl mx-auto  py-10 px-4 lg:px-0">
+        <FadeIn direction="up" delay={0.2}>
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
           Our Core Values
         </h2>
+        </FadeIn>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Integrity */}
-          <div className="flex-1 bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
+          
+          <div className="flex-1  dark:bg-[#000B25]  border border-gray-200 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
+            <FadeIn direction="right">
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaHandshake className="text-[#B54118] h-10 w-10" />
             </div>
             <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
               Integrity
             </h3>
-            <p className="text-white text-md">
+            <p className="dark:text-white text-black text-md">
               We act with honesty, transparency, and accountability in
               everything we do.
             </p>
+            </FadeIn>
           </div>
-
+          
           {/* Innovation */}
-          <div className="flex-1 bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+          <div className="flex-1 dark:bg-[#000B25]  border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+            <FadeIn direction="up">
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaLightbulb className="text-[#B54118] h-10 w-10" />
             </div>
             <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
               Innovation
             </h3>
-            <p className="text-white text-md">
+            <p className="dark:text-white text-black text-md">
               We embrace creativity and forward-thinking solutions to solve
               complex problems.
             </p>
+            </FadeIn>
           </div>
 
           {/* Results-Driven */}
-          <div className="flex-1 bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
+          <div className="flex-1 dark:bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
+           <FadeIn direction="left">
             <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
               <FaRocket className="text-[#B54118] h-10 w-10" />
             </div>
             <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
               Results-Driven
             </h3>
-            <p className="text-white text-md">
+            <p className="dark:text-white text-black text-md">
               We focus on delivering measurable impact and achieving success for
               our clients.
             </p>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* Clients Section */}
       <section className="mx-auto py-16 dark:bg-gray-200 px-4 lg:px-0">
+        <FadeIn direction="up">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
           Trusted By
         </h2>
+        </FadeIn>
+        
         <div className="flex justify-center items-center">
           <Image
             src="/client-logo.jpg"

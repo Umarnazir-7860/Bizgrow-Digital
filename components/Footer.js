@@ -73,7 +73,7 @@ const Footer = () => {
           <ul className="space-y-2 text-md">
             {importantLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="hover:text-[#FEDB01] transition duration-200">
+                <Link href={link.href} className="hover:text-[#B54118] transition duration-200">
                   {link.name}
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const Footer = () => {
           <ul className="space-y-2 text-md">
             {servicesLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="hover:text-[#FEDB01] transition duration-200">
+                <Link href={link.href} className="hover:text-[#B54118] transition duration-200">
                   {link.name}
                 </Link>
               </li>
@@ -100,15 +100,15 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-4">Contact Us:</h3>
           <div className="space-y-3 mb-6 text-sm">
             <p className="flex items-center font-bold">
-              <FaPhoneAlt className="mr-2 text-2xl text-[#FEDB01] min-w-[1rem]" />
-              Mobile: +44 7360 182981 Office: +44 20 8090 4209
+              <FaPhoneAlt className="mr-2 text-2xl text-[#B54118] min-w-[1rem]" />
+              +44 7903 332433 <br/> 020 8090 4209 
             </p>
             <p className="flex items-center font-bold">
-              <FaEnvelope className="mr-2 text-[#FEDB01] min-w-[1rem]" />
-              <a href="mailto:info@iccs.uk" className="hover:text-[#FEDB01]">info@iccs.uk</a>
+              <FaEnvelope className="mr-2 text-[#B54118] min-w-[1rem]" />
+              <a href="mailto:info@iccs.uk" className="hover:text-[#FEDB01]">Info@bizgrow-digital.co.uk</a>
             </p>
             <p className="flex items-start font-bold">
-              <FaMapMarkerAlt className="mr-2 text-[#FEDB01] mt-1 min-w-[1rem]" />
+              <FaMapMarkerAlt className="mr-2 text-[#B54118] mt-1 min-w-[1rem]" />
               7 Bernard Road, RM7 0HX Romford, London, United Kingdom
             </p>
           </div>

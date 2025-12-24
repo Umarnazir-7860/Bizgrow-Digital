@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import FadeIn from "@components/MotionWrapper";
 
 export default function ServicesSection() {
   const container = useRef(null);
@@ -23,11 +24,16 @@ export default function ServicesSection() {
   return (
     <section ref={container} className="relative bg-[#F2E8D5]/90">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden space-y-5 px-4">
-        
+       
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl text-[#B54118] mt-20 font-bold">Our Digital Services</h1>
-          <p className="text-black mt-2 text-lg ">We help businesses grow online through modern solutions.</p>
+           <FadeIn direction="up">
+            <h1 className="text-4xl md:text-6xl text-[#B54118] mt-20 font-bold">Our Digital Services</h1>
+           </FadeIn>
+           <FadeIn direction="up" delay={0.4}>
+         <p className="text-black mt-2 text-lg ">We help businesses grow online through modern solutions.</p>
+        </FadeIn>
         </div>
+        
 
         <div className="relative w-full max-w-4xl h-[50vh] flex items-center justify-center">
           {visibleCards.map((card, idx) => (

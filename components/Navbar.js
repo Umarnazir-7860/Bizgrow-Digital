@@ -18,9 +18,9 @@ export default function Navbar() {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about-us" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/our-digital-services" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact-us" },
   ];
 
   if (!mounted) return null; // Taaki server side par buttons galat render na hon
