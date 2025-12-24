@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/Bizgrow-digital-logo.png"
+                src="/BizGrow-digital-logo.png"
                 alt="Logo"
                 width={110}
                 height={50}
