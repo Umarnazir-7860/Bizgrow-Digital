@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Column 1: Logo + About */}
         <div>
           <Image
-            src="/Bizgrow-digital-logo.png"
+            src="/BizGrow-digital-logo.png"
             alt="BizGrow Digital Logo"
             width={120}
             height={60}
