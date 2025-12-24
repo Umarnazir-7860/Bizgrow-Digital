@@ -18,7 +18,7 @@ const HomePage = () => {
           <h1 className="text-white text-3xl md:text-6xl mt-30 font-serif font-bold md:leading-[4rem]">
             Smart Digital Solutions <br /> That Grow Your Business
           </h1>
-          <p className="mt-6 text-white max-w-2xl text- md:text-xl">
+          <p className="mt-6 text-white max-w-2xl  md:text-xl">
             We help businesses increase visibility, attract quality leads, and
             scale online through modern web development, SEO, and data-driven
             digital marketing.

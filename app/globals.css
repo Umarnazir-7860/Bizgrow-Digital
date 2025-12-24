@@ -2,6 +2,9 @@
 body{
   background-color: white;
   overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  width: full;
 }
 /* Branding colors */
 :root {

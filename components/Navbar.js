@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/about-us" },
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
@@ -44,7 +44,7 @@ export default function Navbar() {
           </div>
 
           {/* Center: Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-8">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -60,7 +60,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <Link
               href="/contact"
-              className="hidden md:inline-block px-4 py-2 rounded-lg bg-orange-600 text-white font-medium hover:bg-orange-500 transition"
+              className="hidden lg:inline-block px-4 py-2 rounded-lg bg-orange-600 text-white font-medium hover:bg-orange-500 transition"
             >
               Get Started
             </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 rounded-md border border-gray-300 dark:border-gray-600"
+              className="lg:hidden p-2 rounded-md border border-gray-300 dark:border-gray-600"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               <svg
@@ -122,7 +122,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-black/90 shadow-lg overflow-hidden"
+            className="lg:hidden bg-white dark:bg-black/90 shadow-lg overflow-hidden"
           >
             <div className="px-4 py-4 flex flex-col space-y-2">
               {menuItems.map((item, idx) => (
