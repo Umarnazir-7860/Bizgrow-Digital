@@ -12,6 +12,7 @@ const HomePage = () => {
           src="/admin-ajax.jpg"
           fill
           className="object-cover"
+          priority
           alt="Hero Background"
         />
         <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
@@ -37,7 +38,8 @@ const HomePage = () => {
           {/* Left Text */}
           <div>
             <h2 className="text-3xl md:text-5xl font-bold  text-[#000B25] mb-6">
-              Boost Your Online Presence with <span className="text-[#B54118]">BizGrow</span>  <br />
+              Boost Your Online Presence with{" "}
+              <span className="text-[#B54118]">BizGrow</span> <br />
               <span className="text-3xl md:text-5xl font-bold text-[#B54118]">
                 Digital
               </span>
@@ -111,21 +113,28 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Final CTA Section */}
-      <section className="py-20 bg-[#000B25]/90 mx-6 md:mx-30 rounded-2xl my-20 text-white text-center px-4">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          Ready to Grow Your Business Online?
-        </h2>
-        <p className="max-w-2xl mx-auto mb-8 text-lg">
-          Let’s build a strong digital presence that attracts, converts, and
-          scales. Our team is ready to help your business succeed online.
-        </p>
-        <Link href="/contact">
-          <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
-            Request a Quote
-          </button>
-        </Link>
+      <section
+        className="relative py-20 mx-4 md:mx-20 my-20 rounded-2xl text-white text-center px-4 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/hero-cta.jpg')" }}
+      >
+        {/* Dark Overlay taaki text aur button clear nazar aayein */}
+        <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Ready to Grow Your Business Online?
+          </h2>
+          <p className="mb-8 text-lg md:text-xl">
+            Let’s build a strong digital presence that attracts, converts, and
+            scales. Our team is ready to help your business succeed online.
+          </p>
+          <Link href="/contact">
+            <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
+              Request a Quote
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );

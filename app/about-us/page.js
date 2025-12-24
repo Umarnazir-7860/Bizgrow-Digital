@@ -19,6 +19,7 @@ export default function AboutPage() {
           fill
           className="object-cover"
           alt="About BizGrow Digital"
+          priority
         />
         <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
