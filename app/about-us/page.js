@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* Overview Section */}
       <div className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8">
         {/* Text */}
-        <div className="w-full lg:w-1/2 py-10 ml-8 flex flex-col space-y-3">
+        <div className="w-full lg:w-1/2 py-5 md:py-10 md:ml-8 flex flex-col space-y-3">
         <FadeIn direction="right" delay={0.2}>
           <h1 className="text-3xl md:text-5xl font-bold text-[#B54118]">
             Who We Are
@@ -78,7 +78,7 @@ export default function AboutPage() {
 
         {/* Image */}
         
-        <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex justify-center -mt-5 mb-3 md:mt-8 lg:mt-0">
           <FadeIn direction="left" delay={0.4}>
           <Image
             src="/team-collaboration.jpg"

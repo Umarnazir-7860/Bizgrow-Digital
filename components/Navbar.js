@@ -12,7 +12,6 @@ export default function Navbar() {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Hydration mismatch se bachne ke liye useEffect
   useEffect(() => setMounted(true), []);
 
   const menuItems = [
@@ -23,12 +22,14 @@ export default function Navbar() {
     { name: "Contact", href: "/contact-us" },
   ];
 
-  if (!mounted) return null; // Taaki server side par buttons galat render na hon
+  if (!mounted) return null;
 
   return (
-    <nav className="fixed w-full z-50 py-2 backdrop-blur-md bg-black/30  shadow-md">
+    // FIX 1: Added 'inset-x-0' and 'top-0' to ensure it stays pinned globally
+    <nav className="fixed top-0 inset-x-0 w-full z-50 py-2 backdrop-blur-md bg-black/30 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          
           {/* Left: Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
@@ -37,7 +38,7 @@ export default function Navbar() {
                 alt="Logo"
                 width={110}
                 height={50}
-                className="object-contain" // Agar logo black hai toh dark mode mein white ho jayega
+                className="object-contain"
               />
             </Link>
           </div>
@@ -64,33 +65,41 @@ export default function Navbar() {
               Get Started
             </Link>
 
-            {/* Professional Theme Toggle */}
+            {/* FIX 2: Removed '-left-10' which was causing alignment issues */}
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className={`relative inline-flex items-center h-9 w-16 rounded-full transition-colors duration-300 focus:outline-none 
+              className={`relative inline-flex items-center h-8 w-14 rounded-full transition-colors duration-300 focus:outline-none 
                 ${resolvedTheme === "dark" ? "bg-orange-600" : "bg-gray-300"}`}
             >
               <span
-                className={`inline-block w-7 h-7 bg-white rounded-full shadow-md transform transition-transform duration-300
-                ${resolvedTheme === "dark" ? "translate-x-8" : "translate-x-1"}`}
+                className={`inline-block w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300
+                ${resolvedTheme === "dark" ? "translate-x-7" : "translate-x-1"}`}
               />
-              <FaMoon className="absolute left-2 text-gray-700 pointer-events-none" size={14} />
-              <FaSun className="absolute right-2 text-orange-500 pointer-events-none" size={14} />
+              <FaMoon className="absolute left-1.5 text-gray-700 pointer-events-none" size={12} />
+              <FaSun className="absolute right-1.5 text-orange-500 pointer-events-none" size={12} />
             </button>
 
             {/* Mobile menu button */}
-            <button
-              className="lg:hidden p-2 rounded-md border border-gray-300 dark:border-gray-600"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              <svg className="h-6 w-6 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {mobileOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+            <div className="lg:hidden">
+              <button
+                className="p-2 rounded-md"
+                onClick={() => setMobileOpen(!mobileOpen)}
+              >
+                {/* FIX 3: Dynamic color for mobile icon if background is light */}
+                <svg
+                  className={`h-6 w-6 ${mobileOpen ? 'text-black dark:text-white' : 'text-white'}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {mobileOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +111,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-black/95 shadow-lg overflow-hidden"
+            className="lg:hidden bg-white dark:bg-black shadow-lg overflow-hidden"
           >
             <div className="px-4 py-6 flex flex-col space-y-4 text-center">
               {menuItems.map((item, idx) => (
