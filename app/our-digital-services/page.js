@@ -120,7 +120,7 @@ const page = () => {
           {/* Services Grid  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-               <FadeIn direction="up" delay={0.6}>
+               <FadeIn direction="up" delay={0.5}>
               <div
                 key={index}
                 className="group p-10 bg-white dark:bg-[#000B25] rounded-[2.5rem] 

@@ -52,6 +52,7 @@ export default function ServicesSection() {
                 {...card} 
                 progress={scrollYProgress} 
                 range={[start, end]} 
+                isFirst={idx === 0} // <--- Ye line add karein
                 isLast={idx === visibleCards.length - 1} // Passing last card check
               />
             );
@@ -71,28 +72,28 @@ export default function ServicesSection() {
   );
 }
 
-function Card({ title, img, desc, i, progress, range, isLast }) {
+function Card({ title, img, desc, i, progress, range,isFirst, isLast }) {
   const [start, end] = range;
 
   // X-axis: Last card remains at 0% instead of moving to -150%
   const x = useTransform(
     progress,
     [start, start + 0.08, end - 0.08, end],
-    ["150%", "0%", "0%", isLast ? "0%" : "-150%"]
+   [isFirst ? "0%" : "150%", "0%", "0%", isLast ? "0%" : "-150%"]
   );
 
   // Opacity: Last card stays visible at the end
   const opacity = useTransform(
     progress,
     [start, start + 0.05, end - 0.05, end],
-    [0, 1, 1, isLast ? 1 : 0]
+   [isFirst ? 1 : 0, 1, 1, isLast ? 1 : 0]
   );
 
   // Scale: Last card doesn't shrink back
   const scale = useTransform(
     progress,
     [start, start + 0.08, end - 0.08, end],
-    [0.8, 1, 1, isLast ? 1 : 0.8]
+    [isFirst ? 1 : 0.8, 1, 1, isLast ? 1 : 0.8]
   );
 
   return (
