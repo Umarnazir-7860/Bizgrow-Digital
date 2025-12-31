@@ -152,7 +152,7 @@ const page = () => {
       <VShapeTransition />
       {/* CTA Section */}
       <section
-        className="relative py-20 mx-4 my-20 rounded-[2rem] text-white text-center px-6 md:mx-20 bg- bg-center bg-fixed overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 rounded-[2rem] text-white text-center px-6 md:mx-20 bg- bg-cover bg-fixed overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/team-work.jpg')" }}
       >
         {/* Overlay using your secondary color variable with transparency */}
