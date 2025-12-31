@@ -27,7 +27,7 @@ const page = () => {
   },
   {
     title: "SEO",
-    desc: "Driving high-quality organic traffic by ranking your website at the top of Google search results through data-backed strategies.",
+    desc: "Driving high-quality organic traffic by ranking your website at the top of Google search results.",
     icon: <TrendingUp className="w-8 h-8" />,
     bgColor: "bg-green-100",
     hoverIcon: "group-hover:text-white",
