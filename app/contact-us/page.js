@@ -47,7 +47,7 @@ const ContactPage = () => {
       {/* --- HERO SECTION --- */}
       <div className="relative h-screen w-full">
         <Image
-          src="/services-hero.jpg"
+          src="/contact-us-hero.jpg"
           alt="Contact Hero"
           fill
           priority
