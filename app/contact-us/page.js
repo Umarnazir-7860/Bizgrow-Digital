@@ -151,7 +151,7 @@ const ContactPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="relative w-full h-[450px] rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl bg-gray-200">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d317788.248899627!2d0.17185!3d51.51834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2sus!4v1767348057582!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d317788.248899627!2d0.17185!3d51.51834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2sus!4v1767348057582!5m2!1sen!2sus"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
