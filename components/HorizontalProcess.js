@@ -11,9 +11,11 @@ const HorizontalProcess = () => {
     offset: ["start start", "end end"]
   });
 
+ // 🔹 Shivering kam karne ke liye stiffness/damping adjust ki
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
+    stiffness: 70, 
     damping: 30,
+    restDelta: 0.001
   });
 
   const inputRange = [0, 0.05, 0.2, 0.4, 0.55, 0.75, 0.85, 1];
@@ -39,14 +41,14 @@ const HorizontalProcess = () => {
       <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
         
         {/* --- MAIN HEADING (Top Center) --- */}
-        <div className="absolute top-20 left-0 w-full z-20 pointer-events-none">
+        <div className="absolute top-15 left-0 w-full z-20  pointer-events-none" style={{ transform: 'translateZ(0)' }}>
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center"
           >
              <FadeIn direction="up" delay={0.2}>
-            <h3 className="text-[#B54118]  font-bold tracking-[0.5em] text-xs md:text-sm mb-2">
+            <h3 className="text-[#B54118] pointer-events-none font-bold tracking-[0.5em] text-xs md:text-sm mt-5 mb-2">
               OUR WORKFLOW
             </h3>
             </FadeIn>
@@ -67,7 +69,7 @@ const HorizontalProcess = () => {
           {sections.map((item) => (
             <div 
               key={item.id} 
-              className="relative h-screen w-screen flex flex-col md:flex-row items-center justify-between p-10 md:pt-40 flex-shrink-0"
+              className="relative  mt-64 md:mt-0 h-screen w-screen flex flex-col md:flex-row items-center justify-between p-10 md:pt-40 flex-shrink-0"
             >
               <div className="z-10 w-full md:w-1/2">
                <FadeIn direction="right" delay={0.2}>
@@ -76,17 +78,17 @@ const HorizontalProcess = () => {
                 </span>
                 </FadeIn>
                  <FadeIn direction="right" delay={0.4}>
-                <h2 className="text-5xl md:text-[7rem] font-black dark:text-white text-slate-900 leading-none mt-4">
+                <h2 className="text-5xl  md:text-[7rem] font-black dark:text-white text-slate-900 leading-none mt-4">
                   {item.title}
                 </h2>
                 </FadeIn>
               </div>
 
-              <div className="w-full md:w-1/2 h-[45vh] md:h-[60vh] relative mt-10 md:mt-0">
+              <div className="w-full md:w-1/2 h-[45vh] md:h-[60vh] relative md:mt-0">
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-full object-cover rounded-2xl -mt-40 md:mt-0 shadow-2xl"
                 />
                 <div className="absolute -bottom-10 -left-10 text-[8rem] md:text-[10rem] font-black text-slate-100 -z-10 opacity-40">
                   {item.id}

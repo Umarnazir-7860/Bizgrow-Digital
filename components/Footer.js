@@ -116,7 +116,7 @@ const Footer = () => {
           {/* Responsive Map */}
           <div className="w-full h-40 md:h-60 rounded-xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.6778661243093!2d144.96674!3d-37.8210137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4bfadc1839%3A0xb7442f9eed7c3b64!2sBizGrow%20Digital!5e0!3m2!1sen!2s!4v1766504497748!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d317788.248899627!2d0.17185!3d51.51834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2sus!4v1767348057582!5m2!1sen!2sus"
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"

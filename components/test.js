@@ -30,7 +30,7 @@ export default function ShapeChangeSection() {
       >
         <h2 className="text-white text-4xl md:text-6xl font-bold text-center px-10 leading-tight">
           <motion.span
-            className="inline-block pt-60 text-8xl" // Ye sabse zaroori hai transform ke liye
+            className="inline-block pt-60 text-3xl md:text-8xl" // Ye sabse zaroori hai transform ke liye
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }} // Jab screen par aaye tab chale
             // Sirf ek baar animate ho
@@ -42,7 +42,7 @@ export default function ShapeChangeSection() {
           <br />
 
           <motion.span
-            className="inline-block pt-5 text-8xl mt-6 text-[#B54118]" // Dusri line ko bhi animate karein
+            className="inline-block pt-5 text-3xl md:text-8xl mt-6 text-[#B54118]" // Dusri line ko bhi animate karein
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
            
