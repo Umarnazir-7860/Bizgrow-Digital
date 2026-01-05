@@ -49,7 +49,7 @@ const CreativeContentPage = () => {
   return (
     <section className="relative w-full">
       {/* --- HERO SECTION --- */}
-      <div className="relative h-[80vh] md:h-screen w-full">
+      <div className="relative h-[100vh] md:h-screen w-full">
         <Image
           src="/creative-content-hero.jpg"
           alt="Creative Content Services"
@@ -57,16 +57,17 @@ const CreativeContentPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-6">
+        <div className="absolute inset-0 bg-black/70 flex flex-col pt-12 justify-center items-center px-6">
           <FadeIn direction="up" delay={0.2}>
             <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block text-center">
               Creative Excellence
             </span>
           </FadeIn>
           <FadeIn direction="up" delay={0.4}>
-            <h1 className="text-white text-4xl md:text-7xl text-center font-bold max-w-4xl leading-tight">
+            <h1 className="text-white text-5xl md:text-7xl text-center font-bold max-w-4xl 
+            leading-tight">
               Words & Visuals That <br />
-              <span className="text-orange-500">Command Attention</span>
+              <span className="text-orange-500  text-3xl">Command Attention</span>
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.6}>
@@ -79,7 +80,7 @@ const CreativeContentPage = () => {
       </div>
 
       {/* --- FEATURES GRID --- */}
-      <section className="py-24 bg-gray-50 dark:bg-[#020817]">
+      <section className="py-14 bg-gray-50 dark:bg-[#020817]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col justify-center items-center mb-16 gap-6">
             <div className="max-w-3xl">
@@ -117,7 +118,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* --- WHY US SECTION --- */}
-      <section className="py-20 bg-white dark:bg-black">
+      <section className="py-10 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:flex-row gap-16 items-center">
           <FadeIn direction="right" delay={0.3}>
             <div className="relative h-[400px] md:h-[600px] w-full rounded-[3rem] overflow-hidden">
@@ -170,7 +171,7 @@ const CreativeContentPage = () => {
       {/* CTA Section */}
       <section
         className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/team-work.jpg')" }}
+        style={{ backgroundImage: "url('/creative-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto">

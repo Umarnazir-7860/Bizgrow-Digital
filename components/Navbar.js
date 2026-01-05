@@ -39,7 +39,7 @@ export default function Navbar() {
   const services = [
     { title: "Creative Content", 
       description: "Brand storytelling & visuals", href: "/our-digital-services/creative-content", icon: <FaPaintBrush /> },
-    { title: "Email Marketing", description: "High-converting email campaigns", href: "/services/email-marketing", icon: <FaEnvelope /> },
+    { title: "Email Marketing", description: "High-converting email campaigns", href: "/our-digital-services/email-marketing", icon: <FaEnvelope /> },
     { title: "Lead Generation", description: "Sales-focused strategies", href: "/services/lead-generation", icon: <FaChartLine /> },
     { title: "WordPress", description: "Custom WP development & themes", href: "/services/wordpress", icon: <FaCode /> },
     { title: "Digital Marketing", description: "Omnichannel marketing solutions", href: "/services/digital-marketing", icon: <FaBullhorn /> },
@@ -53,7 +53,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex  items-center justify-between">
+        <div className="flex py-3 items-center justify-between">
           <Link href="/">
             <Image src="/BizGrow-digital-logo.png" alt="Logo" width={110} height={40} priority />
           </Link>

@@ -18,7 +18,7 @@ export default function ShapeChangeSection() {
   return (
     <div
       ref={containerRef}
-      className="h-[200vh] flex  items-start justify-center bg-gray-100 pt-10"
+      className="h-[100vh] md:h-[200vh] flex  items-start justify-center bg-gray-100 pt-10"
     >
       <motion.div
         style={{
@@ -26,7 +26,7 @@ export default function ShapeChangeSection() {
           borderRadius,
           scale,
         }}
-        className="h-[200vh] bg-black flex flex-col items-center justify-center overflow-hidden"
+        className="h-[100vh] md:h-[200vh] bg-black flex flex-col items-center justify-center overflow-hidden"
       >
         <h2 className="text-white text-4xl md:text-6xl font-bold text-center px-10 leading-tight">
           <motion.span
