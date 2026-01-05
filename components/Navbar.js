@@ -1,133 +1,184 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "next-themes";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaChartLine,
+  FaEnvelope,
+  FaMoon,
+  FaSun,
+  FaBullhorn,
+  FaSearch
+} from "react-icons/fa";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-
-  const menuItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about-us" },
-    { name: "Services", href: "/our-digital-services" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact-us" },
-  ];
-
+  useEffect(() => {
+    setMounted(true);
+    // Masla Fix: Menu khulne par background scroll lock karna
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [mobileOpen]);
+  
   if (!mounted) return null;
 
+  const services = [
+    { title: "Creative Content", 
+      description: "Brand storytelling & visuals", href: "/our-digital-services/creative-content", icon: <FaPaintBrush /> },
+    { title: "Email Marketing", description: "High-converting email campaigns", href: "/services/email-marketing", icon: <FaEnvelope /> },
+    { title: "Lead Generation", description: "Sales-focused strategies", href: "/services/lead-generation", icon: <FaChartLine /> },
+    { title: "WordPress", description: "Custom WP development & themes", href: "/services/wordpress", icon: <FaCode /> },
+    { title: "Digital Marketing", description: "Omnichannel marketing solutions", href: "/services/digital-marketing", icon: <FaBullhorn /> },
+    { title: "Facebook Marketing", description: "Targeted ads & social growth", href: "/services/facebook-marketing", icon: <FaBullhorn /> },
+    { title: "Social Media Marketing", description: "Engagement & community building", href: "/services/social-media-marketing", icon: <FaBullhorn /> },
+    { title: "Web Design", description: "Modern & responsive UI/UX", href: "/services/web-design", icon: <FaCode /> },
+    { title: "Graphic Design", description: "Creative logos & branding", href: "/services/graphic-design", icon: <FaPaintBrush /> },
+    { title: "Search Engine Optimisation", description: "Boost your organic visibility", href: "/services/seo", icon: <FaSearch /> },
+  ];
+
   return (
-    // FIX 1: Added 'inset-x-0' and 'top-0' to ensure it stays pinned globally
-    <nav className="fixed top-0 inset-x-0 w-full z-50 py-2 backdrop-blur-md bg-black/30 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          {/* Left: Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/">
-              <Image
-                src="/BizGrow-digital-logo.png"
-                alt="Logo"
-                width={110}
-                height={50}
-                className="object-contain"
-              />
-            </Link>
-          </div>
+    <nav className="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex  items-center justify-between">
+          <Link href="/">
+            <Image src="/BizGrow-digital-logo.png" alt="Logo" width={110} height={40} priority />
+          </Link>
 
-          {/* Center: Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            {menuItems.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                className="text-white hover:text-orange-500 transition font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+          {/* DESKTOP MENU */}
+          <div className="hidden lg:flex items-center gap-10 text-sm font-medium text-white">
+            <Link href="/" className="hover:text-orange-500 transition">Home</Link>
+            <Link href="/about-us" className="hover:text-orange-500 transition">About</Link>
 
-          {/* Right: CTA + Theme Toggle */}
-          <div className="flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="hidden lg:inline-block px-4 py-2 rounded-lg bg-orange-600 text-white font-medium hover:bg-orange-500 transition"
-            >
-              Get Started
-            </Link>
-
-            {/* FIX 2: Removed '-left-10' which was causing alignment issues */}
-            <button
-              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className={`relative inline-flex items-center h-8 w-14 rounded-full transition-colors duration-300 focus:outline-none 
-                ${resolvedTheme === "dark" ? "bg-orange-600" : "bg-gray-300"}`}
-            >
-              <span
-                className={`inline-block w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300
-                ${resolvedTheme === "dark" ? "translate-x-7" : "translate-x-1"}`}
-              />
-              <FaMoon className="absolute left-1.5 text-gray-700 pointer-events-none" size={12} />
-              <FaSun className="absolute right-1.5 text-orange-500 pointer-events-none" size={12} />
-            </button>
-
-            {/* Mobile menu button */}
-            <div className="lg:hidden">
-              <button
-                className="p-2 rounded-md"
-                onClick={() => setMobileOpen(!mobileOpen)}
-              >
-                {/* FIX 3: Dynamic color for mobile icon if background is light */}
-                <svg
-                  className={`h-6 w-6 ${mobileOpen ? 'text-black dark:text-white' : 'text-white'}`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {mobileOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
+            <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+              <button className="flex items-center gap-1 text-orange-500 outline-none">
+                Services
+                <svg className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              <AnimatePresence>
+                {open && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 15 }}
+                    className="absolute left-1/2 -translate-x-1/2 mt-8 w-[720px] rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl"
+                  >
+                    <div className="grid grid-cols-2 gap-2 p-4">
+                      {services.map((s, i) => (
+                        <Link key={i} href={s.href} className="group flex gap-4 p-3 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition">
+                          <div className="text-orange-500 text-lg mt-1">{s.icon}</div>
+                          <div>
+                            <h4 className="text-black dark:text-white text-sm font-semibold group-hover:text-orange-500">{s.title}</h4>
+                            <p className="text-[10px] text-gray-500 leading-tight">{s.description}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+
+            <Link href="/blogs" className="hover:text-orange-500 transition">Blogs</Link>
+            <Link href="/contact-us" className="hover:text-orange-500 transition">Contact</Link>
+          </div>
+
+          {/* THEME & MOBILE BUTTON */}
+          <div className="flex items-center gap-4">
+            <button onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white">
+              {resolvedTheme === "dark" ? <FaSun /> : <FaMoon />}
+            </button>
+            <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-white text-2xl">
+              {mobileOpen ? "✕" : "☰"}
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-black shadow-lg overflow-hidden"
+      {/* MOBILE DRAWER */}
+<AnimatePresence>
+  {mobileOpen && (
+    <motion.div
+      initial={{ x: "100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "100%" }}
+      transition={{ type: "tween", duration: 0.3 }}
+      // FIXED: 'fixed' position, full height, aur overflow-y-auto zaroori hai
+      className="fixed top-0 left-0 w-full h-screen bg-white z-[60] overflow-y-auto outline-none"
+    >
+      {/* Menu Header: Logo aur Close button ko andar rakhein taaki wo hamesha nazar ayien */}
+      <div className="flex items-center justify-between px-6 h-16 border-b border-white/10 sticky top-0 bg-black z-10">
+        <Image src="/BizGrow-digital-logo.png" alt="Logo" width={100} height={35} />
+        <button onClick={() => setMobileOpen(false)} className="text-white text-3xl">✕</button>
+      </div>
+
+      <div className="px-6 py-8 pb-12 flex flex-col space-y-6">
+        <Link href="/" onClick={() => setMobileOpen(false)} className="text-xl font-medium 
+        text-black">Home</Link>
+        <Link href="/about-us" onClick={() => setMobileOpen(false)} className="text-xl font-medium
+         text-black">About</Link>
+
+        {/* Services Section */}
+        <div className="space-y-4">
+         <Link href="/our-digital-services">
+          <button
+            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+            className="w-full flex justify-between items-center text-xl font-medium text-black"
           >
-            <div className="px-4 py-6 flex flex-col space-y-4 text-center">
-              {menuItems.map((item, idx) => (
-                <Link
-                  key={idx}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-xl text-black dark:text-white hover:text-orange-500 transition font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            
+            Services
+           
+            <span className={`text-orange-500 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`}>▼</span>
+          </button>
+           </Link>
+
+          <AnimatePresence>
+            {mobileServicesOpen && (
+              <motion.div 
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                className="flex flex-col space-y-2 pl-4 border-l border-white/10"
+              >
+                {services.map((service, i) => (
+                  <Link
+                    key={i}
+                    href={service.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0"
+                  >
+                    <div className="text-orange-500 text-lg">{service.icon}</div>
+                    <span className="text-black text-base">{service.title}</span>
+                  </Link>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        <Link href="/blogs" onClick={() => setMobileOpen(false)} className="text-xl font-medium
+         text-black">Blogs</Link>
+        <Link href="/contact-us" onClick={() => setMobileOpen(false)} className="text-xl font-medium
+         text-black">Contact</Link>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </nav>
   );
 }

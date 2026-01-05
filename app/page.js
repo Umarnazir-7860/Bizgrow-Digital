@@ -53,7 +53,7 @@ const HomePage = () => {
               </span>
             </h2>
             </FadeIn>
-            <FadeIn direction="up" delay={0.4}>
+            <FadeIn direction="up" delay={0.3}>
             <p className="text-black dark:text-white mb-6 text-md ">
               Ready to attract more clients, increase traffic to your website,
               and grow your online presence? BizGrow Digital provides

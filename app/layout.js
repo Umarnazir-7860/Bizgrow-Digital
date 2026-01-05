@@ -28,7 +28,7 @@ export const metadata = {
 // app/layout.tsx
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}suppressHydrationWarning>
       {/* overflow-x-hidden yahan se hata dein */}
       <body className="font-sans bg-white text-black antialiased overflow-x-clip">
         <Providers>
