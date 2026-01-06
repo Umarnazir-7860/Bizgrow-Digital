@@ -16,27 +16,26 @@ import {
 const Footer = () => {
   const importantLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Services", href: "/our-digital-services" },
     { name: "Blog", href: "/blog" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact Us", href: "/contact" },
+   
+    { name: "Contact Us", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms" },
   ];
 
   const servicesLinks = [
-    { name: "Creative Content", href: "/services/creative-content" },
-    { name: "Email Marketing", href: "/services/creative-content/email-marketing" },
-    { name: "Lead Generation", href: "/services/creative-content/lead-generation" },
-    { name: "WordPress", href: "/services/creative-content/wordpress" },
-    { name: "Digital Marketing", href: "/services/digital-marketing" },
-    { name: "Facebook Marketing", href: "/services/digital-marketing/facebook" },
-    { name: "Social Media Marketing", href: "/services/digital-marketing/social-media" },
-    { name: "Website Development", href: "/services/web-development" },
-    { name: "Graphic Design", href: "/services/graphic-design" },
-    { name: "Search Engine Optimisation", href: "/services/seo/search-engine-optimisation" },
+    { name: "Creative Content", href: "/creative-content" },
+    { name: "Email Marketing", href: "/email-marketing" },
+    { name: "Lead Generation", href: "/lead-generation-solutions" },
+    { name: "WordPress", href: "/wordpress-website" },
+    { name: "Digital Marketing", href: "/digital-marketing-services" },
+    { name: "Facebook Marketing", href: "/facebook-marketing-services" },
+    { name: "Social Media Marketing", href: "/social-media-marketing" },
+    { name: "Website Development", href: "/web-development" },
+    { name: "Graphic Design", href: "/graphic-design-services" },
+    { name: "Search Engine Optimisation", href: "/search-engine-optimisation" },
   ];
 
   const socialMedia = [

@@ -129,6 +129,7 @@ export default function Navbar() {
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => setOpen(false)}
             >
+              <Link href="/our-digital-services">
               <button className="flex items-center gap-1 text-orange-500 outline-none">
                 Services
                 <svg
@@ -147,6 +148,7 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
+              </Link>
               <AnimatePresence>
                 {open && (
                   <motion.div
