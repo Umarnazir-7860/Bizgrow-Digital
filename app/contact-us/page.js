@@ -9,15 +9,15 @@ const ContactPage = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      details: "+92 300 1234567",
-      desc: "Mon-Fri from 9am to 6pm.",
+      details: "+44 7903 332433 / 020 8090 4209",
+      desc: "Mon-Fri from 9am to 5pm.",
       bgColor: "bg-orange-100",
       iconColor: "text-[#B54118]",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: "hello@bizgrow.com",
+      details: "Info@bizgrow-digital.co.uk",
       desc: "We respond within 24 hours.",
       bgColor: "bg-blue-100",
       iconColor: "text-blue-600",
@@ -25,7 +25,7 @@ const ContactPage = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
-      details: "Lahore, Punjab, Pakistan",
+      details: "CEME Campus, Marsh Way, RM13 8EU",
       desc: "Come say hello at our office.",
       bgColor: "bg-green-100",
       iconColor: "text-green-600",

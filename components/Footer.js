@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaFacebookF,
-  FaTwitter,
+  FaTiktok,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
@@ -19,7 +19,7 @@ const Footer = () => {
     { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/our-digital-services" },
     { name: "Blog", href: "/blog" },
-   
+
     { name: "Contact Us", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms" },
@@ -39,11 +39,11 @@ const Footer = () => {
   ];
 
   const socialMedia = [
-    { Icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
-    { Icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+    { Icon: FaFacebookF, href: "https://www.facebook.com/profile.php?id=61577206013332", label: "Facebook" },
+    { Icon: FaTiktok, href: "https://www.tiktok.com/@bizgrowholdings", label: "TikTok" },
     { Icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
-    { Icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-    { Icon: FaYoutube, href: "https://youtube.com", label: "YouTube" },
+    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/bizgrowdigital/posts/?feedView=all", label: "LinkedIn" },
+    { Icon: FaYoutube, href: "https://www.youtube.com/@bizgrowholdings/featured", label: "YouTube" },
   ];
 
   return (
@@ -59,7 +59,12 @@ const Footer = () => {
             className="mb-4 rounded-xl"
           />
           <p className="text-sm leading-relaxed mb-4">
-            <span className="font-bold">BizGrow Digital</span> is a results-driven digital solutions company committed to helping businesses grow online. Guided by our mission “Empowering Brands for the Digital Era,” we equip businesses with modern web development, data-driven marketing strategies, and creative design solutions to achieve measurable growth and lasting impact.
+            <span className="font-bold">BizGrow Digital</span> is a
+            results-driven digital solutions company committed to helping
+            businesses grow online. Guided by our mission “Empowering Brands for
+            the Digital Era,” we equip businesses with modern web development,
+            data-driven marketing strategies, and creative design solutions to
+            achieve measurable growth and lasting impact.
           </p>
           <p className="text-base font-extrabold text-[#B54118] mt-6">
             BIZGROW DIGITAL
@@ -72,7 +77,10 @@ const Footer = () => {
           <ul className="space-y-2 text-md">
             {importantLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="hover:text-[#B54118] transition duration-200">
+                <Link
+                  href={link.href}
+                  className="hover:text-[#B54118] transition duration-200"
+                >
                   {link.name}
                 </Link>
               </li>
@@ -86,7 +94,10 @@ const Footer = () => {
           <ul className="space-y-2 text-md">
             {servicesLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="hover:text-[#B54118] transition duration-200">
+                <Link
+                  href={link.href}
+                  className="hover:text-[#B54118] transition duration-200"
+                >
                   {link.name}
                 </Link>
               </li>
@@ -95,20 +106,22 @@ const Footer = () => {
         </div>
 
         {/* Column 4: Contact + Map + Social */}
-        <div >
+        <div>
           <h3 className="text-lg font-bold mb-4">Contact Us:</h3>
           <div className="space-y-3 mb-6 text-sm">
             <p className="flex items-center font-bold">
               <FaPhoneAlt className="mr-2 text-2xl text-[#B54118] min-w-[1rem]" />
-              +44 7903 332433 <br/> 020 8090 4209 
+              +44 7903 332433 <br /> 020 8090 4209
             </p>
             <p className="flex items-center font-bold">
               <FaEnvelope className="mr-2 text-[#B54118] min-w-[1rem]" />
-              <a href="mailto:info@iccs.uk" className="hover:text-[#FEDB01]">Info@bizgrow-digital.co.uk</a>
+              <a href="mailto:info@iccs.uk" className="hover:text-[#FEDB01]">
+                Info@bizgrow-digital.co.uk
+              </a>
             </p>
             <p className="flex items-start font-bold">
               <FaMapMarkerAlt className="mr-2 text-[#B54118] mt-1 min-w-[1rem]" />
-              7 Bernard Road, RM7 0HX Romford, London, United Kingdom
+              CEME Campus, Marsh Way, RM13 8EU
             </p>
           </div>
 
