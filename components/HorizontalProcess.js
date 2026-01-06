@@ -26,8 +26,8 @@ const HorizontalProcess = () => {
     restDelta: 0.001
   });
 
-  const inputRange = [0, 0.05, 0.2, 0.4, 0.55, 0.75, 0.85, 1];
-  const outputRange = ["0vw", "0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw"];
+  const inputRange = [0, 0.05, 0.2, 0.4, 0.55, 0.75, 0.85, 1,0];
+  const outputRange = ["0vw", "0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw","0vw"];
 
   const x = useTransform(smoothProgress, inputRange, outputRange);
 

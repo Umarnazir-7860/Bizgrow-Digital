@@ -41,7 +41,7 @@ const Footer = () => {
   const socialMedia = [
     { Icon: FaFacebookF, href: "https://www.facebook.com/profile.php?id=61577206013332", label: "Facebook" },
     { Icon: FaTiktok, href: "https://www.tiktok.com/@bizgrowholdings", label: "TikTok" },
-    { Icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
+    { Icon: FaInstagram, href: "https://www.instagram.com/bizgrowdigital_uk/", label: "Instagram" },
     { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/bizgrowdigital/posts/?feedView=all", label: "LinkedIn" },
     { Icon: FaYoutube, href: "https://www.youtube.com/@bizgrowholdings/featured", label: "YouTube" },
   ];
