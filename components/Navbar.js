@@ -41,19 +41,19 @@ export default function Navbar() {
     {
       title: "Creative Content",
       description: "Brand storytelling & visuals",
-      href: "/our-digital-services/creative-content",
+      href: "/creative-content",
       icon: <FaPaintBrush />,
     },
     {
       title: "Email Marketing",
       description: "High-converting email campaigns",
-      href: "/our-digital-services/email-marketing",
+      href: "/email-marketing",
       icon: <FaEnvelope />,
     },
     {
       title: "Lead Generation",
       description: "Sales-focused strategies",
-      href: "/our-digital-services/lead-generation-solutions",
+      href: "/lead-generation-solutions",
       icon: <FaChartLine />,
     },
     {
