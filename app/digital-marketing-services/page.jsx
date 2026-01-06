@@ -16,22 +16,22 @@ const DigitalMarketingPage = () => {
   const marketingServices = [
     {
       title: "Search Engine Optimization",
-      desc: "Hum aapki website ko Google ke top results mein laate hain taake organic traffic aur sales mein izafa ho.",
+      desc: "We propel your website to the top of Google search results to significantly increase organic traffic and boost sales.",
       icon: <Search className="w-8 h-8" />,
     },
     {
       title: "Pay-Per-Click (PPC)",
-      desc: "Instant results ke liye targeted Ads (Google & Meta) jo aapki ROI ko maximize karte hain.",
+      desc: "Achieve instant results with targeted Ads on Google and Meta platforms designed to maximize your ROI.",
       icon: <MousePointerClick className="w-8 h-8" />,
     },
     {
       title: "Social Media Strategy",
-      desc: "Aapke brand ki voice ko social platforms par itna strong banana ke log engagement par majboor ho jayein.",
+      desc: "Strengthening your brand voice across social platforms to spark meaningful engagement and build a loyal community.",
       icon: <Share2 className="w-8 h-8" />,
     },
     {
       title: "Content Marketing",
-      desc: "Value-driven content jo trust build karta hai aur cold audience ko loyal customers mein convert karta hai.",
+      desc: "Value-driven content that builds authority, establishes trust, and converts cold audiences into repeat customers.",
       icon: <BarChart3 className="w-8 h-8" />,
     },
   ];
@@ -59,8 +59,8 @@ const DigitalMarketingPage = () => {
               Redefined
             </h1>
             <p className="text-gray-300 text-base md:text-lg lg:text-xl max-w-2xl mb-10 mx-auto px-4 font-light">
-              Hum sirf campaigns nahi chalate, hum aapke brand ko ek digital power-house banate hain. 
-              Data-driven strategies jo measurable results deliver karti hain.
+              We don't just run campaigns; we build your brand into a digital powerhouse. 
+              Our data-driven strategies deliver real, measurable results every time.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-8 md:px-12 py-4 rounded-full font-bold hover:scale-105 transition-all text-sm md:text-base uppercase tracking-widest shadow-xl">
@@ -138,7 +138,7 @@ const DigitalMarketingPage = () => {
           <FadeIn direction="up" delay={0.4}>
             <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light px-4">
               Stop guessing. Start growing. Let's create a marketing strategy that 
-              actually pays for itself through massive growth and sales.
+              actually pays for itself through massive growth and increased sales.
             </p>
           </FadeIn>
 

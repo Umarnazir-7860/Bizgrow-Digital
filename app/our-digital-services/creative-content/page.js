@@ -122,7 +122,7 @@ const CreativeContentPage = () => {
           <FadeIn direction="right" delay={0.3}>
             <div className="relative h-[400px] md:h-[600px] w-full rounded-[3rem] overflow-hidden">
               <Image 
-                src="/download (8).jpg" 
+                src="/download (8).png" 
                 alt="Creative Workflow" 
                 fill 
                 className="object-center"

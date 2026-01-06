@@ -16,22 +16,22 @@ const FacebookMarketingPage = () => {
   const fbFeatures = [
     {
       title: "Precision Targeting",
-      desc: "Hum aapke ads unhi logon ko dikhate hain jo aapki product kharidne ka 90% irada rakhte hain.",
+      desc: "We place your ads in front of the specific audience segments that have a 90% higher intent to purchase your product.",
       icon: <Target className="w-8 h-8" />,
     },
     {
       title: "Retargeting Campaigns",
-      desc: "Jo log aapki site dekh kar chale gaye, hum unhein Facebook par dobara dhoond kar wapas laate hain.",
+      desc: "We track visitors who left your site and bring them back through strategic Facebook reminders to complete their purchase.",
       icon: <Users className="w-8 h-8" />,
     },
     {
       title: "Creative Ad Copies",
-      desc: "Aisi visuals aur captions jo scrolling ko rok dein aur click par majboor kar dein.",
+      desc: "Engineered visuals and high-converting captions designed to stop the scroll and compel users to click.",
       icon: <PieChart className="w-8 h-8" />,
     },
     {
       title: "Messenger Marketing",
-      desc: "Chatbots aur direct messages ke zariye leads ko real-time mein customers mein badalna.",
+      desc: "Leveraging intelligent chatbots and direct messaging to convert leads into loyal customers in real-time.",
       icon: <MessageSquare className="w-8 h-8" />,
     },
   ];
@@ -60,8 +60,8 @@ const FacebookMarketingPage = () => {
               <span className="text-orange-500 text-glow">Social Algorithm</span>
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-2xl mb-10 mx-auto px-4 font-light">
-              Facebook marketing sirf 'Post Boost' ka naam nahi. Hum data-backed Meta strategies 
-              banate hain jo aapke brand ko social media ka leader banati hain.
+              Facebook marketing is more than just a 'Post Boost.' We engineer data-backed 
+              Meta strategies that position your brand as a social media industry leader.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
@@ -108,9 +108,9 @@ const FacebookMarketingPage = () => {
               </h2>
               <div className="space-y-6">
                 {[
-                  { step: "01", t: "Awareness", d: "Aapke brand ko un logon tak pohnchana jo aapko nahi jante." },
-                  { step: "02", t: "Engagement", d: "Interaction barhana taake log aapke brand par trust karein." },
-                  { step: "03", t: "Conversion", d: "Final push taake wo lead aapka pakka customer ban jaye." }
+                  { step: "01", t: "Awareness", d: "Scaling your brand reach to high-potential audiences who aren't yet familiar with your business." },
+                  { step: "02", t: "Engagement", d: "Driving meaningful interactions to build authority and foster deep brand trust." },
+                  { step: "03", t: "Conversion", d: "The final strategic push that transforms a warm lead into a committed customer." }
                 ].map((s, i) => (
                   <div key={i} className="flex gap-6 items-start group">
                     <span className="text-3xl font-black text-white/20 group-hover:text-orange-500 transition-colors">{s.step}</span>
@@ -127,7 +127,7 @@ const FacebookMarketingPage = () => {
                 src="/award-winning.jpg" 
                 alt="Marketing Funnel" 
                 fill 
-                className="object-cover  transition-all duration-700"
+                className="object-cover transition-all duration-700"
                />
             </div>
           </div>
@@ -147,8 +147,8 @@ const FacebookMarketingPage = () => {
               <span className="text-orange-500">Start Dominating.</span>
             </h2>
             <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light px-4">
-              Don't waste your budget on empty likes. Let's build a Facebook 
-              marketing machine that generates real revenue for your business.
+              Don't waste your budget on vanity metrics like empty likes. Let's build a Facebook 
+              marketing machine that generates real, sustainable revenue for your business.
             </p>
             <Link href="/contact-us">
               <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg uppercase tracking-widest">
