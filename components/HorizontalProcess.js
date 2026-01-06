@@ -51,7 +51,7 @@ const HorizontalProcess = () => {
       <div className={`${isMobile ? 'relative' : 'sticky top-0 h-screen w-full flex items-center overflow-hidden'}`}>
         
         {/* --- MAIN HEADING --- */}
-        <div className={`${isMobile ? 'relative mb-12' : 'absolute top-10 left-0 w-full z-20 pointer-events-none'}`}>
+        <div className={`${isMobile ? 'relative mb-12' : 'absolute top-17 left-0 w-full z-20 pointer-events-none'}`}>
           <motion.div className="text-center">
             <FadeIn direction="up" delay={0.2}>
               <h3 className="text-[#B54118] font-bold tracking-[0.5em] text-xs md:text-sm mt-5 mb-2">
