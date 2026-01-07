@@ -58,25 +58,38 @@ const EmailMarketingPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/75 flex flex-col justify-center items-center px-6">
-          <FadeIn direction="up" delay={0.2}>
-            <span className="text-orange-500 font-bold tracking-[0.4em] uppercase text-xs md:text-sm mb-4 block text-center">
-              Direct-to-Consumer Growth
-            </span>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-            <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-tight">
-              Turn Your Inbox Into A <br />
-              <span className="text-orange-500">Revenue Engine</span>
-            </h1>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.6}>
-            <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
-              Don't just send emails. Build relationships and drive sales with 
-              highly personalized, automated email marketing campaigns.
-            </p>
-          </FadeIn>
-        </div>
+     <div className="absolute inset-0 w-full bg-black/75 flex flex-col justify-center items-center px-6">
+  
+  {/* Row 1: Label */}
+  <FadeIn direction="up" delay={0.2}>
+    <div className="w-full flex justify-center">
+      <span className="text-orange-500 font-bold tracking-[0.4em] uppercase text-xs md:text-sm mb-4 block text-center">
+        Direct-to-Consumer Growth
+      </span>
+    </div>
+  </FadeIn>
+
+  {/* Row 2: Heading */}
+  <FadeIn direction="up" delay={0.4}>
+    <div className="w-full flex justify-center">
+      <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-tight">
+        Turn Your Inbox Into A <br />
+        <span className="text-orange-500">Revenue Engine</span>
+      </h1>
+    </div>
+  </FadeIn>
+
+  {/* Row 3: Paragraph */}
+  <FadeIn direction="up" delay={0.6}>
+    <div className="w-full flex justify-center">
+      <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
+        Don't just send emails. Build relationships and drive sales with 
+        highly personalized, automated email marketing campaigns.
+      </p>
+    </div>
+  </FadeIn>
+  
+</div>
       </div>
 
       {/* --- CORE FEATURES GRID --- */}

@@ -112,6 +112,7 @@ export default function Navbar() {
               width={110}
               height={40}
               priority
+              style={{ height: 'auto', width: 'auto'}}
             />
           </Link>
 
@@ -206,7 +207,7 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden text-white text-2xl"
+              className="lg:hidden text-white text-2xl mx-4"
             >
               {mobileOpen ? "✕" : "☰"}
             </button>

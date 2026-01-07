@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { 
-  Target, 
-  Magnet, 
-  Filter, 
-  LineChart, 
-  CheckCircle2, 
+import {
+  Target,
+  Magnet,
+  Filter,
+  LineChart,
+  CheckCircle2,
   Globe,
-  Zap
+  Zap,
 } from "lucide-react";
 import HorizontalProcess from "@components/HorizontalProcess";
 import ShapeChangeSection from "@components/test";
@@ -58,23 +58,33 @@ const LeadGenerationPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/75 flex flex-col justify-center items-center px-6">
-          <FadeIn direction="up" delay={0.2}>
-            <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block text-center">
-              Scalable Growth Engines
-            </span>
+        <div className="absolute inset-0 w-full bg-black/75 flex flex-col justify-center items-center px-6">
+          {/* 🔹 FIX: Har element ko 'w-full flex justify-center' wale div mein wrap kiya gaya hai */}
+          <FadeIn direction="up" delay={0.2} className="w-full">
+            <div className="w-full flex justify-center">
+              <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block text-center">
+                Scalable Growth Engines
+              </span>
+            </div>
           </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-            <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-[1.1]">
-              Fuel Your Sales Pipe with <br />
-              <span className="text-orange-500">Qualified Leads</span>
-            </h1>
+
+          <FadeIn direction="up" delay={0.4} className="w-full">
+            <div className="w-full flex justify-center">
+              <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-[1.1]">
+                Fuel Your Sales Pipe with <br />
+                <span className="text-orange-500">Qualified Leads</span>
+              </h1>
+            </div>
           </FadeIn>
-          <FadeIn direction="up" delay={0.6}>
-            <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
-              We stop the guessing game. Our data-driven lead generation strategies 
-              ensure your sales team only talks to people ready to do business.
-            </p>
+
+          <FadeIn direction="up" delay={0.6} className="w-full">
+            <div className="w-full flex justify-center">
+              <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
+                We stop the guessing game. Our data-driven lead generation
+                strategies ensure your sales team only talks to people ready to
+                do business.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </div>
@@ -87,8 +97,8 @@ const LeadGenerationPage = () => {
               A Results-First <span className="text-[#B54118]">Approach</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto mb-16">
-              Quality over quantity. We focus on leads that actually convert into 
-              revenue, not just vanity metrics.
+              Quality over quantity. We focus on leads that actually convert
+              into revenue, not just vanity metrics.
             </p>
           </FadeIn>
 
@@ -96,10 +106,14 @@ const LeadGenerationPage = () => {
             {leadServices.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.1 * index}>
                 <div className="group p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300`}>
+                  <div
+                    className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300`}
+                  >
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">{item.title}</h3>
+                  <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">
+                    {item.title}
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                     {item.desc}
                   </p>
@@ -113,7 +127,6 @@ const LeadGenerationPage = () => {
       {/* --- DATA SECTION (Lead Gen Focus) --- */}
       <section className="py-24 bg-white dark:bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
           <div className="space-y-8">
             <FadeIn direction="right" delay={0.2}>
               <h2 className="text-4xl md:text-5xl font-black dark:text-white leading-tight">
@@ -121,9 +134,9 @@ const LeadGenerationPage = () => {
                 <span className="text-orange-500">& Smart Targeting</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 pt-8 text-lg">
-                Lead generation isn't just about traffic; it's about the right traffic. 
-                We use predictive analytics to find your future customers before 
-                your competitors do.
+                Lead generation isn't just about traffic; it's about the right
+                traffic. We use predictive analytics to find your future
+                customers before your competitors do.
               </p>
             </FadeIn>
 
@@ -132,11 +145,13 @@ const LeadGenerationPage = () => {
                 "Targeted LinkedIn Outreach",
                 "High-Intent Google Ads",
                 "Custom Landing Pages",
-                "CRM Integration & Tracking"
+                "CRM Integration & Tracking",
               ].map((feature, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="text-[#B54118] w-5 h-5" />
-                  <span className="font-semibold dark:text-gray-200">{feature}</span>
+                  <span className="font-semibold dark:text-gray-200">
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
@@ -144,10 +159,10 @@ const LeadGenerationPage = () => {
 
           <FadeIn direction="left" delay={0.4}>
             <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-slate-800">
-              <Image 
+              <Image
                 src="/lead-generation.jpg" // Suggestion: Screenshot of a lead dashboard or growth chart
-                alt="Lead Generation Results" 
-                fill 
+                alt="Lead Generation Results"
+                fill
                 className="object-cover"
               />
             </div>
@@ -172,8 +187,9 @@ const LeadGenerationPage = () => {
             <span className="text-orange-500">Sales Pipeline?</span>
           </h2>
           <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light">
-            Stop waiting for customers to find you. Let us build a proactive 
-            system that delivers consistent, high-quality leads every single day.
+            Stop waiting for customers to find you. Let us build a proactive
+            system that delivers consistent, high-quality leads every single
+            day.
           </p>
           <Link href="/contact-us">
             <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">

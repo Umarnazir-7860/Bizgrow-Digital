@@ -13,49 +13,57 @@ import {
 export default function AboutPage() {
   return (
     <main className="w-full">
-      {/* Hero Section */}
-      <section className="relative h-screen">
-        <Image
-          src="/about-hero.jpg"
-          fill
-          className="object-cover"
-          alt="About BizGrow Digital"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
-          <FadeIn direction="up" delay={0.2}>
-          <h1 className="text-white text-4xl md:text-6xl mt-20 font-serif font-bold mb-4">
-            About BizGrow Digital
-          </h1>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-          <p className="text-white text-lg md:text-xl max-w-2xl">
-            We are committed to helping businesses grow online with innovative
-            digital solutions, creative design, and data-driven marketing
-            strategies.
-          </p>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.6}>
-          <Link href="/services">
-            <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
-              Explore Our Services →
-            </button>
-          </Link>
-          </FadeIn>
-        </div>
-      </section>
+     {/* Hero Section */}
+<section className="relative h-screen w-full">
+  <Image
+    src="/about-hero.jpg"
+    fill
+    className="object-cover"
+    alt="About BizGrow Digital"
+    priority
+  />
+  
+  {/* 🔹 FIX: 'inset-0' aur 'w-full' add kiya taake content poori screen ke hisab se center ho */}
+  <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
+    
+    <FadeIn direction="up" delay={0.2}>
+      <h1 className="text-white text-4xl md:text-6xl mt-20 font-serif font-bold mb-4">
+        About BizGrow Digital
+      </h1>
+    </FadeIn>
+
+    <FadeIn direction="up" delay={0.4}>
+      {/* 🔹 FIX: 'mx-auto' add kiya taake max-width ke sath text center mein hi rahe */}
+      <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+        We are committed to helping businesses grow online with innovative
+        digital solutions, creative design, and data-driven marketing
+        strategies.
+      </p>
+    </FadeIn>
+
+    <FadeIn direction="up" delay={0.6}>
+      <Link href="/services">
+        <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
+          Explore Our Services →
+        </button>
+      </Link>
+    </FadeIn>
+    
+  </div>
+</section>F
 
       {/* Overview Section */}
-      <div className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8">
+      <div className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2
+       dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8">
         {/* Text */}
-        <div className="w-full lg:w-1/2 py-5 md:py-10 md:ml-8 flex flex-col space-y-3">
+        <div className="w-full lg:w-1/2 py-5 md:py-10  flex flex-col space-y-3">
         <FadeIn direction="right" delay={0.2}>
-          <h1 className="text-3xl md:text-5xl font-bold text-[#B54118]">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#B54118]">
             Who We Are
           </h1>
           </FadeIn>
           <FadeIn direction="right" delay={0.4}>
-          <p className="text-gray-700 dark:text-white text-md md:text-md">
+          <p className="text-gray-700 dark:text-white text-lg mr-2 md:text-md">
             "We are a passionate and dedicated team of professionals committed
             to delivering innovative solutions that empower businesses to grow,
             adapt, and succeed in today’s fast-paced world. At the core of our

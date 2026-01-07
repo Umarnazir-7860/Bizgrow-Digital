@@ -2,19 +2,22 @@
 @variant dark (&:where(.dark, .dark *));
 
 /* Branding colors */
+/* Forcefully prevent horizontal scroll and white space */
 :root {
-  --color-primary: #B54118;   /* Warm Rust Orange */
-  --color-secondary: #000B25; /* Deep Navy Blue */
+  overflow-x: clip;
 }
-/* globals.css */
 
+
+/* globals.css */
 html, body {
-  /* overflow-x: hidden sticky ko break karta hai, isliye 'clip' use karein */
-  overflow-x: clip ; 
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* hidden ya clip dono use karein */
+  overflow-y: auto;
   position: relative;
-  height: auto;
-  /* Scrollbar ki wajah se navbar ko hilne se rokne ke liye */
-  scrollbar-gutter: stable;
+  /* 🔹 Ye line body ko side par hilne se rok degi */
+  touch-action: pan-y; 
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Navbar shifting fix */

@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative w-full h-screen">
         <Image
           src="/admin-ajax.jpg"
           fill
@@ -16,14 +16,14 @@ const HomePage = () => {
           priority
           alt="Hero Background"
         />
-        <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up" delay={0.2}>
-          <h1 className="text-white text-3xl md:text-6xl mt-30 font-serif font-bold md:leading-[4rem]">
+          <h1 className="text-white text-3xl md:text-5xl mt-20 font-serif font-bold md:leading-[4rem]">
             Smart Digital Solutions <br /> That Grow Your Business
           </h1>
           </FadeIn>
           <FadeIn direction="up"delay={0.4}>
-          <p className="mt-6 text-white max-w-2xl  md:text-xl">
+          <p className="mt-6 text-white max-w-2xl mx-auto text-sm md:text-lg">
             We help businesses increase visibility, attract quality leads, and
             scale online through modern web development, SEO, and data-driven
             digital marketing.
@@ -40,12 +40,13 @@ const HomePage = () => {
       </section>
 
       {/* Feature Section: Left Text, Right Image */}
-      <section className="py-20 bg-gray-50 dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="py-10 bg-gray-50 dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 
+      px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
           {/* Left Text */}
           <div>
             <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-3xl md:text-5xl font-bold  dark:text-white text-[#000B25] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold  dark:text-white text-[#000B25] mb-6">
               Boost Your Online Presence with{" "}
               <span className="text-[#B54118]">BizGrow</span> <br />
               <span className="text-3xl md:text-5xl font-bold text-[#B54118]">
@@ -54,7 +55,7 @@ const HomePage = () => {
             </h2>
             </FadeIn>
             <FadeIn direction="up" delay={0.3}>
-            <p className="text-black dark:text-white mb-6 text-md ">
+            <p className="text-black dark:text-white mb-6 text-sm ">
               Ready to attract more clients, increase traffic to your website,
               and grow your online presence? BizGrow Digital provides
               results-driven digital marketing that enables your business to
@@ -71,7 +72,8 @@ const HomePage = () => {
             </FadeIn>
 
             <Link href="/services">
-              <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
+              <button className="px-4 py-4 bg-[#B54118] text-white font-semibold rounded-xl 
+              hover:scale-105 transition">
                 Learn More About Our Services →
               </button>
             </Link>
@@ -97,7 +99,7 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-100 dark:bg-black text-center px-4">
+      <section className="py-20 bg-gray-100 dark:bg-black text-center px-6">
        <FadeIn direction="up" delay={0.2}>
        <h2 className="text-3xl md:text-5xl font-bold text-[#B54118] mb-6">
           Why Choose BizGrow Digital
@@ -110,7 +112,7 @@ const HomePage = () => {
           growth for your business.
         </p>
         </FadeIn>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl  md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-[#B54118] p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
             <h3 className="text-xl dark:text-white font-semibold mb-2">Strategy-First</h3>
             <p className="text-gray-600 dark:text-white">

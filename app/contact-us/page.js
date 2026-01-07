@@ -60,9 +60,11 @@ const ContactPage = () => {
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>
+            <div className="w-full flex justify-center">
             <p className="text-gray-200 text-lg md:text-xl text-center mt-4 max-w-2xl font-light" style={{ transform: 'translateZ(0)' }}>
               Have a project in mind? Reach out to us and let’s build something incredible together.
             </p>
+            </div>
           </FadeIn>
         </div>
       </div>

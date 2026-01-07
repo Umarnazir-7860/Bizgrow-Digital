@@ -1,12 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { 
-  PenTool, 
-  Video, 
-  Layers, 
-  Target, 
-  CheckCircle2 
-} from "lucide-react";
+import { PenTool, Video, Layers, Target, CheckCircle2 } from "lucide-react";
 import HorizontalProcess from "@components/HorizontalProcess";
 import ShapeChangeSection from "@components/test";
 import VShapeTransition from "@components/test2";
@@ -48,7 +42,7 @@ const CreativeContentPage = () => {
   return (
     <section className="relative w-full">
       {/* --- HERO SECTION --- */}
-      <div className="relative h-[100vh] md:h-screen w-full">
+      <div className="relative  md:h-screen w-full">
         <Image
           src="/creative-content-hero.jpg"
           alt="Creative Content Services"
@@ -56,24 +50,34 @@ const CreativeContentPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70 flex flex-col pt-12 justify-center items-center px-6">
+        <div className="absolute inset-0 w-full mx-auto bg-black/70 flex flex-col pt-12 justify-center items-center px-6">
           <FadeIn direction="up" delay={0.2}>
-            <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block text-center">
-              Creative Excellence
-            </span>
+            {/* 🔹 FIX: Wrapper div inside FadeIn to force centering */}
+            <div className="w-full flex flex-col items-center">
+              <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block text-center">
+                Creative Excellence
+              </span>
+            </div>
           </FadeIn>
+
           <FadeIn direction="up" delay={0.4}>
-            <h1 className="text-white text-5xl md:text-7xl text-center font-bold max-w-4xl 
-            leading-tight">
-              Words & Visuals That <br />
-              <span className="text-orange-500  text-3xl">Command Attention</span>
-            </h1>
+            <div className="w-full flex flex-col items-center">
+              <h1 className="text-white text-5xl md:text-7xl text-center font-bold max-w-4xl leading-tight">
+                Words & Visuals That <br />
+                <span className="text-orange-500 text-4xl">
+                  Command Attention
+                </span>
+              </h1>
+            </div>
           </FadeIn>
+
           <FadeIn direction="up" delay={0.6}>
-            <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-6">
-              We don't just produce content; we engineer experiences that 
-              elevate your brand's market authority and global reach.
-            </p>
+            <div className="w-full flex flex-col items-center">
+              <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-6">
+                We don't just produce content; we engineer experiences that
+                elevate your brand's market authority and global reach.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </div>
@@ -92,8 +96,9 @@ const CreativeContentPage = () => {
             </div>
             <FadeIn direction="up" delay={0.4}>
               <p className="text-gray-600 dark:text-gray-400 text-lg text-center max-w-xl">
-                Your content is your digital handshake. We ensure every pixel 
-                and every word serves a purpose in achieving your business goals.
+                Your content is your digital handshake. We ensure every pixel
+                and every word serves a purpose in achieving your business
+                goals.
               </p>
             </FadeIn>
           </div>
@@ -102,10 +107,14 @@ const CreativeContentPage = () => {
             {contentFeatures.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.2 * index}>
                 <div className="group p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-white/5 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                  <div className={`w-14 h-14 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:rotate-6`}>
+                  <div
+                    className={`w-14 h-14 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:rotate-6`}
+                  >
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold dark:text-white mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold dark:text-white mb-3">
+                    {item.title}
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                     {item.desc}
                   </p>
@@ -121,15 +130,15 @@ const CreativeContentPage = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:flex-row gap-16 items-center">
           <FadeIn direction="right" delay={0.3}>
             <div className="relative h-[400px] md:h-[600px] w-full rounded-[3rem] overflow-hidden">
-              <Image 
-                src="/download (8).png" 
-                alt="Creative Workflow" 
-                fill 
+              <Image
+                src="/download (8).png"
+                alt="Creative Workflow"
+                fill
                 className="object-center"
               />
             </div>
           </FadeIn>
-          
+
           <div className="space-y-8">
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl font-black dark:text-white leading-tight">
@@ -137,23 +146,25 @@ const CreativeContentPage = () => {
                 <span className="text-orange-500">Creative Strategy?</span>
               </h2>
             </FadeIn>
-            
+
             <div className="space-y-6">
               {[
                 "Conversion-Focused Copywriting",
                 "Trending Visual Styles & Aesthetics",
                 "SEO-Optimized Editorial Content",
-                "Platform-Specific Format Optimization"
+                "Platform-Specific Format Optimization",
               ].map((text, i) => (
                 <FadeIn key={i} direction="up" delay={0.1 * i}>
                   <div className="flex items-center gap-4">
                     <CheckCircle2 className="text-[#B54118] w-6 h-6 flex-shrink-0" />
-                    <p className="text-lg font-medium dark:text-gray-200">{text}</p>
+                    <p className="text-lg font-medium dark:text-gray-200">
+                      {text}
+                    </p>
                   </div>
                 </FadeIn>
               ))}
             </div>
-            
+
             <FadeIn direction="up" delay={0.6}>
               <Link href="/contact-us">
                 <button className="bg-black dark:bg-white dark:text-black text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#B54118] dark:hover:bg-[#B54118] dark:hover:text-white transition-all">
@@ -164,8 +175,6 @@ const CreativeContentPage = () => {
           </div>
         </div>
       </section>
-
-     
 
       {/* CTA Section */}
       <section
@@ -182,8 +191,8 @@ const CreativeContentPage = () => {
           </FadeIn>
           <FadeIn direction="up" delay={0.4}>
             <p className="mx-auto mb-10 text-lg text-gray-300 max-w-2xl">
-              Ready to give your brand the creative edge it deserves? 
-              Your dream project is just one conversation away.
+              Ready to give your brand the creative edge it deserves? Your dream
+              project is just one conversation away.
             </p>
           </FadeIn>
           <Link href="/contact-us">
