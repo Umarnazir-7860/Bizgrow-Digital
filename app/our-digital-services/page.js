@@ -71,7 +71,7 @@ const page = () => {
     // Main Section: Isay py-20 ki zarurat Hero mein nahi hoti agar aap h-screen use kar rahe hain
     <section className="relative w-full">
       {/* Hero Container */}
-      <div className="relative  h-screen w-full">
+      <div className="relative  h-[85vh] md:h-screen w-full">
         {/* Background Image */}
         <Image
           src="/services-hero.jpg"

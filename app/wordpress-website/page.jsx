@@ -15,7 +15,7 @@ const WordPressPage = () => {
   return (
     <section className="w-full bg-white dark:bg-[#020817]">
       {/* --- HERO: Fixed Centering --- */}
-      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/Laptop mockup.jpg"
           alt="WordPress Development"
@@ -57,7 +57,7 @@ const WordPressPage = () => {
       </div>
 
       {/* --- NEW SECTION: The "Not Just a Theme" Grid --- */}
-      <div className="py-24 max-w-7xl mx-auto px-6">
+      <div className="py-14 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-black dark:text-white mb-6">

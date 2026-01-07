@@ -72,7 +72,7 @@ const DigitalMarketingPage = () => {
       </div>
 
       {/* --- UNIQUE SECTION: Floating Services Grid --- */}
-      <div className="py-20 md:py-32 max-w-7xl mx-auto px-6">
+      <div className="py-10 md:py-32 max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black dark:text-white uppercase mb-6">
             Our <span className="text-orange-500">Marketing</span> Arsenal

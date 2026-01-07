@@ -45,7 +45,7 @@ const ContactPage = () => {
   return (
     <section className="relative w-full bg-gray-50 antialiased">
       {/* --- HERO SECTION --- */}
-      <div className="relative h-screen w-full">
+      <div className="relative h-[75vh] md:h-screen w-full">
         <Image
           src="/contact-us-hero.jpg"
           alt="Contact Hero"

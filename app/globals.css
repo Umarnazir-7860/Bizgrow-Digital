@@ -3,9 +3,7 @@
 
 /* Branding colors */
 /* Forcefully prevent horizontal scroll and white space */
-:root {
-  overflow-x: clip;
-}
+
 
 
 /* globals.css */

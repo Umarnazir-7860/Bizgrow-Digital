@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <main className="w-full">
      {/* Hero Section */}
-<section className="relative h-screen w-full">
+<section className="relative h-[75vh] md:h-screen w-full">
   <Image
     src="/about-hero.jpg"
     fill

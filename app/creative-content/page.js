@@ -42,7 +42,7 @@ const CreativeContentPage = () => {
   return (
     <section className="relative w-full">
       {/* --- HERO SECTION --- */}
-      <div className="relative  md:h-screen w-full">
+      <div className="relative  h-[75vh] md:h-screen w-full">
         <Image
           src="/creative-content-hero.jpg"
           alt="Creative Content Services"
