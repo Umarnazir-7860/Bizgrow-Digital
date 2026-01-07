@@ -95,11 +95,13 @@ const CreativeContentPage = () => {
               </FadeIn>
             </div>
             <FadeIn direction="up" delay={0.4}>
+              <div className="w-full flex justify-center">
               <p className="text-gray-600 dark:text-gray-400 text-lg text-center max-w-xl">
                 Your content is your digital handshake. We ensure every pixel
                 and every word serves a purpose in achieving your business
                 goals.
               </p>
+              </div>
             </FadeIn>
           </div>
 
