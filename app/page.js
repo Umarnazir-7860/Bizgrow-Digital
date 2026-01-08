@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full h-[75vh] md:h-screen">
+      <section className="relative w-full h-[95vh] md:h-screen">
         <Image
           src="/admin-ajax.jpg"
           fill
@@ -18,7 +18,7 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up" delay={0.2}>
-          <h1 className="text-white text-4xl md:text-5xl mt-20 font-serif font-bold md:leading-[4rem]">
+          <h1 className="text-white text-3xl md:text-5xl mt-20 font-serif font-bold md:leading-[4rem]">
             Smart Digital Solutions <br /> That Grow Your Business
           </h1>
           </FadeIn>

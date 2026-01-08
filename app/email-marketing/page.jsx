@@ -103,10 +103,12 @@ const EmailMarketingPage = () => {
               </h2>
             </FadeIn>
             <FadeIn direction="up" delay={0.4}>
+              <div className="flex justify-center">
               <p className="text-gray-600 dark:text-gray-400 text-lg text-center max-w-2xl">
                 We bridge the gap between your brand and your customers through 
                 targeted messaging that actually gets opened and clicked.
               </p>
+              </div>
             </FadeIn>
           </div>
 
@@ -166,7 +168,7 @@ const EmailMarketingPage = () => {
                 { label: "Automated Sales Funnels", icon: <Zap className="text-orange-500" /> }
               ].map((item, i) => (
                 <FadeIn key={i} direction="up" delay={0.1 * i}>
-                  <div className="flex items-center gap-5 bg-gray-50 dark:bg-slate-900/50 p-4 rounded-2xl border border-transparent hover:border-orange-500 transition-colors">
+                  <div className="flex items-center  gap-5 bg-gray-50 dark:bg-slate-900/50 p-4 rounded-2xl border border-transparent hover:border-orange-500 transition-colors">
                     {item.icon}
                     <p className="text-lg font-bold dark:text-gray-200">{item.label}</p>
                   </div>
