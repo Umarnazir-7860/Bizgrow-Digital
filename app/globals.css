@@ -47,17 +47,75 @@ nav {
   margin-bottom: 2.5rem !important; /* Proper breathing space for readers */
 }
 
-.blog-professional-content h3 {
-  font-size: 3.75rem !important; /* Sub-headings */
+.blog-content-flow h3 {
+  font-size: 2.2rem !important; /* Size barhaya gaya hai */
   font-weight: 800 !important;
   color: #12066a !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 1rem !important;
+  line-height: 1.3 !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.02em !important;
 }
 
 
 
-.blog-professional-content ul, .blog-professional-content ol {
+/* 🚀 Refined Sub-headings (H3) */
+.blog-content-flow h3 {
+  font-size: 2.2rem !important; /* Size barhaya gaya hai */
+  font-weight: 800 !important;
+  color: #12066a !important;
+  line-height: 1.3 !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 🚀 Professional Bullets & Lists */
+.blog-content-flow ul {
+  list-style-type: none !important; /* Default bullets khatam */
+  padding-left: 0 !important;
   margin-bottom: 2.5rem !important;
-  padding-left: 1.5rem !important;
+}
+
+.blog-content-flow ul li {
+  position: relative !important;
+  padding-left: 1.8rem !important;
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  color: black !important; /* Professional Gray */
+  margin-bottom: 1rem !important;
+}
+
+/* Custom Orange Bullet Point */
+.blog-content-flow ul li::before {
+  content: "•"; 
+  color: #B54118; /* Aapka brand orange color */
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Professional Numbered Lists */
+.blog-content-flow ol {
+  counter-reset: my-counter;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.blog-content-flow ol li {
+  counter-increment: my-counter;
+  position: relative !important;
+  padding-left: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.2rem !important;
+}
+
+.blog-content-flow ol li::before {
+  content: counter(my-counter) ".";
+  color: #12066a;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
 }
