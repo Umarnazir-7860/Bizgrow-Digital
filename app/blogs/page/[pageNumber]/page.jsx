@@ -19,7 +19,7 @@ export default async function BlogPaginationPage({ params }) {
   return (
     <div className="max-w-7xl mx-auto mt-10 px-4 py-16 bg-[#FDFCF9]">
        <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-tighter">
+        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-normal">
           Digital Marketing <span className="text-[#B54118]">Insights</span>
         </h1>
         <p className="text-orange-800 font-bold">Page {currentPage}</p>
