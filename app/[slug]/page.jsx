@@ -33,14 +33,14 @@ export default async function SingleBlogPost({ params }) {
           className="text-4xl md:text-6xl font-black text-[#12066a] leading-[1.1] mb-6 tracking-tighter"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }} 
         />
-        <div className="text-gray-400 font-medium">
+        <div className="text-orange-800 font-medium">
           {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
         </div>
       </header>
 
       {/* Featured Image */}
       {post.yoast_head_json?.og_image?.[0]?.url && (
-        <div className="max-w-5xl mx-auto px-4 mb-16">
+        <div className="max-w-4xl mx-auto px-4 mb-16">
           <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl
            border-4 border-white">
             <img 
