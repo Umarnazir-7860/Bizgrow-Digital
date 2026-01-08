@@ -38,7 +38,7 @@ export default async function BlogPaginationPage({ params }) {
       </div>
 
       {/* 🚀 WordPress Style Pagination Links */}
-      <nav className="flex justify-center items-center gap-4 mt-20 border-t pt-10">
+      <nav className="flex justify-center items-center gap-4 mt-6 pt-10">
         <Link href={currentPage === 2 ? "/blogs" : `/blogs/page/${currentPage - 1}/`} className="px-6 py-2 border-2 border-[#12066a] text-[#12066a] rounded-full font-bold">PREV</Link>
         
         <div className="flex gap-2">

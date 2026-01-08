@@ -21,9 +21,9 @@ export default async function BlogPage() {
   const currentPage = 1;
 
   return (
-    <div className="max-w-7xl mx-auto mt-10 px-4 py-16 bg-[#FDFCF9]">
+    <div className="max-w-7xl mx-auto mt-10 px-10 py-16 bg-[#FDFCF9]">
       <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-tighter">
+        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-normal">
           Digital Marketing <span className="text-[#B54118]">Insights</span>
         </h1>
       </header>
@@ -46,7 +46,7 @@ export default async function BlogPage() {
 
       {/* FIXED URL STRUCTURE FOR PAGE 1 */}
       {totalPages > 1 && (
-        <nav className="flex justify-center items-center gap-4 mt-20 border-t pt-10">
+        <nav className="flex justify-center items-center gap-4 mt-6  pt-10">
           <div className="flex gap-2">
             {[...Array(totalPages)].map((_, i) => (
               <Link

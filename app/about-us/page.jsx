@@ -27,7 +27,7 @@ export default function AboutPage() {
   <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
     
     <FadeIn direction="up" delay={0.2}>
-      <h1 className="text-white text-4xl md:text-6xl mt-20 font-serif font-bold mb-4">
+      <h1 className="text-white text-4xl md:text-6xl mt-20 font-bold mb-4">
         About BizGrow Digital
       </h1>
     </FadeIn>

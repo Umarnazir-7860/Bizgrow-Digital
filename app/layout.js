@@ -1,19 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Montserrat } from "next/font/google"; // Naye fonts import kiye
 import Navbar from "@components/Navbar";
 import "./globals.css";
 import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Headings ke liye Premium Font
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["700", "900"],
+  style: ['italic', 'normal'], // Italic bht unique lagta hai is style mein
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500"],
 });
+
 
 export const metadata = {
   title: "Bizgrow Digital",
@@ -24,12 +29,10 @@ export const metadata = {
   },
 };
 
-// app/layout.tsx
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}suppressHydrationWarning={true}>
-      {/* overflow-x-hidden yahan se hata dein */}
-      <body className="font-sans bg-white text-black antialiased overflow-x-clip">
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
+      <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased overflow-x-clip">
         <Providers>
           <Navbar />
           <SmoothScroll>
