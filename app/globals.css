@@ -34,28 +34,28 @@ nav {
 }
 
 /* Custom spacing for WordPress content */
-.blog-professional-content h2 {
-  font-size: 2.25rem !important; /* Large headings */
-  font-weight: 900 !important;
-  color: #12066a !important;
-  margin-top: 3.5rem !important;
-  margin-bottom: 1.5rem !important;
+.blog-content-flow h2 {
+  font-size: 2.5rem !important; /* Professional large headings */
   line-height: 1.2 !important;
+  border-left: 6px solid #B54118;
+  padding-left: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.blog-content-flow p {
+  font-size: 1.2rem !important;
+  margin-bottom: 2.5rem !important; /* Proper breathing space for readers */
 }
 
 .blog-professional-content h3 {
-  font-size: 1.75rem !important; /* Sub-headings */
+  font-size: 3.75rem !important; /* Sub-headings */
   font-weight: 800 !important;
   color: #12066a !important;
   margin-top: 2.5rem !important;
   margin-bottom: 1rem !important;
 }
 
-.blog-professional-content p {
-  margin-bottom: 2rem !important; /* Extra spacing between paragraphs */
-  line-height: 1.8 !important;
-  color: #374151 !important;
-}
+
 
 .blog-professional-content ul, .blog-professional-content ol {
   margin-bottom: 2.5rem !important;

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
+// 1. Pehle function define karna lazmi hai (Error Fix)
 async function getPost(slug) {
   try {
     const res = await fetch(`https://bizgrow-digital.co.uk/wp-json/wp/v2/posts?slug=${slug}&_embed`, {
@@ -10,36 +11,38 @@ async function getPost(slug) {
     const data = await res.json();
     return data[0]; 
   } catch (error) {
+    console.error("Fetch error:", error);
     return null;
   }
 }
 
 export default async function SingleBlogPost({ params }) {
-  const { slug } = await params;
+  const { slug } = await params; 
   const post = await getPost(slug);
 
   if (!post) return notFound();
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Reader-friendly Header */}
-      <header className="max-w-4xl mx-auto px-6 pt-16 pb-10 text-center">
+      {/* Professional Header */}
+      <header className="max-w-4xl mt-10 mx-auto px-6 pt-16 pb-10">
         <Link href="/blogs" className="text-[#B54118] font-bold text-sm tracking-widest uppercase mb-8 inline-block hover:underline">
-          ← Back to All Insights
+          ← Back to Insights
         </Link>
         <h1 
-          className="text-4xl md:text-6xl font-black text-[#12066a] leading-tight mb-6 tracking-tight"
+          className="text-4xl md:text-6xl font-black text-[#12066a] leading-[1.1] mb-6 tracking-tighter"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }} 
         />
         <div className="text-gray-400 font-medium">
-          Published on {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
         </div>
       </header>
 
-      {/* High-Impact Featured Image */}
+      {/* Featured Image */}
       {post.yoast_head_json?.og_image?.[0]?.url && (
         <div className="max-w-5xl mx-auto px-4 mb-16">
-          <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl
+           border-4 border-white">
             <img 
               src={post.yoast_head_json.og_image[0].url} 
               alt={post.title.rendered}
@@ -49,26 +52,27 @@ export default async function SingleBlogPost({ params }) {
         </div>
       )}
 
-      {/* 🚀 Professional Typography Content Area */}
+      {/* 🚀 Professional Typography & Spacing Section */}
       <article className="max-w-3xl mx-auto px-6 pb-24">
         <div 
           className="
-            /* Paragraph Spacing & Size */
-            prose-p:text-lg prose-p:leading-[1.8] prose-p:text-gray-700 prose-p:mb-10
+            /* Paragraph Spacing (As per WP Example) */
+            prose-p:text-xl prose-p:leading-[1.9] prose-p:text-gray-700 prose-p:mb-12
             
-            /* Headings Styling (WordPress H2, H3) */
-            prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:font-black prose-h2:text-[#12066a] prose-h2:mt-16 prose-h2:mb-6 prose-h2:tracking-tight
-            prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:font-extrabold prose-h3:text-[#12066a] prose-h3:mt-12 prose-h3:mb-4
+            /* Large & Bold Headings */
+            prose-h2:text-4xl prose-h2:font-black prose-h2:text-[#12066a] prose-h2:mt-20 prose-h2:mb-8 
+            prose-h2:tracking-tight prose-h3:text-2xl prose-h3:font-extrabold 
+            prose-h3:text-[#12066a] prose-h3:mt-14 m prose-h3:mb-6
             
-            /* List Styling */
-            prose-li:text-lg prose-li:text-gray-700 prose-li:mb-3
-            prose-ul:my-8 prose-ul:list-disc prose-ul:pl-6
+            /* Professional Lists */
+            prose-li:text-lg prose-li:text-gray-700 prose-li:mb-4
+            prose-ul:my-10 prose-ul:list-disc prose-ul:pl-6 mb-10
             
-            /* Links & Bold Text */
-            prose-a:text-[#B54118] prose-a:font-bold prose-a:no-underline hover:prose-a:underline
+            /* Links & Bolds */
             prose-strong:text-[#12066a] prose-strong:font-black
+            prose-a:text-[#B54118] prose-a:font-bold prose-a:underline
             
-            max-w-none blog-professional-content
+            max-w-none blog-content-flow
           "
           dangerouslySetInnerHTML={{ __html: post.content.rendered }} 
         />
