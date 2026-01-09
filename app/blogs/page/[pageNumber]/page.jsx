@@ -17,9 +17,9 @@ export default async function BlogPaginationPage({ params }) {
   const { posts, totalPages } = await getPosts(currentPage);
 
   return (
-    <div className="max-w-7xl mx-auto mt-10 px-4 py-16 bg-[#FDFCF9]">
+    <div className="max-w-7xl mx-auto mt-10 px-4 py-16 bg-[#FDFCF9] dark:bg-[#121212]">
        <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-normal">
+        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-normal">
           Digital Marketing <span className="text-[#B54118]">Insights</span>
         </h1>
         <p className="text-orange-800 font-bold">Page {currentPage}</p>
@@ -27,10 +27,10 @@ export default async function BlogPaginationPage({ params }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {posts.map((post) => (
-          <article key={post.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
+          <article key={post.id} className="bg-white dark:bg-[#000B25] rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
             <div className="relative h-56 w-full"><Image src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} alt={post.title.rendered} fill className="object-cover" /></div>
             <div className="p-8 flex flex-col flex-grow">
-              <h2 className="text-xl font-extrabold text-[#12066a] mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+              <h2 className="text-xl font-extrabold text-[#12066a] dark:text-white mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
               <Link href={`/${post.slug}`} className="mt-auto text-[#B54118] font-bold text-xs uppercase tracking-widest">Read Full Story →</Link>
             </div>
           </article>
@@ -39,7 +39,7 @@ export default async function BlogPaginationPage({ params }) {
 
       {/* 🚀 WordPress Style Pagination Links */}
       <nav className="flex justify-center items-center gap-4 mt-6 pt-10">
-        <Link href={currentPage === 2 ? "/blogs" : `/blogs/page/${currentPage - 1}/`} className="px-6 py-2 border-2 border-[#12066a] text-[#12066a] rounded-full font-bold">PREV</Link>
+        <Link href={currentPage === 2 ? "/blogs" : `/blogs/page/${currentPage - 1}/`} className="px-6 py-2 border-2 border-[#12066a] text-[#12066a] dark:text-white dark:border-white rounded-full font-bold">PREV</Link>
         
         <div className="flex gap-2">
           {[...Array(totalPages)].map((_, i) => (

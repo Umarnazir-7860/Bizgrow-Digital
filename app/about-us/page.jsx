@@ -53,60 +53,57 @@ export default function AboutPage() {
         </div>
       </section>
 
-    {/* Overview Section Wrapper: Poori screen ka background aur border yahan aayega */}
-<section className="w-full bg-white dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 py-12 md:py-20">
-  
-  {/* Content Container: Ye content ko center mein rakhega aur sides par padding dega */}
-  <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-    
-    {/* Text Side */}
-    <div className="w-full lg:w-1/2 flex flex-col space-y-4">
-      <FadeIn direction="right" delay={0.2}>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#B54118] uppercase tracking-tighter">
-          Who We Are
-        </h2>
-      </FadeIn>
-      
-      <FadeIn direction="right" delay={0.4}>
-        <p className="text-gray-700 dark:text-white text-sm sm:text-base md:text-lg leading-relaxed text-justify md:text-left">
-          "We are a passionate and dedicated team of professionals committed
-          to delivering innovative solutions that empower businesses to
-          grow, adapt, and succeed in today’s fast-paced world. At the core
-          of our work is a desire to turn ambitious ideas into tangible
-          results, helping our clients overcome challenges, seize
-          opportunities, and thrive in an ever-evolving market. Every
-          project we undertake is guided by creativity, expertise, and a
-          deep understanding of our clients’ unique needs, ensuring
-          solutions that are not only effective but also sustainable and
-          future-ready."
-        </p>
-      </FadeIn>
-    </div>
+      {/* Overview Section Wrapper: Poori screen ka background aur border yahan aayega */}
+      <section className="w-full bg-white dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 py-12 md:py-20">
+        {/* Content Container: Ye content ko center mein rakhega aur sides par padding dega */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          {/* Text Side */}
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4">
+            <FadeIn direction="right" delay={0.2}>
+              <h2 className="text-4xl md:text-5xl  font-black text-[#B54118]  uppercase tracking-tighter">
+                Who We Are
+              </h2>
+            </FadeIn>
 
-    {/* Image Side */}
-    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-      <FadeIn direction="left" delay={0.4}>
-        <div className="relative">
-          <Image
-            src="/team-collaboration.jpg"
-            width={550}
-            height={400}
-            className="rounded-[2rem] shadow-2xl object-cover"
-            alt="Team Collaboration"
-          />
-          {/* Decorative Background Shape - Sirf bari screens par */}
-          <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-[#B54118]/5 rounded-full hidden md:block" />
+            <FadeIn direction="right" delay={0.4}>
+              <p className="text-gray-700 dark:text-white text-sm sm:text-base lg:text-md leading-relaxed text-justify md:text-left  ">
+                "We are a passionate and dedicated team of professionals
+                committed to delivering innovative solutions that empower
+                businesses to grow, adapt, and succeed in today’s fast-paced
+                world. At the core of our work is a desire to turn ambitious
+                ideas into tangible results, helping our clients overcome
+                challenges, seize opportunities, and thrive in an ever-evolving
+                market. Every project we undertake is guided by creativity,
+                expertise, and a deep understanding of our clients’ unique
+                needs, ensuring solutions that are not only effective but also
+                sustainable and future-ready."
+              </p>
+            </FadeIn>
+          </div>
+
+          {/* Image Side */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <FadeIn direction="left" delay={0.4}>
+              <div className="relative">
+                <Image
+                  src="/team-collaboration.jpg"
+                  width={550}
+                  height={400}
+                  className="rounded-[2rem] shadow-2xl object-cover"
+                  alt="Team Collaboration"
+                />
+                {/* Decorative Background Shape - Sirf bari screens par */}
+                <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-[#B54118]/5 rounded-full hidden md:block" />
+              </div>
+            </FadeIn>
+          </div>
         </div>
-      </FadeIn>
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* Mission & Vision Section */}
-      <section className="bg-[#F2E8D5] py-10 px-4 ">
+      <section className="bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-red-700  py-10 px-4 ">
         <FadeIn direction="up" delay={0.2}>
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] dark:text-white mb-12">
             Our Mission & Vision
           </h2>
         </FadeIn>
@@ -150,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="max-w-7xl mx-auto py-10 px-4 lg:px-0">
+      <section className="max-w-7xl mx-auto py-10 dark:bg-[#000B25] px-4 lg:px-0">
         <FadeIn direction="up" delay={0.2}>
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
             Our Core Values
@@ -213,9 +210,9 @@ export default function AboutPage() {
       </section>
 
       {/* Clients Section */}
-      <section className="mx-auto py-16 dark:bg-gray-200 px-4 lg:px-0">
+      <section className="mx-auto py-16 dark:bg-black dark:border-t-2 dark:border-red-700  px-4 lg:px-0">
         <FadeIn direction="up">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] dark:text-white mb-12">
             Trusted By
           </h2>
         </FadeIn>
@@ -232,8 +229,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="relative py-10 mx-4 my-10 rounded-2xl text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+       <div
+        className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-white text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/team-work.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
@@ -252,6 +250,7 @@ export default function AboutPage() {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </main>
   );

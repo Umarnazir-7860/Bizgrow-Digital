@@ -37,9 +37,9 @@ const DigitalMarketingPage = () => {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-[#020817]">
+    <section className="w-full bg-white ">
       {/* --- HERO SECTION: Responsive & Centered --- */}
-      <div className="relative h-[80vh] md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh]  md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/digital-hero.webp" 
           alt="Full Stack Digital Marketing"
@@ -72,7 +72,7 @@ const DigitalMarketingPage = () => {
       </div>
 
       {/* --- UNIQUE SECTION: Floating Services Grid --- */}
-      <div className="py-10 md:py-32 max-w-7xl mx-auto px-6">
+      <div className="py-10 md:py-32 max-w-7xl dark:bg-black mx-auto px-6 dark:border-t-2 dark:border-orange-700">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black dark:text-white uppercase mb-6">
             Our <span className="text-orange-500">Marketing</span> Arsenal
@@ -83,7 +83,7 @@ const DigitalMarketingPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {marketingServices.map((service, i) => (
             <FadeIn key={i} direction="up" delay={i * 0.1}>
-              <div className="group p-8 bg-gray-50 dark:bg-slate-900/50 rounded-[2rem] border border-transparent hover:border-orange-500/20 hover:bg-white dark:hover:bg-slate-900 transition-all duration-500 h-full flex flex-col items-center text-center shadow-sm hover:shadow-2xl">
+              <div className="group p-8 bg-gray-50 dark:bg-slate-700/50 rounded-[2rem] border border-transparent hover:border-orange-500/20 hover:bg-white dark:hover:bg-slate-900 transition-all duration-500 h-full flex flex-col items-center text-center shadow-sm hover:shadow-2xl">
                 <div className="w-16 h-16 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
                   {service.icon}
                 </div>
@@ -98,7 +98,8 @@ const DigitalMarketingPage = () => {
       </div>
 
       {/* --- RESPONSIVE VALUE SECTION (New Layout) --- */}
-      <div className="py-20 bg-[#B54118]/90 rounded-[3rem] md:rounded-[5rem] mx-4 md:mx-10 mb-24 overflow-hidden">
+      <section className="dark:bg-[#020817] dark:border-t-2 dark:border-orange-700 py-20">
+      <div className="py-20 bg-gray-700 dark:border dark:border-orange-700 rounded-[3rem] md:rounded-[5rem] mx-4 md:mx-10 mb-24 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
           <div className="space-y-6">
             <h2 className="text-4xl md:text-6xl font-black leading-tight uppercase">
@@ -112,7 +113,7 @@ const DigitalMarketingPage = () => {
               "Competitor Analysis",
               "Omnichannel Marketing"
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/20">
+              <div key={index} className="flex items-center gap-4 bg-orange-600/50 p-4 rounded-2xl backdrop-blur-sm border border-white/20">
                 <div className="bg-white text-orange-500 p-1 rounded-full"><Check size={16} strokeWidth={4} /></div>
                 <span className="font-bold text-sm md:text-base uppercase">{item}</span>
               </div>
@@ -120,10 +121,12 @@ const DigitalMarketingPage = () => {
           </div>
         </div>
       </div>
+      </section>
 
       {/* --- FINAL CTA: Consistently Powerful --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/Smart Digital Marketing.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -149,6 +152,7 @@ const DigitalMarketingPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

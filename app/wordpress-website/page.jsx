@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const WordPressPage = () => {
   return (
-    <section className="w-full bg-white dark:bg-[#020817]">
+    <section className="w-full bg-white ">
       {/* --- HERO: Fixed Centering --- */}
       <div className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
@@ -57,7 +57,7 @@ const WordPressPage = () => {
       </div>
 
       {/* --- NEW SECTION: The "Not Just a Theme" Grid --- */}
-      <div className="py-14 max-w-7xl mx-auto px-6">
+      <div className="py-14 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-black dark:text-white mb-6">
@@ -95,7 +95,7 @@ const WordPressPage = () => {
             ].map((box, i) => (
               <div
                 key={i}
-                className="p-8 bg-gray-50 dark:bg-slate-900 rounded-3xl border border-transparent hover:border-orange-500/30 transition-all"
+                className="p-8 bg-gray-50 dark:bg-slate-700 rounded-3xl border border-transparent hover:border-orange-500/30 transition-all"
               >
                 <div className="text-orange-500 mb-4">{box.icon}</div>
                 <h3 className="text-xl font-bold dark:text-white mb-2">
@@ -111,7 +111,8 @@ const WordPressPage = () => {
       </div>
 
       {/* --- NEW SECTION: Feature Comparison (Design Variation) --- */}
-      <div className="py-20 bg-slate-900 text-white rounded-[4rem] mx-4 md:mx-10 mb-20">
+      <section className="dark:bg-[#020817] py-20 dark:border-t-2 dark:border-orange-700 ">
+      <div className="py-10 bg-slate-900 dark:border dark:border-white text-white rounded-[4rem] mx-4 md:mx-10 mb-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-16">
             Standard WP vs. <span className="text-orange-500">Biz Grow WP</span>
@@ -155,10 +156,11 @@ const WordPressPage = () => {
           </div>
         </div>
       </div>
-
+      </section>
       {/* --- FINAL CTA: The Original Powerful Style --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/wp-cta.jpg')" }} // Search Keyword: Dark abstract tech background
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>
@@ -184,6 +186,7 @@ const WordPressPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

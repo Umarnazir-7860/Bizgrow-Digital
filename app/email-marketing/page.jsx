@@ -22,7 +22,7 @@ const EmailMarketingPage = () => {
       desc: "We design data-driven email roadmaps that target your audience segments with precision and purpose.",
       icon: <Workflow className="w-8 h-8" />,
       bgColor: "bg-blue-100",
-      hoverBg: "group-hover:bg-blue-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Email Automation",
@@ -36,14 +36,14 @@ const EmailMarketingPage = () => {
       desc: "High-converting subject lines and body copy that bypasses spam filters and lands straight in the heart.",
       icon: <Mail className="w-8 h-8" />,
       bgColor: "bg-purple-100",
-      hoverBg: "group-hover:bg-purple-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "A/B Testing & Analytics",
       desc: "Constant optimization through split testing and deep performance tracking to maximize your ROI.",
       icon: <BarChart3 className="w-8 h-8" />,
       bgColor: "bg-green-100",
-      hoverBg: "group-hover:bg-green-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
   ];
 
@@ -93,7 +93,7 @@ const EmailMarketingPage = () => {
       </div>
 
       {/* --- CORE FEATURES GRID --- */}
-      <section className="py-24 bg-gray-50 dark:bg-[#020817]">
+      <section className="py-24 bg-gray-50 dark:bg-[#020817] dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col justify-center items-center mb-16 gap-6">
             <FadeIn direction="up" delay={0.2}>
@@ -115,7 +115,7 @@ const EmailMarketingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {emailServices.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.2 * index}>
-                <div className="group p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-xl hover:shadow-2xl transition-all duration-500 h-full">
+                <div className="group p-10 bg-white dark:bg-slate-700 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-xl hover:shadow-2xl transition-all duration-500 h-full">
                   <div className={`w-16 h-16 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:rotate-[15deg]`}>
                     {item.icon}
                   </div>
@@ -131,7 +131,7 @@ const EmailMarketingPage = () => {
       </section>
 
       {/* --- PROCESS/WHY US SECTION --- */}
-      <section className="py-24 bg-white dark:bg-black overflow-hidden">
+      <section className="py-24 bg-white dark:bg-black dark:border-y-2 dark:border-orange-700 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
           <div className="relative order-2 lg:order-1">
@@ -185,8 +185,9 @@ const EmailMarketingPage = () => {
       
 
       {/* --- FINAL CTA --- */}
-      <section
-        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center px-6 md:mx-20 bg-center bg-fixed overflow-hidden shadow-3xl"
+       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border dark-border-white px-6 md:mx-20 bg-center bg-fixed overflow-hidden shadow-3xl"
         style={{ backgroundImage: "url('/email-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>
@@ -209,6 +210,7 @@ const EmailMarketingPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

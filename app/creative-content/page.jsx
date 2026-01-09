@@ -21,21 +21,21 @@ const CreativeContentPage = () => {
       desc: "High-impact social media assets and marketing collateral designed to reinforce your brand's visual identity.",
       icon: <PenTool className="w-8 h-8" />,
       bgColor: "bg-blue-100",
-      hoverBg: "group-hover:bg-blue-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Video Production",
       desc: "Professional video editing and motion graphics that drive engagement and convert viewers into loyal customers.",
       icon: <Video className="w-8 h-8" />,
       bgColor: "bg-purple-100",
-      hoverBg: "group-hover:bg-purple-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Content Strategy",
       desc: "Data-backed content blueprints designed to reach your target demographics and fuel long-term organic growth.",
       icon: <Target className="w-8 h-8" />,
       bgColor: "bg-green-100",
-      hoverBg: "group-hover:bg-green-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
   ];
 
@@ -83,7 +83,7 @@ const CreativeContentPage = () => {
       </div>
 
       {/* --- FEATURES GRID --- */}
-      <section className="py-14 bg-gray-50 dark:bg-[#020817]">
+      <section className="py-14 bg-gray-50 dark:bg-black dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col justify-center items-center mb-16 gap-6">
             <div className="max-w-3xl">
@@ -96,7 +96,7 @@ const CreativeContentPage = () => {
             </div>
             <FadeIn direction="up" delay={0.4}>
               <div className="w-full flex justify-center">
-              <p className="text-gray-600 dark:text-gray-400 text-lg text-center max-w-xl">
+              <p className="text-gray-600 dark:text-gray-400 dark:text-white text-lg text-center max-w-xl">
                 Your content is your digital handshake. We ensure every pixel
                 and every word serves a purpose in achieving your business
                 goals.
@@ -108,7 +108,7 @@ const CreativeContentPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contentFeatures.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.2 * index}>
-                <div className="group p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-white/5 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="group p-8 bg-white dark:bg-slate-700 dark:border dark:border-orange-700 rounded-3xl border border-slate-100  shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                   <div
                     className={`w-14 h-14 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:rotate-6`}
                   >
@@ -128,7 +128,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* --- WHY US SECTION --- */}
-      <section className="py-10 bg-white dark:bg-black">
+      <section className="py-10 bg-white dark:bg-[#020817]  dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:flex-row gap-16 items-center">
           <FadeIn direction="right" delay={0.3}>
             <div className="relative h-[400px] md:h-[600px] w-full rounded-[3rem] overflow-hidden">
@@ -179,8 +179,9 @@ const CreativeContentPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
+       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center dark:border dark:border-white px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/creative-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>
@@ -203,6 +204,7 @@ const CreativeContentPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

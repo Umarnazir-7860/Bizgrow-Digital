@@ -37,7 +37,7 @@ const SocialMediaMarketingPage = () => {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-[#020817]">
+    <section className="w-full bg-white ">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[80vh] md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
         <Image
@@ -72,11 +72,11 @@ const SocialMediaMarketingPage = () => {
       </div>
 
       {/* --- SERVICES GRID: Equal Height --- */}
-      <div className="py-24 max-w-7xl mx-auto px-6">
+      <div className="py-24 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
           {smmServices.map((service, i) => (
             <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
-              <div className="p-10 bg-slate-50 dark:bg-slate-900/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
+              <div className="p-10 bg-slate-50 dark:bg-slate-700/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
                 <div className="text-orange-500 mb-6 group-hover:rotate-12 transition-transform duration-300">
                   {service.icon}
                 </div>
@@ -95,11 +95,11 @@ const SocialMediaMarketingPage = () => {
       </div>
 
       {/* --- STRATEGY SECTION: Unique Layout --- */}
-      <div className="py-24 bg-white dark:bg-[#020817] overflow-hidden">
+      <div className="py-24 bg-white dark:bg-[#020817] dark:border-t-2 dark:border-orange-700 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative order-2 lg:order-1 group">
              <div className="absolute -top-10 -left-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl" />
-             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-slate-800 transition-transform group-hover:scale-[1.02] duration-500">
+             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800 transition-transform group-hover:scale-[1.02] duration-500">
                <Image 
                 src="/smm-strategy.jpg" 
                 alt="Social Media Strategy" 
@@ -135,8 +135,9 @@ const SocialMediaMarketingPage = () => {
       </div>
 
       {/* --- CONSISTENT CTA --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/smm-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -157,6 +158,7 @@ const SocialMediaMarketingPage = () => {
             </Link>
           </FadeIn>
         </div>
+      </div>
       </section>
     </section>
   );

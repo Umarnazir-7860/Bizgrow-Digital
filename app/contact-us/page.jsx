@@ -43,7 +43,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <section className="relative w-full bg-gray-50 antialiased">
+    <section className="relative w-full bg-gray-50 dark:bg-black dark:border-y-2 dark:border-orange-700 antialiased">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[75vh] md:h-screen w-full">
         <Image
@@ -70,8 +70,8 @@ const ContactPage = () => {
       </div>
 
       {/* --- CONTACT CONTENT --- */}
-      <div className="max-w-7xl mx-auto px-4 py-20  relative z-10">
-               <h1 className="text-5xl mb-4 font-black text-center text-slate-900 uppercase">
+      <div className="max-w-7xl mx-auto px-4 py-20 dark:border-t dark:border-orange-700 relative z-10">
+               <h1 className="text-5xl mb-4 font-black text-center text-slate-900 dark:text-white uppercase">
               Get in Touch
             </h1>
              <div className="w-1/5 h-1 my-6 bg-[#B54118]  mx-auto rounded-full" />

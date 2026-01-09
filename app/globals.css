@@ -128,7 +128,11 @@ nav {
   letter-spacing: -0.02em !important;
 }
 
-
+/* Agar aap class-based dark mode use kar rahe hain (standard) */
+.dark .blog-content-flow h2,
+.dark .blog-content-flow h3 {
+  color: white !important;
+}
 
 /* 🚀 Refined Sub-headings (H3) */
 .blog-content-flow h3 {

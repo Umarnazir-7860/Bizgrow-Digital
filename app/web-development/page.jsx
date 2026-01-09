@@ -38,7 +38,7 @@ const WebDevelopmentPage = () => {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-[#020817]">
+    <section className="w-full bg-white">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
@@ -72,11 +72,11 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* --- TECH FEATURES GRID --- */}
-      <div className="py-24 max-w-7xl mx-auto px-6">
+      <div className="py-24 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
           {techStack.map((tech, i) => (
             <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
-              <div className="p-10 bg-slate-50 dark:bg-slate-900/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
+              <div className="p-10 bg-slate-50 dark:bg-slate-700/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
                 <div className="text-orange-500 mb-6 group-hover:rotate-6 transition-transform duration-300">
                   {tech.icon}
                 </div>
@@ -95,7 +95,8 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* --- BEYOND TEMPLATES SECTION --- */}
-      <div className="py-24 bg-slate-900 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">
+      <section className="dark:bg-[#020817] py-20">
+      <div className="py-24 bg-slate-900 mx-4 md:mx-10 dark:border dark:border-orange-700 rounded-[4rem] mb-24 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase">
@@ -131,10 +132,12 @@ const WebDevelopmentPage = () => {
           </div>
         </div>
       </div>
+      </section>
 
       {/* --- CONSISTENT CTA --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 dark:border dark:border-white rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/web-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/75 z-0"></div>
@@ -155,6 +158,7 @@ const WebDevelopmentPage = () => {
             </Link>
           </FadeIn>
         </div>
+      </div>
       </section>
     </section>
   );

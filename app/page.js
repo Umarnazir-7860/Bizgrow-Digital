@@ -4,6 +4,12 @@ import ServicesServer from "@components/ServicesServer";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
+export const metadata = {
+  title: "BizGrow Digital | Expert Digital Marketing Services UK", // Ye layout wale template ki wajah se "About Us | BizGrow Digital" ban jayega
+  description:
+    "BizGrow Digital provides professional digital marketing services in the UK to boost visibility, engagement, and business growth.",
+};
+
 const HomePage = () => {
   return (
     <main className="w-full">
@@ -90,7 +96,7 @@ const HomePage = () => {
             <div className="relative w-full h-80 md:h-[500px]">
               <Image
                 src="/boost.jpg" // replace with your image
-                alt="Boost Your Online Presence"
+                alt="Boost Online Presence with BizGrow Digital"
                 fill
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -102,12 +108,12 @@ const HomePage = () => {
       </section>
 
       {/* Our Services Section */}
-      <section className="relative ">
+      <section className="relative">
         <ServicesServer />
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-100 dark:bg-black text-center px-6">
+      <section className="py-20 bg-gray-100 dark:bg-[#000B25] text-center px-6">
         <FadeIn direction="up" delay={0.2}>
           <h2 className="text-3xl md:text-5xl font-bold text-[#B54118] mb-6">
             Why Choose BizGrow Digital
@@ -154,28 +160,30 @@ const HomePage = () => {
         </div>
       </section>
       {/* Final CTA Section */}
-      <section
-        className="relative py-20 my-10 bg-black mx-4 md:mx-20 my-8 rounded-2xl text-white text-center px-4 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/hero-cta.jpg')" }}
-      >
-        {/* Dark Overlay taaki text aur button clear nazar aayein */}
-        <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+        <div
+          className="relative py-20 mx-4 md:mx-20  rounded-2xl text-white text-center dark:border dark:border-white px-4 bg-black bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: "url('/hero-cta.jpg')" }}
+        >
+          {/* Dark Overlay taaki text aur button clear nazar aayein */}
+          <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl leading-snug font-bold mb-6">
-            Trusted by Top Brands:
-            <br /> Let's Build Your Digital Success.
-          </h2>
-          <p className="mb-8 text-lg md:text-xl">
-            BizGrow Digital is all about helping your business thrive online. We
-            create awesome websites, boost your SEO, and handle marketing that
-            works to attract more visitors and customers.
-          </p>
-          <Link href="/contact">
-            <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
-              Contact US
-            </button>
-          </Link>
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl leading-snug font-bold mb-6">
+              Trusted by Top Brands:
+              <br /> Let's Build Your Digital Success.
+            </h2>
+            <p className="mb-8 text-lg md:text-xl">
+              BizGrow Digital is all about helping your business thrive online.
+              We create awesome websites, boost your SEO, and handle marketing
+              that works to attract more visitors and customers.
+            </p>
+            <Link href="/contact">
+              <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
+                Contact US
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

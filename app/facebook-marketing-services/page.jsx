@@ -37,9 +37,9 @@ const FacebookMarketingPage = () => {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-[#020817]">
+    <section className="w-full bg-white">
       {/* --- HERO SECTION --- */}
-      <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh]  md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/fb.jpg" 
           alt="Facebook Ads Management"
@@ -51,7 +51,7 @@ const FacebookMarketingPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
           <FadeIn direction="up">
-            <div className="flex gap-4 mb-6 opacity-80">
+            <div className="flex gap-4 mt-6 opacity-80">
                 <Facebook className="text-orange-500 w-8 h-8" />
                 <Instagram className="text-white w-8 h-8" />
             </div>
@@ -73,11 +73,11 @@ const FacebookMarketingPage = () => {
       </div>
 
       {/* --- FEATURE SECTION: Fixed Spacing & Height --- */}
-      <div className="py-14 max-w-7xl mx-auto px-6">
+      <div className="py-14 max-w-7xl dark:bg-black dark:border-t-2 dark:border-orange-700 mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
           {fbFeatures.map((f, i) => (
             <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
-              <div className="p-10 bg-slate-50 dark:bg-slate-900/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
+              <div className="p-10 bg-slate-50 dark:bg-slate-700/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
                 
                 <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform flex-shrink-0">
                   {f.icon}
@@ -98,7 +98,8 @@ const FacebookMarketingPage = () => {
       </div>
 
       {/* --- STRATEGY SECTION --- */}
-      <div className="py-24 bg-slate-900 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">
+      <section className="dark:bg-[#020817] py-20">
+      <div className="py-24 bg-slate-900 dark:border dark:border-orange-700 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[100px] rounded-full" />
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -133,10 +134,12 @@ const FacebookMarketingPage = () => {
           </div>
         </div>
       </div>
+      </section>
 
       {/* --- CONSISTENT CTA --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 dark:border dark:border-white rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/fb-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -157,6 +160,7 @@ const FacebookMarketingPage = () => {
             </Link>
           </FadeIn>
         </div>
+      </div>
       </section>
     </section>
   );

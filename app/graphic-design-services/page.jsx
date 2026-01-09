@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const GraphicDesignPage = () => {
   return (
-    <section className="w-full bg-white dark:bg-[#020817] overflow-hidden">
+    <section className="w-full bg-white  overflow-hidden">
       {/* --- HERO SECTION: Consistent Style --- */}
       <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
@@ -50,7 +50,7 @@ const GraphicDesignPage = () => {
       </div>
 
       {/* --- UNIQUE SERVICE "BENTO" GRID: Artistic Middle Section --- */}
-      <div className="py-32 max-w-7xl mx-auto px-6">
+      <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700">
         <FadeIn direction="up">
           <h2 className="text-3xl md:text-5xl font-black dark:text-white mb-16 uppercase tracking-tighter">
             Our Creative{" "}
@@ -107,23 +107,23 @@ const GraphicDesignPage = () => {
           </div>
 
           {/* Wide Card: Vector/Print */}
-          <div className="md:col-span-3 mt-10 bg-white border-2 border-slate-100 dark:border-slate-800 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-10 hover:shadow-2xl transition-all">
+          <div className="md:col-span-3 mt-10 bg-white dark:bg-gray-700 border-2 border-slate-100 dark:border-slate-800 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-10 hover:shadow-2xl transition-all">
             <div className="max-w-xl">
               <h3 className="text-3xl font-black dark:text-white mb-4 uppercase">
                 The Vector Advantage
               </h3>
-              <p className="text-gray-500">
+              <p className="text-gray-500 dark:text-white ">
                 From high-res print to infinitely scalable digital vectors, we
                 ensure your brand never loses its edge in any medium.
               </p>
             </div>
-            <PenTool className="text-orange-500 w-20 h-20 opacity-20" />
+            <PenTool className="text-orange-500 dark:text-orange-400 w-20 h-20 opacity-20" />
           </div>
         </div>
       </div>
 
       {/* --- CONTENT SECTION: Unique Visual Philosophy --- */}
-      <div className="py-14 bg-white dark:bg-[#020817] mb-12">
+      <div className="py-14 bg-white dark:bg-[#020817] dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row-reverse gap-20 items-center">
           <div className="w-full lg:w-1/2 space-y-8">
             <h2 className="text-5xl md:text-7xl font-black dark:text-white leading-none uppercase">
@@ -148,7 +148,7 @@ const GraphicDesignPage = () => {
               ))}
             </div>
           </div>
-          <div className="w-full lg:w-1/2 relative h-[500px] rounded-[4rem] overflow-hidden border-[12px] border-slate-50 dark:border-slate-900 shadow-2xl">
+          <div className="w-full lg:w-1/2 relative h-[500px] rounded-[4rem] overflow-hidden border-[12px] border-slate-50 dark:border-orange-900 shadow-2xl">
             <Image
               src="/grphs.jpg"
               alt="Design Thinking"
@@ -160,8 +160,9 @@ const GraphicDesignPage = () => {
       </div>
 
       {/* --- CTA SECTION: Consistent Style --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 dark:border dark:border-white rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/graphic-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -182,6 +183,7 @@ const GraphicDesignPage = () => {
             </Link>
           </FadeIn>
         </div>
+      </div>
       </section>
     </section>
   );

@@ -29,21 +29,21 @@ const LeadGenerationPage = () => {
       desc: "Crafting irresistible offers, whitepapers, and webinars that pull qualified prospects into your sales ecosystem.",
       icon: <Magnet className="w-8 h-8" />,
       bgColor: "bg-blue-100",
-      hoverBg: "group-hover:bg-blue-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Conversion Funnels",
       desc: "Designing  multi-step funnels that turn cold traffic into hot leads.",
       icon: <Filter className="w-8 h-8" />,
       bgColor: "bg-purple-100",
-      hoverBg: "group-hover:bg-purple-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Lead Nurturing",
       desc: "Automated follow-up sequences that keep your brand top-of-mind until the lead is ready to buy.",
       icon: <Zap className="w-8 h-8" />,
       bgColor: "bg-green-100",
-      hoverBg: "group-hover:bg-green-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
   ];
 
@@ -91,7 +91,7 @@ const LeadGenerationPage = () => {
       </div>
 
       {/* --- SERVICE GRID --- */}
-      <section className="py-14 bg-gray-50 dark:bg-[#020817]">
+      <section className="py-14 bg-gray-50 dark:bg-[#020817] dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up" delay={0.2}>
             <h2 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">
@@ -103,10 +103,10 @@ const LeadGenerationPage = () => {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
             {leadServices.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.1 * index}>
-                <div className="group p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-300">
+                <div className="group p-10 bg-white dark:bg-slate-700 rounded-[2.5rem]  border border-slate-100 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-300">
                   <div
                     className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300`}
                   >
@@ -126,7 +126,7 @@ const LeadGenerationPage = () => {
       </section>
 
       {/* --- DATA SECTION (Lead Gen Focus) --- */}
-      <section className="py-24 bg-white dark:bg-black overflow-hidden">
+      <section className="py-24 bg-white dark:bg-black dark:border-t-2 dark:border-orange-700 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <FadeIn direction="right" delay={0.2}>
@@ -177,8 +177,9 @@ const LeadGenerationPage = () => {
       <VShapeTransition />
 
       {/* --- CALL TO ACTION --- */}
-      <section
-        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center px-6 md:mx-20 bg-cover bg-center bg-fixed overflow-hidden shadow-2xl"
+         <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+       <div
+        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border dark:border-white px-6 md:mx-20 bg-cover bg-center bg-fixed overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/sales-pipeline.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -198,6 +199,7 @@ const LeadGenerationPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

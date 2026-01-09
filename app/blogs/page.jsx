@@ -21,21 +21,22 @@ export default async function BlogPage() {
   const currentPage = 1;
 
   return (
-    <div className="max-w-7xl mx-auto mt-10 px-10 py-16 bg-[#FDFCF9]">
+    <div className="max-w-7xl mx-auto mt-10 px-10 py-16 bg-white  dark:bg-[#121212] ">
       <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] mb-4 uppercase tracking-normal">
+        <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-normal">
           Digital Marketing <span className="text-[#B54118]">Insights</span>
         </h1>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {posts.map((post) => (
-          <article key={post.id} className="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
+          <article key={post.id} className="group bg-white  dark:bg-[#000B25]  rounded-2xl shadow-sm border
+           border-gray-100 flex flex-col overflow-hidden">
             <div className="relative h-56 w-full">
               <Image src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} alt={post.title.rendered} fill className="object-cover" />
             </div>
             <div className="p-8 flex flex-col flex-grow">
-              <h2 className="text-xl font-extrabold text-[#12066a] mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+              <h2 className="text-xl font-extrabold text-[#12066a] dark:text-white mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
               <Link href={`/${post.slug}`} className="mt-auto text-[#B54118] font-bold text-xs uppercase tracking-widest">
                 Read Full Story →
               </Link>

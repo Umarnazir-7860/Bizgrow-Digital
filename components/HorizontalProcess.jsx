@@ -45,7 +45,7 @@ const HorizontalProcess = () => {
       className="relative bg-white dark:bg-black overflow-visible py-16 lg:py-0"
     >
       {/* Sticky sirf Laptop (lg: 1024px+) screens par chalega */}
-      <div className={`${isVertical ? 'relative' : 'sticky top-0 h-screen w-full flex items-center overflow-hidden'}`}>
+      <div className={`${isVertical ? 'relative' : 'sticky top-0 h-screen w-full flex items-center dark:border-t-2 dark:border-orange-700 overflow-hidden'}`}>
         
         {/* --- MAIN HEADING --- */}
         <div className={`${isVertical ? 'relative mb-16' : 'absolute top-20 left-0 w-full z-20 pointer-events-none'}`}>

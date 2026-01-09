@@ -30,7 +30,7 @@ const page = () => {
       icon: <Palette className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-blue-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "SEO",
@@ -38,7 +38,7 @@ const page = () => {
       icon: <TrendingUp className="w-8 h-8" />,
       bgColor: "bg-green-100",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-green-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Digital Marketing",
@@ -46,7 +46,7 @@ const page = () => {
       icon: <Megaphone className="w-8 h-8" />,
       bgColor: "bg-purple-100",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-purple-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Brand Identity",
@@ -54,7 +54,7 @@ const page = () => {
       icon: <Fingerprint className="w-8 h-8" />,
       bgColor: "bg-red-100",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-red-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
     // ... baqi services same rahengi
     {
@@ -63,7 +63,7 @@ const page = () => {
       icon: <PenTool className="w-8 h-8" />,
       bgColor: "bg-yellow-100",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-yellow-600",
+      hoverBg: "group-hover:bg-[#B54118]",
     },
   ];
 
@@ -114,18 +114,18 @@ const page = () => {
       </div>
       {/*   */}
       {/* Services Section  */}
-      <section className="py-10 bg-gray-200">
+      <section className="py-10 bg-gray-200 dark:bg-[#000B25] dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header Text */}
           <div className="text-center mb-16">
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
                 Solutions Tailored for <br />
                 <span className="text-[#B54118]">Your Growth</span>
               </h2>
             </FadeIn>
             <FadeIn direction="up" delay={0.4}>
-              <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+              <p className="mt-4 text-gray-600 dark:text-white max-w-2xl mx-auto text-lg">
                 Latest technology aur data-driven strategy ke sath hum aapki
                 brand identity ko next level par le jate hain.
               </p>
@@ -137,21 +137,21 @@ const page = () => {
     /* FadeIn ko 'h-full' dena zaroori hai taake grid stretch ho sakay */
     <FadeIn key={index} direction="up" delay={0.1 * index} className="h-full">
       <div
-        className="group h-full p-10 bg-white dark:bg-[#000B25] rounded-[2.5rem] 
+        className="group h-full p-10 bg-white dark:bg-gray-700 rounded-[2.5rem] 
         border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 
         transition-all duration-300 flex flex-col"
       >
         <div
           className={`w-16 h-16 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
           rounded-2xl flex items-center justify-center mb-6 transition-all 
-          duration-300 group-hover:rotate-12 shrink-0`}
+          duration-300 group-hover:rotate-12  shrink-0`}
         >
           {service.icon}
         </div>
 
         <h3
           className="text-2xl font-bold text-slate-800 dark:text-white mb-4 
-          transition-colors group-hover:text-[#B54118]"
+          transition-colors group-hover:text-[#B54118] "
         >
           {service.title}
         </h3>
@@ -170,7 +170,8 @@ const page = () => {
       <ShapeChangeSection />
       <VShapeTransition />
       {/* CTA Section */}
-      <section
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+      <div
         className="relative py-20 mx-4 my-20 rounded-[2rem] text-white text-center px-6 md:mx-20 bg- bg-cover bg-fixed overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/services-cta.jpg')" }}
       >
@@ -194,6 +195,7 @@ const page = () => {
             </button>
           </Link>
         </div>
+      </div>
       </section>
     </section>
   );

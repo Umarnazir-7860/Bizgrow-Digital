@@ -13,28 +13,52 @@ export default function ServicesSection() {
     offset: ["start start", "end end"],
   });
 
-  const visibleCards = [
-    { title: "Website Development", img: "/web-development2.jpg", desc: "High-performance websites designed to attract, engage, and convert." },
-    { title: "SEO Optimization", img: "/SEO.jpg", desc: "Data-driven SEO strategies that increase visibility and drive qualified traffic." },
-    { title: "Digital Marketing", img: "/Social media.jpg", desc: "Integrated digital marketing strategies designed to grow reach, leads, and revenue." },
-    { title: "Creative Content", img: "/creative.jpg", desc: "Compelling content crafted to engage audiences and strengthen your brand." },
-    { title: "Graphic Design", img: "/graphic-design.jpg", desc: "Professional graphic design that communicates your brand with clarity." },
+ const visibleCards = [
+    { 
+      title: "Website Development", 
+      img: "/web-development2.jpg", 
+      alt: "Website Development - BizGrowDigital",
+      desc: "High-performance websites designed to attract, engage, and convert." 
+    },
+    { 
+      title: "Search Engine Optimisation", // Yahan title bhi update kar diya
+      img: "/SEO.jpg", 
+      alt: "Search Engine Optimisation - BizGrowDigital",
+      desc: "Data-driven SEO strategies that increase visibility and drive qualified traffic." 
+    },
+    { 
+      title: "Digital Marketing", 
+      img: "/Social media.jpg", 
+      alt: "Digital Marketing - BizGrowDigital",
+      desc: "Integrated digital marketing strategies designed to grow reach, leads, and revenue." 
+    },
+    { 
+      title: "Creative Content", 
+      img: "/creative.jpg", 
+      alt: "Creative Content - BizGrowDigital",
+      desc: "Compelling content crafted to engage audiences and strengthen your brand." 
+    },
+    { 
+      title: "Graphic Design", 
+      img: "/graphic-design.jpg", 
+      alt: "Graphic Design - BizGrowDigital",
+      desc: "Professional graphic design that communicates your brand with clarity." 
+    },
   ];
-
   return (
-    <section ref={container} className="relative w-full h-[250vh] md:h-[350vh] bg-[#F2E8D5]">
+    <section ref={container} className="relative w-full h-[250vh] md:h-[350vh] bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-red-700 ">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4">
         
         {/* Heading & Paragraph Section */}
         <div className="text-center z-10 w-full  flex flex-col items-center">
           <FadeIn direction="up">
-            <h1 className="text-4xl mt-20 md:text-6xl text-[#B54118] font-bold uppercase tracking-tighter leading-none">
+            <h1 className="text-4xl mt-20 md:text-6xl text-[#B54118] dark:text-white font-bold uppercase tracking-tighter leading-none">
               Our Digital Services
             </h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
-            <p className="text-black my-2 text-sm md:text-lg font-medium max-w-[300px] 
+            <p className="text-black dark:text-white mb-6 text-sm md:text-lg font-medium max-w-[300px] 
             md:max-w-xl mx-auto">
               Empowering your business to thrive online with tailored digital solutions.
             </p>
@@ -76,7 +100,7 @@ export default function ServicesSection() {
   );
 }
 
-function Card({ title, img, desc, i, progress, range, isFirst, isLast }) {
+function Card({ title, img, desc,alt, i, progress, range, isFirst, isLast }) {
   const [start, end] = range;
   const xTranslate = isFirst ? "0%" : "120%";
   const xExit = isLast ? "0%" : "-120%";
@@ -93,7 +117,7 @@ function Card({ title, img, desc, i, progress, range, isFirst, isLast }) {
       flex flex-col md:flex-row gap-4 md:gap-8 items-center"
     >
       <div className="w-full md:w-1/2 overflow-hidden rounded-xl shrink-0">
-        <Image src={img} width={400} height={300} alt={title} className="object-cover h-[130px] 
+        <Image src={img} width={400} height={300} alt={alt} className="object-cover h-[130px] 
         md:h-[220px] w-full" priority={i === 0} />
       </div>
       <div className="w-full md:w-1/2 text-center md:text-left">

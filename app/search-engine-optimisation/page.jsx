@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const SEOPage = () => {
   return (
-    <section className="w-full bg-white dark:bg-[#020817] overflow-hidden">
+    <section className="w-full bg-white  overflow-hidden">
       
       {/* --- HERO SECTION: Consistent Style --- */}
       <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
@@ -49,7 +49,7 @@ const SEOPage = () => {
       </div>
 
       {/* --- SEO BENTO GRID: The Strategy Section --- */}
-      <div className="py-32 max-w-7xl mx-auto px-6">
+      <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700 ">
         <FadeIn direction="up">
            <h2 className="text-3xl md:text-5xl font-black dark:text-white mb-16 uppercase tracking-tighter">
              The Science of <span className="text-orange-500 underline">Ranking</span>
@@ -76,7 +76,7 @@ const SEOPage = () => {
           </div>
 
           {/* Small Card 1: Keyword Research */}
-          <div className="bg-slate-900 rounded-[3rem] p-10 flex flex-col justify-between hover:border-orange-500/50 border border-transparent transition-all">
+          <div className="bg-slate-900  rounded-[3rem] p-10 flex flex-col justify-between hover:border-orange-500/50 dark:border dark:border-orange-300 border border-transparent transition-all">
              <Search className="text-orange-500 w-12 h-12" />
              <h3 className="text-2xl font-black text-white leading-tight uppercase">KEYWORD <br/> STRATEGY</h3>
           </div>
@@ -88,7 +88,7 @@ const SEOPage = () => {
           </div>
 
           {/* Wide Card: Global Reach */}
-          <div className="md:col-span-3 bg-white border-2 border-orange-300 dark:border-slate-800 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-10 hover:shadow-2xl transition-all">
+          <div className="md:col-span-3 dark:bg-slate-900 dark:border dark:border-orange-500 to-transparent border-2 border-orange-300 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-10 hover:shadow-2xl transition-all">
              <div className="max-w-xl">
                 <h3 className="text-3xl font-black dark:text-white mb-4 uppercase">Dominate Globally</h3>
                 <p className="text-gray-500">From local search presence to international dominance, our SEO frameworks scale with your business goals.</p>
@@ -99,7 +99,7 @@ const SEOPage = () => {
       </div>
 
       {/* --- REVERSED CONTENT: Why Trust Us --- */}
-      <div className="py-24 bg-white dark:bg-[#020817] mb-12">
+      <div className="py-24 bg-white dark:bg-[#020817] dark:border-t-2 dark:border-orange-700 ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row-reverse gap-20 items-center">
           <div className="w-full lg:w-1/2 space-y-8">
             <h2 className="text-5xl md:text-7xl font-black dark:text-white leading-none uppercase">
@@ -132,8 +132,9 @@ const SEOPage = () => {
       </div>
 
       {/* --- CTA SECTION: Consistent Style --- */}
-      <section
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+      <div
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/seo-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>
@@ -154,6 +155,7 @@ const SEOPage = () => {
             </Link>
           </FadeIn>
         </div>
+      </div>
       </section>
       
     </section>
