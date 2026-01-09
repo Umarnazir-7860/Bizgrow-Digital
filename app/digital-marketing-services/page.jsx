@@ -143,7 +143,8 @@ const DigitalMarketingPage = () => {
           </FadeIn>
 
           <Link href="/contact-us">
-            <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg uppercase tracking-widest">
+            <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl
+             hover:scale-105 transition-all shadow-lg uppercase tracking-widest">
               Get My Strategy Call
             </button>
           </Link>

@@ -82,7 +82,7 @@ const EmailMarketingPage = () => {
   {/* Row 3: Paragraph */}
   <FadeIn direction="up" delay={0.6}>
     <div className="w-full flex justify-center">
-      <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
+      <p className="text-gray-300 text-xl md:text-2xl text-center max-w-2xl mt-8">
         Don't just send emails. Build relationships and drive sales with 
         highly personalized, automated email marketing campaigns.
       </p>

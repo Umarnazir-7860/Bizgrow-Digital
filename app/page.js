@@ -18,7 +18,7 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up" delay={0.2}>
-            <h1 className="text-white text-3xl md:text-5xl mt-20  mx-20 font-bold md:leading-[4rem]">
+            <h1 className="text-white text-3xl md:text-5xl mt-20   md:mx-20 font-bold md:leading-[4rem]">
               Smart Digital Solutions <br /> Designed for Sustainable Business
               Growth
             </h1>
@@ -92,6 +92,8 @@ const HomePage = () => {
                 src="/boost.jpg" // replace with your image
                 alt="Boost Your Online Presence"
                 fill
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover rounded-2xl mt-4 shadow-lg"
               />
             </div>
@@ -100,7 +102,7 @@ const HomePage = () => {
       </section>
 
       {/* Our Services Section */}
-      <section>
+      <section className="relative ">
         <ServicesServer />
       </section>
 

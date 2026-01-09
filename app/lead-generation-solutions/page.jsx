@@ -50,7 +50,7 @@ const LeadGenerationPage = () => {
   return (
     <section className="relative w-full">
       {/* --- HERO SECTION --- */}
-      <div className="relative h-[80vh] md:h-screen w-full">
+      <div className="relative  h-screen w-full">
         <Image
           src="/lead-hero.jpg" // Hero image suggestion: High-end corporate building or data visualization
           alt="Lead Generation Services"
@@ -62,7 +62,8 @@ const LeadGenerationPage = () => {
           {/* 🔹 FIX: Har element ko 'w-full flex justify-center' wale div mein wrap kiya gaya hai */}
           <FadeIn direction="up" delay={0.2} className="w-full">
             <div className="w-full flex justify-center">
-              <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block text-center">
+              <span className="text-orange-500 font-bold tracking-[0.3em] uppercase 
+              text-xs md:text-sm mb-4 block text-center">
                 Scalable Growth Engines
               </span>
             </div>
@@ -70,7 +71,7 @@ const LeadGenerationPage = () => {
 
           <FadeIn direction="up" delay={0.4} className="w-full">
             <div className="w-full flex justify-center">
-              <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-[1.1]">
+              <h1 className="text-white text-3xl md:text-7xl text-center font-black max-w-5xl leading-[1.1]">
                 Fuel Your Sales Pipe with <br />
                 <span className="text-orange-500">Qualified Leads</span>
               </h1>
@@ -79,7 +80,7 @@ const LeadGenerationPage = () => {
 
           <FadeIn direction="up" delay={0.6} className="w-full">
             <div className="w-full flex justify-center">
-              <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-8">
+              <p className="text-gray-300 text-lg md:text-2xl text-center max-w-2xl mt-8">
                 We stop the guessing game. Our data-driven lead generation
                 strategies ensure your sales team only talks to people ready to
                 do business.
@@ -90,10 +91,10 @@ const LeadGenerationPage = () => {
       </div>
 
       {/* --- SERVICE GRID --- */}
-      <section className="py-24 bg-gray-50 dark:bg-[#020817]">
+      <section className="py-14 bg-gray-50 dark:bg-[#020817]">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">
               A Results-First <span className="text-[#B54118]">Approach</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto mb-16">
@@ -192,7 +193,7 @@ const LeadGenerationPage = () => {
             day.
           </p>
           <Link href="/contact-us">
-            <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">
+            <button className="px-8 py-5 text-sm bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">
               Get Your Free Audit
             </button>
           </Link>

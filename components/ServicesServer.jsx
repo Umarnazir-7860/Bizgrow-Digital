@@ -22,7 +22,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section ref={container} className="relative w-full h-[300vh] md:h-[500vh] bg-[#F2E8D5]">
+    <section ref={container} className="relative w-full h-[250vh] md:h-[350vh] bg-[#F2E8D5]">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4">
         
         {/* Heading & Paragraph Section */}
@@ -34,7 +34,7 @@ export default function ServicesSection() {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
-            <p className="text-black mb-4 text-lg md:text-lg font-medium max-w-[300px] 
+            <p className="text-black my-2 text-sm md:text-lg font-medium max-w-[300px] 
             md:max-w-xl mx-auto">
               Empowering your business to thrive online with tailored digital solutions.
             </p>
@@ -42,7 +42,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Cards Wrapper */}
-        <div className="relative w-full mt-10 max-w-5xl h-[50vh] md:h-[60vh] 
+        <div className="relative w-full mt-7 max-w-5xl h-[50vh] md:h-[60vh] 
         flex items-center justify-center">
           {visibleCards.map((card, idx) => {
             const start = idx * 0.18;
@@ -63,13 +63,12 @@ export default function ServicesSection() {
 
         {/* 🔹 FIX: Button properly centered inside FadeIn wrapper */}
         <div className="mt-16 z-10 w-full ">
-          <FadeIn direction="up" delay={0.4}>
-            <Link href="/services" className="flex justify-center"> 
+             <Link href="/services" className="flex justify-center"> 
               <button className="px-10 py-4 mb-4 bg-[#B54118] text-white text-sm md:text-base font-semibold rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg uppercase tracking-wider whitespace-nowrap">
                 View All Services →
               </button>
             </Link>
-          </FadeIn>
+          
         </div>
 
       </div>
@@ -94,7 +93,7 @@ function Card({ title, img, desc, i, progress, range, isFirst, isLast }) {
       flex flex-col md:flex-row gap-4 md:gap-8 items-center"
     >
       <div className="w-full md:w-1/2 overflow-hidden rounded-xl shrink-0">
-        <Image src={img} width={400} height={300} alt={title} className="object-cover h-[180px] 
+        <Image src={img} width={400} height={300} alt={title} className="object-cover h-[130px] 
         md:h-[220px] w-full" priority={i === 0} />
       </div>
       <div className="w-full md:w-1/2 text-center md:text-left">

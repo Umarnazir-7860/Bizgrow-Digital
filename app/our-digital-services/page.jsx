@@ -71,7 +71,7 @@ const page = () => {
     // Main Section: Isay py-20 ki zarurat Hero mein nahi hoti agar aap h-screen use kar rahe hain
     <section className="relative w-full">
       {/* Hero Container */}
-      <div className="relative  h-[85vh] md:h-screen w-full">
+      <div className="relative  h-[95vh] md:h-screen w-full">
         {/* Background Image */}
         <Image
           src="/services-hero.jpg"
@@ -81,40 +81,40 @@ const page = () => {
           className="object-cover object-center" // object-cover image ko stretch hone se bachata hai
         />
 
-    {/* Overlay: Taaki image ke upar text parha ja sakay */}
-<div className="absolute inset-0 w-full bg-black/50 flex flex-col justify-center items-center space-y-3">
-  
-  {/* Content wahi hai, sirf FadeIn par 'w-full' add kiya hai */}
-  <FadeIn direction="up" delay={0.2} className="w-full">
-    <h1 className="text-white text-5xl mx-auto md:text-7xl text-center font-bold mt-26 max-w-3xl px-4">
-      Data-Driven Services to{" "}
-      <span className="text-orange-500">Scale Your Business</span> for
-      Growth
-    </h1>
-  </FadeIn>
+        {/* Overlay: Taaki image ke upar text parha ja sakay */}
+        <div className="absolute inset-0 w-full bg-black/70 flex flex-col justify-center
+         items-center space-y-3">
+          {/* Content wahi hai, sirf FadeIn par 'w-full' add kiya hai */}
+          <FadeIn direction="up" delay={0.2} className="w-full">
+            <h1 className="text-white text-4xl mx-auto md:text-7xl text-center 
+            font-bold mt-26 max-w-3xl px-4">
+              Data-Driven Services to{" "}
+              <span className="text-orange-500">Scale Your Business</span> for
+              Growth
+            </h1>
+          </FadeIn>
 
-  <FadeIn direction="up" delay={0.4} className="w-full">
-    <p className="text-white text-lg mx-auto md:text-xl text-center max-w-2xl px-4">
-      We provide end-to-end digital solutions that help brands grow,
-      engage, and dominate their niche
-    </p>
-  </FadeIn>
+          <FadeIn direction="up" delay={0.4} className="w-full">
+            <p className="text-white text-md mx-auto md:text-xl text-center max-w-2xl px-4">
+              We provide end-to-end digital solutions that help brands grow,
+              engage, and dominate their niche
+            </p>
+          </FadeIn>
 
-  {/* 🔹 FIX: Yahan 'flex justify-center' add kiya hai taake button center mein aaye */}
- <FadeIn direction="up" delay={0.6} className="w-full">
-  {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
-  <div className="w-full flex justify-center">
-    <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
-      Explore Our Services →
-    </button>
-  </div>
-</FadeIn>
-
-</div>
+          {/* 🔹 FIX: Yahan 'flex justify-center' add kiya hai taake button center mein aaye */}
+          <FadeIn direction="up" delay={0.6} className="w-full">
+            {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
+            <div className="w-full flex justify-center">
+              <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
+                Explore Our Services →
+              </button>
+            </div>
+          </FadeIn>
+        </div>
       </div>
       {/*   */}
       {/* Services Section  */}
-      <section className="py-20 bg-gray-200">
+      <section className="py-10 bg-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header Text */}
           <div className="text-center mb-16">
@@ -131,38 +131,39 @@ const page = () => {
               </p>
             </FadeIn>
           </div>
-          {/* Services Grid  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
-            {services.map((service, index) => (
-              <FadeIn key={index} direction="up" delay={0.1 * index}>
-                <div
-                  className="group h-full p-10 bg-white dark:bg-[#000B25] rounded-[2.5rem] 
+      {/* Services Grid  */}
+<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
+  {services.map((service, index) => (
+    /* FadeIn ko 'h-full' dena zaroori hai taake grid stretch ho sakay */
+    <FadeIn key={index} direction="up" delay={0.1 * index} className="h-full">
+      <div
+        className="group h-full p-10 bg-white dark:bg-[#000B25] rounded-[2.5rem] 
         border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 
         transition-all duration-300 flex flex-col"
-                >
-                  <div
-                    className={`w-16 h-16 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
+      >
+        <div
+          className={`w-16 h-16 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
           rounded-2xl flex items-center justify-center mb-6 transition-all 
           duration-300 group-hover:rotate-12 shrink-0`}
-                  >
-                    {service.icon}
-                  </div>
+        >
+          {service.icon}
+        </div>
 
-                  <h3
-                    className="text-2xl font-bold text-slate-800 dark:text-white mb-4 
+        <h3
+          className="text-2xl font-bold text-slate-800 dark:text-white mb-4 
           transition-colors group-hover:text-[#B54118]"
-                  >
-                    {service.title}
-                  </h3>
+        >
+          {service.title}
+        </h3>
 
-                  {/* 'flex-grow' ensures all cards look uniform even with short text */}
-                  <p className="text-gray-600 dark:text-white leading-relaxed flex-grow">
-                    {service.desc}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+        {/* 'flex-grow' text ko expansion deta hai aur cards ko match karta hai */}
+        <p className="text-gray-600 dark:text-white leading-relaxed flex-grow">
+          {service.desc}
+        </p>
+      </div>
+    </FadeIn>
+  ))}
+</div>
         </div>
       </section>
       <HorizontalProcess />
@@ -188,7 +189,7 @@ const page = () => {
           </p>
 
           <Link href="/contact-us">
-            <button className="px-10 py-5 bg-[var(--color-primary)] text-white font-bold rounded-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-lg uppercase tracking-widest">
+            <button className="px-6 py-4 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-lg uppercase tracking-widest">
               Get Started Now
             </button>
           </Link>

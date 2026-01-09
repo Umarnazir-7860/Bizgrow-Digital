@@ -42,7 +42,7 @@ const CreativeContentPage = () => {
   return (
     <section className="relative w-full">
       {/* --- HERO SECTION --- */}
-      <div className="relative  h-[75vh] md:h-screen w-full">
+      <div className="relative  h-[85vh] md:h-screen w-full">
         <Image
           src="/creative-content-hero.jpg"
           alt="Creative Content Services"
@@ -62,7 +62,7 @@ const CreativeContentPage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <h1 className="text-white text-5xl md:text-7xl text-center font-bold max-w-4xl leading-tight">
+              <h1 className="text-white text-4xl md:text-7xl text-center font-bold max-w-4xl leading-tight">
                 Words & Visuals That <br />
                 <span className="text-orange-500 text-4xl">
                   Command Attention
