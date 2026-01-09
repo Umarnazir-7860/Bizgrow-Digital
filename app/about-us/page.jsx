@@ -53,55 +53,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <div
-        className=" mx-auto flex flex-col dark:bg-[#000B25] dark:border-y-2
-       dark:border-red-700 lg:flex-row items-center py-6 px-4 gap-8"
-      >
-        {/* Text */}
-        <div className="w-full lg:w-1/2 py-5 md:py-10  flex flex-col space-y-3">
-          <FadeIn direction="right" delay={0.2}>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#B54118]">
-              Who We Are
-            </h1>
-          </FadeIn>
-          <FadeIn direction="right" delay={0.4}>
-            <p className="text-gray-700 dark:text-white text-sm mr-2 md:text-md">
-              "We are a passionate and dedicated team of professionals committed
-              to delivering innovative solutions that empower businesses to
-              grow, adapt, and succeed in today’s fast-paced world. At the core
-              of our work is a desire to turn ambitious ideas into tangible
-              results, helping our clients overcome challenges, seize
-              opportunities, and thrive in an ever-evolving market. Every
-              project we undertake is guided by creativity, expertise, and a
-              deep understanding of our clients’ unique needs, ensuring
-              solutions that are not only effective but also sustainable and
-              future-ready. Our approach combines strategic thinking with
-              hands-on execution, allowing us to design and implement solutions
-              that drive measurable impact. We believe in building strong
-              partnerships with our clients, fostering collaboration and
-              transparency at every stage of the process. By staying ahead of
-              trends, leveraging cutting-edge technologies, and embracing
-              continuous learning, we help businesses navigate complexity and
-              achieve their goals with confidence."
-            </p>
-          </FadeIn>
-        </div>
+    {/* Overview Section Wrapper: Poori screen ka background aur border yahan aayega */}
+<section className="w-full bg-white dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 py-12 md:py-20">
+  
+  {/* Content Container: Ye content ko center mein rakhega aur sides par padding dega */}
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+    
+    {/* Text Side */}
+    <div className="w-full lg:w-1/2 flex flex-col space-y-4">
+      <FadeIn direction="right" delay={0.2}>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#B54118] uppercase tracking-tighter">
+          Who We Are
+        </h2>
+      </FadeIn>
+      
+      <FadeIn direction="right" delay={0.4}>
+        <p className="text-gray-700 dark:text-white text-sm sm:text-base md:text-lg leading-relaxed text-justify md:text-left">
+          "We are a passionate and dedicated team of professionals committed
+          to delivering innovative solutions that empower businesses to
+          grow, adapt, and succeed in today’s fast-paced world. At the core
+          of our work is a desire to turn ambitious ideas into tangible
+          results, helping our clients overcome challenges, seize
+          opportunities, and thrive in an ever-evolving market. Every
+          project we undertake is guided by creativity, expertise, and a
+          deep understanding of our clients’ unique needs, ensuring
+          solutions that are not only effective but also sustainable and
+          future-ready."
+        </p>
+      </FadeIn>
+    </div>
 
-        {/* Image */}
-
-        <div className="w-full lg:w-1/2 flex justify-center -mt-5 mb-3 md:mt-8 lg:mt-0">
-          <FadeIn direction="left" delay={0.4}>
-            <Image
-              src="/team-collaboration.jpg"
-              width={500}
-              height={400}
-              className="rounded-xl"
-              alt="Team Collaboration"
-            />
-          </FadeIn>
+    {/* Image Side */}
+    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+      <FadeIn direction="left" delay={0.4}>
+        <div className="relative">
+          <Image
+            src="/team-collaboration.jpg"
+            width={550}
+            height={400}
+            className="rounded-[2rem] shadow-2xl object-cover"
+            alt="Team Collaboration"
+          />
+          {/* Decorative Background Shape - Sirf bari screens par */}
+          <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-[#B54118]/5 rounded-full hidden md:block" />
         </div>
-      </div>
+      </FadeIn>
+    </div>
+
+  </div>
+</section>
 
       {/* Mission & Vision Section */}
       <section className="bg-[#F2E8D5] py-10 px-4 ">
