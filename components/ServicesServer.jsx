@@ -52,9 +52,9 @@ export default function ServicesSection() {
         {/* Heading & Paragraph Section */}
         <div className="text-center z-10 w-full  flex flex-col items-center">
           <FadeIn direction="up">
-            <h1 className="text-4xl mt-20 md:text-6xl text-[#B54118] font-bold uppercase tracking-tighter leading-none">
+            <h2 className="text-4xl mt-20 md:text-6xl text-[#B54118] font-bold uppercase tracking-tighter leading-none">
               Our Digital Services
-            </h1>
+            </h2>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
@@ -124,9 +124,9 @@ function Card({ title, img, desc,alt, i, progress, range, isFirst, isLast }) {
         <span className="text-[#B54118] font-bold text-xs uppercase tracking-widest opacity-60">
           Service 0{i + 1}
         </span>
-        <h2 className="text-2xl md:text-4xl text-[#B54118] font-black mt-1 leading-tight uppercase">
+        <h3 className="text-2xl md:text-4xl text-[#B54118] font-black mt-1 leading-tight uppercase">
           {title}
-        </h2>
+        </h3>
         <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg mt-2 md:mt-4">
           {desc}
         </p>
