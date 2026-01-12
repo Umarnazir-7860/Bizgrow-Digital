@@ -147,7 +147,8 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="max-w-7xl mx-auto py-10 dark:bg-black px-4 lg:px-0">
+     <section className="w-full dark:bg-black"> 
+      <div className="max-w-7xl mx-auto py-10  px-4 lg:px-0">
         <FadeIn direction="up" delay={0.2}>
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
             Our Core Values
@@ -207,12 +208,13 @@ export default function AboutPage() {
             </FadeIn>
           </div>
         </div>
+      </div>
       </section>
 
       {/* Clients Section */}
       <section className="mx-auto py-16 dark:bg-[#000B25] dark:border-t-2 dark:border-orange-700  px-4 lg:px-0">
         <FadeIn direction="up">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] dark:text-white mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118]  mb-12">
             Trusted By
           </h2>
         </FadeIn>
@@ -229,28 +231,28 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-       <div
-        className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-[#B54118] text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/team-work.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
-        <div className="relative z-10 mx-1 md:mx-0">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Let’s Work Together to Achieve Your Goals
-          </h2>
-          <p className=" mx-auto mb-8 text-lg md:text-xl">
-            We’ve shared our story, our mission, and our values. Now it’s time
-            to create something remarkable for your business. Reach out today
-            and let’s start building success together.
-          </p>
-          <Link href="/contact-us">
-            <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
-              Get in Touch
-            </button>
-          </Link>
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+        <div
+          className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-[#B54118] text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: "url('/team-work.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
+          <div className="relative z-10 mx-1 md:mx-0">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Let’s Work Together to Achieve Your Goals
+            </h2>
+            <p className=" mx-auto mb-8 text-lg md:text-xl">
+              We’ve shared our story, our mission, and our values. Now it’s time
+              to create something remarkable for your business. Reach out today
+              and let’s start building success together.
+            </p>
+            <Link href="/contact-us">
+              <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
+                Get in Touch
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
       </section>
     </main>
   );

@@ -49,7 +49,8 @@ const SEOPage = () => {
       </div>
 
       {/* --- SEO BENTO GRID: The Strategy Section --- */}
-      <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700 ">
+     <section className="w-full dark:bg-black dark:border-t-2 dark:border-orange-700">
+      <div className="py-32 max-w-7xl mx-auto px-6  ">
         <FadeIn direction="up">
            <h2 className="text-3xl md:text-5xl flex justify-center font-black dark:text-white mb-16 uppercase tracking-tighter">
              The Science of <span className="text-orange-500 underline">Ranking</span>
@@ -97,7 +98,7 @@ const SEOPage = () => {
           </div>
         </div>
       </div>
-
+     </section>
       {/* --- REVERSED CONTENT: Why Trust Us --- */}
       <div className="py-24 bg-white dark:bg-[#020817] dark:border-t-2 dark:border-orange-700 ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row-reverse gap-20 items-center">

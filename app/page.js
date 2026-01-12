@@ -49,7 +49,7 @@ const HomePage = () => {
 
       {/* Feature Section: Left Text, Right Image */}
       <section
-        className="py-10 bg-gray-50 dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 
+        className="py-10 bg-gray-50 dark:bg-[#000B25] dark:border-y-2 dark:border-orange-700 
       px-6"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
@@ -127,7 +127,7 @@ const HomePage = () => {
           </p>
         </FadeIn>
         <div className="max-w-4xl  md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-[#B54118] p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
+          <div className="bg-white dark:bg-[#B54118] dark:border dark:border-white p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
             <h3 className="text-2xl dark:text-white font-semibold mb-2">
               Strategy-First Approach
             </h3>
@@ -137,7 +137,7 @@ const HomePage = () => {
               performance.
             </p>
           </div>
-          <div className="bg-white dark:bg-[#B54118] p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
+          <div className="bg-white dark:bg-[#B54118] p-6 dark:border dark:border-white rounded-xl shadow-lg transition-transform hover:scale-105">
             <h3 className="text-2xl dark:text-white font-semibold mb-2">
               Performance-Focused SEO
             </h3>
@@ -147,8 +147,8 @@ const HomePage = () => {
               audience.
             </p>
           </div>
-          <div className="bg-white dark:bg-[#B54118] p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
-            <h3 className="text-2xl dark:text-white font-semibold mb-2">
+          <div className="bg-white dark:bg-[#B54118] p-6 rounded-xl dark:border dark:border-white shadow-lg transition-transform hover:scale-105">
+            <h3 className="text-2xl dark:text-white  font-semibold mb-2">
               Creative Brand Design
             </h3>
             <p className="text-gray-600 text-sm dark:text-white">
@@ -160,9 +160,9 @@ const HomePage = () => {
         </div>
       </section>
       {/* Final CTA Section */}
-      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
         <div
-          className="relative py-20 mx-4 md:mx-20  rounded-2xl text-white text-center dark:border dark:border-white px-4 bg-black bg-cover bg-center bg-fixed"
+          className="relative py-20 mx-4 md:mx-20  rounded-2xl text-white text-center dark:border dark:border-orange-700 px-4 bg-black bg-cover bg-center bg-fixed"
           style={{ backgroundImage: "url('/hero-cta.jpg')" }}
         >
           {/* Dark Overlay taaki text aur button clear nazar aayein */}

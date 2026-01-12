@@ -133,7 +133,8 @@ export default function Navbar() {
               <Link href="/our-digital-services">
               <button className="flex items-center gap-1 text-orange-500 outline-none">
                 Services
-                <svg
+                <svg 
+                  
                   className={`w-4 h-4 transition-transform ${
                     open ? "rotate-180" : ""
                   }`}
@@ -141,6 +142,7 @@ export default function Navbar() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"

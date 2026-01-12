@@ -69,7 +69,7 @@ export default async function SingleBlogPost({ params }) {
         <div
           className="
             /* Paragraph Spacing (As per WP Example) */
-            prose-p:text-xl prose-p:leading-[1.9] prose-p:text-gray-700 dark:text-white prose-p:mb-12
+            prose-p:text-xl prose-p:leading-[1.9]  prose-p:text-gray-700 dark:text-white prose-p:mb-12
             
             /* Large & Bold Headings */
             prose-h2:text-4xl prose-h2:font-black prose-h2:text-[#12066a]  prose-h2:mt-20 prose-h2:mb-8 

@@ -46,13 +46,13 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <section ref={container} className="relative w-full h-[250vh] md:h-[350vh] bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-red-700 ">
+    <section ref={container} className="relative w-full h-[250vh] md:h-[350vh] bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-orange-700 ">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4">
         
         {/* Heading & Paragraph Section */}
         <div className="text-center z-10 w-full  flex flex-col items-center">
           <FadeIn direction="up">
-            <h1 className="text-4xl mt-20 md:text-6xl text-[#B54118] dark:text-white font-bold uppercase tracking-tighter leading-none">
+            <h1 className="text-4xl mt-20 md:text-6xl text-[#B54118] font-bold uppercase tracking-tighter leading-none">
               Our Digital Services
             </h1>
           </FadeIn>

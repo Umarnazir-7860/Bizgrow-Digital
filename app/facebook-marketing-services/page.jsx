@@ -73,7 +73,8 @@ const FacebookMarketingPage = () => {
       </div>
 
       {/* --- FEATURE SECTION: Fixed Spacing & Height --- */}
-      <div className="py-14 max-w-7xl dark:bg-black dark:border-t-2 dark:border-orange-700 mx-auto px-6">
+    <section className="w-full dark:bg-black  dark:border-y-2 dark:border-orange-700"> 
+       <div className="py-14 max-w-7xl  mx-auto px-6 " >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
           {fbFeatures.map((f, i) => (
             <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
@@ -96,7 +97,7 @@ const FacebookMarketingPage = () => {
           ))}
         </div>
       </div>
-
+    </section> 
       {/* --- STRATEGY SECTION --- */}
       <section className="dark:bg-[#020817] py-20">
       <div className="py-24 bg-slate-900 dark:border dark:border-orange-700 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">

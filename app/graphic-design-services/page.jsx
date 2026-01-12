@@ -50,7 +50,8 @@ const GraphicDesignPage = () => {
       </div>
 
       {/* --- UNIQUE SERVICE "BENTO" GRID: Artistic Middle Section --- */}
-      <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700">
+      <section className="w-full dark:bg-black dark:border-t-2 dark:border-orange-700">
+       <div className="py-32 max-w-7xl mx-auto px-6 ">
         <FadeIn direction="up">
           <h2 className="text-3xl md:text-5xl  flex justify-center font-black dark:text-white mb-16 uppercase tracking-tighter">
             Our Creative{" "}
@@ -77,7 +78,7 @@ const GraphicDesignPage = () => {
 
             {/* Content */}
             <div className="relative z-20 h-full flex flex-col justify-end p-12">
-              <div className="bg-orange-500/10 backdrop-blur-md border border-orange-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+              <div className="bg-orange-500/10 backdrop-blur-md border border-orange-500/20  w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <Figma className="text-orange-500 w-10 h-10" />
               </div>
               <h3 className="text-4xl font-bold text-white mb-4 uppercase tracking-tighter">
@@ -121,6 +122,7 @@ const GraphicDesignPage = () => {
           </div>
         </div>
       </div>
+      </section>
 
       {/* --- CONTENT SECTION: Unique Visual Philosophy --- */}
       <div className="py-14 bg-white dark:bg-[#020817] dark:border-t-2 dark:border-orange-700">

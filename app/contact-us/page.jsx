@@ -167,7 +167,7 @@ const ContactPage = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="flex flex-col space-y-2">
+                    <div className="flex flex-col space-y-2 ">
                       <label className="text-sm font-bold text-slate-700 dark:text-white ml-1">Full Name</label>
                       <input 
                         name="name"
@@ -176,7 +176,7 @@ const ContactPage = () => {
                         required
                         type="text" 
                         placeholder="John Doe" 
-                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-gray-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
+                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 border border-black-600  dark:text-white  dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
                       />
                     </div>
                     <div className="flex flex-col space-y-2">
@@ -188,7 +188,7 @@ const ContactPage = () => {
                         required
                         type="email" 
                         placeholder="john@example.com" 
-                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-gray-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
+                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-black-600 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
                       />
                     </div>
                     <div className="flex flex-col space-y-2 md:col-span-2">
@@ -200,19 +200,19 @@ const ContactPage = () => {
                         required
                         type="text" 
                         placeholder="How can we help?" 
-                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-gray-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
+                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-black-600 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all" 
                       />
                     </div>
                     <div className="flex flex-col space-y-2 md:col-span-2">
-                      <label className="text-sm font-bold text-slate-700 dark:text-white ml-1">Message</label>
+                      <label className="text-sm font-bold text-slate-700 dark:text-white ml-1">Message </label>
                       <textarea 
                         name="message"
-                        value={formData.message}
+                        value={formData.message}  
                         onChange={handleChange}
                         required
                         rows={4} 
                         placeholder="Your project details..." 
-                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-gray-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all resize-none" 
+                        className="px-6 py-4 bg-gray-50 dark:bg-slate-900 dark:text-white border border-black-600 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-[#B54118]/20 focus:border-[#B54118] outline-none transition-all resize-none" 
                       />
                     </div>
                     <div className="md:col-span-2">

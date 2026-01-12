@@ -89,7 +89,7 @@ const page = () => {
           {/* Content wahi hai, sirf FadeIn par 'w-full' add kiya hai */}
           <FadeIn direction="up" delay={0.2} className="w-full">
             <h1
-              className="text-white text-4xl mx-auto md:text-7xl text-center 
+              className="text-white text-4xl mx-auto md:text-6xl text-center 
             font-bold mt-26 max-w-3xl px-4"
             >
               Data-Driven Services to{" "}

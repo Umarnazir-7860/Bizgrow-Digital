@@ -57,7 +57,8 @@ const WordPressPage = () => {
       </div>
 
       {/* --- NEW SECTION: The "Not Just a Theme" Grid --- */}
-      <div className="py-14 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700 ">
+      <section className="w-full dark:bg-black  dark:border-t-2 dark:border-orange-700 ">
+       <div className="py-14 max-w-7xl mx-auto px-6 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-black dark:text-white mb-6">
@@ -109,7 +110,7 @@ const WordPressPage = () => {
           </div>
         </div>
       </div>
-
+       </section> 
       {/* --- NEW SECTION: Feature Comparison (Design Variation) --- */}
       <section className="dark:bg-[#020817] py-20 dark:border-t-2 dark:border-orange-700 ">
       <div className="py-10 bg-slate-900 dark:border dark:border-white text-white rounded-[4rem] mx-4 md:mx-10 mb-20">
