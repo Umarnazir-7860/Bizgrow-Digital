@@ -95,7 +95,7 @@ const HomePage = () => {
           <FadeIn direction="left" delay={0.4}>
             <div className="relative w-full h-80 md:h-[500px]">
               <Image
-                src="/boost.jpg" // replace with your image
+                src="/boost.jpg" 
                 alt="Boost Online Presence with BizGrow Digital"
                 fill
                 loading="lazy"

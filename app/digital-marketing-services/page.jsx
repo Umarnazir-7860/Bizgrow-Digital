@@ -124,9 +124,9 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* --- FINAL CTA: Consistently Powerful --- */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-[#B54118] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/Smart Digital Marketing.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>

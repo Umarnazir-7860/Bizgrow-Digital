@@ -54,7 +54,7 @@ export default function AboutPage() {
       </section>
 
       {/* Overview Section Wrapper: Poori screen ka background aur border yahan aayega */}
-      <section className="w-full bg-white dark:bg-[#000B25] dark:border-y-2 dark:border-red-700 py-12 md:py-20">
+      <section className="w-full bg-white dark:bg-black dark:border-y-2 dark:border-orange-700 py-12 md:py-20">
         {/* Content Container: Ye content ko center mein rakhega aur sides par padding dega */}
         <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Text Side */}
@@ -101,9 +101,9 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-red-700  py-10 px-4 ">
+      <section className="bg-[#F2E8D5] dark:bg-[#000B25] dark:border-b-2 dark:border-orange-700  py-10 px-4 ">
         <FadeIn direction="up" delay={0.2}>
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] dark:text-white mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
             Our Mission & Vision
           </h2>
         </FadeIn>
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
                 <FaBullseye className="text-[#B54118] h-10 w-10" />
               </div>
-              <h3 className="text-2xl font-semibold dark:text-white mb-3">
+              <h3 className="text-2xl font-semibold dark:text-[#B54118] mb-3">
                 Our Mission
               </h3>
               <p className="text-gray-700 dark:text-white text-sm">
@@ -132,7 +132,7 @@ export default function AboutPage() {
               <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
                 <FaEye className="text-[#B54118] h-10 w-10" />
               </div>
-              <h3 className="text-2xl font-semibold dark:text-white mb-3">
+              <h3 className="text-2xl font-semibold dark:text-[#B54118] mb-3">
                 Our Vision
               </h3>
               <p className="text-gray-700 dark:text-white text-sm">
@@ -147,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="max-w-7xl mx-auto py-10 dark:bg-[#000B25] px-4 lg:px-0">
+      <section className="max-w-7xl mx-auto py-10 dark:bg-black px-4 lg:px-0">
         <FadeIn direction="up" delay={0.2}>
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
             Our Core Values
@@ -210,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* Clients Section */}
-      <section className="mx-auto py-16 dark:bg-black dark:border-t-2 dark:border-red-700  px-4 lg:px-0">
+      <section className="mx-auto py-16 dark:bg-[#000B25] dark:border-t-2 dark:border-orange-700  px-4 lg:px-0">
         <FadeIn direction="up">
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] dark:text-white mb-12">
             Trusted By
@@ -229,9 +229,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
        <div
-        className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-white text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
+        className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-[#B54118] text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/team-work.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>

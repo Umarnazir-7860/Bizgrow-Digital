@@ -179,9 +179,9 @@ const CreativeContentPage = () => {
       </section>
 
       {/* CTA Section */}
-       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
+       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center dark:border dark:border-white px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center dark:border dark:border-[#B54118] px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/creative-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>

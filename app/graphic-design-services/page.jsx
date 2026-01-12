@@ -52,7 +52,7 @@ const GraphicDesignPage = () => {
       {/* --- UNIQUE SERVICE "BENTO" GRID: Artistic Middle Section --- */}
       <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700">
         <FadeIn direction="up">
-          <h2 className="text-3xl md:text-5xl font-black dark:text-white mb-16 uppercase tracking-tighter">
+          <h2 className="text-3xl md:text-5xl  flex justify-center font-black dark:text-white mb-16 uppercase tracking-tighter">
             Our Creative{" "}
             <span className="text-orange-500 underline">Ecosystem</span>
           </h2>
@@ -162,7 +162,7 @@ const GraphicDesignPage = () => {
       {/* --- CTA SECTION: Consistent Style --- */}
         <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-20 mx-4 my-20 dark:border dark:border-white rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 dark:border dark:border-[#B54118] rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/graphic-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>

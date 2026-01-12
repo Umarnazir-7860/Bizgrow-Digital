@@ -51,14 +51,14 @@ const SEOPage = () => {
       {/* --- SEO BENTO GRID: The Strategy Section --- */}
       <div className="py-32 max-w-7xl mx-auto px-6 dark:bg-black dark:border-t-2 dark:border-orange-700 ">
         <FadeIn direction="up">
-           <h2 className="text-3xl md:text-5xl font-black dark:text-white mb-16 uppercase tracking-tighter">
+           <h2 className="text-3xl md:text-5xl flex justify-center font-black dark:text-white mb-16 uppercase tracking-tighter">
              The Science of <span className="text-orange-500 underline">Ranking</span>
            </h2>
         </FadeIn>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
           {/* Large Card: Data Analytics with Image BG */}
-          <div className="md:col-span-2 md:row-span-2 rounded-[3rem] relative overflow-hidden group shadow-2xl">
+          <div className="md:col-span-2 md:row-span-2 rounded-[3rem] dark:border dark:border-[#B54118] relative overflow-hidden group shadow-2xl">
              <Image 
                 src="/analytics.png" 
                 alt="SEO Data Analytics"
@@ -76,7 +76,7 @@ const SEOPage = () => {
           </div>
 
           {/* Small Card 1: Keyword Research */}
-          <div className="bg-slate-900  rounded-[3rem] p-10 flex flex-col justify-between hover:border-orange-500/50 dark:border dark:border-orange-300 border border-transparent transition-all">
+          <div className="bg-slate-900  rounded-[3rem] p-10 flex flex-col justify-between hover:border-orange-500/50 dark:border dark:border-orange-600 border border-transparent transition-all">
              <Search className="text-orange-500 w-12 h-12" />
              <h3 className="text-2xl font-black text-white leading-tight uppercase">KEYWORD <br/> STRATEGY</h3>
           </div>
@@ -119,7 +119,7 @@ const SEOPage = () => {
               ))}
             </div>
           </div>
-          <div className="w-full lg:w-1/2 relative h-[500px] rounded-[4rem] overflow-hidden border-[12px] border-slate-50 dark:border-slate-900 shadow-2xl group">
+          <div className="w-full lg:w-1/2 relative h-[500px] rounded-[4rem] overflow-hidden border-[8px] border-slate-30 dark:border-orange-700 shadow-2xl group">
             <Image 
               src="/data-over.png" 
               alt="SEO Strategy" 
@@ -134,7 +134,7 @@ const SEOPage = () => {
       {/* --- CTA SECTION: Consistent Style --- */}
         <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-white text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-[#B54118] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/seo-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/85 z-0"></div>

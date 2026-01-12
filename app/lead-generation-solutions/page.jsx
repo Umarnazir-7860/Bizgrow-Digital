@@ -62,8 +62,10 @@ const LeadGenerationPage = () => {
           {/* 🔹 FIX: Har element ko 'w-full flex justify-center' wale div mein wrap kiya gaya hai */}
           <FadeIn direction="up" delay={0.2} className="w-full">
             <div className="w-full flex justify-center">
-              <span className="text-orange-500 font-bold tracking-[0.3em] uppercase 
-              text-xs md:text-sm mb-4 block text-center">
+              <span
+                className="text-orange-500 font-bold tracking-[0.3em] uppercase 
+              text-xs md:text-sm mb-4 block text-center"
+              >
                 Scalable Growth Engines
               </span>
             </div>
@@ -103,19 +105,29 @@ const LeadGenerationPage = () => {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 items-stretch">
             {leadServices.map((item, index) => (
-              <FadeIn key={index} direction="up" delay={0.1 * index}>
-                <div className="group p-10 bg-white dark:bg-slate-700 rounded-[2.5rem]  border border-slate-100 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <FadeIn
+                key={index}
+                direction="up"
+                delay={0.1 * index}
+                className="h-full flex"
+              >
+                <div className="group h-full flex flex-col p-10 dark:border dark:border-[#B54118] bg-white dark:bg-slate-700 rounded-[2.5rem] border border-slate-100  shadow-lg hover:shadow-2xl transition-all duration-300 w-full">
+                  {/* Icon Container */}
                   <div
-                    className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300`}
+                    className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 shrink-0`}
                   >
                     {item.icon}
                   </div>
+
+                  {/* Title */}
                   <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+
+                  {/* Description - flex-grow ensures this fills the height */}
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-grow">
                     {item.desc}
                   </p>
                 </div>
@@ -159,7 +171,7 @@ const LeadGenerationPage = () => {
           </div>
 
           <FadeIn direction="left" delay={0.4}>
-            <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-slate-800">
+            <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800">
               <Image
                 src="/lead-generation.jpg" // Suggestion: Screenshot of a lead dashboard or growth chart
                 alt="Lead Generation Results"
@@ -177,29 +189,29 @@ const LeadGenerationPage = () => {
       <VShapeTransition />
 
       {/* --- CALL TO ACTION --- */}
-         <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-       <div
-        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border dark:border-white px-6 md:mx-20 bg-cover bg-center bg-fixed overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/sales-pipeline.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/85 z-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase">
-            Ready to Fill Your <br />
-            <span className="text-orange-500">Sales Pipeline?</span>
-          </h2>
-          <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light">
-            Stop waiting for customers to find you. Let us build a proactive
-            system that delivers consistent, high-quality leads every single
-            day.
-          </p>
-          <Link href="/contact-us">
-            <button className="px-8 py-5 text-sm bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">
-              Get Your Free Audit
-            </button>
-          </Link>
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+        <div
+          className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border  dark:border-[#B54118] px-6 md:mx-20 bg-cover bg-center bg-fixed overflow-hidden shadow-2xl"
+          style={{ backgroundImage: "url('/sales-pipeline.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black/85 z-0"></div>
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase">
+              Ready to Fill Your <br />
+              <span className="text-orange-500">Sales Pipeline?</span>
+            </h2>
+            <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light">
+              Stop waiting for customers to find you. Let us build a proactive
+              system that delivers consistent, high-quality leads every single
+              day.
+            </p>
+            <Link href="/contact-us">
+              <button className="px-8 py-5 text-sm bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">
+                Get Your Free Audit
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
       </section>
     </section>
   );

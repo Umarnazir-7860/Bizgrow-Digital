@@ -95,7 +95,7 @@ const WebDevelopmentPage = () => {
       </div>
 
       {/* --- BEYOND TEMPLATES SECTION --- */}
-      <section className="dark:bg-[#020817] py-20">
+      <section className="dark:bg-[#020817] py-20 dark:border-t-2 dark:border-orange-700">
       <div className="py-24 bg-slate-900 mx-4 md:mx-10 dark:border dark:border-orange-700 rounded-[4rem] mb-24 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -137,7 +137,7 @@ const WebDevelopmentPage = () => {
       {/* --- CONSISTENT CTA --- */}
         <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-20 mx-4 my-20 dark:border dark:border-white rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
+        className="relative py-20 mx-4 my-20 dark:border dark:border-[#B54118] rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
         style={{ backgroundImage: "url('/web-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/75 z-0"></div>

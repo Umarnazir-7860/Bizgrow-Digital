@@ -115,7 +115,7 @@ const EmailMarketingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {emailServices.map((item, index) => (
               <FadeIn key={index} direction="up" delay={0.2 * index}>
-                <div className="group p-10 bg-white dark:bg-slate-700 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-xl hover:shadow-2xl transition-all duration-500 h-full">
+                <div className="group p-10 bg-white dark:bg-slate-700 dark:border dark:border-[#B54118] rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-500 h-full">
                   <div className={`w-16 h-16 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:rotate-[15deg]`}>
                     {item.icon}
                   </div>
@@ -187,7 +187,7 @@ const EmailMarketingPage = () => {
       {/* --- FINAL CTA --- */}
        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
       <div
-        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border dark-border-white px-6 md:mx-20 bg-center bg-fixed overflow-hidden shadow-3xl"
+        className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border dark:border-[#B54118] px-6 md:mx-20 bg-center bg-fixed overflow-hidden shadow-3xl"
         style={{ backgroundImage: "url('/email-cta.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>

@@ -82,12 +82,16 @@ const page = () => {
         />
 
         {/* Overlay: Taaki image ke upar text parha ja sakay */}
-        <div className="absolute inset-0 w-full bg-black/70 flex flex-col justify-center
-         items-center space-y-3">
+        <div
+          className="absolute inset-0 w-full bg-black/70 flex flex-col justify-center
+         items-center space-y-3"
+        >
           {/* Content wahi hai, sirf FadeIn par 'w-full' add kiya hai */}
           <FadeIn direction="up" delay={0.2} className="w-full">
-            <h1 className="text-white text-4xl mx-auto md:text-7xl text-center 
-            font-bold mt-26 max-w-3xl px-4">
+            <h1
+              className="text-white text-4xl mx-auto md:text-7xl text-center 
+            font-bold mt-26 max-w-3xl px-4"
+            >
               Data-Driven Services to{" "}
               <span className="text-orange-500">Scale Your Business</span> for
               Growth
@@ -131,71 +135,78 @@ const page = () => {
               </p>
             </FadeIn>
           </div>
-      {/* Services Grid  */}
-<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
-  {services.map((service, index) => (
-    /* FadeIn ko 'h-full' dena zaroori hai taake grid stretch ho sakay */
-    <FadeIn key={index} direction="up" delay={0.1 * index} className="h-full">
-      <div
-        className="group h-full p-10 bg-white dark:bg-gray-700 rounded-[2.5rem] 
+          {/* Services Grid  */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
+            {services.map((service, index) => (
+              /* FadeIn ko 'h-full' dena zaroori hai taake grid stretch ho sakay */
+              <FadeIn
+                key={index}
+                direction="up"
+                delay={0.1 * index}
+                className="h-full"
+              >
+                <div
+                  className="group h-full p-10 bg-white dark:bg-gray-700 rounded-[2.5rem] 
         border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 
         transition-all duration-300 flex flex-col"
-      >
-        <div
-          className={`w-16 h-16 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
+                >
+                  <div
+                    className={`w-16 h-16 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
           rounded-2xl flex items-center justify-center mb-6 transition-all 
           duration-300 group-hover:rotate-12  shrink-0`}
-        >
-          {service.icon}
-        </div>
+                  >
+                    {service.icon}
+                  </div>
 
-        <h3
-          className="text-2xl font-bold text-slate-800 dark:text-white mb-4 
+                  <h3
+                    className="text-2xl font-bold text-slate-800 dark:text-white mb-4 
           transition-colors group-hover:text-[#B54118] "
-        >
-          {service.title}
-        </h3>
+                  >
+                    {service.title}
+                  </h3>
 
-        {/* 'flex-grow' text ko expansion deta hai aur cards ko match karta hai */}
-        <p className="text-gray-600 dark:text-white leading-relaxed flex-grow">
-          {service.desc}
-        </p>
-      </div>
-    </FadeIn>
-  ))}
-</div>
+                  {/* 'flex-grow' text ko expansion deta hai aur cards ko match karta hai */}
+                  <p className="text-gray-600 dark:text-white leading-relaxed flex-grow">
+                    {service.desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
       <HorizontalProcess />
       <ShapeChangeSection />
       <VShapeTransition />
       {/* CTA Section */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-red-700 ">
-      <div
-        className="relative py-20 mx-4 my-20 rounded-[2rem] text-white text-center px-6 md:mx-20 bg- bg-cover bg-fixed overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/services-cta.jpg')" }}
-      >
-        {/* Overlay using your secondary color variable with transparency */}
-        <div className="absolute inset-0 bg-[black]/80 z-0"></div>
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
+        <div
+          className="relative py-20 mx-4 my-20 rounded-[2rem] text-white text-center dark:border dark:border-[#B54118] px-6 md:mx-20 bg- bg-cover bg-fixed overflow-hidden shadow-2xl"
+          style={{ backgroundImage: "url('/services-cta.jpg')" }}
+        >
+          {/* Overlay using your secondary color variable with transparency */}
+          <div className="absolute inset-0 bg-[black]/80 z-0"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase">
-            Ready to Scale Your <br />
-            <span className="text-[var(--color-primary)]">Digital Reach?</span>
-          </h2>
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase">
+              Ready to Scale Your <br />
+              <span className="text-[var(--color-primary)]">
+                Digital Reach?
+              </span>
+            </h2>
 
-          <p className="mx-auto mb-10 text-lg md:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
-            We don’t just build websites; we create growth engines. Let’s turn
-            your business goals into a digital reality today.
-          </p>
+            <p className="mx-auto mb-10 text-lg md:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
+              We don’t just build websites; we create growth engines. Let’s turn
+              your business goals into a digital reality today.
+            </p>
 
-          <Link href="/contact-us">
-            <button className="px-6 py-4 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-lg uppercase tracking-widest">
-              Get Started Now
-            </button>
-          </Link>
+            <Link href="/contact-us">
+              <button className="px-6 py-4 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-lg uppercase tracking-widest">
+                Get Started Now
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
       </section>
     </section>
   );
