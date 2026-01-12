@@ -44,7 +44,7 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.6}>
-            <Link href="/services">
+            <Link href="/our-digital-services">
               <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
                 Explore Our Services →
               </button>

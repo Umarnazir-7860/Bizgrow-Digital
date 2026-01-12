@@ -38,7 +38,7 @@ const HomePage = () => {
             </p>
           </FadeIn>
           <FadeIn direction="up" delay={0.6}>
-            <Link href="/services">
+            <Link href="/our-digital-services">
               <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
                 Explore Our Services →
               </button>
@@ -81,7 +81,7 @@ const HomePage = () => {
               </p>
             </FadeIn>
 
-            <Link href="/services">
+            <Link href="/our-digital-services">
               <button
                 className="px-3 py-3 bg-[#B54118] text-white font-semibold rounded-xl 
               hover:scale-105 transition"
@@ -178,7 +178,7 @@ const HomePage = () => {
               We create awesome websites, boost your SEO, and handle marketing
               that works to attract more visitors and customers.
             </p>
-            <Link href="/contact">
+            <Link href="/contact-us">
               <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
                 Contact US
               </button>

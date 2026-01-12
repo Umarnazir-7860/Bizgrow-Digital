@@ -87,7 +87,7 @@ export default function ServicesSection() {
 
         {/* 🔹 FIX: Button properly centered inside FadeIn wrapper */}
         <div className="mt-16 z-10 w-full ">
-             <Link href="/services" className="flex justify-center"> 
+             <Link href="/our-digital-services" className="flex justify-center"> 
               <button className="px-10 py-4 mb-4 bg-[#B54118] text-white text-sm md:text-base font-semibold rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg uppercase tracking-wider whitespace-nowrap">
                 View All Services →
               </button>

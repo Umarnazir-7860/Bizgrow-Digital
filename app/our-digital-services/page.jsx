@@ -109,9 +109,11 @@ const page = () => {
           <FadeIn direction="up" delay={0.6} className="w-full">
             {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
             <div className="w-full flex justify-center">
+              <Link href="/contact-us">
               <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
-                Explore Our Services →
+                Contact Us →
               </button>
+              </Link>
             </div>
           </FadeIn>
         </div>
