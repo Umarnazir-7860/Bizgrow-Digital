@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FaBullseye,
+  FaCheckCircle,
   FaEye,
   FaHandshake,
   FaLightbulb,
@@ -26,7 +27,7 @@ export default function AboutPage() {
         {/* 🔹 FIX: 'inset-0' aur 'w-full' add kiya taake content poori screen ke hisab se center ho */}
         <div
           className="absolute inset-0 w-full bg-black/60 flex flex-col items-center 
-  justify-center text-center px-4"
+          justify-center text-center px-4"
         >
           <FadeIn direction="up" delay={0.2}>
             <h1 className="text-white text-4xl md:text-6xl mt-20 font-bold mb-4">
@@ -61,22 +62,25 @@ export default function AboutPage() {
           <div className="w-full lg:w-1/2 flex flex-col space-y-4">
             <FadeIn direction="right" delay={0.2}>
               <h2 className="text-4xl md:text-5xl  font-black text-[#B54118]  uppercase tracking-tighter">
-                Who We Are
+                About Us
               </h2>
             </FadeIn>
 
             <FadeIn direction="right" delay={0.4}>
               <p className="text-gray-700 dark:text-white text-sm sm:text-base lg:text-md leading-relaxed text-justify md:text-left  ">
-                "We are a passionate and dedicated team of professionals
-                committed to delivering innovative solutions that empower
-                businesses to grow, adapt, and succeed in today’s fast-paced
-                world. At the core of our work is a desire to turn ambitious
-                ideas into tangible results, helping our clients overcome
-                challenges, seize opportunities, and thrive in an ever-evolving
-                market. Every project we undertake is guided by creativity,
-                expertise, and a deep understanding of our clients’ unique
-                needs, ensuring solutions that are not only effective but also
-                sustainable and future-ready."
+                At BizGrow Digital, our focus is on your business’s brand,
+                specifically online, using results-driven digital marketing
+                services and creative thinking. We have SEO professionals,
+                developers, and digital marketers who help in delivering results
+                to media success. We’re not your average digital agency; we are
+                your business’s growth partners, helping your business unleash
+                its full potential. <br />
+                <b className="text-black">Your partner for digital growth </b>
+                We specialise in advanced SEO, websites built with purpose that
+                make an impact, all to generate valuable leads for growth. When
+                you work with us, you will become visible and will start to
+                establish a presence of credibility and reliability that exposes
+                long-term growth.
               </p>
             </FadeIn>
           </div>
@@ -118,10 +122,12 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-gray-700 dark:text-white text-sm">
-                Our mission is to empower businesses with innovative solutions
-                that drive growth, efficiency, and lasting success. We exist to
-                help our clients turn ideas into actionable strategies, overcome
-                challenges with confidence, and achieve measurable results.
+                BizGrow Digital helps UK businesses grow online with strategies
+                that increase visibility, connect their business to potential
+                customers, and build their brand presence of their business. We
+                provide results-driven digital solutions so that businesses can
+                be distinguishable from others in their industry and achieve
+                measurable success across all digital platforms.
               </p>
             </FadeIn>
           </div>
@@ -136,79 +142,156 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="text-gray-700 dark:text-white text-sm">
-                Our vision is to be recognized as a leader in delivering
-                transformative solutions that shape the future of industries. We
-                aspire to create a world where businesses of all sizes can
-                thrive, innovate, and adapt effortlessly to change.
+                We aim to be the trusted digital partner for UK brands, helping
+                them succeed online, establish credibility, and reach more
+                customers. By crafting professional digital strategies and
+                providing innovative solutions, we will help businesses to
+                achieve long-term growth and a strong, recognisable online
+                presence.
               </p>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Core Values Section */}
-     <section className="w-full dark:bg-black"> 
-      <div className="max-w-7xl mx-auto py-10  px-4 lg:px-0">
-        <FadeIn direction="up" delay={0.2}>
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
-            Our Core Values
-          </h2>
-        </FadeIn>
-        <div className="flex flex-col px-4 md:flex-row gap-8">
-          {/* Integrity */}
+      {/* 🚀 NEW SECTION: What Makes Us Different */}
+      <section className="w-full py-20 bg-white dark:bg-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn direction="up">
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-16 uppercase">
+              What Makes Us Different
+            </h2>
+          </FadeIn>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature 1: Listen with Purpose */}
+            <FadeIn direction="up" delay={0.1}>
+              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
+                {/* Animated Icon Container */}
+                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
+                  <FaHandshake className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Listen with Purpose
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Every strategy we build is rooted in your unique goals to make
+                  sure we get a solution that actually meets your needs.
+                </p>
+              </div>
+            </FadeIn>
 
-          <div
-            className="flex-1  dark:bg-[#000B25]  border border-gray-200 shadow-lg rounded-xl
+            {/* Feature 2: Complex Simple */}
+            <FadeIn direction="up" delay={0.2}>
+              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
+                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
+                  <FaLightbulb className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Make the Complex Simple
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  With our collective experience, we are able to build pragmatic
+                  and actionable plans to take your ideas and turn them into
+                  results.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Feature 3: Deliver Results */}
+            <FadeIn direction="up" delay={0.3}>
+              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
+                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
+                  <FaRocket className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Deliver Results
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Everything from mobile-responsive websites to better placement
+                  in search results allows us to produce real results.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn direction="up" delay={0.5}>
+            <div className="mt-16 p-8 bg-[#F2E8D5] dark:bg-[#000B25] rounded-2xl border-l-8 border-[#B54118]">
+              <p className="text-xl md:text-2xl font-medium text-black dark:text-white italic">
+                "At BizGrow Digital, we don’t just develop websites; we build
+                powerful digital solutions that turn visitors into clients and
+                position your brand as a trusted leader in your industry."
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="w-full dark:bg-black">
+        <div className="max-w-7xl mx-auto py-10  px-4 lg:px-0">
+          <FadeIn direction="up" delay={0.2}>
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
+              Our Core Values
+            </h2>
+          </FadeIn>
+          <div className="flex flex-col px-4 md:flex-row gap-8">
+            {/* Integrity */}
+
+            <div
+              className="flex-1  dark:bg-[#000B25]  border border-orange-700 shadow-lg rounded-xl
            p-8 transition-transform hover:scale-105 flex flex-col items-center text-center 
            hover:shadow-2xl duration-300"
-          >
-            <FadeIn direction="right">
-              <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                <FaHandshake className="text-[#B54118] h-10 w-10" />
-              </div>
-              <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                Integrity
-              </h3>
-              <p className="dark:text-white text-black text-md">
-                We act with honesty, transparency, and accountability in
-                everything we do.
-              </p>
-            </FadeIn>
-          </div>
+            >
+              <FadeIn direction="right">
+                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
+                  <FaHandshake className="text-[#B54118] h-10 w-10" />
+                </div>
+                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
+                  Integrity
+                </h3>
+                <p className="dark:text-white text-black text-md">
+                  We believe in honest communication, ethical practices, and
+                  delivering what we promise. Trust is the cornerstone of every
+                  relationship we develop.
+                </p>
+              </FadeIn>
+            </div>
 
-          {/* Innovation */}
-          <div className="flex-1 dark:bg-[#000B25]  border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
-            <FadeIn direction="up">
-              <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                <FaLightbulb className="text-[#B54118] h-10 w-10" />
-              </div>
-              <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                Innovation
-              </h3>
-              <p className="dark:text-white text-black text-md">
-                We embrace creativity and forward-thinking solutions to solve
-                complex problems.
-              </p>
-            </FadeIn>
-          </div>
+            {/* Quality and Clarity*/}
+            <div className="flex-1 dark:bg-[#000B25]  border border-orange-700 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+              <FadeIn direction="up">
+                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
+                  <FaLightbulb className="text-[#B54118] h-10 w-10" />
+                </div>
+                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
+                  Quality and Clarity
+                </h3>
+                <p className="dark:text-white text-black text-md">
+                  All of our strategies, messages & designs are created with
+                  intention, precision, and clear intent to maximise the value
+                  of and make an extraordinary impact with.
+                </p>
+              </FadeIn>
+            </div>
 
-          {/* Results-Driven */}
-          <div className="flex-1 dark:bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
-            <FadeIn direction="left">
-              <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                <FaRocket className="text-[#B54118] h-10 w-10" />
-              </div>
-              <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                Results-Driven
-              </h3>
-              <p className="dark:text-white text-black text-md">
-                We focus on delivering measurable impact and achieving success
-                for our clients.
-              </p>
-            </FadeIn>
+            {/* Growth-Driven Mindset */}
+            <div className="flex-1 dark:bg-[#000B25] border border-orange-700 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
+              <FadeIn direction="left">
+                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
+                  <FaRocket className="text-[#B54118] h-10 w-10" />
+                </div>
+                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
+                  Growth-Driven Mindset
+                </h3>
+                <p className="dark:text-white text-black text-md">
+                  We focus on continual improvement, developing strategic
+                  thinkers, and developing a long-term digital growth strategy
+                  for our clients.
+                </p>
+              </FadeIn>
+            </div>
           </div>
         </div>
-      </div>
       </section>
 
       {/* Clients Section */}
@@ -239,12 +322,13 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
           <div className="relative z-10 mx-1 md:mx-0">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Let’s Work Together to Achieve Your Goals
+              Let’s Grow with BizGrow Digital
             </h2>
             <p className=" mx-auto mb-8 text-lg md:text-xl">
-              We’ve shared our story, our mission, and our values. Now it’s time
-              to create something remarkable for your business. Reach out today
-              and let’s start building success together.
+              We work closely with each client to understand what they need. Our
+              solutions are simple, flexible, and designed to get real results.
+              By working together, we make sure every project helps your
+              business grow and succeed.
             </p>
             <Link href="/contact-us">
               <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
