@@ -240,7 +240,8 @@ const ContactPage = () => {
       <section className="pb-20 px-4 md:px-20">
         <FadeIn direction="up">
           <div className="max-w-7xl mx-auto">
-            <div className="relative w-full h-[450px] rounded-[3rem] overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl bg-gray-200">
+            <div className="relative w-full h-[450px] rounded-[3rem] overflow-hidden border-5 
+             border-white dark:border-orange-500 shadow-2xl bg-gray-200">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.565874492323!2d0.15570537704646543!3d51.53951557182046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a59483015f6f%3A0xc07a2164a2752174!2sCEME%20Innovation%20Centre!5e0!3m2!1sen!2suk!4v1709123456789!5m2!1sen!2suk"
                 width="100%" 
