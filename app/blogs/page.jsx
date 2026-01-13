@@ -21,8 +21,8 @@ export default async function BlogPage() {
   const currentPage = 1;
 
   return (
-    <section className="w-full dark:bg-[#121212]">
-    <div className="max-w-7xl mx-auto mt-10 px-10 py-16 dark:bg-[#121212] bg-white">
+    <section className="w-full dark:bg-black">
+    <div className="max-w-7xl mx-auto mt-10 px-10 py-16 dark:bg-black bg-white">
       <header className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-normal">
           Digital Marketing <span className="text-[#B54118]">Insights</span>
