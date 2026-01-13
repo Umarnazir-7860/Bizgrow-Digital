@@ -59,7 +59,7 @@ const HomePage = () => {
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-4xl font-bold  dark:text-white text-[#000B25] mb-6">
                 Boost Your Online Presence with{" "}
-                <span className="text-[#B54118]">BizGrow</span> <br />
+                <span className="text-[#A13512]">BizGrow</span> <br />
                 <span className="text-3xl md:text-4xl font-bold text-[#B54118]">
                   Digital
                 </span>
@@ -164,7 +164,7 @@ const HomePage = () => {
       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
         <div
           className="relative py-20 mx-4 md:mx-20  rounded-2xl text-white text-center dark:border dark:border-orange-700 px-4 bg-black bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/hero-cta.jpg')" }}
+          style={{ backgroundImage: "url('/hero-cta.webp')" }}
         >
           {/* Dark Overlay taaki text aur button clear nazar aayein */}
           <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>

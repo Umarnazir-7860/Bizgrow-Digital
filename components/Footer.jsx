@@ -57,6 +57,7 @@ const Footer = () => {
             width={120}
             height={60}
             className="mb-4 rounded-xl"
+            style={{ width: 'auto', height: 'auto' }}
           />
           <p className="text-sm leading-relaxed mb-4">
             <span className="font-bold">BizGrow Digital</span> is a
@@ -66,7 +67,7 @@ const Footer = () => {
             data-driven marketing strategies, and creative design solutions to
             achieve measurable growth and lasting impact.
           </p>
-          <p className="text-base font-extrabold text-[#B54118] mt-6">
+          <p className="text-base font-extrabold text-[#A13512] mt-6">
             BIZGROW DIGITAL
           </p>
         </div>
