@@ -36,19 +36,19 @@ export default function ShapeChangeSection() {
             // Sirf ek baar animate ho
             transition={{ duration: 0.8, delay:0.4, ease: "easeOut" }}
           >
-            WE SCALE YOUR
+           We Elevate Your 
           </motion.span>
 
           <br />
 
           <motion.span
-            className="inline-block pt-5 text-3xl md:text-8xl mt-6 text-[#B54118]" // Dusri line ko bhi animate karein
+            className="inline-block pt-5 text-3xl md:text-6xl mt-6 leading-normal text-[#B54118]" // Dusri line ko bhi animate karein
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
            
             transition={{ duration: 0.8, delay: 0.6 }} // Thora sa late aaye
           >
-            DIGITAL PRESENCE
+            Digital Presence into <br/> Measurable Growth
           </motion.span>
 
         

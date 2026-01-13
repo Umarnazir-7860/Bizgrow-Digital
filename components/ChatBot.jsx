@@ -137,7 +137,7 @@ export default function ChatBot() {
                     <h3 className="font-playfair font-bold text-sm tracking-wide">
                       BizGrow Expert
                     </h3>
-                    <p className="text-[10px] text-blue-100 uppercase tracking-widest">
+                    <p className="text-[10px] text-green-500 uppercase tracking-widest">
                       Active Now
                     </p>
                   </div>

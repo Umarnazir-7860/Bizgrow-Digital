@@ -54,13 +54,13 @@ export default function VShapeTransition() {
           {/* CONTENT */}
           <div className="max-w-4xl px-5 -mt-15 text-center z-10">
              <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tight mb-3">
-              TRANSFORMING CLICKS INTO CUSTOMERS
+            <h2 className="text-4xl md:text-6xl leading-tight font-bold tracking-tight mb-3">
+             Turning Visitors into Loyal Customers 
             </h2>
             </FadeIn>
              <FadeIn direction="up" delay={0.3}>
             <p className="text-sm md:text-lg uppercase tracking-[0.3em] opacity-80">
-               High-performance digital strategies tailored for your brand.
+              Results-focused digital strategies built to grow your brand and increase ROI.
             </p>
             </FadeIn>
           </div>

@@ -18,7 +18,7 @@ const page = () => {
   const services = [
     {
       title: "Web Development",
-      desc: "Building fast, secure, and SEO-friendly websites using the power of Next.js, React, and custom WordPress solutions.",
+      desc: "Designing high-performance, secure, and SEO-optimised websites using Next.js, React, and custom WordPress solutions built for scalability and conversions.",
       icon: <Globe className="w-8 h-8" />,
       bgColor: "bg-orange-100",
       hoverIcon: "group-hover:text-white",
@@ -26,7 +26,7 @@ const page = () => {
     },
     {
       title: "Graphic Design",
-      desc: "Prioritizing user experience by designing modern, clean, and engaging interfaces tailored for your audience.",
+      desc: "Creating visually compelling, user-focused designs that enhance user experience, strengthen brand identity, and engage your target audience.",
       icon: <Palette className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverIcon: "group-hover:text-white",
@@ -34,7 +34,7 @@ const page = () => {
     },
     {
       title: "SEO",
-      desc: "Driving high-quality organic traffic by ranking your website at the top of Google search results.",
+      desc: "Improving search engine visibility and driving high-quality organic traffic through strategic, results-focused Google ranking optimisation.",
       icon: <TrendingUp className="w-8 h-8" />,
       bgColor: "bg-green-100",
       hoverIcon: "group-hover:text-white",
@@ -42,15 +42,15 @@ const page = () => {
     },
     {
       title: "Digital Marketing",
-      desc: "Expanding your brand's reach to your target audience through strategic social media management and search engine ads.",
+      desc: "Driving brand growth by connecting with the right audience through strategic social media management and search engine-led growth strategies.",
       icon: <Megaphone className="w-8 h-8" />,
       bgColor: "bg-purple-100",
       hoverIcon: "group-hover:text-white",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
-      title: "Brand Identity",
-      desc: "Crafting a unique identity for your business, from professional logo design to a consistent and impactful brand voice.",
+      title: "Social Media Marketing",
+      desc: "Building brand awareness and meaningful engagement through strategic content, platform-focused management, and data-led social growth.",
       icon: <Fingerprint className="w-8 h-8" />,
       bgColor: "bg-red-100",
       hoverIcon: "group-hover:text-white",
@@ -59,7 +59,7 @@ const page = () => {
     // ... baqi services same rahengi
     {
       title: "Creative Content",
-      desc: "Developing high-performance hybrid and native mobile applications for both iOS and Android platforms.",
+      desc: "Crafting high-quality, audience-focused content that strengthens brand messaging, builds trust, and drives meaningful engagement.",
       icon: <PenTool className="w-8 h-8" />,
       bgColor: "bg-yellow-100",
       hoverIcon: "group-hover:text-white",
@@ -93,16 +93,17 @@ const page = () => {
               className="text-white text-4xl mx-auto md:text-6xl text-center 
             font-bold mt-26 max-w-3xl px-4"
             >
-              Data-Driven Services to{" "}
-              <span className="text-orange-500">Scale Your Business</span> for
+              Data-Driven Solutions to{" "}
+              <span className="text-orange-500">Scale Your Business </span>
               Growth
             </h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4} className="w-full">
             <p className="text-white text-md mx-auto md:text-xl text-center max-w-2xl px-4">
-              We provide end-to-end digital solutions that help brands grow,
-              engage, and dominate their niche
+              We deliver end-to-end digital services that empower brands to
+              increase visibility, attract qualified leads, and outperform their
+              competition.
             </p>
           </FadeIn>
 
@@ -111,9 +112,9 @@ const page = () => {
             {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
             <div className="w-full flex justify-center">
               <Link href="/contact-us">
-              <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
-                Contact Us →
-              </button>
+                <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
+                  Contact Us →
+                </button>
               </Link>
             </div>
           </FadeIn>
@@ -127,14 +128,14 @@ const page = () => {
           <div className="text-center mb-16">
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-                Solutions Tailored for <br />
-                <span className="text-[#B54118]">Your Growth</span>
+                Data-Powered Solutions for <br />
+                <span className="text-[#B54118]">Next-Level Growth</span>
               </h2>
             </FadeIn>
             <FadeIn direction="up" delay={0.4}>
               <p className="mt-4 text-gray-600 dark:text-white max-w-2xl mx-auto text-lg">
-                Latest technology aur data-driven strategy ke sath hum aapki
-                brand identity ko next level par le jate hain.
+                Leveraging the latest technology and data-driven strategies, we
+                elevate your brand identity and maximise online visibility.
               </p>
             </FadeIn>
           </div>
@@ -192,15 +193,13 @@ const page = () => {
 
           <div className="relative z-10 max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase">
-              Ready to Scale Your <br />
-              <span className="text-[var(--color-primary)]">
-                Digital Reach?
-              </span>
+              Scale Your Online Presence with Confidence <br />
             </h2>
 
             <p className="mx-auto mb-10 text-lg md:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
-              We don’t just build websites; we create growth engines. Let’s turn
-              your business goals into a digital reality today.
+              We design and optimise digital solutions that convert visitors
+              into customers, helping your business achieve measurable growth.
+              Start your journey today.
             </p>
 
             <Link href="/contact-us">
