@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
+import ChatBot from "@components/ChatBot";
 
 // Headings ke liye Premium Font
 const playfair = Playfair_Display({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
             <main>{children}</main>
             <Footer/>
           </SmoothScroll>
+          <ChatBot />
         </Providers>
       </body>
     </html>

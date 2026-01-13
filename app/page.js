@@ -16,7 +16,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative w-full h-[95vh] md:h-screen">
         <Image
-          src="/admin-ajax.jpg"
+          src="/admin-ajax.webp"
           fill
           className="object-cover"
           fetchPriority="high"
