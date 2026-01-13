@@ -11,7 +11,15 @@ import {
   FaRocket,
 } from "react-icons/fa";
 
+
+export const metadata = {
+  title: "About BizGrow Digital | UK Experts in Digital Growth", 
+  description:
+    "BizGrow Digital delivers expert digital marketing solutions across the UK, helping businesses grow, engage, and succeed online.",
+};
+
 export default function AboutPage() {
+
   return (
     <main className="w-full">
       {/* Hero Section */}
@@ -76,7 +84,7 @@ export default function AboutPage() {
                 to media success. We’re not your average digital agency; we are
                 your business’s growth partners, helping your business unleash
                 its full potential. <br />
-                <b className="text-black">Your partner for digital growth </b>
+            
                 We specialise in advanced SEO, websites built with purpose that
                 make an impact, all to generate valuable leads for growth. When
                 you work with us, you will become visible and will start to
@@ -95,7 +103,7 @@ export default function AboutPage() {
                   width={550}
                   height={400}
                   className="rounded-[2rem] shadow-2xl object-cover"
-                  alt="Team Collaboration"
+                  alt="BizGrow Digital Marketing Experts"
                 />
                 {/* Decorative Background Shape - Sirf bari screens par */}
                 <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-[#B54118]/5 rounded-full hidden md:block" />

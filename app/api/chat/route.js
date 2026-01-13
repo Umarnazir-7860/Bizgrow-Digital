@@ -12,7 +12,7 @@ export async function POST(req) {
 
   OUR LOCATION:
   - Office: **CEME Campus, Marsh Way, Rainham, RM13 8EU**. 
-  - We are based in this innovation hub, serving clients across UK England and globally.
+  - We are based in this innovation hub, serving clients across UK.
 
   OUR TECH WEAPONS (Always highlight these for Web Dev):
   - **Next.js & React:** For lightning-fast speed and SEO dominance.
