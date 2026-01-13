@@ -67,7 +67,7 @@ const Footer = () => {
             data-driven marketing strategies, and creative design solutions to
             achieve measurable growth and lasting impact.
           </p>
-          <p className="text-base font-extrabold text-[#A13512] mt-6">
+          <p className="text-base font-extrabold text-white mt-6">
             BIZGROW DIGITAL
           </p>
         </div>
