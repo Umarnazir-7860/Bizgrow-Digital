@@ -44,7 +44,10 @@ export default function ChatBot() {
         return;
       }
       const isAtTop = chatBox.scrollTop === 0;
-      const isAtBottom = Math.abs(chatBox.scrollHeight - chatBox.clientHeight - chatBox.scrollTop) < 1;
+      const isAtBottom =
+        Math.abs(
+          chatBox.scrollHeight - chatBox.clientHeight - chatBox.scrollTop
+        ) < 1;
       if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
         if (e.cancelable) e.preventDefault();
         e.stopPropagation();
@@ -86,9 +89,15 @@ export default function ChatBot() {
         body: JSON.stringify({ messages: [...messages, userMsg] }),
       });
       const data = await response.json();
-      setMessages((prev) => [...prev, { role: "assistant", content: data.content }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.content },
+      ]);
     } catch (error) {
-      setMessages((prev) => [...prev, { role: "assistant", content: "Direct WhatsApp us!" }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Direct WhatsApp us!" },
+      ]);
     } finally {
       setIsLoading(false);
     }
@@ -125,11 +134,18 @@ export default function ChatBot() {
                     <span className="font-playfair font-bold text-lg">B</span>
                   </div>
                   <div>
-                    <h3 className="font-playfair font-bold text-sm tracking-wide">BizGrow Expert</h3>
-                    <p className="text-[10px] text-blue-100 uppercase tracking-widest">Active Now</p>
+                    <h3 className="font-playfair font-bold text-sm tracking-wide">
+                      BizGrow Expert
+                    </h3>
+                    <p className="text-[10px] text-blue-100 uppercase tracking-widest">
+                      Active Now
+                    </p>
                   </div>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1.5 rounded-full transition-colors">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="hover:bg-white/10 p-1.5 rounded-full transition-colors"
+                >
                   <X size={20} />
                 </button>
               </div>
@@ -141,7 +157,10 @@ export default function ChatBot() {
                     scrollRef.current = el;
                     chatBodyRef.current = el;
                   }}
-                  style={{ overscrollBehavior: "contain", scrollBehavior: "smooth" }}
+                  style={{
+                    overscrollBehavior: "contain",
+                    scrollBehavior: "smooth",
+                  }}
                   className="absolute inset-0 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-[#FDFCF9] dark:bg-[#121212]"
                 >
                   {messages.length === 0 && (
@@ -153,10 +172,19 @@ export default function ChatBot() {
                   )}
 
                   {messages.map((m, i) => (
-                    <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                      <div className={`max-w-[85%] p-3.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
-                        m.role === "user" ? "bg-[#2563eb] text-white rounded-tr-none" : "bg-white dark:bg-[#1e1e1e] text-[#1f2937] dark:text-gray-200 rounded-tl-none border border-gray-100 dark:border-gray-800"
-                      }`}>
+                    <div
+                      key={i}
+                      className={`flex ${
+                        m.role === "user" ? "justify-end" : "justify-start"
+                      }`}
+                    >
+                      <div
+                        className={`max-w-[85%] p-3.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
+                          m.role === "user"
+                            ? "bg-[#2563eb] text-white rounded-tr-none"
+                            : "bg-white dark:bg-[#1e1e1e] text-[#1f2937] dark:text-gray-200 rounded-tl-none border border-gray-100 dark:border-gray-800"
+                        }`}
+                      >
                         <div className="prose prose-sm dark:prose-invert max-w-none font-montserrat">
                           <ReactMarkdown>{m.content}</ReactMarkdown>
                         </div>
@@ -173,7 +201,12 @@ export default function ChatBot() {
 
               {/* Footer */}
               <div className="p-4 bg-white dark:bg-[#1a1a1a] border-t border-gray-100 dark:border-gray-800 shrink-0">
-                <a href="https://wa.me/923XXXXXXXXX" target="_blank" className="flex items-center justify-center gap-2 bg-[#057e32] text-white text-[11px] font-bold py-3 rounded-2xl mb-3 hover:brightness-110 transition-all shadow-lg">
+                <a
+                  href="https://wa.me/447903332433"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#057e32] text-white text-[11px] font-bold py-3 rounded-2xl mb-3 hover:brightness-110 transition-all shadow-lg"
+                >
                   <Phone size={14} /> BOOK A STRATEGY CALL
                 </a>
                 <form onSubmit={handleSubmit} className="flex gap-2">
@@ -183,7 +216,10 @@ export default function ChatBot() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                   />
-                  <button type="submit" className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md">
+                  <button
+                    type="submit"
+                    className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md"
+                  >
                     <Send size={18} />
                   </button>
                 </form>
@@ -226,10 +262,20 @@ export default function ChatBot() {
       </div>
 
       <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
-        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; }
-        .prose strong { font-weight: 800; color: inherit; }
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #d1d5db;
+          border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #333;
+        }
+        .prose strong {
+          font-weight: 800;
+          color: inherit;
+        }
       `}</style>
     </>
   );
