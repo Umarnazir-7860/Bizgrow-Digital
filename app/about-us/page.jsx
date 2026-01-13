@@ -171,7 +171,7 @@ export default function AboutPage() {
               What Makes Us Different
             </h2>
           </FadeIn>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Feature 1: Listen with Purpose */}
             <FadeIn direction="up" delay={0.1}>
               <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
@@ -243,7 +243,7 @@ export default function AboutPage() {
               Our Core Values
             </h2>
           </FadeIn>
-          <div className="flex flex-col px-4 md:flex-row gap-8">
+          <div className="flex flex-col px-4 lg:flex-row gap-8">
             {/* Integrity */}
 
             <div
