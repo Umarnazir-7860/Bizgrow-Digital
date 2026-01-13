@@ -56,7 +56,6 @@ const Footer = () => {
             alt="BizGrow Digital Logo"
             width={120}
             height={60}
-             style={{ height: 'auto', width: 'auto'}}
             className="mb-4 rounded-xl"
           />
           <p className="text-sm leading-relaxed mb-4">
@@ -133,6 +132,7 @@ const Footer = () => {
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"
+              title="BizGrow Digital Location" //
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>

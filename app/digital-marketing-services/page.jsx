@@ -44,6 +44,7 @@ const DigitalMarketingPage = () => {
           src="/digital-hero.webp" 
           alt="Full Stack Digital Marketing"
           fill
+          fetchPriority="high"
           className="object-cover object-center"
           priority
         />

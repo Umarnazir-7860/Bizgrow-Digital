@@ -89,6 +89,7 @@ const ContactPage = () => {
           src="/contact-us-hero.jpg"
           alt="Contact Hero"
           fill
+          fetchPriority="high"
           priority
           className="object-cover"
         />
@@ -246,7 +247,8 @@ const ContactPage = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.565874492323!2d0.15570537704646543!3d51.53951557182046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a59483015f6f%3A0xc07a2164a2752174!2sCEME%20Innovation%20Centre!5e0!3m2!1sen!2suk!4v1709123456789!5m2!1sen!2suk"
                 width="100%" 
                 height="100%" 
-                style={{ border: 0 }} 
+                style={{ border: 0 }}
+                title="BizGrow Digital Location" // 
                 allowFullScreen 
                 loading="lazy" 
                 className="transition-all duration-700"

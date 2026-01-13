@@ -56,6 +56,7 @@ const EmailMarketingPage = () => {
           alt="Email Marketing Services"
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center"
         />
      <div className="absolute inset-0 w-full bg-black/75 flex flex-col justify-center items-center px-6">

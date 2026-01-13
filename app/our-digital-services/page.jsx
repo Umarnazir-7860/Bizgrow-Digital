@@ -78,6 +78,7 @@ const page = () => {
           alt="Services Hero"
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center" // object-cover image ko stretch hone se bachata hai
         />
 

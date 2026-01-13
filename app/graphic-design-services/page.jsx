@@ -24,6 +24,7 @@ const GraphicDesignPage = () => {
           fill
           className="object-cover object-center"
           priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-black/70" />
 

@@ -19,6 +19,7 @@ const HomePage = () => {
           src="/admin-ajax.jpg"
           fill
           className="object-cover"
+          fetchPriority="high"
           priority
           alt="Hero Background"
         />

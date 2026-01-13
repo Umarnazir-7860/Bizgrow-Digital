@@ -22,6 +22,7 @@ const WordPressPage = () => {
           fill
           className="object-cover object-center"
           priority
+          fetchPriority="high"
         />
 
         {/* Overlay ko 'to-r' se hata kar radial ya simple black overlay karein taake center text nazar aaye */}

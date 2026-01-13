@@ -17,10 +17,11 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[85vh] md:h-screen w-full">
         <Image
-          src="/about-hero.jpg"
+          src="/about-hero.webp"
           fill
           className="object-cover"
           alt="About BizGrow Digital"
+          fetchPriority="high"
           priority
         />
 

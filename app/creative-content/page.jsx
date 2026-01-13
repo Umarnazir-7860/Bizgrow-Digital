@@ -47,6 +47,7 @@ const CreativeContentPage = () => {
           src="/creative-content-hero.jpg"
           alt="Creative Content Services"
           fill
+          fetchPriority="high"
           priority
           className="object-cover object-center"
         />
