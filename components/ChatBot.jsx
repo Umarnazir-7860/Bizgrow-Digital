@@ -185,11 +185,56 @@ export default function ChatBot() {
           )}
         </AnimatePresence>
 
+        {/* Floating Chat Toast with Framer Motion */}
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setIsOpen(true)}
+              className="fixed bottom-[90px] right-6 z-[9999] cursor-pointer flex flex-col items-end"
+            >
+              <div className="relative bg-white dark:bg-black text-[#B54118] dark:text-orange-400 text-[12px] font-bold px-4 py-2.5 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-orange-100 dark:border-orange-900 flex items-center gap-2">
+                {/* Online Status Dot */}
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+
+                <span className="dark:text-white">Chat with us</span>
+
+                {/* Triangle Arrow */}
+                <div className="absolute -bottom-1 right-5 w-3 h-3 bg-white dark:bg-black  rotate-45 border-r border-b border-orange-100 dark:border-orange-900/30"></div>
+              </div>
+
+              {/* Continuous Pulse Effect using Framer Motion */}
+              <motion.div
+                animate={{
+                  y: [0, -6, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Aapka Existing Chat Button Niche Aye Ga... */}
+        <motion.button
+          onClick={() => setIsOpen(!isOpen)}
+          // ... rest of your code
+        ></motion.button>
+
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-gradient-to-r from-[#000B25] to-[#2563eb] border border-white/20 text-white p-4 rounded-2xl shadow-xl z-[9999]"
+          className="bg-gradient-to-r from-[#000B25] to-[#2563eb] border border-white/20 text-white p-3 rounded-2xl shadow-xl z-[9999]"
         >
           {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
         </motion.button>
