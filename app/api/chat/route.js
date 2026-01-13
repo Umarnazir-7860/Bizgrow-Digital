@@ -6,46 +6,26 @@ export async function POST(req) {
   try {
     const { messages } = await req.json();
     
-    // Knowledge Base from your code
     const bizGrowKnowledge = `
-    Identity: You are the BizGrow Expert. We don't use templates; we build high-end engineered digital experiences.
+    Identity: You are the BizGrow Expert. 
+    Rule: Answer ONLY the specific service asked. Do NOT cross-sell or mention other services.
     
-    SERVICES & TECH STACK:
-    1. Web Development (Next.js Specialist): 
-       - Tech: Next.js, React, Tailwind CSS, TypeScript.
-       - Focus: "Motion Magic" (Framer Motion/GSAP), Lightning-fast speed, SEO-optimized, High-end interfaces.
-       - Philosophy: Quality over templates, always. Custom-coded React apps over slow WordPress.
+    SERVICES:
+    - SEO: Technical audits, keywords, backlinks. (Don't mention Web Dev)
+    - Web Dev: Next.js, Framer Motion, Custom Code. (Don't mention SEO)
+    - WordPress: Headless WP, Zero-bloat, Security.
+    - SMM: Viral hooks, community growth, "Beyond the like button".
     
-    2. WordPress Development (Enterprise Grade):
-       - Focus: "Not just a theme." Headless WP (WP + Next.js), Custom Admin Dashboards, Security Hardening.
-       - BizGrow WP vs Standard: We have zero bloat, high performance, and pass Core Web Vitals.
-    
-    3. Social Media Marketing (SMM):
-       - Philosophy: "Beyond the Like Button." We build communities, not just vanity metrics.
-       - Strategies: Viral Hook Implementation, Data-driven storytelling, Sentiment Analysis.
-       - Platforms: Instagram, TikTok, LinkedIn (Tailored brand voices).
-
-    TONE & STYLE:
-    - Bold, Professional, and Result-oriented.
-    - Use phrases like: "Own the news feed," "Engineered for growth," "Beyond the like button."
-    - Refuse general non-business questions: "I specialize in BizGrow's high-end services. I can't help with general [TOPIC], but I can scale your business with [SERVICE]."
+    Tone: Professional, Short, Direct. Use Markdown for bolding.
     `;
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { 
-          role: 'system', 
-          content: `${bizGrowKnowledge}
-          
-          STRICT RULES:
-          - Always try to guide the user towards "Starting a project" or "Contacting us".
-          - If they ask about tech, explain WHY BizGrow's tech (Next.js/React) is better than generic sites.
-          - Keep answers clean with Markdown. Use **Bold** for emphasis.` 
-        },
+        { role: 'system', content: bizGrowKnowledge },
         ...messages
       ],
-      temperature: 0.7,
+      temperature: 0.3, // Keeps the AI focused and precise
     });
 
     return new Response(JSON.stringify({ content: response.choices[0].message.content }), {
