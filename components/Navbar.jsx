@@ -27,7 +27,6 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    // Masla Fix: Menu khulne par background scroll lock karna
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -85,7 +84,7 @@ export default function Navbar() {
       description:
         "High-performance React & Next.js apps with Framer Motion & GSAP animations.",
       href: "/web-development",
-      icon: <Code2 />, // Lucide-react use kar rahe hain toh Code2 behtar hai
+      icon: <Code2 />,
     },
     {
       title: "Graphic Design",
@@ -108,7 +107,7 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src="/BizGrow-digital-logo.png"
-              alt="Logo"
+              alt="BizGrow Digital Logo"
               width={110}
               height={40}
               priority
@@ -130,26 +129,29 @@ export default function Navbar() {
               onMouseLeave={() => setOpen(false)}
             >
               <Link href="/our-digital-services">
-              <button className="flex items-center gap-1 text-orange-500 outline-none">
-                Services
-                <svg 
-                  
-                  className={`w-4 h-4 transition-transform ${
-                    open ? "rotate-180" : ""
-                  }`}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden="true"
+                <button 
+                  className="flex items-center gap-1 text-orange-500 outline-none"
+                  aria-expanded={open}
+                  aria-haspopup="true"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+                  Services
+                  <svg 
+                    className={`w-4 h-4 transition-transform ${
+                      open ? "rotate-180" : ""
+                    }`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
               </Link>
               <AnimatePresence>
                 {open && (
@@ -199,6 +201,7 @@ export default function Navbar() {
           {/* THEME & MOBILE BUTTON */}
           <div className="flex items-center gap-4">
             <button
+              aria-label={resolvedTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"} 
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
               }
@@ -207,8 +210,10 @@ export default function Navbar() {
               {resolvedTheme === "dark" ? <FaSun /> : <FaMoon />}
             </button>
             <button
+              aria-label={mobileOpen ? "Close Menu" : "Open Menu"}
+              aria-expanded={mobileOpen}
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden text-white text-2xl mx-4"
+              className="lg:hidden text-white text-2xl mx-4 p-2" 
             >
               {mobileOpen ? "✕" : "☰"}
             </button>
@@ -224,18 +229,17 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            // FIXED: 'fixed' position, full height, aur overflow-y-auto zaroori hai
             className="fixed top-0 left-0 w-full h-screen bg-white z-[60] overflow-y-auto outline-none"
           >
-            {/* Menu Header: Logo aur Close button ko andar rakhein taaki wo hamesha nazar ayien */}
             <div className="flex items-center justify-between px-6 h-16 border-b border-white/10 sticky top-0 bg-black z-10">
               <Image
                 src="/BizGrow-digital-logo.png"
-                alt="Logo"
+                alt="BizGrow Digital Logo"
                 width={100}
                 height={35}
               />
               <button
+                aria-label="Close menu"
                 onClick={() => setMobileOpen(false)}
                 className="text-white text-3xl"
               >
@@ -247,37 +251,35 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setMobileOpen(false)}
-                className="text-xl font-medium 
-        text-black"
+                className="text-xl font-medium text-black"
               >
                 Home
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileOpen(false)}
-                className="text-xl font-medium
-         text-black"
+                className="text-xl font-medium text-black"
               >
                 About
               </Link>
 
               {/* Services Section */}
               <div className="space-y-4">
-                <Link href="/our-digital-services">
-                  <button
-                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="w-full flex justify-between items-center text-xl font-medium text-black"
+                <button
+                  aria-label="Toggle services list"
+                  aria-expanded={mobileServicesOpen}
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="w-full flex justify-between items-center text-xl font-medium text-black"
+                >
+                  Services
+                  <span
+                    className={`text-orange-500 transition-transform ${
+                      mobileServicesOpen ? "rotate-180" : ""
+                    }`}
                   >
-                    Services
-                    <span
-                      className={`text-orange-500 transition-transform ${
-                        mobileServicesOpen ? "rotate-180" : ""
-                      }`}
-                    >
-                      ▼
-                    </span>
-                  </button>
-                </Link>
+                    ▼
+                  </span>
+                </button>
 
                 <AnimatePresence>
                   {mobileServicesOpen && (
@@ -285,19 +287,19 @@ export default function Navbar() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="flex flex-col space-y-2 pl-4 border-l border-white/10"
+                      className="flex flex-col space-y-2 pl-4 border-l border-gray-200"
                     >
                       {services.map((service, i) => (
                         <Link
                           key={i}
                           href={service.href}
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0"
+                          className="flex items-center gap-4 py-3 border-b border-gray-100 last:border-0"
                         >
                           <div className="text-orange-500 text-lg">
                             {service.icon}
                           </div>
-                          <span className="text-black text-base">
+                          <span className="text-black text-base font-semibold">
                             {service.title}
                           </span>
                         </Link>
@@ -310,16 +312,14 @@ export default function Navbar() {
               <Link
                 href="/blogs"
                 onClick={() => setMobileOpen(false)}
-                className="text-xl font-medium
-         text-black"
+                className="text-xl font-medium text-black"
               >
                 Blogs
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setMobileOpen(false)}
-                className="text-xl font-medium
-         text-black"
+                className="text-xl font-medium text-black"
               >
                 Contact
               </Link>
