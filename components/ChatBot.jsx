@@ -11,9 +11,11 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef(null);
+  const chatBodyRef = useRef(null);
 
   const lenis = useLenis();
 
+  // 1. Background Scroll Lock
   useEffect(() => {
     if (isOpen) {
       lenis?.stop();
@@ -28,9 +30,44 @@ export default function ChatBot() {
     };
   }, [isOpen, lenis]);
 
+  // 2. Scroll Leakage Fix
+  useEffect(() => {
+    const chatBox = chatBodyRef.current;
+    if (!chatBox) return;
+
+    const handleScrollLock = (e) => {
+      if (!isOpen) return;
+      const isScrollable = chatBox.scrollHeight > chatBox.clientHeight;
+      if (!isScrollable) {
+        if (e.cancelable) e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+      const isAtTop = chatBox.scrollTop === 0;
+      const isAtBottom = Math.abs(chatBox.scrollHeight - chatBox.clientHeight - chatBox.scrollTop) < 1;
+      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+        if (e.cancelable) e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
+    chatBox.addEventListener("wheel", handleScrollLock, { passive: false });
+    chatBox.addEventListener("touchmove", handleScrollLock, { passive: false });
+    return () => {
+      chatBox.removeEventListener("wheel", handleScrollLock);
+      chatBox.removeEventListener("touchmove", handleScrollLock);
+    };
+  }, [isOpen]);
+
+  // 3. Smooth Auto-scroll Fix (No Jumping)
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      requestAnimationFrame(() => {
+        scrollRef.current.scrollTo({
+          top: scrollRef.current.scrollHeight,
+          behavior: "smooth",
+        });
+      });
     }
   }, [messages, isLoading]);
 
@@ -49,15 +86,9 @@ export default function ChatBot() {
         body: JSON.stringify({ messages: [...messages, userMsg] }),
       });
       const data = await response.json();
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: data.content },
-      ]);
+      setMessages((prev) => [...prev, { role: "assistant", content: data.content }]);
     } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "Direct WhatsApp us!" },
-      ]);
+      setMessages((prev) => [...prev, { role: "assistant", content: "Direct WhatsApp us!" }]);
     } finally {
       setIsLoading(false);
     }
@@ -94,32 +125,27 @@ export default function ChatBot() {
                     <span className="font-playfair font-bold text-lg">B</span>
                   </div>
                   <div>
-                    <h3 className="font-playfair font-bold text-sm tracking-wide">
-                      BizGrow Expert
-                    </h3>
-                    <p className="text-[10px] text-blue-100 uppercase tracking-widest">
-                      Active Now
-                    </p>
+                    <h3 className="font-playfair font-bold text-sm tracking-wide">BizGrow Expert</h3>
+                    <p className="text-[10px] text-blue-100 uppercase tracking-widest">Active Now</p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="hover:bg-white/10 p-1.5 rounded-full transition-colors"
-                >
+                <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1.5 rounded-full transition-colors">
                   <X size={20} />
                 </button>
               </div>
 
-              {/* Chat Body - THE FINAL FIX (Overscroll Contain) */}
+              {/* Chat Body */}
               <div className="flex-1 min-h-0 relative" data-lenis-prevent>
                 <div
-                  ref={scrollRef}
-                  // style me 'overscrollBehavior: contain' add kiya hai
-                  style={{ overscrollBehavior: "contain" }}
+                  ref={(el) => {
+                    scrollRef.current = el;
+                    chatBodyRef.current = el;
+                  }}
+                  style={{ overscrollBehavior: "contain", scrollBehavior: "smooth" }}
                   className="absolute inset-0 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-[#FDFCF9] dark:bg-[#121212]"
                 >
                   {messages.length === 0 && (
-                    <div className="flex flex-col items-center justify-center min-h-full text-center space-y-2 opacity-50 px-6">
+                    <div className="flex flex-col items-center justify-center min-h-full text-center space-y-2 opacity-50 px-6 pointer-events-none">
                       <p className="font-playfair italic text-lg text-[#1f2937] dark:text-white">
                         "Transforming clicks into customers."
                       </p>
@@ -127,22 +153,11 @@ export default function ChatBot() {
                   )}
 
                   {messages.map((m, i) => (
-                    <div
-                      key={i}
-                      className={`flex ${
-                        m.role === "user" ? "justify-end" : "justify-start"
-                      }`}
-                    >
-                      <div
-                        className={`max-w-[85%] p-3.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
-                          m.role === "user"
-                            ? "bg-[#2563eb] text-white rounded-tr-none"
-                            : "bg-white dark:bg-[#1e1e1e] text-[#1f2937] dark:text-gray-200 rounded-tl-none border border-gray-100 dark:border-gray-800"
-                        }`}
-                      >
-                        {/* PURANA: {m.content} */}
-                        {/* NAYA: Markdown rendering with custom styling */}
-                        <div className="prose prose-sm dark:prose-invert max-w-none">
+                    <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                      <div className={`max-w-[85%] p-3.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
+                        m.role === "user" ? "bg-[#2563eb] text-white rounded-tr-none" : "bg-white dark:bg-[#1e1e1e] text-[#1f2937] dark:text-gray-200 rounded-tl-none border border-gray-100 dark:border-gray-800"
+                      }`}>
+                        <div className="prose prose-sm dark:prose-invert max-w-none font-montserrat">
                           <ReactMarkdown>{m.content}</ReactMarkdown>
                         </div>
                       </div>
@@ -158,14 +173,9 @@ export default function ChatBot() {
 
               {/* Footer */}
               <div className="p-4 bg-white dark:bg-[#1a1a1a] border-t border-gray-100 dark:border-gray-800 shrink-0">
-                <a
-                  href="https://wa.me/923XXXXXXXXX"
-                  target="_blank"
-                  className="flex items-center justify-center gap-2 bg-[#057e32] text-white text-[11px] font-bold py-3 rounded-2xl mb-3 hover:brightness-110 transition-all shadow-lg"
-                >
+                <a href="https://wa.me/923XXXXXXXXX" target="_blank" className="flex items-center justify-center gap-2 bg-[#057e32] text-white text-[11px] font-bold py-3 rounded-2xl mb-3 hover:brightness-110 transition-all shadow-lg">
                   <Phone size={14} /> BOOK A STRATEGY CALL
                 </a>
-
                 <form onSubmit={handleSubmit} className="flex gap-2">
                   <input
                     className="flex-1 bg-gray-50 dark:bg-[#252525] rounded-xl px-4 py-2.5 text-sm outline-none border border-gray-200 dark:border-gray-700 text-[#1f2937] dark:text-white"
@@ -173,10 +183,7 @@ export default function ChatBot() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                   />
-                  <button
-                    type="submit"
-                    className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md"
-                  >
+                  <button type="submit" className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md">
                     <Send size={18} />
                   </button>
                 </form>
@@ -185,7 +192,7 @@ export default function ChatBot() {
           )}
         </AnimatePresence>
 
-        {/* Floating Chat Toast with Framer Motion */}
+        {/* Wapis Add Kiya Gaya: "Chat with us" Label */}
         <AnimatePresence>
           {!isOpen && (
             <motion.div
@@ -197,38 +204,16 @@ export default function ChatBot() {
               className="fixed bottom-[90px] right-6 z-[9999] cursor-pointer flex flex-col items-end"
             >
               <div className="relative bg-white dark:bg-black text-[#B54118] dark:text-orange-400 text-[12px] font-bold px-4 py-2.5 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-orange-100 dark:border-orange-900 flex items-center gap-2">
-                {/* Online Status Dot */}
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-
                 <span className="dark:text-white">Chat with us</span>
-
-                {/* Triangle Arrow */}
-                <div className="absolute -bottom-1 right-5 w-3 h-3 bg-white dark:bg-black  rotate-45 border-r border-b border-orange-100 dark:border-orange-900/30"></div>
+                <div className="absolute -bottom-1 right-5 w-3 h-3 bg-white dark:bg-black rotate-45 border-r border-b border-orange-100 dark:border-orange-900/30"></div>
               </div>
-
-              {/* Continuous Pulse Effect using Framer Motion */}
-              <motion.div
-                animate={{
-                  y: [0, -6, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Aapka Existing Chat Button Niche Aye Ga... */}
-        <motion.button
-          onClick={() => setIsOpen(!isOpen)}
-          // ... rest of your code
-        ></motion.button>
 
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -241,16 +226,10 @@ export default function ChatBot() {
       </div>
 
       <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #d1d5db;
-          border-radius: 10px;
-        }
-        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #333;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; }
+        .prose strong { font-weight: 800; color: inherit; }
       `}</style>
     </>
   );
