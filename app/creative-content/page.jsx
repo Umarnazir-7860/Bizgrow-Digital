@@ -11,28 +11,28 @@ const CreativeContentPage = () => {
   const contentFeatures = [
     {
       title: "Brand Storytelling",
-      desc: "We craft compelling narratives that resonate with your audience, turning your brand values into an emotional journey.",
+      desc: "We develop authentic, compelling narratives that connect with your audience and translate your brand values into memorable experiences.",
       icon: <Layers className="w-8 h-8" />,
       bgColor: "bg-orange-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
-      title: "Visual Graphics",
-      desc: "High-impact social media assets and marketing collateral designed to reinforce your brand's visual identity.",
+      title: "Visual Design",
+      desc: "High-impact digital visuals and marketing assets created to strengthen brand consistency and enhance visual recognition across platforms.",
       icon: <PenTool className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
-      title: "Video Production",
-      desc: "Professional video editing and motion graphics that drive engagement and convert viewers into loyal customers.",
+      title: "Video & Motion Content",
+      desc: "Professionally produced video editing and motion graphics designed to increase engagement, communicate value, and build audience trust.",
       icon: <Video className="w-8 h-8" />,
       bgColor: "bg-purple-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Content Strategy",
-      desc: "Data-backed content blueprints designed to reach your target demographics and fuel long-term organic growth.",
+      desc: "Insight-led content frameworks developed using data and audience analysis to drive reach, relevance, and sustainable organic growth.",
       icon: <Target className="w-8 h-8" />,
       bgColor: "bg-green-100",
       hoverBg: "group-hover:bg-[#B54118]",
@@ -56,15 +56,15 @@ const CreativeContentPage = () => {
             {/* 🔹 FIX: Wrapper div inside FadeIn to force centering */}
             <div className="w-full flex flex-col items-center">
               <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block text-center">
-                Creative Excellence
+                Creative Content
               </span>
             </div>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <h1 className="text-white text-4xl md:text-7xl text-center font-bold max-w-4xl leading-tight">
-                Words & Visuals That <br />
+              <h1 className="text-white text-4xl md:text-7xl text-center font-bold max-w-5xl leading-tight">
+                Words & Visuals That Define Authority <br />
                 <span className="text-orange-500 text-4xl">
                   Command Attention
                 </span>
@@ -75,8 +75,8 @@ const CreativeContentPage = () => {
           <FadeIn direction="up" delay={0.6}>
             <div className="w-full flex flex-col items-center">
               <p className="text-gray-300 text-lg md:text-xl text-center max-w-2xl mt-6">
-                We don't just produce content; we engineer experiences that
-                elevate your brand's market authority and global reach.
+                Strategically developed words and visuals that elevate your
+                brand voice and engage the right audience.
               </p>
             </div>
           </FadeIn>
@@ -92,9 +92,10 @@ const CreativeContentPage = () => {
           {/* Header Text */}
           <div className="flex flex-col justify-center items-center mb-20 gap-4 text-center">
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tighter uppercase">
-                Crafting Digital <br />
-                <span className="text-[#B54118]">Masterpieces</span>
+              <h2 className="text-4xl md:text-6xl  font-black text-slate-900 dark:text-white leading-tight tracking-normal uppercase">
+                Crafting Digital Experiences <br />
+                That
+                <span className="text-[#B54118]"> Inspire</span>
               </h2>
               <div className="w-24 h-1.5 bg-[#B54118] mx-auto mt-4 rounded-full" />
             </FadeIn>
@@ -102,9 +103,9 @@ const CreativeContentPage = () => {
             <FadeIn direction="up" delay={0.4}>
               <div className="flex justify-center">
                 <p className="text-gray-600 dark:text-gray-400 text-lg md:text-lg max-w-2xl leading-relaxed font-medium mt-4">
-                  Your content is your digital handshake. We ensure every pixel
-                  and every word serves a purpose in achieving your business
-                  goals.
+                  Your content is your brand’s first impression. We ensure every
+                  word, visual, and interaction is strategically designed to
+                  support your business objectives and drive meaningful results.
                 </p>
               </div>
             </FadeIn>
@@ -131,7 +132,7 @@ const CreativeContentPage = () => {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-[#B54118] transition-colors">
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-normal group-hover:text-[#B54118] transition-colors">
                     {item.title}
                   </h3>
 
@@ -172,10 +173,11 @@ const CreativeContentPage = () => {
 
             <div className="space-y-6">
               {[
-                "Conversion-Focused Copywriting",
-                "Trending Visual Styles & Aesthetics",
-                "SEO-Optimized Editorial Content",
-                "Platform-Specific Format Optimization",
+                "Insight-Driven Creative Planning",
+                "Audience-Focused Content Development",
+                "Consistent Brand Voice & Visual Identity",
+                "Performance-Led Creative Execution",
+                "Scalable Content Systems for Growth",
               ].map((text, i) => (
                 <FadeIn key={i} direction="up" delay={0.1 * i}>
                   <div className="flex items-center gap-4">
@@ -221,7 +223,7 @@ const CreativeContentPage = () => {
               <FadeIn direction="up" delay={0.2}>
                 {/* Top Badge for extra detail */}
                 <div className="flex justify-center mb-8">
-                   <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                  <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
                     Creative Excellence
                   </span>
                 </div>
@@ -236,8 +238,8 @@ const CreativeContentPage = () => {
 
               <FadeIn direction="up" delay={0.4}>
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl italic">
-                  "Ready to give your brand the creative edge it deserves? Your
-                  dream project is just one conversation away."
+                  "Ready to give your brand a creative edge that delivers real
+                  impact? Your next project starts with a simple conversation."
                 </p>
               </FadeIn>
 
