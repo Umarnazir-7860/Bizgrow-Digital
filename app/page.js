@@ -50,7 +50,7 @@ const HomePage = () => {
       </section>
 
       {/* 🚀 UNIQUE FEATURE SECTION: Boost Online Presence */}
-      <section className="relative py-24 bg-white dark:bg-[#000B25] overflow-hidden">
+      <section className="relative py-24 bg-white dark:bg-[#000B25]  overflow-hidden">
         {/* Background Subtle Branding Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-[#B54118]/5 blur-[100px] rounded-full -z-10" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B54118]/5 blur-[130px] rounded-full -z-10" />

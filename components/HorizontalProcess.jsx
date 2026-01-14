@@ -143,9 +143,9 @@ const HorizontalProcess = () => {
                 </FadeIn>
                 <FadeIn direction={isVertical ? "up" : "right"} delay={0.2}>
                   {/* Font sizes optimized for all screens */}
-                  <h2 className="text-5xl sm:text-7xl lg:text-[6.5rem]  font-black dark:text-white text-slate-900 leading-none mt-4">
+                  <h3 className="text-5xl sm:text-7xl lg:text-[6.5rem]  font-black dark:text-white text-slate-900 leading-none mt-4">
                     {item.title}
-                  </h2>
+                  </h3>
                 </FadeIn>
                 {/* Naya Paragraph Section yahan aayega */}
                 <FadeIn direction={isVertical ? "up" : "right"} delay={0.4}>
