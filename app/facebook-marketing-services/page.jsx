@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { 
-  Facebook, 
-  Instagram, 
-  Users, 
-  MessageSquare, 
-  PieChart, 
+import {
+  Facebook,
+  Instagram,
+  Users,
+  MessageSquare,
+  PieChart,
   Target,
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
@@ -41,7 +41,7 @@ const FacebookMarketingPage = () => {
       {/* --- HERO SECTION --- */}
       <div className="relative h-[80vh]  md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
-          src="/fb.jpg" 
+          src="/fb.jpg"
           alt="Facebook Ads Management"
           fill
           className="object-cover object-center"
@@ -49,20 +49,23 @@ const FacebookMarketingPage = () => {
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-black/75" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
           <FadeIn direction="up">
             <div className="flex gap-4 mt-6 opacity-80">
-                <Facebook className="text-orange-500 w-8 h-8" />
-                <Instagram className="text-white w-8 h-8" />
+              <Facebook className="text-orange-500 w-8 h-8" />
+              <Instagram className="text-white w-8 h-8" />
             </div>
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-6 uppercase">
               Mastering the <br />
-              <span className="text-orange-500 text-glow">Social Algorithm</span>
+              <span className="text-orange-500 text-glow">
+                Social Algorithm
+              </span>
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-2xl mb-10 mx-auto px-4 font-light">
-              Facebook marketing is more than just a 'Post Boost.' We engineer data-backed 
-              Meta strategies that position your brand as a social media industry leader.
+              Facebook marketing is more than just a 'Post Boost.' We engineer
+              data-backed Meta strategies that position your brand as a social
+              media industry leader.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
@@ -74,95 +77,157 @@ const FacebookMarketingPage = () => {
       </div>
 
       {/* --- FEATURE SECTION: Fixed Spacing & Height --- */}
-    <section className="w-full dark:bg-black  dark:border-y-2 dark:border-orange-700"> 
-       <div className="py-14 max-w-7xl  mx-auto px-6 " >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
-          {fbFeatures.map((f, i) => (
-            <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
-              <div className="p-10 bg-slate-50 dark:bg-slate-700/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
-                
-                <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform flex-shrink-0">
-                  {f.icon}
+      <section className="w-full dark:bg-black  dark:border-y-2 dark:border-orange-700">
+        <div className="py-14 max-w-7xl  mx-auto px-6 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
+            {fbFeatures.map((f, i) => (
+              <FadeIn key={i} direction="up" delay={i * 0.1} className="flex">
+                <div className="p-10 bg-slate-50 dark:bg-slate-700/40 rounded-[2.5rem] border border-transparent hover:border-orange-500/30 transition-all group w-full flex flex-col h-full shadow-sm hover:shadow-xl">
+                  <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform flex-shrink-0">
+                    {f.icon}
+                  </div>
+
+                  <div className="flex-grow flex flex-col">
+                    <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
+                      {f.title}
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                      {f.desc}
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
-                    {f.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                    {f.desc}
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </div>
-    </section> 
+      </section>
+
       {/* --- STRATEGY SECTION --- */}
       <section className="dark:bg-[#020817] py-20">
-      <div className="py-24 bg-slate-900 dark:border dark:border-orange-700 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[100px] rounded-full" />
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase">
-                Our 3-Step <br /> <span className="text-orange-500 italic">Winning</span> Formula
-              </h2>
-              <div className="space-y-6">
-                {[
-                  { step: "01", t: "Awareness", d: "Scaling your brand reach to high-potential audiences who aren't yet familiar with your business." },
-                  { step: "02", t: "Engagement", d: "Driving meaningful interactions to build authority and foster deep brand trust." },
-                  { step: "03", t: "Conversion", d: "The final strategic push that transforms a warm lead into a committed customer." }
-                ].map((s, i) => (
-                  <div key={i} className="flex gap-6 items-start group">
-                    <span className="text-3xl font-black text-white/20 group-hover:text-orange-500 transition-colors">{s.step}</span>
-                    <div>
-                      <h4 className="text-xl font-bold text-white mb-2 uppercase">{s.t}</h4>
-                      <p className="text-gray-400 text-sm">{s.d}</p>
+        <div className="py-24 bg-slate-900 dark:border dark:border-orange-700 mx-4 md:mx-10 rounded-[4rem] mb-24 overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[100px] rounded-full" />
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase">
+                  Our 3-Step <br />{" "}
+                  <span className="text-orange-500 italic">Winning</span>{" "}
+                  Formula
+                </h2>
+                <div className="space-y-6">
+                  {[
+                    {
+                      step: "01",
+                      t: "Awareness",
+                      d: "Scaling your brand reach to high-potential audiences who aren't yet familiar with your business.",
+                    },
+                    {
+                      step: "02",
+                      t: "Engagement",
+                      d: "Driving meaningful interactions to build authority and foster deep brand trust.",
+                    },
+                    {
+                      step: "03",
+                      t: "Conversion",
+                      d: "The final strategic push that transforms a warm lead into a committed customer.",
+                    },
+                  ].map((s, i) => (
+                    <div key={i} className="flex gap-6 items-start group">
+                      <span className="text-3xl font-black text-white/20 group-hover:text-orange-500 transition-colors">
+                        {s.step}
+                      </span>
+                      <div>
+                        <h4 className="text-xl font-bold text-white mb-2 uppercase">
+                          {s.t}
+                        </h4>
+                        <p className="text-gray-400 text-sm">{s.d}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="relative h-[400px] md:h-[600px] rounded-[3rem] overflow-hidden">
-               <Image 
-                src="/award-winning.jpg" 
-                alt="Marketing Funnel" 
-                fill 
-                className="object-cover transition-all duration-700"
-               />
+              <div className="relative h-[400px] md:h-[600px] rounded-[3rem] overflow-hidden">
+                <Image
+                  src="/award-winning.jpg"
+                  alt="Marketing Funnel"
+                  fill
+                  className="object-cover transition-all duration-700"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
 
-      {/* --- CONSISTENT CTA --- */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-      <div
-        className="relative py-20 mx-4 my-20 dark:border dark:border-[#B54118] rounded-[2.5rem] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/fb-cta.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/85 z-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <FadeIn direction="up">
-            <h2 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
-              Stop Boosting. <br />
-              <span className="text-orange-500">Start Dominating.</span>
-            </h2>
-            <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light px-4">
-              Don't waste your budget on vanity metrics like empty likes. Let's build a Facebook 
-              marketing machine that generates real, sustainable revenue for your business.
-            </p>
-            <Link href="/contact-us">
-              <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg uppercase tracking-widest">
-                Grow My Brand Now
-              </button>
-            </Link>
-          </FadeIn>
+      {/* 🚀 FINAL CTA: Facebook Dominance (Signature Style) */}
+      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10">
+          <div
+            className="relative py-24 md:py-32 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_30px_70px_rgba(0,0,0,0.5)] group"
+            style={{
+              backgroundImage: "url('/fb-cta.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
+            }}
+          >
+            {/* 🔹 Deep Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-[#B54118]/20 z-0"></div>
+
+            {/* 🔹 Signature Glass Border */}
+            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
+
+            <div className="relative z-20 max-w-5xl mx-auto px-6 flex flex-col items-center">
+              {/* 🎯 FIXED TOP BADGE: Content-only width */}
+              <FadeIn direction="up">
+                <div className="flex flex-col items-center">
+                <span className="w-fit px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black mb-8 tracking-[0.3em] uppercase">
+                  Paid Social Excellence
+                </span>
+                </div>
+
+                <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                  Stop Boosting. <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+                    Start Dominating.
+                  </span>
+                </h2>
+              </FadeIn>
+
+              <FadeIn
+                direction="up"
+                delay={0.2}
+                className="flex flex-col items-center"
+              >
+                <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
+                  "Don't waste your budget on vanity metrics like empty likes.
+                  Let's build a Facebook marketing machine that generates real,
+                  sustainable revenue."
+                </p>
+              </FadeIn>
+
+              <FadeIn
+                direction="up"
+                delay={0.4}
+                className="flex flex-col items-center"
+              >
+                <Link href="/contact-us">
+                  {/* 🎯 SIGNATURE SHINE BUTTON */}
+                  <button className="relative px-12 py-6 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.6)]">
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+                    <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
+                      Grow My Brand Now →
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+
+            {/* Decorative Glow */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+          </div>
         </div>
-      </div>
       </section>
     </section>
   );

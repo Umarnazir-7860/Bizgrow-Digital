@@ -39,6 +39,7 @@ const HorizontalProcess = () => {
       title: "STRATEGY",
       tag: "PLANNING",
       img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026",
+      altText: "BizGrow Digital Planning strategy process", // <-- Added this
       description:
         "We analyse your business, audience, and goals to create a clear, actionable roadmap for growth.",
     },
@@ -47,6 +48,7 @@ const HorizontalProcess = () => {
       title: "DIGITAL",
       tag: "MARKETING",
       img: "/digital-marketing.jpg",
+      altText: "BizGrow Digital marketing digital process", // <-- Added this
       description:
         "We implement targeted digital solutions that improve online visibility, attract leads, and drive measurable results.",
     },
@@ -55,6 +57,7 @@ const HorizontalProcess = () => {
       title: "CREATIVE",
       tag: "DESIGN",
       img: "/creative-design.jpg",
+      altText: "BizGrow Digital creative design process", // <-- Added this
       description:
         "We craft visually engaging, user-focused designs that strengthen your brand identity and enhance engagement.",
     },
@@ -63,6 +66,7 @@ const HorizontalProcess = () => {
       title: "DEVELOP",
       tag: "CODING",
       img: "/coding.jpg",
+      altText: "BizGrow Digital web development process", // <-- Added this
       description:
         "We build fast, secure, and SEO-optimised websites and platforms for optimal performance.",
     },
@@ -155,7 +159,7 @@ const HorizontalProcess = () => {
               <div className="w-full lg:w-1/2 h-[35vh] sm:h-[45vh] lg:h-[60vh] relative group">
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt={item.altText}
                   className="w-full h-full object-cover rounded-[2rem] shadow-2xl relative z-10  transition-all duration-500"
                 />
                 {/* Background Shadow Number */}

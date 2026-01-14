@@ -83,44 +83,64 @@ const CreativeContentPage = () => {
         </div>
       </div>
 
-      {/* --- FEATURES GRID --- */}
-      <section className="py-14 bg-gray-50 dark:bg-black dark:border-t-2 dark:border-orange-700">
+      {/* 🚀 UNIQUE FEATURES GRID: Crafting Masterpieces */}
+      <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
+        {/* Background Branding Orbs */}
+        <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
+
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col justify-center items-center mb-16 gap-6">
-            <div className="max-w-3xl">
-              <FadeIn direction="up" delay={0.2}>
-                <h2 className="text-4xl md:text-6xl font-black text-slate-900 text-center dark:text-white leading-tight">
-                  Crafting Digital <br />
-                  <span className="text-[#B54118]">Masterpieces</span>
-                </h2>
-              </FadeIn>
-            </div>
+          {/* Header Text */}
+          <div className="flex flex-col justify-center items-center mb-20 gap-4 text-center">
+            <FadeIn direction="up" delay={0.2}>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tighter uppercase">
+                Crafting Digital <br />
+                <span className="text-[#B54118]">Masterpieces</span>
+              </h2>
+              <div className="w-24 h-1.5 bg-[#B54118] mx-auto mt-4 rounded-full" />
+            </FadeIn>
+
             <FadeIn direction="up" delay={0.4}>
-              <div className="w-full flex justify-center">
-              <p className="text-gray-600 dark:text-gray-400 dark:text-white text-lg text-center max-w-xl">
-                Your content is your digital handshake. We ensure every pixel
-                and every word serves a purpose in achieving your business
-                goals.
-              </p>
+              <div className="flex justify-center">
+                <p className="text-gray-600 dark:text-gray-400 text-lg md:text-lg max-w-2xl leading-relaxed font-medium mt-4">
+                  Your content is your digital handshake. We ensure every pixel
+                  and every word serves a purpose in achieving your business
+                  goals.
+                </p>
               </div>
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contentFeatures.map((item, index) => (
-              <FadeIn key={index} direction="up" delay={0.2 * index}>
-                <div className="group p-8 bg-white dark:bg-slate-700 dark:border dark:border-orange-700 rounded-3xl border border-slate-100  shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                  <div
-                    className={`w-14 h-14 ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:rotate-6`}
-                  >
-                    {item.icon}
+              <FadeIn
+                key={index}
+                direction="up"
+                delay={0.2 * index}
+                className="h-full"
+              >
+                <div className="group relative h-full p-8 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 flex flex-col items-start overflow-hidden hover:-translate-y-3">
+                  {/* 🔹 Icon Box: Animated & Glowing */}
+                  <div className="relative mb-8">
+                    <div
+                      className={`relative z-10 w-16 h-16 ${item.bgColor} ${item.hoverBg} group-hover:text-white text-[#B54118] rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:rotate-[15deg] group-hover:scale-110 shadow-lg`}
+                    >
+                      <span className="text-3xl">{item.icon}</span>
+                    </div>
+                    <div className="absolute inset-0 bg-[#B54118]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
                   </div>
-                  <h3 className="text-xl font-bold dark:text-white mb-3">
+
+                  {/* Title & Description */}
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-[#B54118] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-medium flex-grow">
                     {item.desc}
                   </p>
+
+                  {/* 🔹 Decorative Subtle Indicator */}
+                  <div className="mt-6 w-8 h-1 bg-[#B54118]/20 group-hover:w-full group-hover:bg-[#B54118] transition-all duration-500 rounded-full" />
                 </div>
               </FadeIn>
             ))}
@@ -132,7 +152,7 @@ const CreativeContentPage = () => {
       <section className="py-10 bg-white dark:bg-[#020817]  dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:flex-row gap-16 items-center">
           <FadeIn direction="right" delay={0.3}>
-            <div className="relative h-[400px] md:h-[600px] w-full rounded-[3rem] overflow-hidden">
+            <div className="relative h-[400px] md:h-[500px] w-full rounded-[3rem] overflow-hidden">
               <Image
                 src="/download (8).png"
                 alt="Creative Workflow"
@@ -179,33 +199,65 @@ const CreativeContentPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-       <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-      <div
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] text-white text-center dark:border dark:border-[#B54118] px-6 md:mx-20 bg-cover bg-fixed overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/creative-cta.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/80 z-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase">
-              Let's Build Something <br />
-              <span className="text-orange-500">Extraordinary</span>
-            </h2>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-            <p className="mx-auto mb-10 text-lg text-gray-300 max-w-2xl">
-              Ready to give your brand the creative edge it deserves? Your dream
-              project is just one conversation away.
-            </p>
-          </FadeIn>
-          <Link href="/contact-us">
-            <button className="px-10 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg uppercase tracking-wide">
-              Start Your Journey
-            </button>
-          </Link>
+      {/* 🚀 CREATIVE CTA SECTION: Consistent & Bold */}
+      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10">
+          <div
+            className="relative py-20 md:py-28 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
+            style={{
+              backgroundImage: "url('/creative-cta.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed", // Parallax consistent
+            }}
+          >
+            {/* 🔹 Consistent Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-[#B54118]/20 z-0"></div>
+
+            {/* 🔹 Glassmorphism Border */}
+            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
+
+            <div className="relative z-10 max-w-4xl mx-auto px-6">
+              <FadeIn direction="up" delay={0.2}>
+                {/* Top Badge for extra detail */}
+                <div className="flex justify-center mb-8">
+                   <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                    Creative Excellence
+                  </span>
+                </div>
+
+                <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                  Let's Build Something <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+                    Extraordinary
+                  </span>
+                </h2>
+              </FadeIn>
+
+              <FadeIn direction="up" delay={0.4}>
+                <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl italic">
+                  "Ready to give your brand the creative edge it deserves? Your
+                  dream project is just one conversation away."
+                </p>
+              </FadeIn>
+
+              <FadeIn direction="up" delay={0.6}>
+                <Link href="/contact-us">
+                  <button className="relative px-12 py-5 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(181,65,24,0.5)]">
+                    {/* Shine Animation Effect */}
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+                    <span className="relative z-10 text-xl uppercase tracking-widest">
+                      Start Your Journey →
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+
+            {/* Decorative Blur Orbs */}
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-[#B54118]/10 blur-[120px] rounded-full -z-10"></div>
+          </div>
         </div>
-      </div>
       </section>
     </section>
   );

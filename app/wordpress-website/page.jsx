@@ -59,136 +59,225 @@ const WordPressPage = () => {
 
       {/* --- NEW SECTION: The "Not Just a Theme" Grid --- */}
       <section className="w-full dark:bg-black  dark:border-t-2 dark:border-orange-700 ">
-       <div className="py-14 max-w-7xl mx-auto px-6 ">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          <div className="lg:col-span-1">
-            <h2 className="text-4xl font-black dark:text-white mb-6">
-              Why Our WordPress <br /> is{" "}
-              <span className="text-[#B54118]">Different</span>
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              We move away from heavy page builders and bloated plugins to give
-              you a site that ranks high and loads fast.
-            </p>
-          </div>
-
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Headless WP",
-                icon: <Code2 />,
-                desc: "Using WordPress as a backend with React/Next.js for ultimate speed.",
-              },
-              {
-                title: "Custom Admin",
-                icon: <LayoutDashboard />,
-                desc: "Tailored dashboards so your team can edit content without breaking things.",
-              },
-              {
-                title: "Security Hardening",
-                icon: <ShieldCheck />,
-                desc: "Server-level security to keep your data safe from any vulnerabilities.",
-              },
-              {
-                title: "Core Web Vitals",
-                icon: <Rocket />,
-                desc: "Built to pass Google's speed tests with flying colors.",
-              },
-            ].map((box, i) => (
-              <div
-                key={i}
-                className="p-8 bg-gray-50 dark:bg-slate-700 rounded-3xl border border-transparent hover:border-orange-500/30 transition-all"
-              >
-                <div className="text-orange-500 mb-4">{box.icon}</div>
-                <h3 className="text-xl font-bold dark:text-white mb-2">
-                  {box.title}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {box.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-       </section> 
-      {/* --- NEW SECTION: Feature Comparison (Design Variation) --- */}
-      <section className="dark:bg-[#020817] py-20 dark:border-t-2 dark:border-orange-700 ">
-      <div className="py-10 bg-slate-900 dark:border dark:border-white text-white rounded-[4rem] mx-4 md:mx-10 mb-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-black mb-16">
-            Standard WP vs. <span className="text-orange-500">Biz Grow WP</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="p-8 border border-white/10 rounded-3xl bg-white/5">
-              <h4 className="text-xl font-bold mb-6 text-gray-400 italic italic">
-                Slow & Bloated
-              </h4>
-              <ul className="space-y-4 text-left opacity-60">
-                <li className="flex gap-3">✕ Pre-made templates</li>
-                <li className="flex gap-3">✕ 20+ unnecessary plugins</li>
-                <li className="flex gap-3">✕ Slow mobile experience</li>
-                <li className="flex gap-3">✕ Security risks</li>
-              </ul>
+        <div className="py-14 max-w-7xl mx-auto px-6 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <div className="lg:col-span-1">
+              <h2 className="text-4xl font-black dark:text-white mb-6">
+                Why Our WordPress <br /> is{" "}
+                <span className="text-[#B54118]">Different</span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400">
+                We move away from heavy page builders and bloated plugins to
+                give you a site that ranks high and loads fast.
+              </p>
             </div>
 
-            <div className="p-8 border-2 border-orange-500 rounded-3xl bg-orange-500/5 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 px-4 py-1 rounded-full text-xs font-bold uppercase">
-                The Winner
-              </div>
-              <h4 className="text-xl font-bold mb-6 text-orange-500">
-                Engineered Perfection
-              </h4>
-              <ul className="space-y-4 text-left">
-                <li className="flex gap-3">
-                  <Check className="text-green-500" /> Lightweight Custom Code
-                </li>
-                <li className="flex gap-3">
-                  <Check className="text-green-500" /> Zero Bloat Strategy
-                </li>
-                <li className="flex gap-3">
-                  <Check className="text-green-500" /> SEO & Speed Optimized
-                </li>
-                <li className="flex gap-3">
-                  <Check className="text-green-500" /> Enterprise-grade Security
-                </li>
-              </ul>
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Headless WP",
+                  icon: <Code2 className="w-8 h-8" />,
+                  desc: "Using WordPress as a backend with React/Next.js for ultimate speed.",
+                },
+                {
+                  title: "Custom Admin",
+                  icon: <LayoutDashboard className="w-8 h-8" />,
+                  desc: "Tailored dashboards so your team can edit content without breaking things.",
+                },
+                {
+                  title: "Security Hardening",
+                  icon: <ShieldCheck className="w-8 h-8" />,
+                  desc: "Server-level security to keep your data safe from any vulnerabilities.",
+                },
+                {
+                  title: "Core Web Vitals",
+                  icon: <Rocket className="w-8 h-8" />,
+                  desc: "Built to pass Google's speed tests with flying colors.",
+                },
+              ].map((box, i) => (
+                <div
+                  key={i}
+                  className="group relative p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 overflow-hidden hover:-translate-y-2"
+                >
+                  {/* 🔹 Animated Icon Container */}
+                  <div className="relative mb-6">
+                    <div className="relative z-10 text-[#B54118] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                      {box.icon}
+                    </div>
+                    {/* Subtle glow behind icon on hover */}
+                    <div className="absolute inset-0 bg-[#B54118]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
+                  </div>
+
+                  {/* 🔹 Title & Desc */}
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-[#B54118] transition-colors">
+                    {box.title}
+                  </h3>
+
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-medium">
+                    {box.desc}
+                  </p>
+
+                  {/* 🔹 Bottom Decorative Line */}
+                  <div className="absolute bottom-0 left-0 w-0 h-1.5 bg-[#B54118] group-hover:w-full transition-all duration-500" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
       </section>
-      {/* --- FINAL CTA: The Original Powerful Style --- */}
-        <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-      <div
-        className="relative py-20 mx-4 my-20 rounded-[2.5rem] dark:border dark:border-[#B54118] text-white text-center px-6 md:mx-20 bg-cover bg-fixed bg-center overflow-hidden shadow-2xl"
-        style={{ backgroundImage: "url('/wp-cta.jpg')" }} // Search Keyword: Dark abstract tech background
-      >
-        <div className="absolute inset-0 bg-black/80 z-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase leading-tight">
-              Ready to Build Your <br />
-              <span className="text-orange-500">WordPress Masterpiece</span>
-            </h2>
-          </FadeIn>
+      {/* 🚀 PREMIUM COMPARISON: Standard vs BizGrow */}
+      <section className="dark:bg-black py-24 relative overflow-hidden dark:border-t-2 dark:border-orange-700">
+        {/* Background Glow Effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
 
-          <FadeIn direction="up" delay={0.4}>
-            <p className="mx-auto mb-10 text-lg text-gray-300 max-w-2xl font-light">
-              Don't settle for a generic theme. Let's create a high-performance
-              WordPress site that is built for speed, security, and your
-              success.
-            </p>
-          </FadeIn>
+        <div className="relative py-20 bg-slate-900 dark:bg-[#001235]/30 backdrop-blur-xl border-2 border-white/5 dark:border-white/10 text-white rounded-[3.5rem] mx-4 md:mx-10 shadow-2xl overflow-hidden">
+          <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <FadeIn direction="up">
+              <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase">
+                Standard WP vs.{" "}
+                <span className="text-[#B54118]">Biz Grow WP</span>
+              </h2>
+            </FadeIn>
 
-          <Link href="/contact-us">
-            <button className="px-12 py-5 bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg uppercase tracking-widest">
-              Start Your Project
-            </button>
-          </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+              {/* ❌ SLOW & BLOATED CARD - Updated for better visibility */}
+              <FadeIn direction="left" delay={0.2}>
+                <div className="h-full p-10 border border-white/10 rounded-[2.5rem] bg-white/5 hover:bg-white/[0.08] transition-all duration-500 group relative overflow-hidden">
+                  {/* Subtle Red Glow for "Warning/Negative" vibe */}
+                  <div className="absolute -top-10 -left-10 w-32 h-32 bg-red-500/5 blur-3xl rounded-full" />
+
+                  <h4 className="text-2xl font-bold mb-8 text-gray-400 tracking-wide group-hover:text-gray-300 transition-colors">
+                    Slow & Bloated
+                  </h4>
+
+                  <ul className="space-y-6 text-left">
+                    {[
+                      "Pre-made templates",
+                      "20+ unnecessary plugins",
+                      "Slow mobile experience",
+                      "Security risks",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-4 text-sm md:text-base font-medium text-gray-500 group-hover:text-gray-400 transition-colors"
+                      >
+                        {/* Icons ko dull se "Sharp Muted Red" kiya hai */}
+                        <div className="flex-shrink-0 w-7 h-7 rounded-full bg-red-500/10 border border-red-500/20 text-red-500/70 flex items-center justify-center text-xs font-bold">
+                          ✕
+                        </div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
+
+              {/* ✅ BIZ GROW WP (THE WINNER) */}
+              <FadeIn direction="right" delay={0.4}>
+                <div className="relative h-full p-10 border-2 border-[#B54118] rounded-[2.5rem] bg-[#B54118]/10 shadow-[0_0_40px_rgba(181,65,24,0.15)] overflow-hidden group">
+                  {/* Winner Badge */}
+                  <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-[#B54118] px-6 py-2 rounded-b-2xl text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">
+                    The Winner
+                  </div>
+
+                  <h4 className="text-2xl font-black mb-8 text-[#B54118] uppercase tracking-tight">
+                    Engineered Perfection
+                  </h4>
+
+                  <ul className="space-y-6 text-left">
+                    {[
+                      "Lightweight Custom Code",
+                      "Zero Bloat Strategy",
+                      "SEO & Speed Optimized",
+                      "Enterprise-grade Security",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-4 text-sm md:text-base font-bold dark:text-white group-hover:translate-x-2 transition-transform duration-300"
+                      >
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg shadow-green-500/30">
+                          <Check size={14} strokeWidth={4} />
+                        </div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Subtle Inner Glow */}
+                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#B54118]/20 blur-3xl rounded-full" />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      {/* 🚀 FINAL CTA: WordPress Masterpiece (The Signature Style) */}
+      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10">
+          <div
+            className="relative py-24 md:py-32 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_30px_70px_rgba(0,0,0,0.5)] group"
+            style={{
+              backgroundImage: "url('/wp-cta.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed", // Smooth Parallax
+            }}
+          >
+            {/* 🔹 Depth Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-[#B54118]/20 z-0"></div>
+
+            {/* 🔹 Glass Border (Aapki Brand Identity) */}
+            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
+
+            <div className="relative z-20 max-w-5xl mx-auto px-6 flex flex-col items-center">
+              {/* Top Badge */}
+              <FadeIn direction="up" className="flex flex-col items-center">
+                <span className="px-6 py-2  rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                 WordPress Excellence
+                </span>
+
+                <h2 className="text-4xl md:text-7xl mt-4 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                  Ready to Build Your <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+                    WP Masterpiece
+                  </span>
+                </h2>
+              </FadeIn>
+
+              <FadeIn
+                direction="up"
+                delay={0.2}
+                className="flex flex-col items-center"
+              >
+                <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
+                  "Don't settle for a generic theme. Let's create a
+                  high-performance WordPress site that is built for speed,
+                  security, and your success."
+                </p>
+              </FadeIn>
+
+              <FadeIn
+                direction="up"
+                delay={0.4}
+                className="flex flex-col items-center"
+              >
+                <Link href="/contact-us">
+                  {/* 🎯 FIXED PREMIUM BUTTON */}
+                  <button className="relative px-12 py-6 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.6)]">
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+                    <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
+                      Start Your Project →
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+
+            {/* Glowing Accents */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+          </div>
+        </div>
       </section>
     </section>
   );

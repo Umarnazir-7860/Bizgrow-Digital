@@ -10,16 +10,15 @@ import {
   FaLightbulb,
   FaRocket,
 } from "react-icons/fa";
-
+import { CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "About BizGrow Digital | UK Experts in Digital Growth", 
+  title: "About BizGrow Digital | UK Experts in Digital Growth",
   description:
     "BizGrow Digital delivers expert digital marketing solutions across the UK, helping businesses grow, engage, and succeed online.",
 };
 
 export default function AboutPage() {
-
   return (
     <main className="w-full">
       {/* Hero Section */}
@@ -63,242 +62,321 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Overview Section Wrapper: Poori screen ka background aur border yahan aayega */}
-      <section className="w-full bg-white dark:bg-black dark:border-y-2 dark:border-orange-700 py-12 md:py-20">
-        {/* Content Container: Ye content ko center mein rakhega aur sides par padding dega */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      {/* Overview Section Wrapper */}
+      <section className="w-full bg-white dark:bg-black dark:border-y-2 dark:border-orange-700 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
           {/* Text Side */}
-          <div className="w-full lg:w-1/2 flex flex-col space-y-4">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-6">
             <FadeIn direction="right" delay={0.2}>
-              <h2 className="text-4xl md:text-5xl  font-black text-[#B54118]  uppercase tracking-tighter">
-                About Us
-              </h2>
+              <div className="flex flex-col">
+                <span className="text-[#B54118] font-bold tracking-widest text-sm mb-2">
+                  WHO WE ARE
+                </span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
+                  About <span className="text-[#B54118]">Us</span>
+                </h2>
+              </div>
             </FadeIn>
 
             <FadeIn direction="right" delay={0.4}>
-              <p className="text-gray-700 dark:text-white text-sm sm:text-base lg:text-md leading-relaxed text-justify md:text-left  ">
-                At BizGrow Digital, our focus is on your business’s brand,
-                specifically online, using results-driven digital marketing
-                services and creative thinking. We have SEO professionals,
-                developers, and digital marketers who help in delivering results
-                to media success. We’re not your average digital agency; we are
-                your business’s growth partners, helping your business unleash
-                its full potential. <br />
-            
-                We specialise in advanced SEO, websites built with purpose that
-                make an impact, all to generate valuable leads for growth. When
-                you work with us, you will become visible and will start to
-                establish a presence of credibility and reliability that exposes
-                long-term growth.
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                At BizGrow Digital, we’re not your average agency; we are your
+                <strong> business’s growth partners</strong>. We combine
+                creative thinking with data-driven strategies to unleash your
+                full potential.
               </p>
             </FadeIn>
+
+            {/* Bullet Points for better Scannability */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+              {[
+                "Advanced SEO Experts",
+                "Results-Driven Marketing",
+                "Custom Web Development",
+                "Lead Generation Focus",
+              ].map((item, i) => (
+                <FadeIn key={i} direction="up" delay={0.5 + i * 0.1}>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="text-[#B54118]" size={20} />
+                    <span className="font-semibold dark:text-white text-slate-800">
+                      {item}
+                    </span>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
           </div>
 
-          {/* Image Side */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          {/* Image Side with Floating Element */}
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-10 lg:mt-0">
             <FadeIn direction="left" delay={0.4}>
-              <div className="relative">
+              <div className="relative group">
+                {/* Main Image */}
                 <Image
                   src="/team-collaboration.jpg"
                   width={550}
-                  height={400}
-                  className="rounded-[2rem] shadow-2xl object-cover"
+                  height={450}
+                  className="rounded-[3rem] shadow-2xl object-cover border-8 border-white dark:border-zinc-900 transition-transform duration-500 group-hover:scale-[1.02]"
                   alt="BizGrow Digital Marketing Experts"
                 />
-                {/* Decorative Background Shape - Sirf bari screens par */}
-                <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-[#B54118]/5 rounded-full hidden md:block" />
+
+                {/* Floating Badge - Ye "Weird" feel khatam karega */}
+                <div className="absolute -bottom-6 left-6 md:left-1 bg-[#B54118] p-6 rounded-2xl shadow-xl text-white z-20 animate-bounce-slow">
+                  <p className="text-3xl font-black">100%</p>
+                  <p className="text-xs uppercase tracking-tighter">
+                    Client Satisfaction
+                  </p>
+                </div>
+
+                {/* Decorative Back-layer */}
+                <div className="absolute -top-6 -right-6 w-full h-full border-2 border-[#B54118]/30 rounded-[3rem] -z-10" />
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="bg-[#F2E8D5] dark:bg-[#000B25] dark:border-b-2 dark:border-orange-700  py-10 px-4 ">
-        <FadeIn direction="up" delay={0.2}>
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-12">
-            Our Mission & Vision
-          </h2>
-        </FadeIn>
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Mission */}
-          <div className="w-full lg:w-1/2 bg-white dark:bg-[#000B25] border border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-            <FadeIn direction="right" delay={0.3}>
-              <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                <FaBullseye className="text-[#B54118] h-10 w-10" />
-              </div>
-              <h3 className="text-2xl font-semibold dark:text-[#B54118] mb-3">
-                Our Mission
-              </h3>
-              <p className="text-gray-700 dark:text-white text-sm">
-                BizGrow Digital helps UK businesses grow online with strategies
-                that increase visibility, connect their business to potential
-                customers, and build their brand presence of their business. We
-                provide results-driven digital solutions so that businesses can
-                be distinguishable from others in their industry and achieve
-                measurable success across all digital platforms.
-              </p>
-            </FadeIn>
-          </div>
+      {/* 🚀 UNIQUE SECTION: Mission & Vision */}
+      <section className="bg-[#F2E8D5] dark:bg-black py-24 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn direction="up">
+            <div className="flex flex-col items-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-black text-center text-[#B54118] uppercase tracking-tighter">
+                Our{" "}
+                <span className="text-slate-900 dark:text-white">
+                  Mission & Vision
+                </span>
+              </h2>
+              <div className="w-24 h-2 bg-[#B54118] mt-4 rounded-full" />
+            </div>
+          </FadeIn>
 
-          {/* Vision */}
-          <div className="w-full lg:w-1/2 bg-white border  dark:bg-[#000B25] border-gray-200 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-            <FadeIn direction="left" duration={0.3}>
-              <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                <FaEye className="text-[#B54118] h-10 w-10" />
-              </div>
-              <h3 className="text-2xl font-semibold dark:text-[#B54118] mb-3">
-                Our Vision
-              </h3>
-              <p className="text-gray-700 dark:text-white text-sm">
-                We aim to be the trusted digital partner for UK brands, helping
-                them succeed online, establish credibility, and reach more
-                customers. By crafting professional digital strategies and
-                providing innovative solutions, we will help businesses to
-                achieve long-term growth and a strong, recognisable online
-                presence.
-              </p>
-            </FadeIn>
+          {/* Main Container */}
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+            {/* 🔹 Left Side: Mission Card */}
+            <div className="w-full lg:w-1/2 flex">
+              <FadeIn direction="right" className="w-full flex">
+                <div className="group relative w-full bg-white dark:bg-[#000B25] p-10 md:p-12 rounded-[3rem] border-2 border-orange-700/10 dark:border-white/5 shadow-2xl flex flex-col items-start text-left hover:border-[#B54118]/40 transition-all duration-500">
+                  {/* Background Accent */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#B54118]/5 rounded-bl-full -z-10 group-hover:bg-[#B54118]/10 transition-colors" />
+
+                  <div className="bg-[#B54118] p-5 rounded-2xl mb-8 shadow-lg shadow-[#B54118]/20 group-hover:scale-110 transition-transform">
+                    <FaBullseye className="text-white h-8 w-8" />
+                  </div>
+
+                  <h3 className="text-3xl font-black dark:text-[#B54118] text-slate-900 mb-6 tracking-tight">
+                    Our Mission
+                  </h3>
+
+                  <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed flex-grow">
+                    BizGrow Digital helps UK businesses grow online with
+                    strategies that increase visibility, connect their business
+                    to potential customers, and build their brand presence. We
+                    provide results-driven digital solutions so that businesses
+                    can be distinguishable from others in their industry and
+                    achieve measurable success.
+                  </p>
+
+                  {/* Subtle Branding Footnote */}
+                  <div className="mt-8 pt-6 border-t border-gray-100 dark:border-white/5 w-full italic text-[#B54118] font-medium">
+                    #DrivingSuccess
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* 🔹 Right Side: Vision Card */}
+            <div className="w-full lg:w-1/2 flex">
+              <FadeIn direction="left" className="w-full flex">
+                <div className="group relative w-full bg-white dark:bg-[#000B25] p-10 md:p-12 rounded-[3rem] border-2 border-orange-700/10 dark:border-white/5 shadow-2xl flex flex-col items-start text-left hover:border-[#B54118]/40 transition-all duration-500">
+                  {/* Background Accent */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#B54118]/5 rounded-bl-full -z-10 group-hover:bg-[#B54118]/10 transition-colors" />
+
+                  <div className="bg-[#B54118] p-5 rounded-2xl mb-8 shadow-lg shadow-[#B54118]/20 group-hover:scale-110 transition-transform">
+                    <FaEye className="text-white h-8 w-8" />
+                  </div>
+
+                  <h3 className="text-3xl font-black dark:text-[#B54118] text-slate-900 mb-6 tracking-tight">
+                    Our Vision
+                  </h3>
+
+                  <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed flex-grow">
+                    We aim to be the trusted digital partner for UK brands,
+                    helping them succeed online, establish credibility, and
+                    reach more customers. By crafting professional digital
+                    strategies and providing innovative solutions, we will help
+                    businesses to achieve long-term growth and a strong,
+                    recognisable online presence.
+                  </p>
+
+                  {/* Subtle Branding Footnote */}
+                  <div className="mt-8 pt-6 border-t border-gray-100 dark:border-white/5 w-full italic text-[#B54118] font-medium">
+                    #FutureFocused
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 🚀 NEW SECTION: What Makes Us Different */}
-      <section className="w-full py-20 bg-white dark:bg-black">
+      {/* 🚀 UNIQUE SECTION: What Makes Us Different */}
+      <section className="w-full py-24 bg-white dark:bg-black relative overflow-hidden">
+        {/* Background Subtle Elements */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
+
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn direction="up">
-            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-16 uppercase">
-              What Makes Us Different
-            </h2>
+            <div className="flex flex-col items-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-black text-center text-[#B54118] uppercase tracking-tighter">
+                What Makes Us{" "}
+                <span className="text-slate-900 dark:text-white">
+                  Different
+                </span>
+              </h2>
+              <div className="w-24 h-2 bg-[#B54118] mt-4 rounded-full" />
+            </div>
           </FadeIn>
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Feature 1: Listen with Purpose */}
-            <FadeIn direction="up" delay={0.1}>
-              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
-                {/* Animated Icon Container */}
-                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
-                  <FaHandshake className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Listen with Purpose
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Every strategy we build is rooted in your unique goals to make
-                  sure we get a solution that actually meets your needs.
-                </p>
-              </div>
-            </FadeIn>
 
-            {/* Feature 2: Complex Simple */}
-            <FadeIn direction="up" delay={0.2}>
-              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
-                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
-                  <FaLightbulb className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Make the Complex Simple
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  With our collective experience, we are able to build pragmatic
-                  and actionable plans to take your ideas and turn them into
-                  results.
-                </p>
-              </div>
-            </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10">
+            {[
+              {
+                icon: <FaHandshake />,
+                title: "We Listen with Purpose",
+                desc: "Every strategy we build is rooted in your unique goals to make sure we get a solution that actually meets your needs.",
+              },
+              {
+                icon: <FaLightbulb />,
+                title: "We Make the Complex Simple",
+                desc: "With our collective experience, we are able to build pragmatic and actionable plans to take your ideas and turn them into results.",
+              },
+              {
+                icon: <FaRocket />,
+                title: "We Deliver Results",
+                desc: "Everything from mobile-responsive websites to better placement in search results allows us to produce real results.",
+              },
+            ].map((feature, index) => (
+              <FadeIn key={index} direction="up" delay={0.1 * (index + 1)}>
+                <div className="group relative h-full">
+                  {/* Unique Card Styling - Removed Numbers, Added Hover Glow */}
+                  <div className="relative z-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md p-10 rounded-[2.5rem] border border-orange-700/20 dark:border-white/10 shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 flex flex-col items-center text-center h-full overflow-hidden">
+                    {/* Subtle Gradient Spot (Invisible until hover) */}
+                    <div className="absolute -inset-full bg-gradient-to-br from-[#B54118]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-            {/* Feature 3: Deliver Results */}
-            <FadeIn direction="up" delay={0.3}>
-              <div className="group bg-white dark:bg-[#001235] p-8 rounded-2xl border border-orange-700 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center">
-                <div className="mb-6 p-4 rounded-full bg-[#B54118]/10 group-hover:bg-[#B54118] transition-colors duration-500">
-                  <FaRocket className="text-[#B54118] group-hover:text-white text-4xl transition-transform duration-700 group-hover:[transform:rotateY(360deg)]" />
+                    {/* Icon Container with Floating Animation */}
+                    <div className="mb-8 p-6 rounded-3xl bg-[#B54118]/10 text-[#B54118] group-hover:bg-[#B54118] group-hover:text-white transition-all duration-500 shadow-lg relative z-10 transform group-hover:-translate-y-2">
+                      <span className="text-5xl block transform group-hover:[transform:rotateY(360deg)] duration-700">
+                        {feature.icon}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 z-10 tracking-tight">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed z-10 text-sm md:text-base">
+                      {feature.desc}
+                    </p>
+
+                    {/* Bottom Glow Line */}
+                    <div className="absolute bottom-0 left-0 w-0 h-2 bg-[#B54118] group-hover:w-full transition-all duration-500" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Deliver Results
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Everything from mobile-responsive websites to better placement
-                  in search results allows us to produce real results.
-                </p>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
 
+          {/* Quote Section with Unique Signature Style */}
           <FadeIn direction="up" delay={0.5}>
-            <div className="mt-16 p-8 bg-[#F2E8D5] dark:bg-[#000B25] rounded-2xl border-l-8 border-[#B54118]">
-              <p className="text-xl md:text-2xl font-medium text-black dark:text-white italic">
+            <div className="mt-24 p-12 md:p-16 bg-orange-50/50 dark:bg-[#000B25]/50 backdrop-blur-xl rounded-[3rem] rounded-br-[120px] border-l-[12px] border-[#B54118] relative group">
+              <div className="absolute top-4 right-12 text-[12rem] text-[#B54118]/5 font-serif leading-none select-none">
+                ”
+              </div>
+
+              <p className="text-2xl md:text-2xl font-bold text-slate-800 dark:text-white italic leading-tight relative z-10">
                 "At BizGrow Digital, we don’t just develop websites; we build
                 powerful digital solutions that turn visitors into clients and
-                position your brand as a trusted leader in your industry."
+                position your brand as a{" "}
+                <span className="text-[#B54118]">trusted leader</span>."
               </p>
+
+              <div className="mt-10 flex items-center gap-4 relative z-10">
+                <div className="w-16 h-1 bg-[#B54118]" />
+                <span className="uppercase tracking-[0.4em] text-xs font-black text-[#B54118]">
+                  Our Growth Mission
+                </span>
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="w-full dark:bg-black">
-        <div className="max-w-7xl mx-auto py-10  px-4 lg:px-0">
+      {/* 🚀 UNIQUE SECTION: Our Core Values (Height Fixed) */}
+      <section className="w-full py-20 bg-white dark:bg-black relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-64 bg-[#B54118]/5 skew-y-3 -z-10" />
+
+        <div className="max-w-7xl mx-auto px-6">
           <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#B54118] mb-7">
-              Our Core Values
-            </h2>
+            <div className="flex flex-col items-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-black text-center text-[#B54118] uppercase tracking-tighter">
+                Our Core{" "}
+                <span className="text-slate-900 dark:text-white">Values</span>
+              </h2>
+              <div className="w-20 h-1.5 bg-[#B54118] mt-3 rounded-full" />
+            </div>
           </FadeIn>
-          <div className="flex flex-col px-4 lg:flex-row gap-8">
-            {/* Integrity */}
 
-            <div
-              className="flex-1  dark:bg-[#000B25]  border border-orange-700 shadow-lg rounded-xl
-           p-8 transition-transform hover:scale-105 flex flex-col items-center text-center 
-           hover:shadow-2xl duration-300"
-            >
-              <FadeIn direction="right">
-                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                  <FaHandshake className="text-[#B54118] h-10 w-10" />
-                </div>
-                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                  Integrity
-                </h3>
-                <p className="dark:text-white text-black text-md">
-                  We believe in honest communication, ethical practices, and
-                  delivering what we promise. Trust is the cornerstone of every
-                  relationship we develop.
-                </p>
-              </FadeIn>
-            </div>
+          {/* 🔹 FIX: added 'items-stretch' taake saare cards barabar height pakrein */}
+          <div className="flex flex-col lg:flex-row gap-10 items-stretch">
+            {[
+              {
+                icon: <FaHandshake />,
+                title: "Integrity",
+                desc: "We believe in honest communication, ethical practices, and delivering what we promise. Trust is the cornerstone of every relationship we develop.",
+                dir: "right",
+              },
+              {
+                icon: <FaLightbulb />,
+                title: "Quality and Clarity",
+                desc: "All of our strategies, messages & designs are created with intention, precision, and clear intent to maximise the value of and make an extraordinary impact with.",
+                dir: "up",
+              },
+              {
+                icon: <FaRocket />,
+                title: "Growth-Driven Mindset",
+                desc: "We focus on continual improvement, developing strategic thinkers, and developing a long-term digital growth strategy for our clients.",
+                dir: "left",
+              },
+            ].map((value, index) => (
+              <div key={index} className="flex-1 group">
+                <FadeIn
+                  direction={value.dir}
+                  delay={0.2 * index}
+                  className="h-full"
+                >
+                  {/* 🔹 FIX: 'h-full' and 'flex-col' ensures the box stretches equally */}
+                  <div className="relative h-full bg-white dark:bg-[#000B25]/60 backdrop-blur-xl border-2 border-orange-700/20 dark:border-white/5 p-10 rounded-t-[3rem] rounded-bl-[3rem] rounded-br-none shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 flex flex-col items-center text-center group-hover:-translate-y-4">
+                    <div className="relative mb-8 flex-shrink-0">
+                      <div className="absolute inset-0 bg-[#B54118] blur-xl opacity-0 group-hover:opacity-30 transition-opacity" />
+                      <div className="relative bg-[#B54118]/10 p-6 rounded-2xl text-[#B54118] group-hover:bg-[#B54118] group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] shadow-lg">
+                        <span className="text-4xl">{value.icon}</span>
+                      </div>
+                    </div>
 
-            {/* Quality and Clarity*/}
-            <div className="flex-1 dark:bg-[#000B25]  border border-orange-700 shadow-lg rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
-              <FadeIn direction="up">
-                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                  <FaLightbulb className="text-[#B54118] h-10 w-10" />
-                </div>
-                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                  Quality and Clarity
-                </h3>
-                <p className="dark:text-white text-black text-md">
-                  All of our strategies, messages & designs are created with
-                  intention, precision, and clear intent to maximise the value
-                  of and make an extraordinary impact with.
-                </p>
-              </FadeIn>
-            </div>
+                    <h3 className="text-2xl font-black text-[#B54118] mb-4 tracking-tight flex-shrink-0">
+                      {value.title}
+                    </h3>
 
-            {/* Growth-Driven Mindset */}
-            <div className="flex-1 dark:bg-[#000B25] border border-orange-700 shadow-lg rounded-xl p-8 transition-transform hover:scale-105 flex flex-col items-center text-center hover:shadow-2xl duration-300">
-              <FadeIn direction="left">
-                <div className="bg-[#B54118]/20 p-5 rounded-full mb-4 inline-flex">
-                  <FaRocket className="text-[#B54118] h-10 w-10" />
-                </div>
-                <h3 className="text-2xl text-[#B54118] font-semibold mb-3">
-                  Growth-Driven Mindset
-                </h3>
-                <p className="dark:text-white text-black text-md">
-                  We focus on continual improvement, developing strategic
-                  thinkers, and developing a long-term digital growth strategy
-                  for our clients.
-                </p>
-              </FadeIn>
-            </div>
+                    {/* 🔹 FIX: 'flex-grow' taake description box poori jagah le aur bottom bar align ho jaye */}
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-md flex-grow">
+                      {value.desc}
+                    </p>
+
+                    <div className="absolute bottom-4 right-4 w-8 h-8 border-r-4 border-b-4 border-[#B54118]/20 group-hover:border-[#B54118] transition-colors duration-500" />
+                  </div>
+                </FadeIn>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -322,28 +400,61 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-        <div
-          className="relative py-10 mx-4 my-10 rounded-2xl dark:border dark:border-[#B54118] text-white text-center px-4 md:mx-20 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/team-work.jpg')" }}
-        >
-          <div className="absolute inset-0 bg-black/60 z-0 rounded-2xl"></div>
-          <div className="relative z-10 mx-1 md:mx-0">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Let’s Grow with BizGrow Digital
-            </h2>
-            <p className=" mx-auto mb-8 text-lg md:text-xl">
-              We work closely with each client to understand what they need. Our
-              solutions are simple, flexible, and designed to get real results.
-              By working together, we make sure every project helps your
-              business grow and succeed.
-            </p>
-            <Link href="/contact-us">
-              <button className="px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
-                Get in Touch
-              </button>
-            </Link>
+      {/* 🚀 UNIQUE SECTION: CTA Section */}
+      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10">
+          <div
+            className="relative py-16 md:py-20 rounded-[3rem] overflow-hidden text-white text-center shadow-2xl group"
+            style={{
+              backgroundImage: "url('/team-work.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed", // Parallax effect
+            }}
+          >
+            {/* 🔹 Dynamic Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#B54118]/40 z-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+            {/* 🔹 Glassy Border Effect */}
+            <div className="absolute inset-0 border-[1px] border-white/20 rounded-[3rem] z-10 pointer-events-none"></div>
+
+            <div className="relative z-20 max-w-4xl mx-auto px-6">
+              <FadeIn direction="up">
+                <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                  Start Your Journey
+                </span>
+
+                <h2 className="text-4xl md:text-6xl font-black mb-8 mt-3 leading-tight tracking-tighter">
+                  Let’s Grow with <br />
+                  <span className="text-[#B54118]">BizGrow Digital</span>
+                </h2>
+              </FadeIn>
+
+              <FadeIn direction="up" delay={0.2}>
+                <p className="mx-auto mb-12 text-lg md:text-xl text-gray-200 leading-relaxed font-light">
+                  We work closely with each client to understand what they need.
+                  Our solutions are simple, flexible, and designed to get real
+                  results. By working together, we make sure every project helps
+                  your business grow and succeed.
+                </p>
+              </FadeIn>
+
+              <FadeIn direction="up" delay={0.4}>
+                <Link href="/contact-us">
+                  <button className="relative px-10 py-5 bg-[#B54118] text-white font-bold rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(181,65,24,0.5)]">
+                    {/* Button Shine Effect */}
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
+                    <span className="relative z-10 text-xl">
+                      Get in Touch →
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+
+            {/* 🔹 Decorative Animated Circles */}
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#B54118]/20 blur-[80px] rounded-full animate-pulse"></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 blur-[80px] rounded-full animate-pulse"></div>
           </div>
         </div>
       </section>

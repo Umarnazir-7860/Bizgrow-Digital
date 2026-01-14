@@ -93,20 +93,43 @@ const LeadGenerationPage = () => {
         </div>
       </div>
 
-      {/* --- SERVICE GRID --- */}
-      <section className="py-14 bg-gray-50 dark:bg-[#020817] dark:border-t-2 dark:border-orange-700">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">
-              A Results-First <span className="text-[#B54118]">Approach</span>
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto mb-16">
-              Quality over quantity. We focus on leads that actually convert
-              into revenue, not just vanity metrics.
-            </p>
-          </FadeIn>
+      {/* 🚀 SERVICE GRID: Results-First Approach */}
+      <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
+        {/* Subtle Branding Blur */}
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 items-stretch">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="mb-20">
+            <FadeIn
+              direction="up"
+              delay={0.2}
+              className="flex flex-col items-center"
+            >
+              <div className="flex flex-col items-center">
+                <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter uppercase">
+                  A Results-First{" "}
+                  <span className="text-[#B54118]">Approach</span>
+                </h2>
+                <div className="w-24 h-1.5 bg-[#B54118] mt-6 rounded-full" />
+              </div>
+            </FadeIn>
+
+            <FadeIn
+              direction="up"
+              delay={0.4}
+              className="flex flex-col items-center"
+            >
+              <div className="flex justify-center">
+                <p className="mt-8 text-gray-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
+                  Quality over quantity. We focus on leads that actually convert
+                  into revenue, not just vanity metrics.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* leadServices Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {leadServices.map((item, index) => (
               <FadeIn
                 key={index}
@@ -114,23 +137,29 @@ const LeadGenerationPage = () => {
                 delay={0.1 * index}
                 className="h-full flex"
               >
-                <div className="group h-full flex flex-col p-10 dark:border dark:border-[#B54118] bg-white dark:bg-slate-700 rounded-[2.5rem] border border-slate-100  shadow-lg hover:shadow-2xl transition-all duration-300 w-full">
-                  {/* Icon Container */}
+                {/* Card: Changed dark:bg-slate-700 to match your Brand Navy/Black */}
+                <div className="group relative h-full flex flex-col p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[3rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 w-full overflow-hidden hover:-translate-y-3">
+                  {/* Icon Container - Animated Scale/Rotate */}
                   <div
-                    className={`w-16 h-16 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 shrink-0`}
+                    className={`w-20 h-20 mx-auto ${item.bgColor} ${item.hoverBg} group-hover:text-white text-[#B54118] rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-all duration-500 group-hover:rotate-[15deg] group-hover:scale-110 shrink-0 text-3xl`}
                   >
                     {item.icon}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">
+                  {/* Title - Consistent Font Black */}
+                  <h3 className="text-xl font-black dark:text-white mb-4 uppercase tracking-tight group-hover:text-[#B54118] transition-colors">
                     {item.title}
                   </h3>
 
-                  {/* Description - flex-grow ensures this fills the height */}
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-grow">
+                  {/* Description - flex-grow ensures cards stay equal height */}
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-medium flex-grow">
                     {item.desc}
                   </p>
+
+                  {/* Hover Indicator Line */}
+                  <div className="mt-8 w-12 h-1 bg-gray-100 dark:bg-white/10 mx-auto rounded-full overflow-hidden">
+                    <div className="w-0 group-hover:w-full h-full bg-[#B54118] transition-all duration-700 mx-auto" />
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -189,32 +218,69 @@ const LeadGenerationPage = () => {
       <ShapeChangeSection />
       <VShapeTransition />
 
-      {/* --- CALL TO ACTION --- */}
-      <section className="dark:bg-black py-20 dark:border-y-2 dark:border-orange-700 ">
-        <div
-          className="relative py-24 mx-4 my-20 rounded-[3rem] text-white text-center dark:border  dark:border-[#B54118] px-6 md:mx-20 bg-cover bg-center bg-fixed overflow-hidden shadow-2xl"
-          style={{ backgroundImage: "url('/sales-pipeline.jpg')" }}
-        >
-          <div className="absolute inset-0 bg-black/85 z-0"></div>
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase">
-              Ready to Fill Your <br />
-              <span className="text-orange-500">Sales Pipeline?</span>
-            </h2>
-            <p className="mx-auto mb-10 text-lg md:text-xl text-gray-300 max-w-2xl font-light">
-              Stop waiting for customers to find you. Let us build a proactive
-              system that delivers consistent, high-quality leads every single
-              day.
-            </p>
-            <Link href="/contact-us">
-              <button className="px-8 py-5 text-sm bg-[#B54118] text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl uppercase tracking-widest">
-                Get Your Free Audit
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </section>
+{/* 🚀 FINAL PREMIUM CTA: Sales Pipeline */}
+<section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 md:px-10">
+    <div
+      className="relative py-24 md:py-32 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_30px_70px_rgba(0,0,0,0.5)] group"
+      style={{ 
+        backgroundImage: "url('/sales-pipeline.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed' 
+      }}
+    >
+      {/* 🔹 Overlay: Depth aur Readability ke liye */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-[#B54118]/20 z-0"></div>
+
+      {/* 🔹 Premium Glass Border Overlay */}
+      <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
+
+      <div className="relative z-20 max-w-5xl mx-auto px-6 flex flex-col items-center">
+        
+        {/* Top Status Badge */}
+        <FadeIn direction="up" className="flex flex-col items-center">
+          <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                  Start Your Journey
+                </span>
+          
+          <h2 className="text-4xl md:text-7xl mt-6 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+            Ready to Fill Your <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+              Sales Pipeline?
+            </span>
+          </h2>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.2} className="flex flex-col items-center">
+          <p className="mx-auto mb-14 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
+            "Stop waiting for customers to find you. Let us build a proactive
+            system that delivers consistent, high-quality leads every single day."
+          </p>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.4} className="flex flex-col items-center text-center">
+          <Link href="/contact-us">
+            {/* 🎯 Aapka Fixed Bold Button with Shine Effect */}
+            <button className="relative px-12 py-6 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.6)]">
+              
+              {/* Shine Animation */}
+              <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+              
+              <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
+                Get Your Free Audit →
+              </span>
+            </button>
+          </Link>
+        </FadeIn>
+      </div>
+
+      {/* 🔹 Background Glowing Accents */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+    </div>
+  </div>
+</section>    </section>
   );
 };
 
