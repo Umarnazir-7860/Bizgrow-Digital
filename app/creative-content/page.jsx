@@ -7,6 +7,12 @@ import VShapeTransition from "@components/test2";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
+
+export const metadata ={
+  title:"Creative Content Services by BizGrow Digital UK",
+  description:"BizGrow Digital offers expert creative content services to enhance engagement, brand visibility, and online business growth across the UK."
+}
+
 const CreativeContentPage = () => {
   const contentFeatures = [
     {
@@ -45,7 +51,7 @@ const CreativeContentPage = () => {
       <div className="relative  h-[85vh] md:h-screen w-full">
         <Image
           src="/creative-content-hero.jpg"
-          alt="Creative Content Services"
+          alt="Creative Content Services - BizGrow Digital"
           fill
           fetchPriority="high"
           priority
@@ -156,7 +162,7 @@ const CreativeContentPage = () => {
             <div className="relative h-[400px] md:h-[500px] w-full rounded-[3rem] overflow-hidden">
               <Image
                 src="/download (8).png"
-                alt="Creative Workflow"
+                alt="BizGrow Digital - Creative Strategy "
                 fill
                 className="object-center"
               />
