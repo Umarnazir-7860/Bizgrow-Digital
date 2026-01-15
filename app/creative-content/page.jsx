@@ -108,7 +108,7 @@ const CreativeContentPage = () => {
 
             <FadeIn direction="up" delay={0.4}>
               <div className="flex justify-center">
-                <p className="text-gray-600 dark:text-gray-400 text-lg md:text-lg max-w-2xl leading-relaxed font-medium mt-4">
+                <p className="text-gray-600 dark:text-gray-400 text-lg md:text-[16px] max-w-4xl leading-relaxed font-medium mt-4">
                   Your content is your brand’s first impression. We ensure every
                   word, visual, and interaction is strategically designed to
                   support your business objectives and drive meaningful results.
