@@ -318,7 +318,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
          <FadeIn direction="up">
             <div className="flex flex-col items-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-black text-center text-[#B54118] uppercase tracking-tighter">
+              <h2 className="text-5xl md:text-6xl font-black text-center text-[#B54118] uppercase tracking-tighter">
                 Our Core {" "}
                 <span className="text-slate-900 dark:text-white">
                   Values
