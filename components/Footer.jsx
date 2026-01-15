@@ -1,5 +1,3 @@
-// components/Footer.js
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -19,7 +17,6 @@ const Footer = () => {
     { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/our-digital-services" },
     { name: "Blog", href: "/blogs" },
-
     { name: "Contact Us", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms" },
@@ -31,132 +28,194 @@ const Footer = () => {
     { name: "Lead Generation", href: "/lead-generation-solutions" },
     { name: "WordPress", href: "/wordpress-website" },
     { name: "Digital Marketing", href: "/digital-marketing-services" },
-    { name: "Facebook Marketing", href: "/facebook-marketing-services" },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "Website Development", href: "/web-development" },
-    { name: "Graphic Design", href: "/graphic-design-services" },
     { name: "Search Engine Optimisation", href: "/search-engine-optimisation" },
   ];
 
   const socialMedia = [
-    { Icon: FaFacebookF, href: "https://www.facebook.com/profile.php?id=61577206013332", label: "Facebook" },
-    { Icon: FaTiktok, href: "https://www.tiktok.com/@bizgrowholdings", label: "TikTok" },
-    { Icon: FaInstagram, href: "https://www.instagram.com/bizgrowdigital_uk/", label: "Instagram" },
-    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/bizgrowdigital/posts/?feedView=all", label: "LinkedIn" },
-    { Icon: FaYoutube, href: "https://www.youtube.com/@bizgrowholdings/featured", label: "YouTube" },
+    {
+      Icon: FaFacebookF,
+      href: "https://www.facebook.com/profile.php?id=61577206013332",
+      label: "Facebook",
+    },
+    {
+      Icon: FaTiktok,
+      href: "https://www.tiktok.com/@bizgrowholdings",
+      label: "TikTok",
+    },
+    {
+      Icon: FaInstagram,
+      href: "https://www.instagram.com/bizgrowdigital_uk/",
+      label: "Instagram",
+    },
+    {
+      Icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/company/bizgrowdigital/posts/?feedView=all",
+      label: "LinkedIn",
+    },
+    {
+      Icon: FaYoutube,
+      href: "https://www.youtube.com/@bizgrowholdings/featured",
+      label: "YouTube",
+    },
   ];
 
   return (
-    <footer className=" bg-[#000B25]  text-white py-10 px-4 md:px-8">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-        {/* Column 1: Logo + About */}
-        <div>
-          <Image
-            src="/BizGrow-digital-logo.png"
-            alt="BizGrow Digital Logo"
-            width={120}
-            height={60}
-            className="mb-4 rounded-xl"
-            priority
-          />
-          <p className="text-sm leading-relaxed mb-4">
-            <span className="font-bold">BizGrow Digital</span> is a
-            results-driven digital solutions company committed to helping
-            businesses grow online. Guided by our mission “Empowering Brands for
-            the Digital Era,” we equip businesses with modern web development,
-            data-driven marketing strategies, and creative design solutions to
-            achieve measurable growth and lasting impact.
-          </p>
-          <p className="text-base font-extrabold text-white mt-6">
-            BIZGROW DIGITAL
-          </p>
-        </div>
+    <footer className="relative bg-[#000B25] text-white pt-24 pb-12 px-6 md:px-12 overflow-hidden">
+      {/* Decorative Background Glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B54118]/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-        {/* Column 2: Quick Links */}
-        <div>
-          <h3 className="text-xl font-bold mb-4">Quick Links:</h3>
-          <ul className="space-y-2 text-md">
-            {importantLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="hover:text-[#B54118] transition duration-200"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 3: Services */}
-        <div>
-          <h3 className="text-xl font-bold mb-4">Services Links:</h3>
-          <ul className="space-y-2 text-md">
-            {servicesLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="hover:text-[#B54118] transition duration-200"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 4: Contact + Map + Social */}
-        <div>
-          <h3 className="text-lg font-bold mb-4">Contact Us:</h3>
-          <div className="space-y-3 mb-6 text-sm">
-            <p className="flex items-center font-bold">
-              <FaPhoneAlt className="mr-2 text-2xl text-[#B54118] min-w-[1rem]" />
-              +44 7903 332433 <br /> 020 8090 4209
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          {/* Column 1: Brand Identity */}
+          <div className="space-y-8 text-left">
+            <div className="relative inline-block">
+              <Image
+                src="/BizGrow-digital-logo.png"
+                alt="BizGrow Digital Logo"
+                width={140}
+                height={70}
+                className="brightness-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                priority
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm">
+              <span className="text-white font-bold">BizGrow Digital</span> is a
+              results-driven digital solutions company. We equip businesses with
+              modern web development and data-driven marketing strategies to
+              achieve measurable growth.
             </p>
-            <p className="flex items-center font-bold">
-              <FaEnvelope className="mr-2 text-[#B54118] min-w-[1rem]" />
-              <a href="mailto:info@iccs.uk" className="hover:text-[#FEDB01]">
-                Info@bizgrow-digital.co.uk
-              </a>
-            </p>
-            <p className="flex items-start font-bold">
-              <FaMapMarkerAlt className="mr-2 text-[#B54118] mt-1 min-w-[1rem]" />
-              CEME Campus, Marsh Way, RM13 8EU
-            </p>
+            <div className="text-2xl font-black text-white tracking-tighter uppercase italic ">
+              BIZGROW <span className="text-[#B54118]">DIGITAL</span>
+            </div>
           </div>
 
-          {/* Responsive Map */}
-          <div className="w-full h-40 md:h-60 rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d317788.248899627!2d0.17185!3d51.51834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2sus!4v1767348057582!5m2!1sen!2sus"
-              className="w-full h-full border-0"
-              allowFullScreen
-              loading="lazy"
-              title="BizGrow Digital Location" //
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          {/* Column 2: Quick Navigation */}
+          <div className="text-left">
+            <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+              Navigation
+            </h4>
+            <ul className="space-y-4">
+              {importantLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-4 h-[2px] bg-[#B54118] mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Social Media */}
-          <div className="flex justify-center md:justify-start space-x-2 mt-4">
-            {socialMedia.map(({ Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="bg-white text-[#1D2B52] p-3 rounded-full hover:bg-[#B54118] hover:text-white transition duration-300"
-              >
-                <Icon className="text-sm" />
-              </a>
-            ))}
+          {/* Column 3: Expertise (Services) with Premium Effect */}
+          <div className="text-left">
+            <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+              Expertise
+            </h4>
+            <ul className="grid grid-cols-1 gap-4">
+              {servicesLinks.slice(0, 8).map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-gray-400 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-[0.15em]"
+                  >
+                    {/* Sliding Line Effect */}
+                    <span className="w-0 group-hover:w-6 h-[2px] bg-[#B54118] mr-0 group-hover:mr-3 transition-all duration-500 ease-out"></span>
+
+                    <span className="group-hover:translate-x-1 transition-transform duration-500">
+                      {link.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact + Map + Social */}
+          <div className="space-y-8 text-left">
+            <div>
+              <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+                Get In Touch
+              </h4>
+              <div className="space-y-5">
+                <a href="tel:+447903332433" className="flex items-center group">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#B54118] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
+                    <FaPhoneAlt className="text-sm group-hover:scale-110 transition-transform" />
+                  </div>
+                  <span className="text-gray-300 text-sm font-bold group-hover:text-white transition-colors">
+                    +44 7903 332433
+                  </span>
+                </a>
+                <a
+                  href="mailto:info@bizgrow-digital.co.uk"
+                  className="flex items-center group"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#B54118] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
+                    <FaEnvelope className="text-sm group-hover:scale-110 transition-transform" />
+                  </div>
+                  <span className="text-gray-300 text-sm font-bold group-hover:text-white transition-colors truncate">
+                    Info@bizgrow-digital.co.uk
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Premium Responsive Map Container */}
+            <div className="relative group w-full h-44 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5857241279313!2d0.1802951!3d51.5391642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4d46c873653%3A0x7c73361e6267812e!2sCEME%20Conference%20Centre!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                className="w-full h-full border-0 grayscale invert contrast-[1.2] opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              {/* Glass Overlay on Map */}
+              <div className="absolute inset-0 pointer-events-none border-[8px] border-transparent group-hover:border-white/5 transition-all duration-500 rounded-[2rem]"></div>
+            </div>
+
+            {/* Social Media */}
+            <div className="flex items-center gap-3">
+              {socialMedia.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-[#B54118] hover:text-white hover:border-[#B54118] hover:-translate-y-1 transition-all duration-500"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-white text-[10px] font-black uppercase tracking-[0.4em]">
+            © 2026 BizGrow Digital. Crafted for Excellence.
+          </p>
+          <div className="flex gap-8">
+            <Link
+              href="/privacy-policy"
+              className="text-gray-600 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-gray-600 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
+            >
+              Terms
+            </Link>
           </div>
         </div>
       </div>
-
-      <hr className="border-t border-gray-700 my-8" />
     </footer>
   );
 };

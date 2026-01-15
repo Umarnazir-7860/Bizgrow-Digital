@@ -103,7 +103,7 @@ const page = () => {
           <FadeIn direction="up" delay={0.2} className="w-full">
             <h1
               className="text-white text-4xl mx-auto md:text-6xl text-center 
-            font-bold mt-26 max-w-3xl px-4"
+            font-bold mt-26 max-w-5xl px-4"
             >
               Data-Driven Solutions to{" "}
               <span className="text-orange-500">Scale Your Business </span>
