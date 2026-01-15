@@ -32,7 +32,7 @@ const HomePage = () => {
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.4}>
-            <p className="mt-6 text-white max-w-2xl mx-auto text-sm md:text-lg">
+            <p className="mt-6 text-white max-w-4xl mx-auto text-sm md:text-lg">
               We support businesses in strengthening their online presence,
               generating qualified leads, and achieving scalable growth through
               expert web development, SEO, and data-driven digital marketing
@@ -133,7 +133,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Floating Stats Card (Adding a professional touch) */}
-                <div className="absolute -bottom-8 -left-8 md:bottom-12 md:-left-12 z-20 bg-white dark:bg-[#001235] p-6 rounded-3xl shadow-2xl border border-orange-700/10 dark:border-white/10 animate-bounce-slow">
+                <div className="absolute -bottom-8 left-6 md:bottom-12 md:-left-12 z-20 bg-white dark:bg-[#001235] p-6 rounded-3xl shadow-2xl border border-orange-700/10 dark:border-white/10 animate-bounce-slow">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-orange-100 dark:bg-[#B54118]/20 rounded-2xl">
                       <TrendingUp className="text-[#B54118] h-6 w-6" />
