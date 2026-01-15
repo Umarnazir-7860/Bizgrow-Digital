@@ -316,13 +316,15 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-64 bg-[#B54118]/5 skew-y-3 -z-10" />
 
         <div className="max-w-7xl mx-auto px-6">
-          <FadeIn direction="up" delay={0.2}>
-            <div className="flex flex-col items-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black text-center text-[#B54118] uppercase tracking-tighter">
-                Our Core{" "}
-                <span className="text-slate-900 dark:text-white">Values</span>
+         <FadeIn direction="up">
+            <div className="flex flex-col items-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-black text-center text-[#B54118] uppercase tracking-tighter">
+                Our Core {" "}
+                <span className="text-slate-900 dark:text-white">
+                  Values
+                </span>
               </h2>
-              <div className="w-20 h-1.5 bg-[#B54118] mt-3 rounded-full" />
+              <div className="w-24 h-2 bg-[#B54118] mt-4 rounded-full" />
             </div>
           </FadeIn>
 
