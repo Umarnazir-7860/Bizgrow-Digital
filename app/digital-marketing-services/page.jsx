@@ -139,7 +139,7 @@ const DigitalMarketingPage = () => {
             <div className="space-y-6">
              
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] uppercase tracking-tight text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-black leading-[1.1] uppercase tracking-tight text-white">
                 We Are More Than  Just Marketers, 
                 <span className="text-orange-500 inline-block mt-2 relative">
                   We Engineer Results
