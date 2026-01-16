@@ -284,7 +284,7 @@ const HomePage = () => {
 
               <FadeIn direction="up" delay={0.4}>
                 <Link href="/contact-us">
-                  <button className="relative px-12 py-5 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(181,65,24,0.6)]">
+                  <button className="relative px-8 py-4 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(181,65,24,0.6)]">
                     {/* Shine Animation Effect */}
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
                     <span className="relative z-10 text-xl uppercase tracking-wider">
