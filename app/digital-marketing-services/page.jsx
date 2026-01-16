@@ -143,7 +143,7 @@ const DigitalMarketingPage = () => {
                 We Are More Than  Just Marketers, 
                 <span className="text-orange-500 inline-block mt-2 relative">
                   We Engineer Results
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-orange-600/30 rounded-full" />
+                 
                 </span>
               </h2>
 
