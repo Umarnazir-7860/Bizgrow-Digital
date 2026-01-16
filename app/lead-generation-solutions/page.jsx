@@ -9,44 +9,42 @@ import {
   Globe,
   Zap,
 } from "lucide-react";
-import HorizontalProcess from "@components/HorizontalProcess";
-import ShapeChangeSection from "@components/test";
-import VShapeTransition from "@components/test2";
+
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
-
 export const metadata = {
-  title:"Lead Generation Services to Grow Your UK Business",
-  description:"Maximise engagement and qualified leads with BizGrow Digital’s professional lead generation solutions for UK businesses.",
-}
+  title: "Lead Generation Services to Grow Your UK Business",
+  description:
+    "Maximise engagement and qualified leads with BizGrow Digital’s professional lead generation solutions for UK businesses.",
+};
 
 const LeadGenerationPage = () => {
   const leadServices = [
     {
       title: "Lead Prospecting",
-      desc: "We identify and connect you with high-value decision-makers in your niche using advanced targeting tools.",
+      desc: "We identify and connect you with high-value decision-makers in your industry using advanced targeting tools, ensuring every lead has genuine potential to convert.",
       icon: <Target className="w-8 h-8" />,
       bgColor: "bg-orange-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Lead Magnets",
-      desc: "Crafting irresistible offers, whitepapers, and webinars that pull qualified prospects into your sales ecosystem.",
+      desc: "We craft irresistible offers, whitepapers, and webinars that attract qualified prospects into your sales ecosystem, increasing engagement and nurturing trust.",
       icon: <Magnet className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Conversion Funnels",
-      desc: "Designing  multi-step funnels that turn cold traffic into hot leads.",
+      desc: "Designing multi-step funnels that turn cold traffic into high-quality leads, optimising every stage for maximum conversions.",
       icon: <Filter className="w-8 h-8" />,
       bgColor: "bg-purple-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Lead Nurturing",
-      desc: "Automated follow-up sequences that keep your brand top-of-mind until the lead is ready to buy.",
+      desc: "Automated follow-up sequences keep your brand top-of-mind, ensuring prospects are ready to engage when the timing is right.",
       icon: <Zap className="w-8 h-8" />,
       bgColor: "bg-green-100",
       hoverBg: "group-hover:bg-[#B54118]",
@@ -73,32 +71,32 @@ const LeadGenerationPage = () => {
                 className="text-orange-500 font-bold tracking-[0.3em] uppercase 
               text-xs md:text-sm mb-4 block text-center"
               >
-                Scalable Growth Engines
+                Lead Generation Solutions
               </span>
             </div>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4} className="w-full">
             <div className="w-full flex justify-center">
-              <h1 className="text-white text-3xl md:text-7xl text-center font-black max-w-5xl leading-[1.1]">
-                Fuel Your Sales Pipe with <br />
-                <span className="text-orange-500">Qualified Leads</span>
+              <h1 className="text-white text-3xl md:text-6xl text-center font-black max-w-5xl leading-tiet tracking-normal">
+                Fuel Your Sales Pipeline with 
+                <span className="text-orange-500"> Qualified Leads</span>
               </h1>
             </div>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.6} className="w-full">
             <div className="w-full flex justify-center">
-              <p className="text-gray-300 text-lg md:text-2xl text-center max-w-2xl mt-8">
-                We stop the guessing game. Our data-driven lead generation
-                strategies ensure your sales team only talks to people ready to
-                do business.
+              <p className="text-gray-300 text-lg md:text-lg text-center max-w-3xl mt-8">
+                BizGrow Digital provides advanced lead generation solutions that
+                connect your sales team with high-quality prospects ready to
+                engage. Drive measurable growth and strengthen your business
+                presence in the UK.
               </p>
             </div>
           </FadeIn>
         </div>
       </div>
-
       {/* 🚀 SERVICE GRID: Results-First Approach */}
       <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
         {/* Subtle Branding Blur */}
@@ -113,7 +111,7 @@ const LeadGenerationPage = () => {
             >
               <div className="flex flex-col items-center">
                 <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter uppercase">
-                  A Results-First{" "}
+                  Outcome-Driven Lead Generation{" "}
                   <span className="text-[#B54118]">Approach</span>
                 </h2>
                 <div className="w-24 h-1.5 bg-[#B54118] mt-6 rounded-full" />
@@ -126,9 +124,10 @@ const LeadGenerationPage = () => {
               className="flex flex-col items-center"
             >
               <div className="flex justify-center">
-                <p className="mt-8 text-gray-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
-                  Quality over quantity. We focus on leads that actually convert
-                  into revenue, not just vanity metrics.
+                <p className="mt-8 text-gray-600 dark:text-gray-400 text-lg md:text-lg max-w-3xl leading-relaxed font-medium">
+                  At BizGrow Digital, we prioritise quality over quantity. With
+                  UK-focused strategies, we deliver measurable results that
+                  optimise your sales pipeline efficiently.
                 </p>
               </div>
             </FadeIn>
@@ -172,20 +171,22 @@ const LeadGenerationPage = () => {
           </div>
         </div>
       </section>
-
       {/* --- DATA SECTION (Lead Gen Focus) --- */}
       <section className="py-24 bg-white dark:bg-black dark:border-t-2 dark:border-orange-700 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <FadeIn direction="right" delay={0.2}>
               <h2 className="text-4xl md:text-5xl font-black dark:text-white leading-tight">
-                Data-Driven Insights <br />
-                <span className="text-orange-500">& Smart Targeting</span>
+                PRECISION LEAD GENERATION  
+                <span className="text-orange-500 ml-1">
+                    & TARGETED SALES INSIGHTS
+                </span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 pt-8 text-lg">
-                Lead generation isn't just about traffic; it's about the right
-                traffic. We use predictive analytics to find your future
-                customers before your competitors do.
+                Stop wasting time on unqualified traffic. BizGrow Digital
+                delivers high-quality leads through smart analytics, predictive
+                targeting, and UK-focused strategies. Connect with prospects
+                ready to engage and convert, growing your business efficiently.
               </p>
             </FadeIn>
 
@@ -207,7 +208,7 @@ const LeadGenerationPage = () => {
           </div>
 
           <FadeIn direction="left" delay={0.4}>
-            <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800">
+            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800">
               <Image
                 src="/lead-generation.jpg" // Suggestion: Screenshot of a lead dashboard or growth chart
                 alt="Smart Lead Generation UK"
@@ -218,75 +219,78 @@ const LeadGenerationPage = () => {
           </FadeIn>
         </div>
       </section>
+      {/* 🚀 FINAL PREMIUM CTA: Sales Pipeline */}
+      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10">
+          <div
+            className="relative py-24 md:py-32 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_30px_70px_rgba(0,0,0,0.5)] group"
+            style={{
+              backgroundImage: "url('/sales-pipeline.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
+            }}
+          >
+            {/* 🔹 Overlay: Depth aur Readability ke liye */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-[#B54118]/20 z-0"></div>
 
-      {/* Signature Transitions */}
-      <HorizontalProcess />
-      <ShapeChangeSection />
-      <VShapeTransition />
+            {/* 🔹 Premium Glass Border Overlay */}
+            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
 
-{/* 🚀 FINAL PREMIUM CTA: Sales Pipeline */}
-<section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 md:px-10">
-    <div
-      className="relative py-24 md:py-32 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_30px_70px_rgba(0,0,0,0.5)] group"
-      style={{ 
-        backgroundImage: "url('/sales-pipeline.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed' 
-      }}
-    >
-      {/* 🔹 Overlay: Depth aur Readability ke liye */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-[#B54118]/20 z-0"></div>
-
-      {/* 🔹 Premium Glass Border Overlay */}
-      <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
-
-      <div className="relative z-20 max-w-5xl mx-auto px-6 flex flex-col items-center">
-        
-        {/* Top Status Badge */}
-        <FadeIn direction="up" className="flex flex-col items-center">
-          <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
-                  Start Your Journey
+            <div className="relative z-20 max-w-5xl mx-auto px-6 flex flex-col items-center">
+              {/* Top Status Badge */}
+              <FadeIn direction="up" className="flex flex-col items-center">
+                <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                  BOOST YOUR SALES PIPELINE
                 </span>
-          
-          <h2 className="text-4xl md:text-7xl mt-6 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-            Ready to Fill Your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
-              Sales Pipeline?
-            </span>
-          </h2>
-        </FadeIn>
 
-        <FadeIn direction="up" delay={0.2} className="flex flex-col items-center">
-          <p className="mx-auto mb-14 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
-            "Stop waiting for customers to find you. Let us build a proactive
-            system that delivers consistent, high-quality leads every single day."
-          </p>
-        </FadeIn>
+                <h2 className="text-4xl md:text-7xl mt-6 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                  Connect with <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+                    Ready-to-Buy Leads
+                  </span>
+                </h2>
+              </FadeIn>
 
-        <FadeIn direction="up" delay={0.4} className="flex flex-col items-center text-center">
-          <Link href="/contact-us">
-            {/* 🎯 Aapka Fixed Bold Button with Shine Effect */}
-            <button className="relative px-12 py-6 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.6)]">
-              
-              {/* Shine Animation */}
-              <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
-              
-              <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
-                Get Your Free Audit →
-              </span>
-            </button>
-          </Link>
-        </FadeIn>
-      </div>
+              <FadeIn
+                direction="up"
+                delay={0.2}
+                className="flex flex-col items-center"
+              >
+                <p className="mx-auto mb-14 text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
+                  Don’t wait for prospects to discover your business. BizGrow
+                  Digital identifies and connects you with high-intent leads,
+                  ensuring a steady flow of opportunities that turn into
+                  measurable growth every day.
+                </p>
+              </FadeIn>
 
-      {/* 🔹 Background Glowing Accents */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
-    </div>
-  </div>
-</section>    </section>
+              <FadeIn
+                direction="up"
+                delay={0.4}
+                className="flex flex-col items-center text-center"
+              >
+                <Link href="/contact-us">
+                  {/* 🎯 Aapka Fixed Bold Button with Shine Effect */}
+                  <button className="relative px-12 py-6 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.6)]">
+                    {/* Shine Animation */}
+                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+
+                    <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
+                      Get Your Free Audit →
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+
+            {/* 🔹 Background Glowing Accents */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#B54118]/10 blur-[130px] rounded-full -z-10"></div>
+          </div>
+        </div>
+      </section>{" "}
+    </section>
   );
 };
 
