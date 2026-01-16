@@ -15,6 +15,12 @@ import VShapeTransition from "@components/test2";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
+
+export const metadata = {
+  title:"Lead Generation Services to Grow Your UK Business",
+  description:"Maximise engagement and qualified leads with BizGrow Digital’s professional lead generation solutions for UK businesses.",
+}
+
 const LeadGenerationPage = () => {
   const leadServices = [
     {
@@ -53,7 +59,7 @@ const LeadGenerationPage = () => {
       <div className="relative  h-screen w-full">
         <Image
           src="/lead-hero.jpg" // Hero image suggestion: High-end corporate building or data visualization
-          alt="Lead Generation Services"
+          alt="Lead generation services by BizGrow digital"
           fill
           priority
           fetchPriority="high"
@@ -204,7 +210,7 @@ const LeadGenerationPage = () => {
             <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800">
               <Image
                 src="/lead-generation.jpg" // Suggestion: Screenshot of a lead dashboard or growth chart
-                alt="Lead Generation Results"
+                alt="Smart Lead Generation UK"
                 fill
                 className="object-cover"
               />
