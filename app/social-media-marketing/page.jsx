@@ -2,12 +2,12 @@
 import Image from "next/image";
 import React from "react";
 import {
-  BarChart,
-  Heart,
-  Globe,
+  PenTool, // Strategic Content / Web Design ke liye best hai
+  Share2, // Platform Management / Social Sharing ke liye
+  Users, // Audience Growth / Engagement ke liye
+  TrendingUp, // Performance / Optimisation ke liye
   CheckCircle2,
-  Zap,
-  Share2,
+ 
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
@@ -15,24 +15,24 @@ import Link from "next/link";
 const SocialMediaMarketingPage = () => {
   const smmServices = [
     {
-      title: "Content Strategy",
-      desc: "Data-driven storytelling and high-impact visuals designed to capture attention and stop the scroll.",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Strategic Content & Web Design", // SEO: Added Web Design keyword
+      desc: "Professionally crafted content and high-end web designs meant to reflect your brand voice, engage your audience, and support your marketing objectives.",
+      icon: <PenTool className="w-8 h-8" />, // PenTool design aur creativity ko show karta hai
     },
     {
-      title: "Community Growth",
-      desc: "Proactive engagement strategies to build a loyal following and foster meaningful brand relationships.",
-      icon: <Heart className="w-8 h-8" />,
+      title: "Platform-Focused Management",
+      desc: "Tailored social media management for platforms such as LinkedIn, Facebook, Instagram, and X aligned with your business goals.",
+      icon: <Share2 className="w-8 h-8" />, // Share2 networking aur platforms ko represent karta hai
     },
     {
-      title: "Platform Management",
-      desc: "Comprehensive management across Instagram, TikTok, and LinkedIn with tailored brand voices.",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Audience Growth & Engagement",
+      desc: "We focus on building genuine connections with your audience through meaningful interactions and consistent engagement strategies.",
+      icon: <Users className="w-8 h-8" />, // Users engagement aur audience ke liye perfect hai
     },
     {
-      title: "Actionable Analytics",
-      desc: "Deep-dive performance reports that translate social metrics into real-world business ROI.",
-      icon: <BarChart className="w-8 h-8" />,
+      title: "Performance Monitoring & Optimisation",
+      desc: "Ongoing analysis and optimisation to improve reach, engagement, and overall social media effectiveness using data-driven insights.",
+      icon: <TrendingUp className="w-8 h-8" />, // TrendingUp growth aur analysis ko show karta hai
     },
   ];
 
@@ -50,26 +50,27 @@ const SocialMediaMarketingPage = () => {
         />
         <div className="absolute inset-0 bg-black/75" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 w-full flex flex-col items-center text-center">
           <FadeIn direction="up">
             <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">
-              Digital Influence & Viral Reach
+              Digital Influence &
             </span>
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-6">
-              BEYOND THE{" "}
+              Measurable{" "}
               <span className="text-orange-500 underline decoration-4 underline-offset-8">
-                LIKE
+                Reach
               </span>{" "}
               <br className="hidden md:block" />
               BUTTON
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-2xl mb-10 mx-auto px-4 font-light leading-relaxed">
-              We don't just chase vanity metrics. We build vibrant digital
-              communities that drive brand loyalty and high-intent conversions.
+              We move beyond vanity metrics to deliver strategic social media
+              marketing that builds engaged communities, strengthens brand
+              trust, and drives meaningful, high-intent actions.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
-                Start Your Viral Journey
+                Start Your Growth Journey
               </button>
             </Link>
           </FadeIn>
@@ -116,21 +117,23 @@ const SocialMediaMarketingPage = () => {
             </div>
           </div>
           <div className="space-y-8 order-1 lg:order-2">
-            <h2 className="text-4xl md:text-6xl font-black dark:text-white leading-tight uppercase">
+            <h2 className="text-4xl md:text-5xl font-black dark:text-white leading-tight uppercase">
               How We Turn <br />{" "}
-              <span className="text-orange-500 italic">Noise into Results</span>
+              <span className="text-orange-500 italic">
+                Engagement into Measurable Results
+              </span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">
-              Effective social marketing isn't about constant posting; it's
-              about psychology, precision timing, and data-backed creative
-              execution.
+              Effective social media marketing isn’t about constant posting.
+              It’s about audience insight, precise timing, and data-driven
+              creative strategies that deliver real business impact.
             </p>
             <div className="space-y-4">
               {[
-                "Strategic Audience Research",
-                "Viral Hook Implementation",
-                "Sentiment & Competitor Analysis",
-                "Cross-Platform Brand Sync",
+                "Strategic UK Audience Research",
+                "High-Impact Content Hooks",
+                "Sentiment & Competitor Insights",
+                "Consistent Cross-Platform Brand Alignment",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4">
                   <CheckCircle2 className="text-orange-500 w-6 h-6 flex-shrink-0" />
@@ -166,13 +169,13 @@ const SocialMediaMarketingPage = () => {
               {/* 🎯 FIXED TOP BADGE: Sizing locked to content */}
               <FadeIn direction="up" className="flex flex-col items-center">
                 <div className="flex flex-col items-center">
-                <span className="w-fit px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black mb-8 tracking-[0.3em] uppercase">
-                  Social Influence
-                </span>
+                  <span className="w-fit px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black mb-8 tracking-[0.3em] uppercase">
+                    Social Influence
+                  </span>
                 </div>
 
                 <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-                  Ready to Own the <br />
+                  Ready to Lead the <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
                     News Feed?
                   </span>
@@ -185,8 +188,9 @@ const SocialMediaMarketingPage = () => {
                 className="flex flex-col items-center text-center"
               >
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
-                  "Don't just be part of the conversation—lead it. Let's create
-                  a social presence that turns followers into brand advocates."
+                  “Don’t just participate in the conversation, lead it. We
+                  create strategic social media marketing that transforms
+                  audiences into loyal brand advocates.”
                 </p>
               </FadeIn>
 
@@ -201,7 +205,7 @@ const SocialMediaMarketingPage = () => {
                     {/* Shine Effect Animation */}
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
                     <span className="relative z-10 text-lg uppercase tracking-[0.2em]">
-                      Go Viral Now →
+                      Build Your Social Presence →
                     </span>
                   </button>
                 </Link>
