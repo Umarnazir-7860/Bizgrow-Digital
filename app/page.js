@@ -16,14 +16,17 @@ const HomePage = () => {
     <main className="w-full">
       {/* Hero Section */}
       <section className="relative w-full h-[95vh] md:h-screen">
-        <Image
-          src="/admin-ajax.webp"
-          fill
-          className="object-cover"
-          fetchPriority="high"
-          priority
-          alt="Hero Background"
-        />
+       <Image
+  src="/admin-ajax.webp"
+  fill
+  priority
+  fetchPriority="high"
+  alt="Hero Background"
+  className="object-cover transition-all duration-700" // Smooth transition ke liye
+  placeholder="blur"
+  // Ye Base64 code image ko load hone tak ek premium "Dark Grey/Blue" blur dikhayega
+  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8AKpT899BQAAAABJRU5ErkJggg=="
+/>
         <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up" delay={0.2}>
             <h1 className="text-white text-3xl md:text-5xl mt-20   md:mx-20 font-bold md:leading-[4rem]">

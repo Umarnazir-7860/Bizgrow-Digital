@@ -5,6 +5,7 @@ import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
 import ChatBot from "@components/ChatBot";
+import { Analytics } from '@vercel/analytics/next';
 
 // Headings ke liye Premium Font
 const playfair = Playfair_Display({
@@ -37,7 +38,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navbar />
           <SmoothScroll>
-            <main>{children}</main>
+            <main>{children}
+               <Analytics />
+            </main>
             <Footer/>
           </SmoothScroll>
           <ChatBot />
