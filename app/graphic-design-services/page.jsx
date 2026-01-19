@@ -1,4 +1,4 @@
-"use client";
+
 import Image from "next/image";
 import React from "react";
 import {
@@ -17,7 +17,7 @@ import Link from "next/link";
 export const metadata = {
 title:"Premium Graphic Design Services | BizGrow Digital",
 description:"BizGrow Digital delivers premium graphic design: logos, UI/UX, social assets. Build trust fast, boost engagement and conversions."
-}
+};
 
 const GraphicDesignPage = () => {
   return (
