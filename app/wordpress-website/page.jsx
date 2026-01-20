@@ -11,6 +11,12 @@ import {
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Custom WordPress Website Development UK | BizGrow Digital",
+  description:
+    "High-performance, secure WordPress websites built for UK businesses. Fast loading, SEO-optimised, scalable, and conversion-focused.",
+};
+
 const WordPressPage = () => {
   return (
     <section className="w-full bg-white ">
@@ -34,23 +40,25 @@ const WordPressPage = () => {
             {" "}
             {/* Direction 'up' center ke liye zyada suit karti hai */}
             <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">
-              Enterprise Grade CMS
+              Enterprise-Grade WordPress Websites
             </span>
-            <h1 className="text-white text-5xl md:text-6xl  font-black leading-none mb-6">
-              WP <span className="text-orange-500">ENGINEERED</span> <br />
-              FOR GROWTH
+            <h1 className="text-white text-5xl md:text-6xl  font-black leading-tiet mb-6">
+              WordPress Engineered for{" "}
+              <span className="text-orange-500">Business </span>
+              GROWTH
             </h1>
-            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 mx-auto">
+            <p className="text-gray-300 text-lg md:text-lg max-w-2xl mb-10 mx-auto">
               {" "}
               {/* mx-auto added */}
-              Generic themes are for beginners. We build high-performance,
-              scalable, and secure WordPress ecosystems tailored for brands.
+              Generic themes limit your potential. We create high-performance,
+              scalable, and secure WordPress websites tailored for UK brands
+              that drive engagement and results.
             </p>
             <div className="flex justify-center gap-4">
               {" "}
               {/* justify-center added */}
               <button className="bg-[#B54118] text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all">
-                Start Building
+                Build Your WordPress Platform →
               </button>
             </div>
           </FadeIn>
@@ -63,36 +71,37 @@ const WordPressPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-1">
               <h2 className="text-4xl font-black dark:text-white mb-6">
-                Why Our WordPress <br /> is{" "}
-                <span className="text-[#B54118]">Different</span>
+                What We Deliver
               </h2>
               <p className="text-gray-500 dark:text-gray-400">
-                We move away from heavy page builders and bloated plugins to
-                give you a site that ranks high and loads fast.
+                We build performance-focused WordPress websites without bloated
+                page builders or unnecessary plugins, ensuring fast load times,
+                strong search visibility, and long-term scalability for UK
+                businesses.
               </p>
             </div>
 
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  title: "Headless WP",
+                  title: "Headless WordPress Architecture",
                   icon: <Code2 className="w-8 h-8" />,
-                  desc: "Using WordPress as a backend with React/Next.js for ultimate speed.",
+                  desc: "WordPress is used as a powerful content backend, combined with React or Next.js on the front end for superior speed and flexibility.",
                 },
                 {
-                  title: "Custom Admin",
+                  title: "Custom Admin Experience",
                   icon: <LayoutDashboard className="w-8 h-8" />,
-                  desc: "Tailored dashboards so your team can edit content without breaking things.",
+                  desc: "Clean, tailored admin dashboards that allow your team to manage content confidently without risking site stability.",
                 },
                 {
-                  title: "Security Hardening",
+                  title: "Enterprise-Level Security",
                   icon: <ShieldCheck className="w-8 h-8" />,
-                  desc: "Server-level security to keep your data safe from any vulnerabilities.",
+                  desc: "Advanced server-side security hardening to protect your website, data, and users from vulnerabilities and threats.",
                 },
                 {
-                  title: "Core Web Vitals",
+                  title: "Core Web Vitals Optimisation",
                   icon: <Rocket className="w-8 h-8" />,
-                  desc: "Built to pass Google's speed tests with flying colors.",
+                  desc: "Built to meet Google’s performance standards, delivering fast, stable, and user-friendly experiences that support higher rankings.",
                 },
               ].map((box, i) => (
                 <div
@@ -134,8 +143,8 @@ const WordPressPage = () => {
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <FadeIn direction="up">
               <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase">
-                Standard WP vs.{" "}
-                <span className="text-[#B54118]">Biz Grow WP</span>
+                Standard WordPress vs{" "}
+                <span className="text-[#B54118]">BizGrow WordPress</span>
               </h2>
             </FadeIn>
 
@@ -147,15 +156,16 @@ const WordPressPage = () => {
                   <div className="absolute -top-10 -left-10 w-32 h-32 bg-red-500/5 blur-3xl rounded-full" />
 
                   <h4 className="text-2xl font-bold mb-8 text-gray-400 tracking-wide group-hover:text-gray-300 transition-colors">
-                    Slow & Bloated
+                    Standard WordPress Websites
                   </h4>
 
                   <ul className="space-y-6 text-left">
                     {[
-                      "Pre-made templates",
-                      "20+ unnecessary plugins",
-                      "Slow mobile experience",
-                      "Security risks",
+                      "Slow, bloated performance",
+                      "Generic pre-built themes",
+                      "Multiple unnecessary plugins",
+                      "Poor mobile speed and usability",
+                      "Higher security and maintenance risks",
                     ].map((item, i) => (
                       <li
                         key={i}
@@ -181,15 +191,16 @@ const WordPressPage = () => {
                   </div>
 
                   <h4 className="text-2xl font-black mb-8 text-[#B54118] uppercase tracking-tight">
-                    Engineered Perfection
+                    BizGrow WordPress Solutions
                   </h4>
 
                   <ul className="space-y-6 text-left">
                     {[
-                      "Lightweight Custom Code",
-                      "Zero Bloat Strategy",
-                      "SEO & Speed Optimized",
-                      "Enterprise-grade Security",
+                      "Performance-engineered architecture",
+                      "Lightweight, custom-built code",
+                      "Zero-bloat development approach",
+                      "SEO and Core Web Vitals optimised",
+                      "Enterprise-level security standards",
                     ].map((item, i) => (
                       <li
                         key={i}
@@ -233,13 +244,13 @@ const WordPressPage = () => {
               {/* Top Badge */}
               <FadeIn direction="up" className="flex flex-col items-center">
                 <span className="px-6 py-2  rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
-                 WordPress Excellence
+                  WordPress Excellence
                 </span>
 
                 <h2 className="text-4xl md:text-7xl mt-4 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-                  Ready to Build Your <br />
+                  Let’s Build Your <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
-                    WP Masterpiece
+                    WordPress Website
                   </span>
                 </h2>
               </FadeIn>
@@ -250,9 +261,9 @@ const WordPressPage = () => {
                 className="flex flex-col items-center"
               >
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
-                  "Don't settle for a generic theme. Let's create a
-                  high-performance WordPress site that is built for speed,
-                  security, and your success."
+                  "Ready to launch a WordPress website that drives growth,
+                  engages your audience, and positions your brand professionally
+                  online?"
                 </p>
               </FadeIn>
 
