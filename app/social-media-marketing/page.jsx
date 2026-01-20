@@ -7,10 +7,15 @@ import {
   Users, // Audience Growth / Engagement ke liye
   TrendingUp, // Performance / Optimisation ke liye
   CheckCircle2,
- 
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Social Media Marketing UK | Engage, Grow & Convert Your Audience",
+  description:
+    "UK businesses: Boost engagement, grow followers & drive conversions with strategic, data-led social media marketing solutions.",
+};
 
 const SocialMediaMarketingPage = () => {
   const smmServices = [
@@ -109,7 +114,7 @@ const SocialMediaMarketingPage = () => {
             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-orange-800 transition-transform group-hover:scale-[1.02] duration-500">
               <Image
                 src="/smm-strategy.jpg"
-                alt="Social Media Strategy"
+                alt="Social media marketing for business growth"
                 width={600}
                 height={800}
                 className="w-full object-cover"
