@@ -375,7 +375,7 @@ const SEOPage = () => {
                 <p className="mx-auto mb-12 text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
                   "Our SEO strategies are designed to deliver long‑term growth,
                   help your site rank for relevant terms, and convert visitors
-                  into loyal customers. Contact BizGrow Holdings today for a
+                  into loyal customers. Contact BizGrow Digital today for a
                   tailored SEO plan that aligns with your business goals and UK
                   market needs."
                 </p>
