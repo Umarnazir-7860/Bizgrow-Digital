@@ -75,7 +75,7 @@ const SEOPage = () => {
                   IMPROVE YOUR <br />
                   <span className="text-orange-500">RANKINGS</span> & <br />
                   DRIVE{" "}
-                  <span className="text-orange-500 underline decoration-2 underline-offset-8">
+                  <span className="text-orange-500  decoration-2 ">
                     ORGANIC
                   </span>{" "}
                   <br />
@@ -86,7 +86,7 @@ const SEOPage = () => {
                   {/* Main Paragraph - Improved Clarity */}
                   <p className="text-slate-700 dark:text-gray-200 text-xl ml-1 md:text-2xl font-semibold leading-relaxed relative z-10">
                     Search Engine Optimisation (SEO) is more than just
-                    ranking—it&apos;s about
+                    ranking it&apos;s about
                     <span className="text-[#B54118]">
                       {" "}
                       visibility, credibility, and long-term growth.
@@ -94,7 +94,7 @@ const SEOPage = () => {
                   </p>
 
                   {/* Supporting Text - Less Dull */}
-                  <p className="text-slate-500 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-orange-500/30 pl-6">
+                  <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-orange-600/60 pl-6">
                     Effective SEO involves on-page techniques like keyword
                     optimisation and technical improvements to ensure your
                     business becomes easier for potential customers to find in a
@@ -211,7 +211,7 @@ const SEOPage = () => {
               <Zap className="text-white w-12 h-12" />
               <div>
                 <h3 className="text-2xl font-black text-white leading-tight uppercase mb-4">
-                  TECHNICAL <br /> OPTIMIZATION
+                  TECHNICAL <br /> OPTIMISATION
                 </h3>
                 <p className="text-white/80 text-sm">
                   Enhancing site speed, mobile responsiveness, and structured
@@ -279,10 +279,10 @@ const SEOPage = () => {
                 className="p-8 rounded-[2rem] border border-orange-600  hover:bg-orange-100 dark:hover:bg-white/5 transition-colors"
               >
                 <CheckCircle2 className="text-orange-500 mb-4 w-8 h-8" />
-                <h4 className="text-xl font-bold dark:text-white mb-2 uppercase">
+                <h3 className="text-xl font-bold dark:text-white mb-2 uppercase">
                   {item.title}
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {item.desc}
                 </p>
               </div>
@@ -298,7 +298,7 @@ const SEOPage = () => {
             <h2 className="text-5xl md:text-7xl font-black dark:text-white leading-none uppercase">
               DATA <br /> <span className="text-orange-500">OVER</span> GUESSES
             </h2>
-            <p className="text-gray-500 italic">
+            <p className="text-gray-700 font-semibold">
               Producing high-quality content that satisfies both users and
               search engines.
             </p>
