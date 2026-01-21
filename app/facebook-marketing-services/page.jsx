@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -12,26 +11,31 @@ import {
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Facebook Growth Services | UK Business Marketing",
+  description:"BizGrow Digital delivers Facebook marketing that boosts brand visibility, engagement, and leads with strategy-driven, measurable results.",
+};
+
 const FacebookMarketingPage = () => {
   const fbFeatures = [
     {
-      title: "Precision Targeting",
-      desc: "We place your ads in front of the specific audience segments that have a 90% higher intent to purchase your product.",
+      title: "Audience Precision",
+      desc: "We identify the most relevant people for your brand and ensure your message reaches those who are most likely to engage and trust your business.",
       icon: <Target className="w-8 h-8" />,
     },
     {
-      title: "Retargeting Campaigns",
-      desc: "We track visitors who left your site and bring them back through strategic Facebook reminders to complete their purchase.",
+      title: "Re-Engagement Strategy",
+      desc: "We reconnect with users who previously interacted with your brand, guiding them back with relevant reminders and meaningful touchpoints.",
       icon: <Users className="w-8 h-8" />,
     },
     {
-      title: "Creative Ad Copies",
-      desc: "Engineered visuals and high-converting captions designed to stop the scroll and compel users to click.",
+      title: "Creative Storytelling",
+      desc: "We craft compelling visuals and copy that tell your brand story, capture attention, and encourage real interaction",
       icon: <PieChart className="w-8 h-8" />,
     },
     {
-      title: "Messenger Marketing",
-      desc: "Leveraging intelligent chatbots and direct messaging to convert leads into loyal customers in real-time.",
+      title: "Conversation Nurturing",
+      desc: "We use smart messaging and timely responses to build relationships, answer queries, and turn interest into loyal customers.",
       icon: <MessageSquare className="w-8 h-8" />,
     },
   ];
@@ -42,7 +46,7 @@ const FacebookMarketingPage = () => {
       <div className="relative h-[80vh]  md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/fb.jpg"
-          alt="Facebook Ads Management"
+          alt="Facebook marketing services UK "
           fill
           className="object-cover object-center"
           priority
@@ -56,20 +60,22 @@ const FacebookMarketingPage = () => {
               <Facebook className="text-orange-500 w-8 h-8" />
               <Instagram className="text-white w-8 h-8" />
             </div>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-6 uppercase">
-              Mastering the <br />
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-none mb-6 uppercase">
+              Understanding the
+              <br />
               <span className="text-orange-500 text-glow">
                 Social Algorithm
               </span>
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-2xl mb-10 mx-auto px-4 font-light">
-              Facebook marketing is more than just a 'Post Boost.' We engineer
-              data-backed Meta strategies that position your brand as a social
-              media industry leader.
+              Facebook's success goes beyond posting content. We design
+              intelligent social strategies that increase reach, build
+              credibility, and position your brand as a trusted voice in your
+              industry.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
-                Start Your Campaign
+                Create a Strong Social Presence
               </button>
             </Link>
           </FadeIn>
@@ -88,9 +94,9 @@ const FacebookMarketingPage = () => {
                   </div>
 
                   <div className="flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
+                    <h2 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
                       {f.title}
-                    </h3>
+                    </h2>
                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                       {f.desc}
                     </p>
@@ -110,8 +116,8 @@ const FacebookMarketingPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
                 <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase">
-                  Our 3-Step <br />{" "}
-                  <span className="text-orange-500 italic">Winning</span>{" "}
+                  The 3-Step <br />{" "}
+                  <span className="text-orange-500 italic">Social Growth </span>{" "}
                   Formula
                 </h2>
                 <div className="space-y-6">
@@ -119,17 +125,17 @@ const FacebookMarketingPage = () => {
                     {
                       step: "01",
                       t: "Awareness",
-                      d: "Scaling your brand reach to high-potential audiences who aren't yet familiar with your business.",
+                      d: "Expanding your brand reach to the right audience who haven’t discovered your business yet.",
                     },
                     {
                       step: "02",
                       t: "Engagement",
-                      d: "Driving meaningful interactions to build authority and foster deep brand trust.",
+                      d: "Creating meaningful interactions that strengthen credibility and build genuine trust",
                     },
                     {
                       step: "03",
                       t: "Conversion",
-                      d: "The final strategic push that transforms a warm lead into a committed customer.",
+                      d: "The final strategic push that turns interest into a loyal, paying customer.",
                     },
                   ].map((s, i) => (
                     <div key={i} className="flex gap-6 items-start group">
@@ -137,9 +143,9 @@ const FacebookMarketingPage = () => {
                         {s.step}
                       </span>
                       <div>
-                        <h4 className="text-xl font-bold text-white mb-2 uppercase">
+                        <h3 className="text-xl font-bold text-white mb-2 uppercase">
                           {s.t}
-                        </h4>
+                        </h3>
                         <p className="text-gray-400 text-sm">{s.d}</p>
                       </div>
                     </div>
@@ -149,7 +155,7 @@ const FacebookMarketingPage = () => {
               <div className="relative h-[400px] md:h-[600px] rounded-[3rem] overflow-hidden">
                 <Image
                   src="/award-winning.jpg"
-                  alt="Marketing Funnel"
+                  alt="Three-step digital marketing strategy"
                   fill
                   className="object-cover transition-all duration-700"
                 />
@@ -181,15 +187,15 @@ const FacebookMarketingPage = () => {
               {/* 🎯 FIXED TOP BADGE: Content-only width */}
               <FadeIn direction="up">
                 <div className="flex flex-col items-center">
-                <span className="w-fit px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black mb-8 tracking-[0.3em] uppercase">
-                  Paid Social Excellence
-                </span>
+                  <span className="w-fit px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black mb-8 tracking-[0.3em] uppercase">
+                    Organic Social Excellence
+                  </span>
                 </div>
 
                 <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-                  Stop Boosting. <br />
+                  Stop Posting <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
-                    Start Dominating.
+                    Start Growing
                   </span>
                 </h2>
               </FadeIn>
@@ -200,9 +206,9 @@ const FacebookMarketingPage = () => {
                 className="flex flex-col items-center"
               >
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
-                  "Don't waste your budget on vanity metrics like empty likes.
-                  Let's build a Facebook marketing machine that generates real,
-                  sustainable revenue."
+                  “Don’t settle for shallow engagement and wasted time. Let’s
+                  build a Facebook strategy that drives real growth and lasting
+                  results.”
                 </p>
               </FadeIn>
 
