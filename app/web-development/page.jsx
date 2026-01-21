@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -13,26 +12,32 @@ import {
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Professional Web Development Services | BizGrow Digital ",
+  description:
+    "Get a modern, responsive website that converts. Built by BizGrow Digital using Next.js for speed, performance, and growth.",
+};
+
 const WebDevelopmentPage = () => {
   const techStack = [
     {
       title: "Next.js & React",
-      desc: "Building lightning-fast, SEO-optimized web applications using the latest React features and Server Components.",
+      desc: "Developing high-performance, SEO-optimised web applications using modern React features and server-side rendering for superior speed",
       icon: <Cpu className="w-8 h-8" />,
     },
     {
       title: "Tailwind CSS",
-      desc: "Crafting pixel-perfect, highly responsive layouts with a utility-first approach for rapid and clean styling.",
+      desc: "Delivering clean, responsive designs with a utility-first framework for consistent styling and fast, scalable development.",
       icon: <Layers className="w-8 h-8" />,
     },
     {
-      title: "Motion Magic",
+      title: "Animations Magic",
       desc: "Bringing interfaces to life with fluid Framer Motion and GSAP animations that enhance user engagement.",
       icon: <Zap className="w-8 h-8" />,
     },
     {
       title: "Modern TypeScript",
-      desc: "Writing clean, type-safe, and maintainable code to ensure your project scales without technical debt.",
+      desc: "Writing clean, type-safe, and maintainable code to ensure your project grows smoothly  without technical debt or bugs.",
       icon: <Code2 className="w-8 h-8" />,
     },
   ];
@@ -43,7 +48,7 @@ const WebDevelopmentPage = () => {
       <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/web-dev-hero.jpg"
-          alt="Modern Frontend Development"
+          alt="Modern web development services "
           fill
           className="object-cover object-center"
           priority
@@ -54,15 +59,15 @@ const WebDevelopmentPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
           <FadeIn direction="up">
             <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">
-              Frontend Engineering Specialist
+              Start Your Web Development Journey
             </span>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-6">
-              HIGH-END <span className="text-orange-500">INTERFACES</span>
+            <h1 className="text-white text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-none mb-6">
+              HIGH-PERFORMANCE <span className="text-orange-500">WEBSITES</span>
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-3xl mb-10 mx-auto px-4 font-light leading-relaxed">
-              We specialize in building ultra-fast, animated, and responsive web
-              experiences using Next.js and Framer Motion. Quality over
-              templates, always.
+              We build fast, secure, and high-converting websites using modern
+              tools like Next.js and Tailwind. No templates, just custom
+              solutions for serious businesses.
             </p>
             <Link href="/contact-us">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
@@ -104,21 +109,21 @@ const WebDevelopmentPage = () => {
             <div className="space-y-8">
               <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase">
                 The Power of <br />{" "}
-                <span className="text-orange-500">Custom Code</span>
+                <span className="text-orange-500">Custom Development</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Say goodbye to slow WordPress themes. We build custom-coded
-                React applications that load instantly and provide a premium
-                feel to your users.
+                No more slow themes or generic templates. We build bespoke React
+                applications that deliver exceptional speed, smooth
+                interactions, and a premium user experience.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "Speed & Performance",
-                  "SEO Friendly Architecture",
+                  "Fast loading Performance",
+                  "SEO-Optimised Structure",
                   "Mobile-First Design",
-                  "Advanced Animations",
-                  "Clean Component Code",
-                  "Scalable Frontend",
+                  "Advanced Interactive Animations",
+                  "Clean & Maintainable Code",
+                  "Scalable Architecture",
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <CheckCircle2 className="text-orange-500 w-5 h-5 flex-shrink-0" />
@@ -132,7 +137,7 @@ const WebDevelopmentPage = () => {
             <div className="relative h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
               <Image
                 src="/web-strategy.jpg"
-                alt="Clean Code Frontend"
+                alt="Custom code for fast, scalable websites"
                 fill
                 className="object-cover transition-all duration-1000"
               />
@@ -167,14 +172,14 @@ const WebDevelopmentPage = () => {
               >
                 <div className="flex flex-col items-center mb-8">
                   <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
-                    Frontend Excellence
+                    Frontend Mastery
                   </span>
                 </div>
 
                 <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-                  Ready to Build <br />
+                  Ready to Launch <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
-                    Something Better?
+                    Something Exceptional?
                   </span>
                 </h2>
               </FadeIn>
@@ -185,9 +190,9 @@ const WebDevelopmentPage = () => {
                 className="flex flex-col items-center text-center"
               >
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl italic">
-                  "Stop settling for slow, bloated sites. Let's build a modern
-                  frontend experience that truly represents your brand's
-                  quality."
+                  "Stop using slow, outdated websites. Let’s create a modern,
+                  fast, and premium frontend that reflects your brand’s true
+                  value."
                 </p>
               </FadeIn>
 
