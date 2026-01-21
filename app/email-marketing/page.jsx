@@ -39,8 +39,8 @@ const EmailMarketingPage = () => {
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
-      title: "A/B Testing & Analytics",
-      desc: "Constant optimization through split testing and deep performance tracking to maximize your ROI.",
+      title: "Testing & Analytics",
+      desc: "Constant optimisation through split testing and deep performance tracking to maximise your ROI.",
       icon: <BarChart3 className="w-8 h-8" />,
       bgColor: "bg-green-100",
       hoverBg: "group-hover:bg-[#B54118]",
@@ -84,7 +84,7 @@ const EmailMarketingPage = () => {
             <div className="w-full flex justify-center">
               <p className="text-gray-300 text-xl md:text-2xl text-center max-w-2xl mt-8">
                 Don't just send emails. Build relationships and drive sales with
-                highly personalized, automated email marketing campaigns.
+                highly personalised, automated email marketing campaigns.
               </p>
             </div>
           </FadeIn>
@@ -204,7 +204,7 @@ const EmailMarketingPage = () => {
                   icon: <Users className="text-orange-500" />,
                 },
                 {
-                  label: "Personalized Customer Journeys",
+                  label: "Personalised Customer Journeys",
                   icon: <MousePointerClick className="text-orange-500" />,
                 },
                 {

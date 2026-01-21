@@ -307,7 +307,7 @@ const SEOPage = () => {
                 "Comprehensive On-Page Audits",
                 "High-Authority Backlink Strategy",
                 "Speed & Core Web Vitals",
-                "Semantic Search Optimization",
+                "Semantic Search Optimisation",
                 "Link Building & Authority Growth",
               ].map((text, i) => (
                 <div
