@@ -160,7 +160,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 15 }}
-                    className="absolute left-1/2 -translate-x-1/2 mt-8 w-[720px] rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl"
+                    className="absolute left-1/2 -translate-x-1/2 mt-3 w-[720px] rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl"
                   >
                     <div className="grid grid-cols-2 gap-2 p-4">
                       {services.map((s, i) => (
