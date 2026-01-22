@@ -19,7 +19,7 @@ const TermsConditions = () => {
       {/* --- HERO SECTION --- */}
       <div className="relative h-[60vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
-          src="/privacy-hero.png" // Same hero image for legal consistency
+          src="/privacy-hero-s.png" // Same hero image for legal consistency
           alt="BizGrow Terms and Conditions"
           fill
           className="object-cover"
