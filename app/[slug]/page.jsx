@@ -5,7 +5,7 @@ import Link from "next/link";
 async function getPost(slug) {
   try {
     const res = await fetch(
-      `https://bizgrow-digital.co.uk/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+      `https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?slug=${slug}&_embed`,
       {
         next: { revalidate: 3600 },
       }
