@@ -68,12 +68,12 @@ const WordPressPage = () => {
       {/* --- NEW SECTION: The "Not Just a Theme" Grid --- */}
       <section className="w-full dark:bg-black  dark:border-t-2 dark:border-orange-700 ">
         <div className="py-14 max-w-7xl mx-auto px-6 ">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
             <div className="lg:col-span-1">
-              <h2 className="text-4xl font-black dark:text-white mb-6">
+              <h2 className="text-5xl font-black text-center dark:text-white mb-6">
                 What We Deliver
               </h2>
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-gray-500 text-center  dark:text-gray-400">
                 We build performance-focused WordPress websites without bloated
                 page builders or unnecessary plugins, ensuring fast load times,
                 strong search visibility, and long-term scalability for UK
