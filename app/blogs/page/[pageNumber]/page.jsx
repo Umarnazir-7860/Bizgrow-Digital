@@ -4,7 +4,7 @@ import Image from "next/image";
 async function getPosts(page) {
   const perPage = 9;
   try {
-    const res = await fetch(`https://bizgrow-digital.co.uk/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${page}`, { next: { revalidate: 3600 } });
+    const res = await fetch(`https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${page}`, { next: { revalidate: 3600 } });
     const totalPages = res.headers.get("X-WP-TotalPages") || 1;
     const posts = await res.json();
     return { posts, totalPages: parseInt(totalPages) };

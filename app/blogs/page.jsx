@@ -5,7 +5,7 @@ async function getPosts(page = 1) {
   const perPage = 9;
   try {
     const res = await fetch(
-      `https://bizgrow-digital.co.uk/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${page}`,
+      `https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${page}`,
       { next: { revalidate: 3600 } }
     );
     const totalPages = res.headers.get("X-WP-TotalPages") || 1;
