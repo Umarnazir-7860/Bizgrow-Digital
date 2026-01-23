@@ -92,9 +92,9 @@ const SocialMediaMarketingPage = () => {
                     {service.icon}
                   </div>
                   <div className="flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
+                    <h2 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight min-h-[3rem]">
                       {service.title}
-                    </h3>
+                    </h2>
                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                       {service.desc}
                     </p>

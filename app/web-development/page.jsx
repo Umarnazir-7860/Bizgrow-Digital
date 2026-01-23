@@ -89,9 +89,9 @@ const WebDevelopmentPage = () => {
                     {tech.icon}
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">
+                    <h2 className="text-xl font-bold dark:text-white mb-4 uppercase tracking-tight">
                       {tech.title}
-                    </h3>
+                    </h2>
                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                       {tech.desc}
                     </p>

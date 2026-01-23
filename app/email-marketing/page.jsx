@@ -15,6 +15,12 @@ import VShapeTransition from "@components/test2";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
+export const metadata = {
+  title: "Email Marketing UK | Automated Campaigns & Customer Engagement",
+  description:
+    "Boost UK business growth with data-driven email marketing, automation, and personalised campaigns for maximum engagement.",
+};
+
 const EmailMarketingPage = () => {
   const emailServices = [
     {

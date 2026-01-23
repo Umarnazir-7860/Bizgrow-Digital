@@ -95,7 +95,7 @@ const ContactPage = () => {
       <div className="relative h-[75vh] md:h-screen w-full">
         <Image
           src="/contact-us-hero.jpg"
-          alt="Contact Hero"
+          alt="Contact - BizGrow Digital today"
           fill
           fetchPriority="high"
           priority

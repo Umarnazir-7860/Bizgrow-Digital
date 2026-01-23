@@ -21,7 +21,7 @@ const HomePage = () => {
   fill
   priority
   fetchPriority="high"
-  alt="Hero Background"
+  alt="Home Page - BizGrow Digital"
   className="object-cover transition-all duration-700" // Smooth transition ke liye
   placeholder="blur"
   // Ye Base64 code image ko load hone tak ek premium "Dark Grey/Blue" blur dikhayega

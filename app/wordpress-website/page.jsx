@@ -155,9 +155,9 @@ const WordPressPage = () => {
                   {/* Subtle Red Glow for "Warning/Negative" vibe */}
                   <div className="absolute -top-10 -left-10 w-32 h-32 bg-red-500/5 blur-3xl rounded-full" />
 
-                  <h4 className="text-2xl font-bold mb-8 text-gray-400 tracking-wide group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-2xl font-bold mb-8 text-gray-400 tracking-wide group-hover:text-gray-300 transition-colors">
                     Standard WordPress Websites
-                  </h4>
+                  </h3>
 
                   <ul className="space-y-6 text-left">
                     {[
@@ -190,9 +190,9 @@ const WordPressPage = () => {
                     The Winner
                   </div>
 
-                  <h4 className="text-2xl font-black mb-8 text-[#B54118] uppercase tracking-tight">
+                  <h3 className="text-2xl font-black mb-8 text-[#B54118] uppercase tracking-tight">
                     BizGrow WordPress Solutions
-                  </h4>
+                  </h3>
 
                   <ul className="space-y-6 text-left">
                     {[
