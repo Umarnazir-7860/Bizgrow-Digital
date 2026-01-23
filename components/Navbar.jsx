@@ -106,7 +106,7 @@ export default function Navbar() {
         <div className="flex py-3 items-center justify-between">
           <Link href="/">
             <Image
-              src="/BizGrow-digital-logo.png"
+              src="/logo.png"
               alt="BizGrow Digital Logo"
               width={110}
               height={40}
