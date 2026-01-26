@@ -3,9 +3,11 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/', // Agar koi folder hide karna ho toh yahan likhen
+      disallow: [
+        '/private/',
+        '/wp-content/uploads/wpo/wpo-plugins-tables-list.json',
+      ],
     },
-    // Hamesha apni REAL domain use karein, vercel.app nahi
     sitemap: 'https://bizgrow-digital.co.uk/sitemap.xml',
   }
 }
