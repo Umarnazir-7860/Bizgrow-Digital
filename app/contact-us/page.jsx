@@ -12,6 +12,14 @@ import {
 } from "lucide-react"; // Extra icons
 import FadeIn from "@components/MotionWrapper";
 
+
+export const metadata = {
+  title: "Contact BizGrow Digital | Digital Marketing Agency",
+  description:"Contact BizGrow Digital for SEO, web design, social media, and digital marketing services. Get a free consultation today.",
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/contact-us/",
+  },
+};
 const ContactPage = () => {
   // 1. Form States
   const [formData, setFormData] = useState({

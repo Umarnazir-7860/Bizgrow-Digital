@@ -19,6 +19,26 @@ async function getPost(slug) {
   }
 }
 
+
+// --- Metadata & Canonical Start ---
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  if (!post) return {};
+
+  return {
+    // WordPress se SEO title aur description uthana
+    title: post.yoast_head_json?.title || post.title.rendered,
+    description: post.yoast_head_json?.description || post.excerpt.rendered.replace(/<[^>]*>/g, ""),
+    
+    alternates: {
+      // Dynamic Canonical with Trailing Slash
+      canonical: `https://bizgrow-digital.co.uk/blogs/${slug}/`,
+    },
+  };
+}
+// --- Metadata & Canonical End ---
 export default async function SingleBlogPost({ params }) {
   const { slug } = await params;
   const post = await getPost(slug);
