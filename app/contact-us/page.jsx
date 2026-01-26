@@ -121,9 +121,9 @@ const ContactPage = () => {
 
       {/* --- CONTACT CONTENT --- */}
       <div className="max-w-7xl mx-auto px-4 py-20 dark:border-t dark:border-orange-700 relative z-10">
-        <h1 className="text-5xl mb-4 font-black text-center text-slate-900 dark:text-white uppercase">
+        <h2 className="text-5xl mb-4 font-black text-center text-slate-900 dark:text-white uppercase">
           Get in Touch
-        </h1>
+        </h2>
         <div className="w-1/5 h-1 my-6 bg-[#B54118] mx-auto rounded-full" />
        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
   {/* 1. Contact Info - Minimalist Floating Style */}
