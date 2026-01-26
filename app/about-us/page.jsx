@@ -16,7 +16,10 @@ export const metadata = {
   title: "About BizGrow Digital | UK Experts in Digital Growth",
   description:
     "BizGrow Digital delivers expert digital marketing solutions across the UK, helping businesses grow, engage, and succeed online.",
-};
+   alternates: {
+    canonical: "https://bizgrow-digital.co.uk/about-us/", 
+  },
+  };
 
 export default function AboutPage() {
   return (

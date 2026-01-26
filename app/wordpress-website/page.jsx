@@ -15,7 +15,10 @@ export const metadata = {
   title: "Custom WordPress Website Development UK | BizGrow Digital",
   description:
     "High-performance, secure WordPress websites built for UK businesses. Fast loading, SEO-optimised, scalable, and conversion-focused.",
-};
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/wordpress-website/",
+  },
+  };
 
 const WordPressPage = () => {
   return (

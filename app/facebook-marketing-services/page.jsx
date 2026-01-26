@@ -14,6 +14,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Facebook Growth Services | UK Business Marketing",
   description:"BizGrow Digital delivers Facebook marketing that boosts brand visibility, engagement, and leads with strategy-driven, measurable results.",
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/facebook-marketing-services/",
+  },
 };
 
 const FacebookMarketingPage = () => {

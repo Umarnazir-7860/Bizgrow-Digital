@@ -5,6 +5,9 @@ import FadeIn from "@components/MotionWrapper";
 export const metadata = {
   title: "Privacy Policy UK | BizGrow Digital | Protecting Your Data",
   description: "Read our Privacy Policy: BizGrow Digital protects your data, ensures GDPR compliance, and explains how we handle personal information.",
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/privacy-policy/",
+  },
 };
 
 const PrivacyPolicy = () => {

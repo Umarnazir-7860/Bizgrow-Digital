@@ -19,7 +19,12 @@ export const metadata = {
   title: "Email Marketing UK | Automated Campaigns & Customer Engagement",
   description:
     "Boost UK business growth with data-driven email marketing, automation, and personalised campaigns for maximum engagement.",
-};
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/email-marketing/",
+  },
+
+
+  };
 
 const EmailMarketingPage = () => {
   const emailServices = [

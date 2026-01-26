@@ -10,8 +10,13 @@ import FadeIn from "@components/MotionWrapper";
 
 export const metadata ={
   title:"Creative Content Services by BizGrow Digital UK",
-  description:"BizGrow Digital offers expert creative content services to enhance engagement, brand visibility, and online business growth across the UK."
-}
+  description:"BizGrow Digital offers expert creative content services to enhance engagement, brand visibility, and online business growth across the UK.",
+    alternates: {
+    canonical: "https://bizgrow-digital.co.uk/creative-content/", 
+  },
+
+
+};
 
 const CreativeContentPage = () => {
   const contentFeatures = [

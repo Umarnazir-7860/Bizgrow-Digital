@@ -16,7 +16,11 @@ export const metadata = {
   title: "Professional Web Development Services | BizGrow Digital ",
   description:
     "Get a modern, responsive website that converts. Built by BizGrow Digital using Next.js for speed, performance, and growth.",
-};
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/web-development/",
+  },
+
+  };
 
 const WebDevelopmentPage = () => {
   const techStack = [

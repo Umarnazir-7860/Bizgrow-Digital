@@ -18,7 +18,10 @@ export const metadata = {
   title: "BizGrow Digital | Expert UK Digital Services",
   description:
     "Explore BizGrow Digital’s full range of UK-based digital services, designed to grow your business, boost visibility, and drive results online.",
-};
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/our-digital-services/",
+  },
+  };
 
 const page = () => {
   const services = [

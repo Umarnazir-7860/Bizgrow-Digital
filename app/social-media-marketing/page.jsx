@@ -14,7 +14,11 @@ export const metadata = {
   title: "Social Media Marketing UK | Engage, Grow & Convert Your Audience",
   description:
     "UK businesses: Boost engagement, grow followers & drive conversions with strategic, data-led social media marketing solutions.",
-};
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/social-media-marketing/",
+  },
+
+  };
 
 const SocialMediaMarketingPage = () => {
   const smmServices = [

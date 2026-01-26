@@ -18,7 +18,10 @@ export const metadata = {
   title: "SEO Services UK | Boost Rankings & Grow Online | BizGrow Digital",
   description:
     "UK businesses: Improve visibility, attract leads & increase traffic with data-driven SEO services tailored for measurable results.",
-};
+    alternates: {
+    canonical: "https://bizgrow-digital.co.uk/search-engine-optimisation/", 
+  },
+  };
 
 const SEOPage = () => {
   return (
@@ -48,7 +51,7 @@ const SEOPage = () => {
               actively searching for your products without paying per click.
               Boost your organic visibility with BizGrow Digital.
             </p>
-            <Link href="/contact-us">
+            <Link href="/cosearch-engine-optimisation">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
                 Audit My Site
               </button>

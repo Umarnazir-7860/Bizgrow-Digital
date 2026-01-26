@@ -9,7 +9,11 @@ export const metadata = {
   title: "BizGrow Digital | Expert Digital Marketing Services UK", // Ye layout wale template ki wajah se "About Us | BizGrow Digital" ban jayega
   description:
     "BizGrow Digital provides professional digital marketing services in the UK to boost visibility, engagement, and business growth.",
-};
+   alternates: {
+    canonical: "https://bizgrow-digital.co.uk/", 
+  },
+
+  };
 
 const HomePage = () => {
   return (
