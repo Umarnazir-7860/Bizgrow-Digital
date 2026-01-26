@@ -3,7 +3,9 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/private/', // Agar koi folder hide karna ho toh yahan likhen
     },
-    sitemap: 'https://bizgrow-digital.vercel.app/sitemap.xml',
+    // Hamesha apni REAL domain use karein, vercel.app nahi
+    sitemap: 'https://bizgrow-digital.co.uk/sitemap.xml',
   }
 }
