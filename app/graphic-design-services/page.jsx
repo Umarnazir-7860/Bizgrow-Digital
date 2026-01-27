@@ -12,17 +12,10 @@ import {
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
-import { a } from "framer-motion/dist/types.d-a9pt5qxk";
 
 
-export const metadata = {
-title:"Premium Graphic Design Services | BizGrow Digital",
-description:"BizGrow Digital delivers premium graphic design: logos, UI/UX, social assets. Build trust fast, boost engagement and conversions.",
-alternates: {
-   canonical: "https://bizgrow-digital.co.uk/graphic-design-services/", 
-  },
 
-};
+
 
 const GraphicDesignPage = () => {
   return (
