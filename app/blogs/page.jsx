@@ -1,6 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
+export const metadata = {
+  title: "Insights & Tips for Digital Growth | BizGrow Digital Blogs",
+  description: "Explore expert tips on SEO, web design, social media, and digital growth. Stay updated with fresh insights blogs from BizGrow Digital.",
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/blogs/",
+  },
+};
+
+
 async function getPosts(page = 1) {
   const perPage = 9;
   try {
@@ -34,7 +44,7 @@ export default async function BlogPage() {
           <article key={post.id} className="group bg-white  dark:bg-[#000B25]  rounded-2xl shadow-sm border
            border-gray-100 flex flex-col overflow-hidden">
             <div className="relative h-56 w-full">
-              <Image src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} alt={post.title.rendered} fill className="object-cover" />
+              <Image src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} unoptimized={true} alt={post.title.rendered} fill className="object-cover" />
             </div>
             <div className="p-8 flex flex-col flex-grow">
               <h2 className="text-xl font-extrabold text-[#12066a] dark:text-white mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
