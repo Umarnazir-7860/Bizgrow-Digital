@@ -21,20 +21,21 @@ async function getPost(slug) {
 
 
 // --- Metadata & Canonical Start ---
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = await getPost(slug);
 
-  if (!post) return {};
+  if (!post) return { title: "Page Not Found" };
+
+  const seoTitle = post.yoast_head_json?.title || post.seo?.title || post.title.rendered;
+  const seoDesc = post.yoast_head_json?.description || post.seo?.description || "";
 
   return {
-    // WordPress se SEO title aur description uthana
-    title: post.yoast_head_json?.title || post.title.rendered,
-    description: post.yoast_head_json?.description || post.excerpt.rendered.replace(/<[^>]*>/g, ""),
-    
+    title: seoTitle,
+    description: seoDesc,
     alternates: {
-      // Dynamic Canonical with Trailing Slash
-      canonical: `https://bizgrow-digital.co.uk/blogs/${slug}/`,
+      canonical: `https://bizgrow-digital.co.uk/${slug}/`,
     },
   };
 }
