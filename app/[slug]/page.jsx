@@ -20,17 +20,19 @@ async function getPost(slug) {
 }
 
 
-// Metadata logic with Build Fix
+// 2. Metadata Build Fix
 export async function generateMetadata({ params }) {
-  // Vercel build fix: params ko await karna zaroori hai Next 15 mein
   const resolvedParams = await params;
-  const slug = resolvedParams.slug;
+  const slug = resolvedParams?.slug;
   const post = await getPost(slug);
 
-  if (!post) return { title: "Bizgrow Digital" };
+  // Build time par agar post na mile to default meta return karein
+  if (!post) {
+    return { title: "Bizgrow Digital" };
+  }
 
-  const seoTitle = post.yoast_head_json?.title || post.seo?.title || post.title?.rendered;
-  const seoDesc = post.yoast_head_json?.description || post.seo?.description || "";
+  const seoTitle = post.yoast_head_json?.title || post.title?.rendered || "Bizgrow Digital";
+  const seoDesc = post.yoast_head_json?.description || "";
 
   return {
     title: seoTitle,
