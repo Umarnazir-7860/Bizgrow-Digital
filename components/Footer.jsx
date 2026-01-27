@@ -88,13 +88,13 @@ const Footer = () => {
               achieve measurable growth.
             </p>
             <div className="text-2xl font-black text-white tracking-tighter uppercase italic ">
-              BIZGROW <span className="text-[#B54118]">DIGITAL</span>
+              BIZGROW <span className="text-[#FF5722]">DIGITAL</span>
             </div>
           </div>
 
           {/* Column 2: Quick Navigation */}
           <div className="text-left">
-            <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
               Navigation
             </h4>
             <ul className="space-y-4">
@@ -114,7 +114,7 @@ const Footer = () => {
 
           {/* Column 3: Expertise (Services) with Premium Effect */}
           <div className="text-left">
-            <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
               Expertise
             </h4>
             <ul className="grid grid-cols-1 gap-4">
@@ -139,7 +139,7 @@ const Footer = () => {
           {/* Column 4: Contact + Map + Social */}
           <div className="space-y-8 text-left">
             <div>
-              <h4 className="text-[#B54118] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+              <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
                 Get In Touch
               </h4>
               <div className="space-y-5">
@@ -170,6 +170,7 @@ const Footer = () => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5857241279313!2d0.1802951!3d51.5391642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4d46c873653%3A0x7c73361e6267812e!2sCEME%20Conference%20Centre!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
                 className="w-full h-full border-0 grayscale invert contrast-[1.2] opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
+                title="BizGrow Office Location"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -185,6 +186,7 @@ const Footer = () => {
                   key={label}
                   href={href}
                   target="_blank"
+                  aria-label={`Follow us on ${label}`}
                   rel="noopener noreferrer"
                   className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-[#B54118] hover:text-white hover:border-[#B54118] hover:-translate-y-1 transition-all duration-500"
                 >

@@ -145,6 +145,7 @@ export default function ChatBot() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="hover:bg-white/10 p-1.5 rounded-full transition-colors"
+                  aria-label="Close Chat"
                 >
                   <X size={20} />
                 </button>
@@ -213,11 +214,13 @@ export default function ChatBot() {
                   <input
                     className="flex-1 bg-gray-50 dark:bg-[#252525] rounded-xl px-4 py-2.5 text-sm outline-none border border-gray-200 dark:border-gray-700 text-[#1f2937] dark:text-white"
                     placeholder="Ask us anything..."
+                    aria-label="Type your message"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                   />
                   <button
                     type="submit"
+                    aria-label="Send Message"
                     className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md"
                   >
                     <Send size={18} />
@@ -255,6 +258,7 @@ export default function ChatBot() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close Chat Assistant" : "Open Chat Assistant"}
           className="bg-gradient-to-r from-[#000B25] to-[#2563eb] border border-white/20 text-white p-3 rounded-2xl shadow-xl z-[9999]"
         >
           {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
