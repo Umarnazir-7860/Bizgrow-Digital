@@ -15,8 +15,8 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'BizGrow Digital <onboarding@resend.dev>',
-      to: ['muhammadumarnazirhussain@gmail.com'],
+      from: 'BizGrow Digital <leads@bizgrow-digital.co.uk>',
+      to: ['info@bizgrow-digital.co.uk'],
       subject: `New Lead: ${name} is interested in ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd;">
