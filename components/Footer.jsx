@@ -94,15 +94,15 @@ const Footer = () => {
 
           {/* Column 2: Quick Navigation */}
           <div className="text-left">
-            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+            <h3 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
               Navigation
-            </h4>
+            </h3>
             <ul className="space-y-4">
               {importantLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
                   >
                     <span className="w-0 group-hover:w-4 h-[2px] bg-[#B54118] mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.name}
@@ -114,15 +114,15 @@ const Footer = () => {
 
           {/* Column 3: Expertise (Services) with Premium Effect */}
           <div className="text-left">
-            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+            <h3 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
               Expertise
-            </h4>
+            </h3>
             <ul className="grid grid-cols-1 gap-4">
               {servicesLinks.slice(0, 8).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="group flex items-center text-gray-400 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-[0.15em]"
+                    className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-[0.15em]"
                   >
                     {/* Sliding Line Effect */}
                     <span className="w-0 group-hover:w-6 h-[2px] bg-[#B54118] mr-0 group-hover:mr-3 transition-all duration-500 ease-out"></span>
@@ -139,9 +139,9 @@ const Footer = () => {
           {/* Column 4: Contact + Map + Social */}
           <div className="space-y-8 text-left">
             <div>
-              <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+              <h3 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
                 Get In Touch
-              </h4>
+              </h3>
               <div className="space-y-5">
                 <a href="tel:+447903332433" className="flex items-center group">
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#B54118] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
