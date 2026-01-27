@@ -119,6 +119,8 @@ function Card({ title, img, desc, alt, i, progress, range, isFirst, isLast }) {
           src={img} 
           width={600} 
           height={400} 
+          // sizes attribute added to solve Performance issue
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           alt={alt} 
           className="object-cover w-full h-full transition-transform duration-700 hover:scale-110" 
           priority={i === 0} 
