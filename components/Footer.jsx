@@ -112,7 +112,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Expertise (Services) with Premium Effect */}
+          {/* Column 3: Expertise (Services) */}
           <div className="text-left">
             <h3 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-8">
               Expertise
@@ -124,9 +124,7 @@ const Footer = () => {
                     href={link.href}
                     className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-[0.15em]"
                   >
-                    {/* Sliding Line Effect */}
                     <span className="w-0 group-hover:w-6 h-[2px] bg-[#B54118] mr-0 group-hover:mr-3 transition-all duration-500 ease-out"></span>
-
                     <span className="group-hover:translate-x-1 transition-transform duration-500">
                       {link.name}
                     </span>
@@ -165,21 +163,17 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Premium Responsive Map Container */}
             <div className="relative group w-full h-44 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5857241279313!2d0.1802951!3d51.5391642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4d46c873653%3A0x7c73361e6267812e!2sCEME%20Conference%20Centre!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.850672221615!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xed10390f77744dc!2sLondon!5e0!3m2!1sen!2suk!4v1700000000000"
                 className="w-full h-full border-0 grayscale invert contrast-[1.2] opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
                 title="BizGrow Office Location"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              {/* Glass Overlay on Map */}
-              <div className="absolute inset-0 pointer-events-none border-[8px] border-transparent group-hover:border-white/5 transition-all duration-500 rounded-[2rem]"></div>
             </div>
 
-            {/* Social Media */}
             <div className="flex items-center gap-3">
               {socialMedia.map(({ Icon, href, label }) => (
                 <a
@@ -199,19 +193,19 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white text-[10px] font-black uppercase tracking-[0.4em]">
+          <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em]">
             © 2026 BizGrow Digital. Crafted for Excellence.
           </p>
           <div className="flex gap-8">
             <Link
               href="/privacy-policy"
-              className="text-gray-600 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
+              className="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
             >
               Privacy
             </Link>
             <Link
               href="/terms"
-              className="text-gray-600 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
+              className="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
             >
               Terms
             </Link>
