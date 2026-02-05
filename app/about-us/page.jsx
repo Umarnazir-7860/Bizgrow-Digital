@@ -93,15 +93,15 @@ export default function AboutPage() {
             {/* Bullet Points for better Scannability */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               {[
-                "Advanced SEO Experts",
-                "Results-Driven Marketing",
-                "Custom Web Development",
-                "Lead Generation Focus",
+               <Link href="https://bizgrow-digital.co.uk/search-engine-optimisation/">Advanced SEO Experts</Link> ,
+                <Link href="https://bizgrow-digital.co.uk/what-are-the-top-7-types-of-digital-marketing-you-must-know/ ">Results-Driven Marketing</Link>,
+                <Link href="https://bizgrow-digital.co.uk/web-development/">Custom Web Development</Link>,
+                <Link href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/">Lead Generation Focus</Link>,
               ].map((item, i) => (
                 <FadeIn key={i} direction="up" delay={0.5 + i * 0.1}>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="text-[#B54118]" size={20} />
-                    <span className="font-semibold dark:text-white text-slate-800">
+                    <span className="font-semibold dark:text-white text-slate-800 underline hover:text-[#B54118]">
                       {item}
                     </span>
                   </div>
@@ -297,7 +297,7 @@ export default function AboutPage() {
               </div>
 
               <p className="text-2xl md:text-2xl font-bold text-slate-800 dark:text-white italic leading-tight relative z-10">
-                "At BizGrow Digital, we don’t just develop websites; we build
+                "At <Link href="/" className="text-[#B54118] underline">BizGrow Digital</Link> , we don’t just develop websites; we build
                 powerful digital solutions that turn visitors into clients and
                 position your brand as a{" "}
                 <span className="text-[#B54118]">trusted leader</span>."

@@ -24,12 +24,12 @@ const SocialMediaMarketingPage = () => {
   const smmServices = [
     {
       title: "Strategic Content & Web Design", // SEO: Added Web Design keyword
-      desc: "Professionally crafted content and high-end web designs meant to reflect your brand voice, engage your audience, and support your marketing objectives.",
+      desc: <>Professionally crafted content and high-end <Link href="https://bizgrow-digital.co.uk/what-is-web-design-the-ultimate-guide-to-designing-a-website/ " className="text-[#B54118] underline">web designs</Link> meant to reflect your brand voice, engage your audience, and support your marketing objectives.</>,
       icon: <PenTool className="w-8 h-8" />, // PenTool design aur creativity ko show karta hai
     },
     {
       title: "Platform-Focused Management",
-      desc: "Tailored social media management for platforms such as LinkedIn, Facebook, Instagram, and X aligned with your business goals.",
+      desc: <>Tailored  <Link href="https://bizgrow-digital.co.uk/what-are-the-4-stages-of-social-media-marketing/ " className="text-[#B54118] underline">social media management</Link> for platforms such as LinkedIn, Facebook, Instagram, and X aligned with your business goals.</>,
       icon: <Share2 className="w-8 h-8" />, // Share2 networking aur platforms ko represent karta hai
     },
     {

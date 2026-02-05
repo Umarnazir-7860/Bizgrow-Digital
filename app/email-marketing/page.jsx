@@ -30,14 +30,14 @@ const EmailMarketingPage = () => {
   const emailServices = [
     {
       title: "Campaign Strategy",
-      desc: "We design data-driven email roadmaps that target your audience segments with precision and purpose.",
+      desc: <>We design <Link href="https://bizgrow-digital.co.uk/a-beginners-guide-to-email-marketing-that-actually-works/" className="text-[#B54118] underline">data-driven email</Link> roadmaps that target your audience segments with precision and purpose.</>,
       icon: <Workflow className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverBg: "group-hover:bg-[#B54118]",
     },
     {
       title: "Email Automation",
-      desc: "Set your growth on autopilot with advanced triggers and drip sequences that nurture leads 24/7.",
+      desc: <>Set your growth on autopilot with advanced triggers and drip sequences that <Link href="https://bizgrow-digital.co.uk/lead-generation-solutions/" className="text-[#B54118] underline">nurture leads </Link> 24/7.</>,
       icon: <Zap className="w-8 h-8" />,
       bgColor: "bg-orange-100",
       hoverBg: "group-hover:bg-[#B54118]",

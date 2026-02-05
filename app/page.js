@@ -9,28 +9,27 @@ export const metadata = {
   title: "BizGrow Digital | Expert Digital Marketing Services UK", // Ye layout wale template ki wajah se "About Us | BizGrow Digital" ban jayega
   description:
     "BizGrow Digital provides professional digital marketing services in the UK to boost visibility, engagement, and business growth.",
-   alternates: {
-    canonical: "https://bizgrow-digital.co.uk/", 
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/",
   },
-
-  };
+};
 
 const HomePage = () => {
   return (
     <main className="w-full">
       {/* Hero Section */}
       <section className="relative w-full h-[95vh] md:h-screen">
-       <Image
-  src="/admin-ajax.webp"
-  fill
-  priority
-  fetchPriority="high"
-  alt="Home Page - BizGrow Digital"
-  className="object-cover transition-all duration-700" // Smooth transition ke liye
-  placeholder="blur"
-  // Ye Base64 code image ko load hone tak ek premium "Dark Grey/Blue" blur dikhayega
-  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8AKpT899BQAAAABJRU5ErkJggg=="
-/>
+        <Image
+          src="/admin-ajax.webp"
+          fill
+          priority
+          fetchPriority="high"
+          alt="Home Page - BizGrow Digital"
+          className="object-cover transition-all duration-700" // Smooth transition ke liye
+          placeholder="blur"
+          // Ye Base64 code image ko load hone tak ek premium "Dark Grey/Blue" blur dikhayega
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8AKpT899BQAAAABJRU5ErkJggg=="
+        />
         <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up" delay={0.2}>
             <h1 className="text-white text-3xl md:text-5xl mt-20   md:mx-20 font-bold md:leading-[4rem]">
@@ -91,7 +90,9 @@ const HomePage = () => {
                     Ready to attract more clients, increase traffic, and grow
                     your online presence? BizGrow Digital provides{" "}
                     <span className="text-[#B54118] dark:text-orange-500">
-                      results-driven digital marketing
+                      <Link href="https://bizgrow-digital.co.uk/how-digital-marketing-drives-faster-growth-for-businesses/ ">
+                        results-driven digital marketing
+                      </Link>
                     </span>{" "}
                     that enables your business to grow with confidence.
                   </p>
@@ -189,60 +190,82 @@ const HomePage = () => {
               measurable growth.
             </p>
           </FadeIn>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+  {[
+    {
+      icon: <TrendingUp size={40} strokeWidth={2} />,
+      title: "Strategy-First Approach",
+      desc: "Every digital campaign is planned using market research, data insights, and clear business goals to maximise ROI.",
+      dir: "left",
+    },
+    {
+      icon: <Search size={40} strokeWidth={2} />,
+      title: "Performance SEO",
+      // Yahan humne SEO-optimised websites par link lagaya hai
+      desc: (
+        <>
+          <Link 
+            href="https://bizgrow-digital.co.uk/why-on-page-seo-matters-for-small-businesses-and-how-to-do-it-right/"
+            target="_blank"
+            className="text-[#B54118] font-bold hover:underline"
+          >
+            SEO-optimised websites
+          </Link>{" "}
+          built for speed, user experience, and higher search engine rankings that attract the right audience.
+        </>
+      ),
+      dir: "up",
+    },
+    {
+      icon: <Palette size={40} strokeWidth={2} />,
+      title: "Creative Brand Design",
+      // Yahan web design par link lagaya hai
+      desc: (
+        <>
+          Professional graphic and{" "}
+          <Link 
+            href="https://bizgrow-digital.co.uk/what-is-web-design-the-ultimate-guide-to-designing-a-website/"
+            target="_blank"
+            className="text-[#B54118] font-bold hover:underline"
+          >
+            web design
+          </Link>{" "}
+          that strengthens brand identity, improves engagement, and communicates value.
+        </>
+      ),
+      dir: "right",
+    },
+  ].map((item, index) => (
+    <FadeIn
+      key={index}
+      direction={item.dir}
+      delay={0.2 * (index + 1)}
+      className="h-full"
+    >
+      <div className="group relative h-full bg-white dark:bg-[#001235]/50 backdrop-blur-sm border-2 border-transparent dark:border-white/5 p-10 rounded-[2rem] shadow-xl hover:shadow-[#B54118]/20 hover:border-[#B54118]/50 transition-all duration-500 flex flex-col items-center text-center overflow-hidden">
+        {/* ... (Baaki code wahi rahega jo aapka pehle tha) ... */}
+        
+        {/* Icon Box */}
+        <div className="relative z-10 mb-8 p-5 rounded-2xl bg-orange-50 dark:bg-[#B54118]/10 text-[#B54118] group-hover:bg-[#B54118] group-hover:text-white transition-all duration-500 transform group-hover:-rotate-12 shadow-md">
+          {item.icon}
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-            {[
-              {
-                icon: <TrendingUp size={40} strokeWidth={2} />,
-                title: "Strategy-First Approach",
-                desc: "Every digital campaign is planned using market research, data insights, and clear business goals to maximise ROI.",
-                dir: "left",
-              },
-              {
-                icon: <Search size={40} strokeWidth={2} />,
-                title: "Performance SEO",
-                desc: "SEO-optimised websites built for speed, user experience, and higher search engine rankings that attract the right audience.",
-                dir: "up",
-              },
-              {
-                icon: <Palette size={40} strokeWidth={2} />,
-                title: "Creative Brand Design",
-                desc: "Professional graphic and web design that strengthens brand identity, improves engagement, and communicates value.",
-                dir: "right",
-              },
-            ].map((item, index) => (
-              <FadeIn
-                key={index}
-                direction={item.dir}
-                delay={0.2 * (index + 1)}
-                className="h-full"
-              >
-                <div className="group relative h-full bg-white dark:bg-[#001235]/50 backdrop-blur-sm border-2 border-transparent dark:border-white/5 p-10 rounded-[2rem] shadow-xl hover:shadow-[#B54118]/20 hover:border-[#B54118]/50 transition-all duration-500 flex flex-col items-center text-center overflow-hidden">
-                  {/* Animated Hover Background Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#B54118]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Content */}
+        <h3 className="relative z-10 text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
+          {item.title}
+        </h3>
+        {/* Yahan item.desc ab automatic links ke saath render hoga */}
+        <p className="relative z-10 text-gray-600 dark:text-gray-300 text-base leading-relaxed flex-grow">
+          {item.desc}
+        </p>
 
-                  {/* Icon Box */}
-                  <div className="relative z-10 mb-8 p-5 rounded-2xl bg-orange-50 dark:bg-[#B54118]/10 text-[#B54118] group-hover:bg-[#B54118] group-hover:text-white transition-all duration-500 transform group-hover:-rotate-12 shadow-md">
-                    {item.icon}
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="relative z-10 text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="relative z-10 text-gray-600 dark:text-gray-300 text-base leading-relaxed flex-grow">
-                    {item.desc}
-                  </p>
-
-                  {/* Bottom Accent Line */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1.5 bg-[#B54118] group-hover:w-full transition-all duration-700" />
-
-                  {/* Floating Glow on Hover */}
-                  <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#B54118]/10 blur-3xl rounded-full group-hover:bg-[#B54118]/20 transition-all" />
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+        {/* Bottom Accent Line & Floating Glow (Same as your code) */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1.5 bg-[#B54118] group-hover:w-full transition-all duration-700" />
+        <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#B54118]/10 blur-3xl rounded-full group-hover:bg-[#B54118]/20 transition-all" />
+      </div>
+    </FadeIn>
+  ))}
+</div>
         </div>
       </section>
 
@@ -267,7 +290,7 @@ const HomePage = () => {
             <div className="relative z-20 max-w-4xl mx-auto px-6">
               <FadeIn direction="up">
                 <div className="flex justify-center mb-6">
-                   <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                  <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
                     Let's Partner Up
                   </span>
                 </div>

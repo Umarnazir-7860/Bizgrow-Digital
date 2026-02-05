@@ -18,13 +18,13 @@ const DigitalMarketingPage = () => {
   const marketingServices = [
     {
       title: "Search Engine Optimisation (SEO)",
-      desc: "Drives more visitors to your website through increasing visibility in search engines (e.g., Google) and generating quality traffic from your target customers.",
+      desc: <>Drives more visitors to your website through increasing visibility in <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/ " className="text-[#B54118] underline">search engines</Link>  (e.g., Google) and generating quality traffic from your target customers.</>,
       // Search icon SEO ke liye perfect hai
       icon: <Search className="w-8 h-8" />,
     },
     {
       title: "Social Media Marketing (SMM)",
-      desc: "Create Brand Awareness, interact with your audience, and develop a social community across multiple Social Media Platforms (e.g., Facebook, Instagram, and LinkedIn).",
+      desc: <>Create Brand Awareness, interact with your audience, and develop a social community across multiple <Link href="https://bizgrow-digital.co.uk/what-are-the-4-stages-of-social-media-marketing/ " className="text-[#B54118] underline">Social Media</Link> Platforms (e.g., Facebook, Instagram, and LinkedIn).</>,
       // Users ya Share2 icon SMM (community/social) ke liye behtar hai
       icon: <Users className="w-8 h-8" />,
     },
@@ -36,7 +36,7 @@ const DigitalMarketingPage = () => {
     },
     {
       title: "Web Development",
-      desc: "We design and develop fast, secure, and user-friendly websites to reflect the identity of your brand and its Marketing Goals while providing a quality user experience.",
+      desc: <>We  <Link href="https://bizgrow-digital.co.uk/what-is-web-design-the-ultimate-guide-to-designing-a-website/" className="text-[#B54118] underline">design and develop</Link> fast, secure, and user-friendly websites to reflect the identity of your brand and its Marketing Goals while providing a quality user experience.</>,
       // Code2 ya Layout icon development ke liye standard hai
       icon: <Code2 className="w-8 h-8" />,
     },

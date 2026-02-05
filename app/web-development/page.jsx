@@ -31,7 +31,7 @@ const WebDevelopmentPage = () => {
     },
     {
       title: "Tailwind CSS",
-      desc: "Delivering clean, responsive designs with a utility-first framework for consistent styling and fast, scalable development.",
+      desc: <><Link href="https://bizgrow-digital.co.uk/graphic-design-services/" className="text-[#B54118] underline">Delivering clean, responsive designs</Link> with a utility-first framework for consistent styling and fast, scalable development.</>,
       icon: <Layers className="w-8 h-8" />,
     },
     {
@@ -123,7 +123,7 @@ const WebDevelopmentPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   "Fast loading Performance",
-                  "SEO-Optimised Structure",
+                  <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/" className="underline decoration-[#B54118]">SEO-Optimised Structure</Link>,
                   "Mobile-First Design",
                   "Advanced Interactive Animations",
                   "Clean & Maintainable Code",

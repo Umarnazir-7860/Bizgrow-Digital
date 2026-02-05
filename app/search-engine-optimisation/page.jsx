@@ -98,7 +98,7 @@ const SEOPage = () => {
 
                   {/* Supporting Text - Less Dull */}
                   <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-orange-600/60 pl-6">
-                    Effective SEO involves on-page techniques like keyword
+                    Effective SEO involves <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/" className="text-[#B54118] underline">on-page techniques</Link> like keyword
                     optimisation and technical improvements to ensure your
                     business becomes easier for potential customers to find in a
                     crowded digital landscape.
@@ -230,7 +230,7 @@ const SEOPage = () => {
                   Why SEO Matters for Growth
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Higher rankings lead to more leads and revenue. We optimise
+                  Higher rankings  <Link href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/" className="text-[#B54118] underline">lead to more leads</Link> and revenue. We optimise
                   for UK-based searches and local listings to ensure your
                   business gets noticed by the right audience.
                 </p>
@@ -302,7 +302,7 @@ const SEOPage = () => {
               DATA <br /> <span className="text-orange-500">OVER</span> GUESSES
             </h2>
             <p className="text-gray-700 font-semibold">
-              Producing high-quality content that satisfies both users and
+              Producing <Link href="https://bizgrow-digital.co.uk/10-creative-content-techniques-to-improve-seo-results/" className="text-[#B54118] underline">high-quality content</Link> that satisfies both users and
               search engines.
             </p>
             <div className="space-y-6">
