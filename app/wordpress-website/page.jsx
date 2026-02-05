@@ -77,7 +77,7 @@ const WordPressPage = () => {
                 What We Deliver
               </h2>
               <p className="text-gray-500 text-center  dark:text-gray-400">
-                We build performance-focused <Link href="https://bizgrow-digital.co.uk/wordpress-on-page-seo-checklist/" className="text-[#B54118] underline">WordPress websites</Link>  without bloated
+                We build performance-focused <Link href="https://bizgrow-digital.co.uk/wordpress-on-page-seo-checklist/" className="text-[#B54118] font-bold underline">WordPress websites</Link>  without bloated
                 page builders or unnecessary plugins, ensuring fast load times,
                 strong search visibility, and long-term scalability for UK
                 businesses.
@@ -89,7 +89,7 @@ const WordPressPage = () => {
                 {
                   title: "Headless WordPress Architecture",
                   icon: <Code2 className="w-8 h-8" />,
-                  desc: <>WordPress is used as a <Link href="https://bizgrow-digital.co.uk/write-better-content-with-these-e-e-a-t-seo-techniques/ " className="text-[#B54118] underline">powerful content</Link> backend, combined with React or Next.js on the front end for superior speed and flexibility.</>,
+                  desc: <>WordPress is used as a <Link href="https://bizgrow-digital.co.uk/write-better-content-with-these-e-e-a-t-seo-techniques/ " className="text-[#B54118] font-bold underline">powerful content</Link> backend, combined with React or Next.js on the front end for superior speed and flexibility.</>,
                 },
                 {
                   title: "Custom Admin Experience",

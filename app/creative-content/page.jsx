@@ -29,7 +29,7 @@ const CreativeContentPage = () => {
     },
     {
       title: "Visual Design",
-      desc: <>High-impact <Link href="https://bizgrow-digital.co.uk/how-digital-marketing-drives-faster-growth-for-businesses/" className="text-[#B54118] underline">digital visuals and marketing</Link>  assets created to strengthen brand consistency and enhance visual recognition across platforms.</>,
+      desc: <>High-impact <Link href="https://bizgrow-digital.co.uk/how-digital-marketing-drives-faster-growth-for-businesses/" className="text-[#B54118] font-bold underline">digital visuals and marketing</Link>  assets created to strengthen brand consistency and enhance visual recognition across platforms.</>,
       icon: <PenTool className="w-8 h-8" />,
       bgColor: "bg-blue-100",
       hoverBg: "group-hover:bg-[#B54118]",
@@ -160,7 +160,7 @@ const CreativeContentPage = () => {
         </div>
       </section>
 
-      {/* --- WHY US SECTION --- */}
+      {/* --- WHY CHOOSE US SECTION --- */}
       <section className="py-10 bg-white dark:bg-[#020817]  dark:border-t-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:flex-row gap-16 items-center">
           <FadeIn direction="right" delay={0.3}>
@@ -185,7 +185,7 @@ const CreativeContentPage = () => {
             <div className="space-y-6">
               {[
                 "Insight-Driven Creative Planning",
-                <>Audience-Focused <Link href="https://bizgrow-digital.co.uk/what-is-content-marketing-types-benefits-of-content-marketing/" className="text-[#B54118] underline">Content Development</Link> </>,
+                <>Audience-Focused <Link href="https://bizgrow-digital.co.uk/what-is-content-marketing-types-benefits-of-content-marketing/" className="text-[#B54118] font-bold underline">Content Development</Link> </>,
                 "Consistent Brand Voice & Visual Identity",
                 "Performance-Led Creative Execution",
                 "Scalable Content Systems for Growth",

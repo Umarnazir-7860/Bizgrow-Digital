@@ -297,7 +297,7 @@ export default function AboutPage() {
               </div>
 
               <p className="text-2xl md:text-2xl font-bold text-slate-800 dark:text-white italic leading-tight relative z-10">
-                "At <Link href="/" className="text-[#B54118] underline">BizGrow Digital</Link> , we don’t just develop websites; we build
+                "At <Link href="/" className="text-[#B54118] font-bold underline">BizGrow Digital</Link> , we don’t just develop websites; we build
                 powerful digital solutions that turn visitors into clients and
                 position your brand as a{" "}
                 <span className="text-[#B54118]">trusted leader</span>."

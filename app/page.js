@@ -89,7 +89,7 @@ const HomePage = () => {
                   <p className="text-black dark:text-gray-300 text-lg leading-relaxed font-medium">
                     Ready to attract more clients, increase traffic, and grow
                     your online presence? BizGrow Digital provides{" "}
-                    <span className="text-[#B54118] dark:text-orange-500">
+                    <span className="text-[#B54118] dark:text-orange-500 font-bold underline">
                       <Link href="https://bizgrow-digital.co.uk/how-digital-marketing-drives-faster-growth-for-businesses/ ">
                         results-driven digital marketing
                       </Link>
@@ -207,7 +207,7 @@ const HomePage = () => {
           <Link 
             href="https://bizgrow-digital.co.uk/why-on-page-seo-matters-for-small-businesses-and-how-to-do-it-right/"
             target="_blank"
-            className="text-[#B54118] font-bold hover:underline"
+            className="text-[#B54118] font-bold underline font-bold"
           >
             SEO-optimised websites
           </Link>{" "}
@@ -226,7 +226,7 @@ const HomePage = () => {
           <Link 
             href="https://bizgrow-digital.co.uk/what-is-web-design-the-ultimate-guide-to-designing-a-website/"
             target="_blank"
-            className="text-[#B54118] font-bold hover:underline"
+            className="text-[#B54118] font-bold underline"
           >
             web design
           </Link>{" "}

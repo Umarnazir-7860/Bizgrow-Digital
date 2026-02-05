@@ -73,7 +73,7 @@ const GraphicDesignPage = () => {
               {/* Sub-description (Jo aapne mangi thi) */}
               <p className="text-gray-500 dark:text-gray-400 text-md md:text-xl font-medium leading-relaxed max-w-2xl mx-auto tracking-tight">
                 Strategic design services crafted to strengthen brand identity,
-                improve user experience, and support <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/" className="text-[#B54118] underline">business growth</Link>  across
+                improve user experience, and support <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/" className="text-[#B54118] font-bold underline">business growth</Link>  across
                 digital platforms.
               </p>
             </div>
@@ -135,7 +135,7 @@ const GraphicDesignPage = () => {
                 </h3>
               </div>
               <p className="text-slate-500 dark:text-gray-400 text-sm font-medium leading-relaxed mt-4 max-w-[250px]">
-                High-impact social media  <Link href="https://bizgrow-digital.co.uk/how-can-web-graphic-design-elevate-your-digital-presence/ " className="text-[#B54118] underline">graphics designed</Link> to increase
+                High-impact social media  <Link href="https://bizgrow-digital.co.uk/how-can-web-graphic-design-elevate-your-digital-presence/ " className="text-[#B54118] font-bold underline">graphics designed</Link> to increase
                 visibility, interaction, and brand recall across platforms.
               </p>
             </div>

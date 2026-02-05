@@ -128,7 +128,7 @@ const LeadGenerationPage = () => {
             >
               <div className="flex justify-center">
                 <p className="mt-8 text-gray-600 dark:text-gray-400 text-lg md:text-lg max-w-3xl leading-relaxed font-medium">
-                  At <Link href="https://bizgrow-digital.co.uk/about-us/" className="text-[#B54118] underline">BizGrow Digital,</Link> we prioritise quality over quantity. With
+                  At <Link href="https://bizgrow-digital.co.uk/about-us/" className="text-[#B54118] font-bold underline">BizGrow Digital,</Link> we prioritise quality over quantity. With
                   UK-focused strategies, we deliver measurable results that
                   optimise your sales pipeline efficiently.
                 </p>
@@ -187,7 +187,7 @@ const LeadGenerationPage = () => {
               </h2>
               <p className="text-gray-600 dark:text-gray-400 pt-8 text-lg">
                 Stop wasting time on unqualified traffic. BizGrow Digital
-                delivers <Link href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/ " className="text-[#B54118] underline">high-quality leads </Link>through smart analytics, predictive
+                delivers <Link href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/ " className="text-[#B54118] font-bold underline">high-quality leads </Link>through smart analytics, predictive
                 targeting, and UK-focused strategies. Connect with prospects
                 ready to engage and convert, growing your business efficiently.
               </p>
