@@ -89,7 +89,7 @@ const HomePage = () => {
                     generate qualified leads? BizGrow Digital delivers{" "}
                     <span className="text-[#B54118] dark:text-orange-500 font-bold underline">
                       <Link href="https://bizgrow-digital.co.uk/how-digital-marketing-drives-faster-growth-for-businesses/ ">
-                        results-driven digital marketing
+                        results-driven digital marketing UK businesses
                       </Link>
                     </span>{" "}
                     helping brands grow with confidence.
@@ -193,7 +193,7 @@ const HomePage = () => {
               { name: "Construction", img: "/Construction-h.jpg" },
               { name: "Real Estate", img: "/Real Estate-h.jpg" },
               { name: "Healthcare", img: "/healthcare-h.jpg" },
-              { name: "Hospitality", img: "/HOSPITALITY.jpg" },
+              { name: "Hospitality", img: "/HOSPITALITY (1).jpg" },
               { name: "Education ", img: "/education-h.jpg" },
             ].map((industry, idx) => (
               <FadeIn key={idx} direction="up" delay={idx * 0.1}>
