@@ -17,7 +17,7 @@ import Link from "next/link";
 export const metadata = {
   title: "BizGrow Digital | Expert Digital Marketing Services UK",
   description:
-    "Our UK-based digital marketing services enhance brand influence, attract the right clients, and foster long-term business growth.",
+    "Want more UK customers? BizGrow Digital offers digital marketing services to improve Google rankings and generate qualified leads.",
   alternates: {
     canonical: "https://bizgrow-digital.co.uk/digital-marketing-services/",
   },
@@ -280,9 +280,9 @@ const DigitalMarketingPage = () => {
                     </div>
 
                     <div>
-                      <h4 className="text-2xl font-black text-[#000d26] dark:text-white uppercase mb-4 tracking-tight group-hover:text-orange-500 transition-colors">
+                      <h3 className="text-2xl font-black text-[#000d26] dark:text-white uppercase mb-4 tracking-tight group-hover:text-orange-500 transition-colors">
                         {item.title}
-                      </h4>
+                      </h3>
                       <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-sm">
                         {item.desc}
                       </p>
@@ -443,9 +443,9 @@ const DigitalMarketingPage = () => {
                       </div>
 
                       <div className="flex-1">
-                        <h4 className="text-xl font-black text-[#000d26] dark:text-white uppercase mb-2 group-hover:text-orange-500 transition-colors">
+                        <h3 className="text-xl font-black text-[#000d26] dark:text-white uppercase mb-2 group-hover:text-orange-500 transition-colors">
                           {item.title}
-                        </h4>
+                        </h3>
                         <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed group-hover:text-gray-300 transition-colors">
                           {item.desc}
                         </p>
