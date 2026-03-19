@@ -16,9 +16,9 @@ import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 
 export const metadata = {
-  title: "Email Marketing UK | Automated Campaigns & Customer Engagement",
+  title: "Email Marketing Services UK | Grow Sales with Automation",
   description:
-    "Boost UK business growth with data-driven email marketing, automation, and personalised campaigns for maximum engagement.",
+    "Grow your UK business with Email Marketing Services: targeted, automated emails that boost engagement and customer loyalty.",
   alternates: {
     canonical: "https://bizgrow-digital.co.uk/email-marketing/",
   },
