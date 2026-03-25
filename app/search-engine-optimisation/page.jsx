@@ -10,18 +10,21 @@ import {
   Target,
   MousePointer2,
   ShieldCheck,
+  FileText,
+  Link2,
+  LineChart,
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 
 export const metadata = {
-  title: "SEO Services UK | Boost Rankings & Grow Online | BizGrow Digital",
+  title: "Search Engine Optimisation (SEO) Services UK | BizGrow Digital",
   description:
-    "UK businesses: Improve visibility, attract leads & increase traffic with data-driven SEO services tailored for measurable results.",
-    alternates: {
-    canonical: "https://bizgrow-digital.co.uk/search-engine-optimisation/", 
+    "Improve your UK rankings with expert SEO services from BizGrow Digital. Drive traffic, leads & long-term growth organically",
+  alternates: {
+    canonical: "https://bizgrow-digital.co.uk/search-engine-optimisation/",
   },
-  };
+};
 
 const SEOPage = () => {
   return (
@@ -47,9 +50,10 @@ const SEOPage = () => {
               RANK ON <span className="text-orange-500">TOP</span>
             </h1>
             <p className="text-gray-300 text-base md:text-xl max-w-3xl mb-10 mx-auto px-4 font-light leading-relaxed">
-              SEO focuses on organic search, attracting visitors who are
-              actively searching for your products without paying per click.
-              Boost your organic visibility with BizGrow Digital.
+              At BizGrow Digital, we help UK businesses rank higher in Google
+              organically. Our SEO strategies attract the right visitors
+              actively searching for your products or services without paying
+              per click. Grow your online visibility and generate quality leads.
             </p>
             <Link href="/cosearch-engine-optimisation">
               <button className="bg-[#B54118] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest shadow-2xl">
@@ -88,8 +92,8 @@ const SEOPage = () => {
                 <div className="space-y-6 relative">
                   {/* Main Paragraph - Improved Clarity */}
                   <p className="text-slate-700 dark:text-gray-200 text-xl ml-1 md:text-2xl font-semibold leading-relaxed relative z-10">
-                    Search Engine Optimisation (SEO) is more than just
-                    ranking it&apos;s about
+                    Search Engine Optimisation (SEO) is more than just ranking
+                    it&apos;s about
                     <span className="text-[#B54118]">
                       {" "}
                       visibility, credibility, and long-term growth.
@@ -98,10 +102,16 @@ const SEOPage = () => {
 
                   {/* Supporting Text - Less Dull */}
                   <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-orange-600/60 pl-6">
-                    Effective SEO involves <Link href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/" className="text-[#B54118] font-bold underline">on-page techniques</Link> like keyword
-                    optimisation and technical improvements to ensure your
-                    business becomes easier for potential customers to find in a
-                    crowded digital landscape.
+                    Effective SEO involves{" "}
+                    <Link
+                      href="https://bizgrow-digital.co.uk/how-can-expert-seo-techniques-boost-your-business-visibility/"
+                      className="text-[#B54118] font-bold underline"
+                    >
+                      on-page techniques
+                    </Link>{" "}
+                    like keyword optimisation and technical improvements to
+                    ensure your UK business becomes easier for potential
+                    customers to find in a crowded digital landscape.
                   </p>
 
                   {/* Stats Badges */}
@@ -230,13 +240,121 @@ const SEOPage = () => {
                   Why SEO Matters for Growth
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Higher rankings  <Link href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/" className="text-[#B54118] font-bold underline">lead to more leads</Link> and revenue. We optimise
-                  for UK-based searches and local listings to ensure your
-                  business gets noticed by the right audience.
+                  Higher rankings{" "}
+                  <Link
+                    href="https://bizgrow-digital.co.uk/8-effective-lead-generation-strategies/"
+                    className="text-[#B54118] font-bold underline"
+                  >
+                    lead to more leads
+                  </Link>{" "}
+                  and revenue. We optimise for UK-based searches and local
+                  listings to ensure your business gets noticed by the right
+                  audience.
                 </p>
               </div>
               <Globe2 className="text-orange-500 w-20 h-20 opacity-70" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- NEW SECTION: Step-by-Step SEO Process --- */}
+      <section className="py-14 bg-white dark:bg-black overflow-hidden dark:border-t-2 dark:border-orange-700">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn direction="up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-black dark:text-white uppercase tracking-tighter mb-6">
+                Step-by-Step{" "}
+                <span className="text-orange-500">SEO Process</span> <br />
+                for UK Businesses
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                At BizGrow Digital, we follow a proven, step-by-step SEO
+                approach designed to deliver long-term growth and consistent
+                results.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {/* Connecting Line (Desktop Only) */}
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-orange-500/0 via-orange-500/50 to-orange-500/0 -translate-y-1/2 z-0" />
+
+            {[
+              {
+                num: "01",
+                title: "Website Audit & Analysis",
+                desc: "We start with a complete audit of your website to identify technical issues, SEO gaps, and growth opportunities.",
+                icon: <BarChart3 className="w-6 h-6" />,
+              },
+              {
+                num: "02",
+                title: "Keyword Research & Strategy",
+                desc: "We find high-intent keywords based on UK search behaviour to target the right audience and maximise visibility.",
+                icon: <Search className="w-6 h-6" />,
+              },
+              {
+                num: "03",
+                title: "On-Page SEO Optimisation",
+                desc: "We optimise your website content, meta tags, headings, and structure to improve rankings and user experience.",
+                icon: <Target className="w-6 h-6" />,
+              },
+              {
+                num: "04",
+                title: "Technical SEO Improvements",
+                desc: "We enhance site speed, mobile responsiveness, indexing, and Core Web Vitals to meet Google’s latest standards.",
+                icon: <ShieldCheck className="w-6 h-6" />,
+              },
+              {
+                num: "05",
+                title: "Content Creation & Optimisation",
+                desc: "We develop high-quality, SEO-driven content that matches user intent and builds topical authority.",
+                icon: <FileText className="w-6 h-6" />, // Changed to FileText
+              },
+              {
+                num: "06",
+                title: "Link Building & Authority Growth",
+                desc: "We build high-quality backlinks from relevant UK websites to increase your domain authority.",
+                icon: <Link2 className="w-6 h-6" />, // Changed to Link2
+              },
+              {
+                num: "07",
+                title: "Tracking, Reporting & Ongoing Optimisation",
+                desc: "We monitor performance, track rankings, and continuously refine strategies to ensure consistent growth.",
+                icon: <LineChart className="w-6 h-6" />, // Changed to LineChart
+              },
+            ].map((step, idx) => (
+              <FadeIn
+                key={idx}
+                direction="up"
+                delay={idx * 0.1}
+                className="relative z-10"
+              >
+                <div className="group h-full p-8 rounded-[2.5rem] bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-orange-500 transition-all duration-500 flex flex-col">
+                  {/* Number & Icon Header */}
+                  <div className="flex justify-between items-start mb-8">
+                    <span className="text-5xl font-black text-orange-500/20 group-hover:text-orange-500 transition-colors duration-500">
+                      {step.num}
+                    </span>
+                    <div className="p-3 rounded-2xl bg-white dark:bg-white/10 text-orange-500 shadow-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+                      {step.icon}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-black dark:text-white mb-4 uppercase tracking-tight leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
+
+                  {/* Bottom Glow Accent */}
+                  <div className="mt-auto pt-6">
+                    <div className="h-1 w-12 bg-orange-500 rounded-full group-hover:w-full transition-all duration-500" />
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
@@ -298,12 +416,18 @@ const SEOPage = () => {
       <div className="py-24 bg-slate-50 dark:bg-[#020817] dark:border-t-2 dark:border-orange-700 ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row-reverse gap-20 items-center">
           <div className="w-full lg:w-1/2 space-y-8">
-            <h2 className="text-5xl md:text-7xl font-black dark:text-white leading-none uppercase">
-              DATA <br /> <span className="text-orange-500">OVER</span> GUESSES
+            <h2 className="text-5xl md:text-6xl font-black dark:text-white leading-none uppercase">
+              SEO  <span className="text-orange-500">Strategies </span> for UK Businesses 
             </h2>
             <p className="text-gray-700 font-semibold">
-              Producing <Link href="https://bizgrow-digital.co.uk/10-creative-content-techniques-to-improve-seo-results/" className="text-[#B54118] underline">high-quality content</Link> that satisfies both users and
-              search engines.
+              Producing{" "}
+              <Link
+                href="https://bizgrow-digital.co.uk/10-creative-content-techniques-to-improve-seo-results/"
+                className="text-[#B54118] underline"
+              >
+                high-quality content
+              </Link>{" "}
+              that satisfies both users and search engines.
             </p>
             <div className="space-y-6">
               {[
@@ -402,7 +526,6 @@ const SEOPage = () => {
           </div>
         </div>
       </section>
-      
     </section>
   );
 };
