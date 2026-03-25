@@ -88,7 +88,7 @@ const WordPressPage = () => {
                   <div key={i} className="flex gap-4">
                     <Check className="text-[#B54118] shrink-0" size={24} />
                     <div>
-                      <h4 className="font-bold dark:text-white text-sm uppercase tracking-wide">{item.title}</h4>
+                      <h3 className="font-bold dark:text-white text-sm uppercase tracking-wide">{item.title}</h3>
                       <p className="text-xs text-gray-500">{item.desc}</p>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ const WordPressPage = () => {
                   <div className="w-12 h-12 rounded-xl bg-[#B54118]/10 text-[#B54118] flex items-center justify-center mb-6 group-hover:bg-[#B54118] group-hover:text-white transition-all">
                     {benefit.icon}
                   </div>
-                  <h4 className="text-xl font-black dark:text-white mb-3 uppercase tracking-tight">{benefit.title}</h4>
+                  <h3 className="text-xl font-black dark:text-white mb-3 uppercase tracking-tight">{benefit.title}</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-medium">{benefit.desc}</p>
                 </div>
               </FadeIn>
